@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Computer-Programming</title>
+  <link rel="stylesheet" type="text/css" href="../../normalize.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" type="text/css" href="../bstyle.css">
+  <link rel="stylesheet" type="text/css" href="../fonts.css">
+<!--   <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'> -->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+      <![endif]-->
+      <style type="text/css">
+        body{
+          background-color: #f4f4f4;
+        }
+      </style>  
+</head>
+    <body>
+
+      <nav class="navbar navbar-default visible-lg" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Arrays</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse desk-nav">
+          <ul class="nav navbar-nav">
+            <li style="border-right: 1.5px solid white;"><a href="index.html">Lab Manual</a></li>
+            <li style="border-right: 1.5px solid white;"><a href="simulation.html">Simulation</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+          <a href="../index.html"><span class="glyphicon glyphicon-home pull-right"></span></a>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div class="hidden-lg">
+      <nav class="navbar navbar-default mobile-nav" role="navigation">
+      <div class="nav navbar-nav pull-right">
+    <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="simulation.html"><span class="glyphicon glyphicon-play-circle"></span></a><a href="quiz.html"><span class="glyphicon glyphicon-tower"></span></a><a href="../index.html"><span class="glyphicon glyphicon-home"></span></a>
+  </div>
+    </nav>
+    <p class="experiment-mobile-title"> Arrays</p>
+    </div>
+
+<div class="row">
+  <div class="col-lg-2 visible-lg lab-index">
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active"><a href="#intro">Introduction</a></li>
+      <li><a href="#theory">Theory</a></li>
+      <li><a href="#obj">Objective</a></li>
+      <li><a href="#man">Manual</a></li>
+      <li><a href="#proc">Procedure</a></li>
+      <li><a href="#further-reading">Further Reading</a></li>
+    </ul>
+  </div>
+
+  <div class="col-lg-10 lab-manual">
+    <div id="intro" class="manual-section">
+      <p class="manual-section-title">Introduction</p><hr />
+      <div class="manual-section-description">
+        <p>
+          An array is a group of items which have similar nature.
+        </p>
+        <p>
+          Arrays play a significant role in any programming language, as they 
+          allow the programmer to store more than one value in a variable. That is, 
+          you can use the same variable name to refer to all the values. 
+          An array is analogus to a shelf with many identical compartments. 
+          To identify a compartment, you just need to specify its position. 
+          Similarly, in a array variable, you can store many values of a single datatype. 
+          For example: 10 integers, 4 floating numbers, 12 characters etc. 
+          Not surprisingly, an array variable takes larger memory than a single variable of a datatype.
+        </p>
+        <p>
+          We can use the same name to access the values, but how do we differentiate between them. To do this we use an 
+          index into the array. For example, take an array(myArray) of 100 integers, we can access the hundredth unit:
+        </p>
+        <p>
+          myArray[99] = 3;
+        </p>
+        <p>
+          Notice something unusual? The index is usually zero based. So, the hundredth element is shown accessed using [99]. 
+          In other words, the index to the first item is at [0] and the index to the last item is [#elements -1].
+        </p>
+      </div>
+    </div>
+
+    <div id="theory" class="manual-section">
+      <p class="manual-section-title">Theory</p><hr />
+      <div class="manual-section-description">
+        <p>
+          Array is a data structure consisting of a collection of elements of same datatype. This collection is arranged in a way such that each element can be uniquly identified and addressed. These adresses are called indices. These are integer values. The memory allocation for an array is done contigously. For example, an array of 10 integer variables, with indices 0 through 9, may be stored as 10 words  at memory addresses 2000, 2004, 2008 to 2036 (this memory allocation can vary because some computers use other than 4 bytes to store integer type vrables), so that the element with index i has address 2000 + 4*i . Hence, the address of each element can be computed from its index by a simple mathematical formula. 
+        </p>
+        <p>
+          Arrays are different from structure because structures can have elements of different datatypes. We can also make an array of equally sized arrays. In that case, we call that array a multi dimensional array. Please note again that an array is a collection of similar elements. So, can make only an array of arrays of same datatype having same lengths. And hence, we cannot create an array of 10 elements containing 5 integer arrays and 5 integers. But as showing the example below, we can create an multidimensional array of 10 integer arrays each having a size of 20 elements. Now, We will require 2 indices for referencing an element of the multidimensional array. The first one is used to specify the array and the second one is used to specify the location in the array. For example: 
+        </p>
+        <p>
+          <pre class="prettyprint lang-c">
+            int arr[10][20];
+            arr[5][3]=1;
+          </pre>
+        </p>
+        <p>
+          In this case, the first sentence is used to declare a multi dimensional array containing 10 arrays and the size of each array is 20. In the second sentence, the 4th element of the sixth array will be assigned a value 0. As explained earlier, this is because the indexing in arrays begins with 0. And hence, arr[5][3] refers to the sixth array and its fourth element.
+        </p>
+        <p>
+          Similarly, let us declare a 3 dimenesional array, which in simple terms would be an array containing an array of 2 dimensional arrays each of identical size and same datatype. So, for accessing one element in this array we will need 3 indices. For example,
+        </p>
+        <p>
+          <pre class="prettyprint lang-c">
+            int arr[10][20][30];
+            arr[2][3][4]=1;
+          </pre>
+        </p>
+        <p>
+          The first sentence declares an array of 10 2-dimensional arrays. Each of these 2-dimensional arrays contains 20 arrays of size 30 integers. The next line assigns a value 1 to the 5th element of the 4th array of the 3rd 2-dimensional array of the 3 dimensional integer array named arr. Each of these elements can be accessed using 3 for loops, for example:
+        </p>
+        <p>
+          <pre class="prettyprint lang-c">
+            for(int i=0;i&lt;10;i++)
+              for(int j=0;j&lt;20;j++)
+                for(int k=0;k&lt;30;k++)
+                  arr[i][j][k]=0;
+          </pre>
+        </p>
+        <p>
+          It can be argued that every array can be replaced by declaring an equivalent set of distinct variables. For example, 
+        </p>
+        <p>
+          <pre class="prettyprint lang-c">
+            int arr[5];
+          </pre>
+        </p>
+        <p>
+          can be replaced by <br>
+        </p>
+        <p>
+          <pre class="prettyprint lang-c">
+            int a,b,c,d,e;
+          </pre>
+        </p>
+        <p>
+          Now, let us take an example which show the utility of arrays over an equivalent set of variables. Let us consider that you want to take as input 10 numbers and then for the input(x) given by user from 2 to 9 you want to display the Average with neighbouring numbers i.e. the x-1, x and x+1th numbers. We can easily solve this problem using an array: 
+        </p>
+        <p>
+          <pre class="prettyprint lang-c">
+            int main()
+            {
+            int arr[10];
+            printf("Enter 10 numbers\n");
+            for(i=0;i&lt;10;i++)
+              scanf("%d",&amp;arr[i]);
+            printf("Enter an index(2-9) to find 
+                    average with neighbouring values\n");
+            int x;
+            scanf("%d",&amp;x);
+            printf("Average with neighbouring values is %d",
+            (arr[x-1]+arr[x]+arr[x+1])/3);
+            return 0;
+            }
+          </pre>
+        </p>
+        <p>
+          Note how easy arrays make to find out the neighboring elements of any number. Writing a equivalent program by replacing arr[10] with 10 different variables will require a very complex program having many if else conditions or a switch statement with many cases. Try imagining a case having 100 or 1000 such variables. <br>
+        </p>
+      </div>
+    </div>
+    <div id="obj" class="manual-section">
+      <p class="manual-section-title">Objective</p><hr />
+      <div class="manual-section-description">
+        <p>
+          1. To learn how to use arrays for storing large amount of data.<br>
+          2. To learn how to use array to create a common reference for a large number of variables.<br>
+        </p> 
+      </div>
+    </div>
+
+    <div id="man" class="manual-section">
+      <p class="manual-section-title">Manual</p><hr />
+      <div class="manual-section-description">
+        <p> 
+          Here you will do two experiments relating to sorting of elements of an array and multiplying 2 matrices.
+        </p>   
+      </div>
+    </div>
+    <div id="proc" class="manual-section">
+      <p class="manual-section-title">Procedure</p><hr />
+      <div class="manual-section-description">
+        <p>
+          <b>For Experiment 1:</b>
+        </p>
+        <p>
+          <ol>
+            <li> Enter the size of array for selected problem and press OK.</li>
+            <li> Use Enter values to enter your own values in the box provided below for press Generate random values to generate a set of random values.</li>
+            <li> Press Start to start the experiment.</li>
+            <li> Click Next to get a step by step execution of the code.</li>
+          </ol>
+        </p>
+        <p>
+          <b>For Experiment 2:</b>
+        </p>
+        <p>
+          <ol>
+            <li> Enter the size of rows and columns for array A and press OK.</li>
+            <li> Press Generate random values to generate a set of random values.</li>
+            <li> Enter the size of columns for array B and press OK.</li>
+            <li> Press Generate random values to generate a set of random values.</li>
+            <li> Press Start to start the experiment.</li>
+            <li> Click Next to get a step by step execution of the code.</li>
+          </ol>
+        </p>
+      </div>
+    </div>
+
+    <div id="further-reading" class="manual-section">
+      <p class="manual-section-title">Further Reading</p><hr />
+      <div class="manual-section-description">
+        <ol>
+          <li><a class="more" target="_blank" href="http://en.wikibooks.org/wiki/C_Programming/Arrays">http://en.wikibooks.org/wiki/C_Programming/Arrays</a></li>
+          <li><a class="more" target="_blank" href="http://en.wikipedia.org/wiki/Array_data_structure">http://en.wikipedia.org/wiki/Array_data_structure</a></li>
+          <li><a class="more" target="_blank" href="http://www.cplusplus.com/doc/tutorial/arrays">http://www.cplusplus.com/doc/tutorial/arrays</a></li>
+          <li><a class="more" target="_blank" href="http://www.exforsys.com/tutorials/c-language/c-arrays.html">http://www.exforsys.com/tutorials/c-language/c-arrays.html</a></li>
+        </ol>
+      </div>
+    </div>
+  </div></div>
+  
+</body>
+</html>

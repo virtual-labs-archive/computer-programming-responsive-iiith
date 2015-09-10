@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = 'stylesheet' type = 'text/css' href = 'basicControlFlow.css' />
+<!-- <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'> -->
+<script type = 'text/javascript' src = 'basicControlFlow.js' ></script>
+<title>Computer-Programming</title>
+</head>
+
+<body>
+<div id = 'header' >Basic Control Flow</div>
+<div class = 'vlabsIcon'></div>
+
+<div class = 'inputDivision' >
+	<div class = 'inputDivisionTitle' ><div class = 'initializePic' ></div><div class = 'initializeText'>Initialize</div></div>
+	<div class = 'inputDivisionBody' >
+		<div  class = 'instructionText' > Select the Day :</div>
+		<div class = 'radioButtonHolder' ><input type = 'radio' class = 'radiobutton' name = 'day_radio' id = 'radioBtn1Id' value = '1' >
+		<label class = 'radioText' for = 'day_radio' >DAY : 1</label></div>
+		<div class = 'radioButtonHolder' ><input type = 'radio' class = 'radiobutton' name = 'day_radio' id = 'radioBtn2Id' value = '2'><label class = 'radioText' for = 'day_radio' >DAY : 2</label></div>
+		<div class = 'radioButtonHolder' ><input type = 'radio' class = 'radiobutton' name = 'day_radio' id = 'radioBtn3Id' value = '3'><label class = 'radioText' for = 'day_radio' >DAY : 3</label></div>
+		<div class = 'radioButtonHolder' ><input type = 'radio' class = 'radiobutton' name = 'day_radio' id = 'radioBtn4Id' value = '4'><label class = 'radioText' for = 'day_radio' >DAY : 4</label></div>
+		<div class = 'radioButtonHolder' ><input type = 'radio' class = 'radiobutton' name = 'day_radio' id = 'radioBtn5Id' value = '5'><label class = 'radioText' for = 'day_radio' >DAY : 5</label></div>
+		<div class = 'radioButtonHolder' ><input type = 'radio' class = 'radiobutton' name = 'day_radio' id = 'radioBtn6Id' value = '6'><label class = 'radioText' for = 'day_radio' >DAY : 6</label></div>	
+		<div class = 'radioButtonHolder' ><input type = 'radio' class = 'radiobutton' name = 'day_radio' id = 'radioBtn7Id' value = '7'><label class = 'radioText' for = 'day_radio' >DAY : 7</label></div>
+		<div class = 'DayInputText' ><label class = 'dText' >DAY : </label><input  class = 'textField' type = 'text'  id = 'textFieldId' ></div>
+		<button class = 'button margin15' id = 'submitBtnId' >Submit Day</button>
+		<button class = 'buttonDisable margin15' id = 'startBtnId' disabled>Start</button>
+		<button class = 'button margin15 hide' id = 'nextBtnId' disabled>Next</button>
+		<button class = 'button margin15 hide' id = 'resetBtnId' disabled>Reset</button>
+	</div>
+</div>
+<div class = 'executionDivision' >
+	<div class = 'executionDivisionTitle' ><div class = 'executionPic' ></div><div class = 'executionText' >Step Execution</div></div>
+	<div class = 'stepExecutionDisplay' id = 'switchCaseId' >
+		<div 	id = 'mainId'         >&emsp;main() {</div>
+		<div 	id = 'charId'         >&emsp;char* str;</div>
+		<div 	id = 'strId'          >&emsp;str = null;</div>
+		<div    id = 'switchId'       >&emsp;switch (DAY) {</div>
+		<div 	id = 'case1Id'        >&emsp;&emsp;case 1 : str = 'Monday';</div>
+		<div 	id = 'case1BreakId' 	class='break'   >&emsp;&emsp;&emsp;break;</div>
+		<div 	id = 'case2Id'        >&emsp;&emsp;case 2 : str = 'Tuesday';</div>
+		<div  	id = 'case2BreakId' 	class='break'	  >&emsp;&emsp;&emsp;break;</div>
+		<div   	id = 'case3Id'        >&emsp;&emsp;case 3 : str = 'Wednesday';</div>
+		<div  	id = 'case3BreakId' 	class='break' 	   >&emsp;&emsp;&emsp;break;</div>
+		<div 	id = 'case4Id'        >&emsp;&emsp;case 4 : str = 'Thursday';</div>
+		<div 	id = 'case4BreakId'	    class='break'	   >&emsp;&emsp;&emsp;break;</div>
+		<div  	id = 'case5Id'        >&emsp;&emsp;case 5 : str = 'Friday';</div>
+		<div 	id = 'case5BreakId' 	class='break'	   >&emsp;&emsp;&emsp;break;</div>
+		<div   	id = 'case6Id'        >&emsp;&emsp;case 6 : str = 'Saturday';</div>
+		<div 	id = 'case6BreakId' 	class='break'	   >&emsp;&emsp;&emsp;break;</div>
+		<div  	id = 'case7Id'        >&emsp;&emsp;case 7 : str = 'Sunday';</div>
+		<div 	id = 'case7BreakId' 	class='break'	   >&emsp;&emsp;&emsp;break;</div>
+		<div 	id = 'defaultId'      >&emsp;&emsp;default : str = null;</div>
+		<div 	id = 'defaultBreakId'   class='break'	 >&emsp;&emsp;&emsp;break; </div>
+		<div 	id = 'closeBrc1Id'    >&emsp;}</div>
+		<div 	id = 'ifId'           >&emsp;if ( strcmp( str, 'Sunday' ) == 0 ) {</div>
+		<div 	id = 'holidayId'      >&emsp;&emsp;printf ( 'HOLIDAY' ); }</div>
+		<div 	id = 'elseIfId'       >&emsp;else if ( str != null ) {</div>
+		<div 	id = 'workingdayId'   >&emsp;&emsp;printf ( 'WORKING DAY' ); }</div>
+		<div 	id = 'elseId'         >&emsp;else {</div>
+		<div 	id = 'invalidIPId'    >&emsp;&emsp;printf ('INVALID INPUT'); }</div>
+		<div 	id = 'closeBrc2Id'    >}</div>
+		<div 	id = 'endOfCodeId'    ></div>
+	</div>
+</div>
+<div class = 'outputDivision' > 
+	<div class = 'outputDivisionTitle' ><div class = 'outputPic' ></div><div class = 'outputText' >Code Output</div></div>
+	<div class = 'resultDisplay' id = 'resultDisplay' >
+		<div class = 'imageBlock' id = 'dayImage' >
+			<div class = 'workingDayImage' id = 'workingdayImage' ></div>
+			<div class = 'relaxDayImage' id = 'holidayImage' ></div>
+		</div>
+		<div class = 'dayIconDivision' id = 'dayIcon' >
+		 	<div class = 'mondayIcon' id = 'mondayImages' ></div>
+		 	<div class = 'tuesdayIcon' id = 'tuesdayImages' ></div>
+		 	<div class = 'wednesdayIcon' id = 'wednesdayImages' ></div>
+		 	<div class = 'thursdayIcon' id = 'thursdayImages' ></div>
+		 	<div class = 'fridayIcon' id = 'fridayImages' ></div>
+		 	<div class = 'saturdayIcon' id = 'saturdayImages' ></div>
+		 	<div class = 'sundayIcon' id = 'sundayImages' ></div>
+		</div>
+		<div class = 'localVariabals'>
+		<div class = 'localVariableText' >str : </div><div class = 'localVariableValue' id = 'strNullId' ></div>
+		<div class = 'localVariableText' >day : </div><div class = 'localVariableValue' id = 'idOfDay' ></div>
+		<div class = 'localVariableText' >output : </div><div class = 'localVariableValue' id = 'outputDayId' ></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

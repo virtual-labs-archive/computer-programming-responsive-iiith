@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel = 'stylesheet' type = 'text/css' href = 'numericalApproximation.css' />
+<link href = 'http://fonts.googleapis.com/css?family=Inconsolata' rel = 'stylesheet' type = 'text/css' >
+<script src = "numericalApproximation.js"></script>
+<title>Computer-Programming</title>
+</head>
+
+<body>
+<div id = 'header' > Numerical Integration ( Area Under Curve ) </div>
+<div class = 'vlabsIcon' ></div>
+
+<div class = 'inputDivision' >
+	<div class = 'FirstInputBlock' >
+		<div class = 'problemStatementDivisionTitle' ><div class = 'problemPic' ></div><div class = 'experimentText'>Problem ?</div></div>
+		<div class = 'inputDivisionBody' id = 'inputDivisionSimpleLoop' >
+			<p></p><br>
+			<p class="warningText">1. Given a well-behaved smooth function, integrate it over the given limits of integration ?</p><br>
+			<p class="warningText">2. Approximating solution to integral a smooth function.</p><br>
+			<p class="warningText">3. Integration Limits are from 0 to 30, b > a and b-a >= 1.</p><br>
+		</div><!-- end of inputDivisionSimpleLoop -->
+	</div><!-- end of FirstInputBlock -->
+	<div class = 'SecondInputBlock' >
+		<div class = 'inputDivisionTitle' ><div class = 'experimentPic' ></div><div class = 'experimentText' >Initialize</div></div>
+		<div class = 'inputDivisionBody' id = 'inputDivisionSimpleLoop' >
+			<div class = 'variableText' >Initialize variables</div>
+			<input  placeholder = 'Value of a' class = 'inputField' type = 'text'   id = 'valueA' size = '10' >
+			<input  placeholder = 'Value of b' class = 'inputField' type = 'text'   id = 'valueB' size = '10' >
+			<button  class = 'button startButton' id = 'okBtnId' >OK</button>
+			<button class = 'buttonDisable myStartButton' id = 'startBtnId' disabled>Start</button><button class = 'buttonDisable myStartButton hide' id = 'stopBtnId' disabled>Stop</button>
+			<button class = 'buttonDisable nextButton' id = 'nextBtnId' disabled>Next</button>
+		</div><!-- end of inputDivisionSimpleLoop -->
+	</div><!-- end of SecondInputBlock -->
+</div><!-- end of inputDivision -->
+<div class = 'executionDivision' >
+	<div class = 'executionDivisionTitle' ><div class = 'executionPic' ></div><div class = 'executionText' >Step Execution</div></div>
+	<div class = 'stepExecutionDisplay' >
+		<div id = 'NumApproCode' class = 'programCode' >
+			<div id = 'NumApproCodeContent1' >main(){</div>
+			<div id = 'NumApproCodeContent2' >&emsp;&emsp;&emsp;int a, b, width, i;</div>
+			<div id = 'NumApproCodeContent3' >&emsp;&emsp;&emsp;double sum;</div>
+			<div id = 'NumApproCodeContent4' >&emsp;&emsp;&emsp;scanf("%d%d", &a, &b );</div>
+			<div id = 'NumApproCodeContent5' >&emsp;&emsp;&emsp;sum = 0; width = 1; i = 0;</div>
+			<div id = 'NumApproCodeContent6' >&emsp;&emsp;&emsp;for ( i = a; b >= i; i += width){</div>
+			<div id = 'NumApproCodeContent7' >&emsp;&emsp;&emsp;&emsp;&emsp;sum = sum + cos(2*Pi/13*i) * width;</div>
+			<div id = 'NumApproCodeContent8' >&emsp;&emsp;&emsp;}</div>
+			<div id = 'NumApproCodeContent9' >&emsp;&emsp;&emsp;printf("Integration value = %d", sum);</div>
+			<div id = 'NumApproCodeContent10' >}</div>
+		</div><!-- end of programCode -->
+	</div><!-- end of stepExecutionDisplay -->
+</div><!-- end of executionDivision -->
+<div class = 'outputDivision' > 
+	<div class = 'outputDivisionTitle' ><div class = 'outputPic' ></div><div class = 'outputText' >Graph Visualization</div></div>
+	<div class = 'resultDisplay' id = 'resultDisplay' >
+		<div class = 'graph'>
+			<canvas class = 'canvas' id = 'myCanvas' width = '420' height = '300' ></canvas>
+		</div><!-- end of FirstInputBlock -->
+		<div class = 'gapBitweenMeamoryGap' ></div>
+		<div id = 'resultShowDiv' class = 'textAlignLeft' >
+			<div class = 'marginLeft' >
+				<span>LOCAL VARIABLES :</span>&emsp;&emsp;<span id = 'vari' ></span><span id = 'valuei' ></span>&emsp;&emsp;<span id = 'varsum' ></span><span id = 'valuesum' ></span>
+			</div>
+			<div class = 'marginLeft' >
+				<span>OUTPUT :</span>&emsp;&emsp;<span id = 'integrText' ></span><span id = 'integrValue' ></span>
+			</div>
+		</div>
+	</div><!-- end of resultDisplay -->
+</div><!-- end of outputDivision -->
+
+
+
+</body>
+</html>

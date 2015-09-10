@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = 'stylesheet' type = 'text/css' href = 'CallByReferencePointer.css' />
+<link href = 'http://fonts.googleapis.com/css?family=Inconsolata' rel = 'stylesheet' type = 'text/css' >
+<script src = 'CallByReferencePointer.js' ></script>
+<title>Computer-Programming</title>
+</head>
+
+<body>
+<div id = 'header' >Pointers </div>
+<div class = 'vlabsIcon' ></div>
+
+<div class = 'executionDivision' >
+	<div class = 'executionDivisionTitle' ><div class = 'executionPic' ></div><div class = 'executionText' >Program Code</div></div>
+	<div class = 'stepExecutionDisplay' id = 'basicPointerText' >
+		<div id = 'codeContentCBR1'  >&nbsp;#include&lt;stdio.h&gt;</div>
+		<div id = 'codeContentCBR2'  >&nbsp;void main(){</div>
+		<div id = 'codeContentCBR3'  >&emsp;&emsp;int A = 5, B = 9;</div>
+		<div id = 'codeContentCBR4'  >&emsp;&emsp;printf('Value of A is %d\n',A);</div>
+		<div id = 'codeContentCBR5'  >&emsp;&emsp;printf('Value of B is %d\n',B);</div>
+		<div id = 'codeContentCBR6'  >&emsp;&emsp;swap( &A , &B );</div>
+		<div id = 'codeContentCBR7'  >&emsp;&emsp;printf('Value of A after swapping is %d\n',A);</div>
+		<div id = 'codeContentCBR8'  >&emsp;&emsp;printf('Value of B after swapping is %d\n',B);</div>
+		<div id = 'codeContentCBR9'  >&nbsp;}</div>
+		<div id = 'codeContentCBR10' >&nbsp;&nbsp;&nbsp;&nbsp;</div>
+		<div id = 'codeContentCBR11' >&nbsp;void swap( int *Pa , int *Pb){</div>
+		<div id = 'codeContentCBR12' >&emsp;&emsp;int temp = *Pa;</div>
+		<div id = 'codeContentCBR13' >&emsp;&emsp;*Pa = *Pb;</div>
+		<div id = 'codeContentCBR14' >&emsp;&emsp;*Pb = temp;</div>
+		<div id = 'codeContentCBR15' >&nbsp;}</div>
+		<div id = 'codeContentCBR16' ></div>
+	</div><!-- end of stepExecutionDisplay -->
+	<div class = 'executionDivisionFooter' >
+		<div class = 'buttonHolder' ><button class = 'buttonDisable nextButton' id = 'nextBtnId' disabled>Next</button><button class = 'button startButton' id = 'startBtnId' >Start</button>
+		<button class = 'buttonDisable startButton hide' id = 'backBtnId' disabled>Back</button></div>
+	</div><!-- end of executionDivisionFooter -->
+</div><!-- end of executionDivision -->
+	
+<div class = 'outputDivision' > 
+	<div class = 'outputDivisionTitle' ><div class = 'outputPic' ></div><div class = 'outputText' >Memory Map</div></div>
+	<div class = 'resultDisplay' id = 'resultDisplay' >
+		<table class = 'table1' >
+			<tr>
+			 	<th>Address&emsp;</th>
+			 	<th>BYTE&nbsp;1&emsp;</th>
+			 	<th>BYTE&nbsp;2&emsp;</th>
+			 	<th>BYTE&nbsp;3&emsp;</th>
+			 	<th>BYTE&nbsp;4&emsp;</th>
+			 	<th>Variable&emsp;</th>
+			</tr>
+			<tr>
+				<td>60</td><td id = '60byte1' ></td><td id = '60byte2' ></td><td id = '60byte3' ></td><td id = '60byte4' ></td><td id = '60variable' ></td>
+			</tr>
+			<tr>
+				<td>56</td><td id = '56byte1' ></td><td id = '56byte2' ></td><td id = '56byte3' ></td><td id ='56byte4' ></td><td id = '56variable' ></td>
+			</tr>
+			<tr>
+				<td>52</td><td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			<tr>
+				<td>48</td><td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			<tr>
+				<td>44</td><td></td><td></td><td></td><td></td><td></td>
+				</tr>
+			<tr>
+				<td>40</td><td id = '40byte1' ></td><td id = '40byte2' ></td><td id = '40byte3' ></td><td id = '40byte4' ></td><td id = '40variable' ></td>
+			</tr>
+			<tr>
+				<td>36</td><td id = '36byte1' ></td><td id = '36byte2' ></td><td id = '36byte3' ></td><td id = '36byte4' ></td><td id = '36variable' ></td>
+			</tr>
+			<tr>
+				<td>32</td><td id = '32byte1' ></td><td id = '32byte2' ></td><td id = '32byte3' ></td><td id = '32byte4' ></td><td id = '32variable' ></td>
+			</tr> 
+			<tr>
+				<td>28</td><td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			<tr>
+				<td>24</td><td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			<tr>
+				<td>20</td><td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			<tr>
+				<td>16</td><td></td><td></td><td></td><td></td><td></td>
+			</tr>
+			<tr>
+				<td>12</td><td></td><td></td><td></td><td></td><td></td>
+			</tr>
+		</table><!-- end of table1 -->
+		<table class = 'table2' >
+			<tr>
+			 	<td class = 'td1' >8</td><td class = 'td2' >Program Memory</td>
+			</tr>
+			<tr>
+			 	<td>4</td><td>Program Memory</td>
+			</tr>
+			<tr>
+			 	<td>0</td><td>Reserved By Os</td>
+			</tr>
+		</table><!-- end of table2 -->
+	</div><!-- end of resultDisplay -->
+</div><!-- end of outputDivision -->
+<div class = 'codeOutputDivision' >
+	<div class = 'codeOutputTitle' ><div class = 'outputPic' ></div><div class = 'outputText' >Code Output</div></div>
+	<div class = 'codeOutputBody' >
+		<div class = 'codeOutputText' id = 'outputText' ></div>
+	</div><!-- end of codeExplanationDivision -->
+</div><!-- end of codeExplanationDivision -->
+<div class = 'codeExplanationDivision' >
+	<div class = 'codeExplanationTitle' ><div class = 'initializePic' ></div><div class = 'initializeText' >Explanation</div></div>
+	<div class = 'codeExplanationBody' >
+		<div class = 'explanationText' id = 'explanationText' ></div>
+	</div><!-- end of codeExplanationBody -->
+</div><!-- end of codeExplanationDivision -->
+</body>
+</html>

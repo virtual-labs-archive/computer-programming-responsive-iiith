@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="functions.css" />
+<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+<title>Computer-Programming</title>
+<script type="text/javascript" src="function.js"></script>
+</head>
+
+<body>
+<div id="header">Functions</div>
+<div class="vlabsIcon"></div>
+
+<div class="inputDivision">
+	<div class = "inputDivisionTitle" ><div class="initializePic"></div><div class="initializeText">Initialize</div></div>
+	<div class="inputDivisionBody" id = 'inputDivision'>
+		  <div class="questionBlock" id = 'instructions'>
+           <p class="instruction">1. Click on the square to define a function for calculating the area of a square.</p>
+           <p class="instruction">2. Similarly define functions for the other geometrical figures.</p>
+           <p class="instruction">3. The defined functions are shown in the middle window.</p>
+           <p class="instruction">4. Now make appropriate function calls in the main program to compute the area of the figure displayed.</p>
+           <p class="instruction">5. Press execute to execute the code and see the output.</p>
+        </div><!-- end of instructions -->
+		<div class="questionBlock hide" id = 'questionSquare'>
+			<div class="questionText">1. Enter number of arguments :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group1" value="1"><label class="radioText" >1</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group1" value="2"><label class="radioText" >2</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group1" value="3"><label class="radioText" >3</label></div><!-- end of 1st question -->	
+
+			<div class="questionText">2. Enter datatype of arguments :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group2" value="int"><label class="radioText" >int</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group2" value="float"><label class="radioText" >float</label></div><!-- end of 2ns question -->	
+
+			<div class="questionTextRich">3. Enter return datatype of the function :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group3" value="int"><label class="radioText">int</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group3" value="float"><label class="radioText">float</label></div><!-- end of 3rd question -->	
+
+			<div class="questionTextRich">4. Choose formula for area of the square :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group4" value="a*a"><label class="radioText">a*a</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group4" value="&pi;*a*a"<label class="radioText">&pi;*a*a</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group4" value="2*&pi;*a"><label class="radioText">2*&pi;*a</label></div><!-- end of 4th question -->	
+
+			<button class="button okButton" id = 'okSquare'>OK</button>	
+		</div><!-- end of question block of square -->	
+		<div class="questionBlock hide" id = 'questionRectangle'>
+			<div class="questionText">1. Enter number of arguments :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group5" value="1"><label class="radioText">1</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group5" value="2"><label class="radioText">2</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group5" value="3"><label class="radioText">3</label></div><!-- end of 1st question -->	
+
+			<div class="questionText">2. Enter datatype of arguments :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group6" value="int"><label class="radioText">int</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group6" value="float"><label class="radioText">float</label></div><!-- end of 2nd question -->	
+
+			<div class="questionTextRich">3. Enter return datatype of the function :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group7" value="int"><label class="radioText">int</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group7" value="float"><label class="radioText">float</label></div><!-- end of 3rd question -->		
+
+			<div class="questionTextRich">4. Choose formula for area of the rectangle :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group8" value="a*a"><label class="radioText">a*a</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group8" value="a*b"><label class="radioText">a*b</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group8" value="2*&pi;*a"><label class="radioText">2*&pi;*a</label></div><!-- end of 4th question -->	
+
+			<button class="button okButton" id = 'okRectangle'>OK</button>	
+		</div><!-- end of question block of rectangle -->	
+		<div class="questionBlock hide" id = 'questionTriangle'>
+			<div class="questionText">1. Enter number of arguments :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group9" value="1"><label class="radioText">1</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group9" value="2"><label class="radioText">2</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group9" value="3"><label class="radioText">3</label></div><!-- end of 1st question -->		
+
+			<div class="questionText">2. Enter datatype of arguments :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group10" value="int"><label class="radioText">int</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group10" value="float"><label class="radioText">float</label></div><!-- end of 2nd question -->	
+
+			<div class="questionTextRich">3. Enter return datatype of the function :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group11" value="int"><label class="radioText">int</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group11" value="float"><label class="radioText">float</label></div><!-- end of 3rd question -->	
+
+			<div class="questionTextRich">4. Choose formula for area of the triangle :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group12" value="a*a"><label class="radioText">a*a</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group12" value="pi*a*a"><label class="radioText">&pi;*a*a</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group12" value="correct"><label class="radioText">(&radic;3/4.0)*a*a</label></div><!-- end of 4th question -->	
+
+			<button class="button okButton" id = 'okTriangle'>OK</button>	
+		</div><!-- end of question block of triangle -->	
+		<div class="questionBlock hide" id = 'questionCircle'>
+			<div class="questionText">1. Enter number of arguments :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group13" value="1"><label class="radioText" for="male">1</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group13" value="2"><label class="radioText" for="male">2</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group13" value="3"><label class="radioText" for="male">3</label></div><!-- end of 1st question -->		
+
+			<div class="questionText">2. Enter datatype of arguments :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group14" value="int"><label class="radioText">int</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group14" value="float"><label class="radioText">float</label></div><!-- end of 2nd question -->	
+
+			<div class="questionTextRich">3. Enter return datatype of the function :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group15" value="int"><label class="radioText">int</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group15" value="float"><label class="radioText">float</label></div><!-- end of 3rd question -->		
+
+			<div class="questionTextRich">4. Choose formula for area of the circle :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group16" value="a*a"><label class="radioText">a*a</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group16" value="pi*a*a"><label class="radioText">&pi;*a*a</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group16" value="incorrect"><label class="radioText">(&radic;3/4.0)*a*a</label></div><!-- end of 4th question -->	
+
+			<button class="button okButton" id = 'okCircle'>OK</button>	
+		</div><!-- end of question block of circle -->	
+		<div class="questionBlock hide" id = 'calculateArea'>
+			<div class="programInitialization">int main() {<br>&emsp;float totalArea;</div>
+			<div class="computeArea">totalArea = </div>
+			<div id = 'inputBoxSection'><input  class="textArea" type="text"><input  class="textArea" type="text"><input  class="textArea" type="text"><input  class="textArea" type="text"><input  class="textArea" type="text"><input  class="textArea" type="text"><input  class="textArea" type="text"></div>	
+			<div class="programTail">&emsp;&emsp;printf("Total Area : %f/n", totalArea);<br>&emsp;&emsp;return 0;<br>}</div>
+		
+			<button class="button okButton" id = 'btnExecute'>EXECUTE</button>	
+		</div><!-- end of tatal area calculation block -->	
+	</div><!-- end of inputDivisionBody -->
+</div><!-- end of inputDivision -->
+<div class="executionDivision">
+	<div class="executionDivisionTitle"><div class="executionPic"></div><div class="executionText">Step Execution</div></div>
+	<div class="stepExecutionDisplay" >
+		<div class="functionForSquare"><span class="textColor">//function for square</span><br><div id = 'functionSquare'></div></div>
+		<div class="functionForRectangle"><span class="textColor">//function for rectangle</span><br><div id = 'functionRectangle'></div></div>
+		<div class="functionForTriangle"><span class="textColor">//function for triangle</span><br><div id = 'functionTriangle'></div></div>
+		<div class="functionForCircle"><span class="textColor">//function for circle</span><br><div  id = 'functionCircle'></div></div>
+	</div><!-- end of stepExecutionDisplay -->
+</div><!-- end of executionDivision -->
+<div class="outputDivision"> 
+	<div class="outputDivisionTitle"><div class="outputPic"></div><div class="outputText">Code Output</div></div>
+	<div class="resultDisplay" id = "resultDisplay" >
+		<div class="imageBlock" id = 'imageBlock'>
+			<div class="imageSquare" id = 'imageSquare'><img id='tickSquare' class='tick hide' src="tick.png"></div>
+			<div class="imageRectangle" id = 'imageRectangle'><img id='tickRectangle' class='tick hide' src="tick.png"></div>
+			<div class="imageTriangle" id = 'imageTriangle'><img id='tickTriangle' class='tick hide' src="tick.png"></div>
+			<div class="imageCircle" id = 'imageCircle'><img id='tickCircle' class='tick hide' src="tick.png"></div>
+		</div><!-- end of imageBlock -->
+		<div class="imageComplex hide" id = 'imageComplex'></div>
+	</div><!-- end of resultDisplay -->
+</div><!-- end of outputDivision -->
+</body>
+</html>

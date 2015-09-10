@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Computer-Programming</title>
+  <link rel="stylesheet" type="text/css" href="../../normalize.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" type="text/css" href="../bstyle.css">
+  <link rel="stylesheet" type="text/css" href="../fonts.css">
+<!--   <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'> -->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+      <![endif]-->
+      <style type="text/css">
+        body{
+          background-color: #f4f4f4;
+        }
+      </style>  
+</head>
+    <body>
+
+      <nav class="navbar navbar-default visible-lg" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Expression Evaluation</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse desk-nav">
+          <ul class="nav navbar-nav">
+            <li style="border-right: 1.5px solid white;"><a href="index.html">Lab Manual</a></li>
+            <li style="border-right: 1.5px solid white;"><a href="simulation/index.htm">Simulation</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+          <a href="../index.html"><span class="glyphicon glyphicon-home pull-right"></span></a>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div class="hidden-lg">
+      <nav class="navbar navbar-default mobile-nav" role="navigation">
+      <div class="nav navbar-nav pull-right">
+    <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="simulation/index.htm"><span class="glyphicon glyphicon-play-circle"></span></a><a href="quiz.html"><span class="glyphicon glyphicon-tower"></span></a><a href="../index.html"><span class="glyphicon glyphicon-home"></span></a>
+  </div>
+    </nav>
+    <p class="experiment-mobile-title">Expression Evaluation</p>
+    </div>
+
+<div class="row">
+  <div class="col-lg-2 visible-lg lab-index">
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active"><a href="#intro">Introduction</a></li>
+      <li><a href="#theory">Theory</a></li>
+      <li><a href="#obj">Objective</a></li>
+      <li><a href="#man">Manual</a></li>
+      <li><a href="#proc">Procedure</a></li>
+      <li><a href="#further-reading">Further Reading</a></li>
+    </ul>
+  </div>
+
+  <div class="col-lg-10 lab-manual">
+    <div id="intro" class="manual-section">
+      <p class="manual-section-title">Introduction</p><hr />
+      <div class="manual-section-description">
+        <p>
+          Evaluating an expression is one of the most common tasks in programming. For example a+b+c is an expression. Here + is an operator. The variables a, b and c are operands. The value of the expression is the sum of a, b and c. An expression may be often evaluated to assign a variable a new value or to verify the truthfulness of a test condition. For example the operator can be unary(Ex: ~,++ etc.), binary(Ex: +,* etc.) or ternary (Ex: (a>b)?p:q)<br>
+        </p>
+        <p>
+          Examples of expressions:
+        </p>
+        <p>
+          <ol>
+            <li>
+              To compute the area of a triangle from base b and height h
+              <br>Area=1/2.0*base*height<br>
+              Note that this expression will be evaluated left to right, that is the division opeartor will be evaluated, followed by two multiplication operators. The 2.0 is used to make sure that the division is carried out as a floating point operation.
+            </li>
+            <li>
+              To compute the area of a triangle from the three sides, a, b and c<br>
+              s=(a+b+c)/2.0<br>
+              area = s*(s-a)*(s-b)*(s-c)<br>
+              Here area is calculated in two steps. The first step, s is computed from the three sides a, b and c. Note that, the paranthesis is used so that evaluation within the paranthesis takes first. Without paranthesis, we would have obtained the value of s as sum of a, b and half of c. Similarly, paranthesis are very important in evaluating the second expression.
+            </li>
+            <li>
+              To find the nth term of an arithmetic progression, we can use the following expression<br>
+              tn= a+(n-1)*d<br>
+              where a is the first term and d is the common difference.<br>
+              Here also, the use of paranthesis has helped us in evaluating the expression the way we need it.<br>
+            </li>
+          </ol>
+        </p>  
+        <p>
+          An expression used in a computer program is very similar to an algebraic expression and when many operators are specified in an expression, then the evaluation takes place according to the precedence of operators.The order of the precedence is given by a <a href="table.html"><span style = 'color: brown;'>table of precedence</span></a>.<br> 
+        </p>
+        <p>
+          A paranthesis can be used to override the precedence of operators and force the evalutation of a sub-expression within an expression. Expression is evaluated according to assosciativity of the operator. The assosciativity of the operator is a property that determines how operators of the same precedence are grouped in the absence of paranthesis. The objective in evaluating an expression is to consider the precedence and aasosciativity of the individual operators and compute the value of the sub-expressions.
+        </p>
+      </div>
+    </div>
+
+    <div id="theory" class="manual-section">
+      <p class="manual-section-title">Theory</p><hr />
+      <div class="manual-section-description">
+        <p>
+          Evaluating an expression involves repeatedly solving the sub-expressions in the lowest level paranthesis and substituting its value to solve the bigger expression. If an expression or sub-expression does not have a paranthesis, then we can directly compute its value based on the precedence and assosciativity of the operators present in the expression. That is, the sub expression involving operator with higher precedence is evaluated before other sub-expressions. The following table gives the precedence order of all the operators:<br>
+        </p>
+        <p>
+          <a href="table.html"><span style = 'color: brown;'>Table of precedence (Click here)</span></a><br>
+        </p>
+        <p>
+          Operators can be broadly categorized as:<br>
+        </p>
+        <ol>
+          <li>
+            Arithmetic Operators: These operators are used for arithmetic operations like addition,subtraction and multiplication. Ex: DIVISION(/),MODULUS OR REMAINDER (%)
+          </li>
+          <li>
+            Relational Operators: These operators are typically used for comparison of two operands.Ex: GREATER THAN(>),GREATER THAN OR EQUAL TO(>=) etc.  
+          </li>
+          <li>
+            Logical Operators: These operators are used for conducting logical operations like AND,OR. Ex: LOGICAL AND( && ),LOGICAL OR (||) etc.  
+          </li>
+          <li>
+            Bitwise Operators: These operators are used to perform operations on bits. Ex: BITWISE AND( & ), BITWISE OR ( | ) etc.  
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div id="obj" class="manual-section">
+      <p class="manual-section-title">Objective</p><hr />
+      <div class="manual-section-description">
+        <p>
+          <ol>
+            <li> To learn about different types of operators. </li>
+            <li> To learn about the precedence of the operators. </li>
+            <li> To learn how to evaluate an expression. </li>
+          </ol>
+        </p>
+      </div>
+    </div>
+
+    <div id="man" class="manual-section">
+      <p class="manual-section-title">Manual</p><hr />
+      <div class="manual-section-description">
+        <p>
+          Here we shall see the step by step evaluation of mathematical expressions.
+        </p>
+      </div>
+    </div>
+    <div id="proc" class="manual-section">
+      <p class="manual-section-title">Procedure</p><hr />
+      <div class="manual-section-description">
+        <p>
+          Procedure for the experiment is as follows.
+        </p>
+        <p>
+          <ol>
+            <li> Select the type of operators and the datatype you want to work upon from the top most bar.</li>
+            <li> You can edit the values of variables by pressing the edit button. </li>
+            <li> Select an expression prototype from the menu. </li>
+            <li> You can also edit this expression. </li>
+            <li> You can also edit this expression. </li>
+            <li> Press Next to see the step by step evaluation of the selected expression in the central panel and the corresponding reasoning in the right panel. </li>
+            <li> Press stop if you want to abort the experiment and start over. </li>
+          </ol>
+        </p>
+      </div>
+    </div>
+
+    <div id="further-reading" class="manual-section">
+      <p class="manual-section-title">Further Reading</p><hr />
+      <div class="manual-section-description">
+        <ol>
+          <li><a href="http://en.wikipedia.org/wiki/Expression_(programming)"> http://en.wikipedia.org/wiki/Expression_(programming) </a></li>
+          <li><a href="http://www.exforsys.com/tutorials/c-language/c-expressions.html"> http://www.exforsys.com/tutorials/c-language/c-expressions.html </a></li>
+          <li>
+            Chapter 2, The C Programming Language, Kernighan and Ritchie
+          </li>
+          <li>
+            Chapter 3, Programming with C, Brian Gottfried
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div></div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

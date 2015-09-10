@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="structure.css" />
+<!-- <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'> -->
+<script src = "structure.js"></script>
+<title>Computer-Programming</title>
+</head>
+
+<body>
+<div id="header">Structure </div>
+<div class="vlabsIcon"></div>
+
+<div class="executionDivision" >
+	<div class="executionDivisionTitle" ><div class="outputPic"></div><div class="stepsText" id='stepId'></div></div>
+	<div class="stepExecutionDisplay"  >
+		<div class="instructionArea" id='instructionArea'>
+		</div>
+	</div><!-- end of stepExecutionDisplay -->
+
+</div><!-- end of executionDivision -->
+	
+<div class="outputDivision"> 
+	<div class="outputDivisionTitle"><div class="outputPic"></div>
+		<div class="outputText" id='guideLineId'></div>
+		<button class="button buttonPosition" id='submitBtnId'>Submit Code</button>
+		<!-- <button id='submitBtnId1'>Submit Code</button> -->
+	</div>
+	<div class="resultDisplay" >
+		<textarea class="codeEditArea" id='solutionHintArea'></textarea>
+	</div><!-- end of resultDisplay -->
+
+</div><!-- end of outputDivision -->
+<div class="codeOutputDivision">
+	<div class = "codeOutputTitle" ><div class="userInputPicture"></div><div class="userInputText">User Input Code</div></div>
+	<div class="codeOutputBody" >
+		<textarea class="codeOutputText" id='viewUserCode'></textarea>
+	</div><!-- end of codeOutputBody -->
+</div><!-- end of codeOutputDivision -->
+<div class="codeExplanationDivision">
+	<div class = "codeExplanationTitle" ><div class="solutionPicture"></div><div class="solutionText">Solution </div>
+	<button id='noBtn' class="button buttonPosition hide">No</button>
+	<button id='yesBtnId' class="button buttonPosition hide">Yes</button>
+	<!-- <button id='noBtn' hidden>No</button>
+	<button id='yesBtnId1' hidden>Yes</button> -->
+	</div>
+	<div class="codeExplanationBody" >
+		<div class="explanationText" id='solutionArea'></div>
+	</div><!-- end of codeExplanationBody -->
+</div><!-- end of codeExplanationDivision -->
+
+</body>
+</html>
