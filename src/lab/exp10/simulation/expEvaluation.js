@@ -778,6 +778,7 @@ window.view = {
 		else if ( selectedOption === 'Bitwise' )
 			var isValid = this.validateBitwiseExpression(this.expression)
 		if ( isValid ) {
+      console.log("hello");
 			this.printFirstStep(this.expression)
 			this.disableElement('buttonStart')
 			this.changeClass('buttonStart', 'buttonDisable startButton')
@@ -869,6 +870,7 @@ window.view = {
 	evaluate: function () {
 		if(this.starting == -1 && this.countNext != 0) {
 			alert('Evaluation Complete');
+      location.reload()=true;
 			return ;
 		}
 		var res;
