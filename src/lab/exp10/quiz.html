@@ -54,7 +54,117 @@
       <div class="manual-section">
         <p class="manual-section-title">Quiz</p><hr />
         <div class="manual-section-description">
-          Sorry, Quiz will be updated soon!
+          <form action="quizresults.php" method="post" name="quiz" onsubmit='return window.confirm("You are submitting information to an external page. \nAre you sure?");' target="_blank">
+<ol>
+<li><b>Evaluate 2*3+5%3.</b></li>
+<input name="Q1" type="radio" value="1">1<br>
+<input name="Q1" type="radio" value="2">7<br>
+<input name="Q1" type="radio" value="3">8<br>
+<input name="Q1" type="radio" value="4">2<br>
+<br>
+<li><b>Evaluate (2*(3+5))%3.</b></li>
+<input name="Q2" type="radio" value="1">1<br>
+<input name="Q2" type="radio" value="2">7<br>
+<input name="Q2" type="radio" value="3">8<br>
+<input name="Q2" type="radio" value="4">4<br>
+<br>
+<li><b>The order of evaluation of the operators in (2*(3+5))%3 is:</b> </li>
+<input name="Q3" type="radio" value="1">+, *, %<br>
+<input name="Q3" type="radio" value="2">*, +, %<br>
+<input name="Q3" type="radio" value="3">%, *, +<br>
+<input name="Q3" type="radio" value="4">+, %, *<br>
+<br>
+<li><b>The order of evaluation of the operators in 2*(3+5)%3 is: </b></li>
+<input name="Q4" type="radio" value="1">+, *, %<br>
+<input name="Q4" type="radio" value="2">*, +, %<br>
+<input name="Q4" type="radio" value="3">%, *, +<br>
+<input name="Q4" type="radio" value="4">+, %, *<br>
+<br>
+<b>Assume x=8.8, y=3.5 and z= -5.2 and m=4 for the following questions</b><br><br>
+<li><b>Calculate x%y</b></li>
+<input name="Q5" type="radio" value="1">1.8<br>
+<input name="Q5" type="radio" value="2">3.5<br>
+<input name="Q5" type="radio" value="3">0.8<br>
+<input name="Q5" type="radio" value="4">7<br>
+<br><li><b>Calculate x%m</b></li>
+<input name="Q6" type="radio" value="1">8<br>
+<input name="Q6" type="radio" value="2">4<br>
+<input name="Q6" type="radio" value="3">1.8<br>
+<input name="Q6" type="radio" value="4">0.8<br>
+<br><li><b>Calculate 7/m</b></li>
+<input name="Q7" type="radio" value="1">0<br>
+<input name="Q7" type="radio" value="2">1<br>
+<input name="Q7" type="radio" value="3">2<br>
+<input name="Q7" type="radio" value="4">3<br>
+<br>
+<li><b>Calculate 2*x/(3*y)</b></li>
+<input name="Q8" type="radio" value="1">1.67<br>
+<input name="Q8" type="radio" value="2">2<br>
+<input name="Q8" type="radio" value="3">1<br>
+<input name="Q8" type="radio" value="4">1.5<br>
+<br><li><b>Calculate 2*x/3*y</b></li>
+<input name="Q9" type="radio" value="1">5.86<br>
+<input name="Q9" type="radio" value="2">20.51<br>
+<input name="Q9" type="radio" value="3">1.67<br>
+<input name="Q9" type="radio" value="4">1<br>
+<br>
+<b>Assume a=5, b=0 and c=-2 for the following questions</b><br><br>
+<li><b>Calculate (a |b )&gt;c</b></li>
+<input name="Q10" type="radio" value="1">0<br>
+<input name="Q10" type="radio" value="2">1<br>
+<input name="Q10" type="radio" value="3">5<br>
+<input name="Q10" type="radio" value="4">-2<br>
+<br>
+<li><b>Calculate (a&amp;c)*b%2</b></li>
+<input name="Q11" type="radio" value="1">0<br>
+<input name="Q11" type="radio" value="2">2<br>
+<input name="Q11" type="radio" value="3">5<br>
+<input name="Q11" type="radio" value="4">1<br>
+<br>
+<li><b>Calculate b++&gt;c</b></li>
+<input name="Q12" type="radio" value="1">0<br>
+<input name="Q12" type="radio" value="2">1<br>
+<input name="Q12" type="radio" value="3">-2<br>
+<input name="Q12" type="radio" value="4">-1<br>
+<li><b>Calculate a&gt;((a-2==3)?1:0)</b></li>
+<input name="Q13" type="radio" value="1">0<br>
+<input name="Q13" type="radio" value="2">1<br>
+<input name="Q13" type="radio" value="3">2<br>
+<input name="Q13" type="radio" value="4">3<br>
+<br>
+<b>Assume a='E' , b='5' and c='?' are  char type variables for the following questions</b><br><br>
+<li><b>Calculate b-2</b></li>
+<input name="Q14" type="radio" value="1">'C'<br>
+<input name="Q14" type="radio" value="2">'A'<br>
+<input name="Q14" type="radio" value="3">'c'<br>
+<input name="Q14" type="radio" value="4">'a'<br>
+<br>
+<li><b>Calculate b+c</b></li>
+<input name="Q15" type="radio" value="1">'t'<br>
+<input name="Q15" type="radio" value="2">'s'<br>
+<input name="Q15" type="radio" value="3">'T'<br>
+<input name="Q15" type="radio" value="4">'r'<br>
+<br>
+<li><b>Calculate a%c</b></li>
+<input name="Q16" type="radio" value="1">0<br>
+<input name="Q16" type="radio" value="2">1<br>
+<input name="Q16" type="radio" value="3">6<br>
+<input name="Q16" type="radio" value="4">9<br>
+<br>
+<li><b>Calculate a*3</b></li>
+<input name="Q17" type="radio" value="1">0<br>
+<input name="Q17" type="radio" value="2">1<br>
+<input name="Q17" type="radio" value="3">207<br>
+<input name="Q17" type="radio" value="4">69<br>
+<br>
+<li><b>Calculate a*'3'</b></li>
+<input name="Q18" type="radio" value="1">0<br>
+<input name="Q18" type="radio" value="2">1<br>
+<input name="Q18" type="radio" value="3">97<br>
+<input name="Q18" type="radio" value="4">3519<br>
+<br></br>
+<p> <input target="_blank" type="submit" value="Submit answers for evaluation"/></p>
+</form>
         </div>
     </div>
 

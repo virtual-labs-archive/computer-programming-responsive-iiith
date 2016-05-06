@@ -54,7 +54,38 @@
       <div class="manual-section">
         <p class="manual-section-title">Quiz</p><hr />
         <div class="manual-section-description">
-          <!-- Quiz body here -->  
+          <!-- Quiz body here -->
+<form action="quizresults.php" method="post" name="quiz" onsubmit='return window.confirm("You are submitting information to an external page. \nAre you sure?");' target="_blank">
+<ol>
+<li><b> For the function y=6, the value of area under the curve using the approximation method would be completely accurate.</b></li>
+<input name="Q1" type="radio" value="1">a. True<br>
+<input name="Q1" type="radio" value="2">b. False<br>
+<br>
+<li><b> Decreasing the length of the interval will imporve tha accuracy of the approximation. </b></li>
+<input name="Q2" type="radio" value="1">a. True<br>
+<input name="Q2" type="radio" value="2">b. False<br>
+<br>
+<li><b>Increasing the value of the variable width will : </b> </li>
+<pre class="prettyprint lang-c">
+main(){
+  int a , b , width , i;
+  double sum ;
+  scanf("%d%d", &amp;a; , &amp;b; );
+  sum = 0 ; width = 1 ; i = 0;
+  for ( i = a ; b &gt;= i ; i += width){
+    sum = sum + cos(2*Pi/13*x) * width;
+  }
+  printf("Integration value = %d", sum);
+}
+    </pre>
+<input name="Q3" type="radio" value="1">a. Improve the approximation<br>
+<input name="Q3" type="radio" value="2">b. Will not have any affect<br>
+<input name="Q3" type="radio" value="3">c. Make the approximation worse<br>
+<input name="Q3" type="radio" value="4">d. May improve or make worse depending on the interval<br>
+<br>
+<li><b> An approximate solution may be as good as the accurate solution for <input name="fib1" type="text"> purposes.</input></b></li><br><br>
+<p> <input target="_blank" type="submit" value="Submit answers for evaluation"/></p>
+</form>
         </div>
     </div>
 

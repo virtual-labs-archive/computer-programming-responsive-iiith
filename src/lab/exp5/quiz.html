@@ -55,6 +55,78 @@
         <p class="manual-section-title">Quiz</p><hr />
         <div class="manual-section-description">
           <!-- Quiz body here -->
+          <form action="quizresults.php" method="post" name="quiz" onsubmit='return window.confirm("You are submitting information to an external page. \nAre you sure?");' target="_blank">
+<ol>
+<li><b>Which operator is used to access a member of a structure: </b></li>
+<input name="Q1" type="radio" value="1">a. "."<br>
+<input name="Q1" type="radio" value="2">b. "*"<br>
+<input name="Q1" type="radio" value="3">c. "&amp;"<br>
+<input name="Q1" type="radio" value="4">d. "&gt;"<br>
+<br>
+<li><b>All the functionality of a union can be performed by a structure? </b></li>
+<input name="Q2" type="radio" value="1">a. True<br>
+<input name="Q2" type="radio" value="2">b. False<br>
+<br>
+<li><b>A structure can be defined inside a structure </b> </li>
+<input name="Q3" type="radio" value="1">a. True<br>
+<input name="Q3" type="radio" value="2">b. False<br>
+<br>
+<li><b>Default values can be given to the members of the structure : </b> </li>
+<input name="Q4" type="radio" value="1">a. True<br>
+<input name="Q4" type="radio" value="2">b. False<br>
+<br>
+<li><b>What will be the ouptut of the following function call: fun4(4,3); where fun4 is defined as: </b> </li>
+<p><pre class="prettyprint lang-c">
+    typedef struct S
+    {
+                  int x;
+                  int y;
+                }S;
+
+    S func(S A, S B)
+                {
+                  B.x=A.x;
+                  B.y=B.y+A.y;
+                  return B;
+                }
+                main()
+                {
+                  S a,b;
+                  a.x=10;
+                  a.y=20;
+                        b.x=30;
+                  b.y=40;
+                  b=func(a,b);
+                  printf("%d %d\n",b.x,b.y);
+                }
+    </pre></p>
+<input name="Q5" type="radio" value="1">a. 10 60<br>
+<input name="Q5" type="radio" value="2">b. 20 60<br>
+<input name="Q5" type="radio" value="3">c. 40 50<br>
+<input name="Q5" type="radio" value="4">d. 80 30<br>
+<br>
+<li><b>Arrays can be a part of the structure? </b> </li>
+<input name="Q6" type="radio" value="1">a. True<br>
+<input name="Q6" type="radio" value="2">b. False<br>
+<br>
+<li><b>One can define an array of structure variables?</b> </li>
+<input name="Q7" type="radio" value="1">a. True<br>
+<input name="Q7" type="radio" value="2">b. False<br>
+<br>
+<li><b>The following structure declaration is correct? </b> </li>
+<p><pre class="prettyprint lang-c">
+    typedef struct X
+    {
+      int x;
+      int y=50;
+    }X;
+    </pre></p>
+<input name="Q8" type="radio" value="1">a. True<br>
+<input name="Q8" type="radio" value="2">b. False<br>
+<li><b>A structure is a collection of variables under a <input name="fib1" type="text"> name .</input></b></li><br><br/>
+<p> <input target="_blank" type="submit" value="Submit answers for evaluation"/></p>
+</form>
+
         </div>
     </div>
 

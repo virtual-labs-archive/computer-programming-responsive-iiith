@@ -34,7 +34,7 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse desk-nav">
           <ul class="nav navbar-nav">
             <li style="border-right: 1.5px solid white;"><a href="index.html">Lab Manual</a></li>
-            <li style="border-right: 1.5px solid white;"><a href="simulation.html">Simulation</a></li>
+            <li style="border-right: 1.5px solid white;"><a href="simulation/index.html">Simulation</a></li>
             <li><a href="quiz.html">Quiz</a></li>
           </ul>
           <a href="../index.html"><span class="glyphicon glyphicon-home pull-right"></span></a>
@@ -54,6 +54,57 @@
       <div class="manual-section">
         <p class="manual-section-title">Quiz</p><hr />
         <div class="manual-section-description">
+          <form action="quizresults.php" method="post" name="quiz" onsubmit='return window.confirm("You are submitting information to an external page. \nAre you sure?");' target="_blank">
+<ol>
+<li><b>Function prototype is required in every program</b></li>
+<input name="Q1" type="radio" value="1">a. True<br>
+<input name="Q1" type="radio" value="2">b. False<br>
+<br>
+<li><b>Functions can return more than one value at a time</b></li>
+<input name="Q2" type="radio" value="1">a. True<br>
+<input name="Q2" type="radio" value="2">b. False<br>
+<br>
+<li><b> What is the default return value of a function?</b></li>
+<input name="Q3" type="radio" value="1">a. int<br>
+<input name="Q3" type="radio" value="2">b. Void<br>
+<input name="Q3" type="radio" value="3">c. No default return type<br>
+<input name="Q3" type="radio" value="4">d. Boolean<br>
+<br>
+<li><b>Which of the following is an invalid function prototype?</b></li>
+<input name="Q4" type="radio" value="1">a. float fun(int aa, int bb); <br>
+<input name="Q4" type="radio" value="2">b. float fun(int aa, int );<br>
+<input name="Q4" type="radio" value="3">c. float fun(float , int );<br>
+<input name="Q4" type="radio" value="4">d. float fun(int aa, bb);<br>
+<br>
+<li><b>What is the return type of the function with prototype: "int func(char x, float v, double t);"</b></li>
+<input name="Q5" type="radio" value="1">a. char <br>
+<input name="Q5" type="radio" value="2">b. int <br>
+<input name="Q5" type="radio" value="3">c. float <br>
+<input name="Q5" type="radio" value="4">d. double <br>
+<br>
+<li><b> What is printed when this program is executed</b></li>
+<p><pre class="prettyprint lang-c">
+    int f(int );
+    main()
+    {
+    printf ("%d\n",f(7)); 
+    }
+    f(int x)
+    {
+
+    if ( x&lt;= 4)
+    return x;
+
+    return f(--x);
+    }
+    </pre></p>
+<input name="Q6" type="radio" value="1">a. 4 <br>
+<input name="Q6" type="radio" value="2">b. 5 <br>
+<input name="Q6" type="radio" value="3">c. 6 <br>
+<input name="Q6" type="radio" value="4">d. 7 <br>
+<br>
+<p> <input target="_blank" type="submit" value="Submit answers for evaluation"/></p>
+</form>
           <!-- Quiz body here -->
         </div>
     </div>

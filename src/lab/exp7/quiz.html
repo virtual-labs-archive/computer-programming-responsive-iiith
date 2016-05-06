@@ -55,6 +55,70 @@
         <p class="manual-section-title">Quiz</p><hr />
         <div class="manual-section-description">
           <!-- Quiz body here -->
+          <form action="quizresults.php" method="post" name="quiz" onsubmit='return window.confirm("You are submitting information to an external page. \nAre you sure?");' target="_blank">
+<ol>
+<li><b> Fill in the function name in the blank so that the output of the following code snippet is "YES" :  </b></li>
+<pre class="prettyprint lang-c">
+    void myfunction{
+      char word1[] = "India";
+      char word2[] = "Free Country";
+      word2 = ________(word2,word1);
+      if(strcmp(word1,word2) == 0)
+        printf("YES\n");
+      else
+        printf("NO\n");
+    }
+    </pre>
+<input name="Q1" type="radio" value="1">a. strcat<br>
+<input name="Q1" type="radio" value="2">b. strlen<br>
+<input name="Q1" type="radio" value="3">c. strncat<br>
+<input name="Q1" type="radio" value="4">d. strcpy<br>
+<br>
+<li><b>The name of the string is a (char *)  pointer to the last character in the array.</b></li>
+<input name="Q2" type="radio" value="1">a. True<br>
+<input name="Q2" type="radio" value="2">b. False<br>
+<br>
+<li><b>What will be the ouptut of the following code snippet? </b> </li>
+<pre class="prettyprint lang-c">
+    char word[] = "Attitude";
+    word[4] = '\0';
+    int length = strlen(word);
+    printf("%d\n",length);
+
+    </pre>
+<input name="Q3" type="radio" value="1">a. 8<br>
+<input name="Q3" type="radio" value="2">b. 7<br>
+<input name="Q3" type="radio" value="3">c. 4<br>
+<input name="Q3" type="radio" value="4">d. 3<br>
+<br>
+<li><b>What will be the ouptut of the following code snippet? </b> </li>
+<pre class="prettyprint lang-c">
+    char w[] = "india";
+          w[5] = 'n';
+          printf("%s\n",w);
+    </pre>
+<input name="Q4" type="radio" value="1">a. india<br>
+<input name="Q4" type="radio" value="2">b. indian<br>
+<input name="Q4" type="radio" value="3">c. segmentation fault<br>
+<input name="Q4" type="radio" value="4">d. none of the above<br>
+<br>
+<li><b> What will the follwing function output if word is "heLlO_WOrLd !" ?</b> </li>
+<pre class="prettyprint lang-c">
+    void func(char *word)
+    {
+      word[strlen(word)-1] = 'S';
+      *(word + 3) = 'd';
+      *(word + 5) = word[6] + 1;
+          printf("%s\n",word);      
+    }
+    </pre>
+<input name="Q5" type="radio" value="1">a. heldO_WOrLd S<br>
+<input name="Q5" type="radio" value="2">b. heLdOXWOrLd S <br>
+<input name="Q5" type="radio" value="3">c. heLlOXWorld ! <br>
+<input name="Q5" type="radio" value="4">d. heLdO_World !<br>
+<br>
+<p> <input target="_blank" type="submit" value="Submit answers for evaluation"/></p>
+</form>
         </div>
     </div>
 

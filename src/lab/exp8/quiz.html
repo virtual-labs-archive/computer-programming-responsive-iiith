@@ -55,6 +55,35 @@
         <p class="manual-section-title">Quiz</p><hr />
         <div class="manual-section-description">
           <!-- Quiz body here -->
+          <form action="quizresults.php" method="post" name="quiz" onsubmit='return window.confirm("You are submitting information to an external page. \nAre you sure?");' target="_blank">
+<ol>
+<li><b>What would be the equivalent pointer expression for referring the array element a[i][j][k][l] </b></li>
+<input name="Q1" type="radio" value="1">a. ((((a+i)+j)+k)+l)<br>
+<input name="Q1" type="radio" value="2">b. *(*(*(*(a+i)+j)+k)+l)<br>
+<input name="Q1" type="radio" value="3">c. (((a+i)+j)+k+l)<br>
+<input name="Q1" type="radio" value="4">d. ((a+i)+j+k+l)<br>
+<br>
+<li><b>NULL pointer points to the 0th memory address: </b></li>
+<input name="Q2" type="radio" value="1">a. True<br>
+<input name="Q2" type="radio" value="2">b. False<br>
+<br>
+<li><b>Pointer is a : </b> </li>
+<input name="Q3" type="radio" value="1">a. A keyword used to create variables<br>
+<input name="Q3" type="radio" value="2">b. A variable that stores address of an instruction<br>
+<input name="Q3" type="radio" value="3">c. A variable that stores address of other variable<br>
+<input name="Q3" type="radio" value="4">d. All of the above<br>
+<br>
+<li><b> If a variable is a pointer to a structure, then which of the following operator is used to access data members of the structure through the pointer variable?: </b> </li>
+<input name="Q4" type="radio" value="1">a. "."<br>
+<input name="Q4" type="radio" value="2">b. "&amp;"<br>
+<input name="Q4" type="radio" value="3">c. "*"<br>
+<input name="Q4" type="radio" value="4">d. "-&gt;"<br>
+<br>
+<br>
+<li><b>The name of the array is a pointer to the <input name="fib1" type="text"> element of the array.</input></b></li><br><br>
+<p> <input target="_blank" type="submit" value="Submit answers for evaluation"/></p>
+</form>
+
         </div>
     </div>
 
