@@ -134,6 +134,11 @@ window.view = {
 		if (textFieldValue === '' || isNaN(textFieldValue)) {
 			alert('Enter Numeric Values Only');
 			return false;
+		}
+		else if(textFieldValue < 0){
+			alert('Enter Positive Values Only');
+			return false;
+			
 		} 
 		else {
 			this.changePropertyOfElements();
