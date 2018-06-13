@@ -106,7 +106,7 @@ if ($Q16==4)
 $total=$total+1;
 echo "16 ";
 }
-if ($Q17==3)
+if ($Q17==4)
 {
 $total=$total+1;
 echo "17 ";
@@ -301,7 +301,7 @@ main()
    while(i < 2);
 } 
 		</code></pre>
-		1 2<br>
+		0 1<br>
 
 		<br>
 
