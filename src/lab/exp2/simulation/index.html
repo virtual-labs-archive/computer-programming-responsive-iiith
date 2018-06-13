@@ -12,7 +12,9 @@
 <a href="../index.html"><div class="vlabsIcon"></div></a>
 
 <div class="inputDivision">
-	<div class = "inputDivisionTitle" ><div class="initializePic"></div><div class="initializeText">Initialize</div></div>
+	<div class = "inputDivisionTitle" ><input type="button" value="click to toggle fullscreen" onclick="toggleFullScreen()"><div class="initializePic"></div>
+
+<div class="initializeText">Initialize</div></div>
 	<div class="inputDivisionBody" id = 'inputDivision'>
 		  <div class="questionBlock" id = 'instructions'>
            <p class="instruction">1. Click on the square to define a function for calculating the area of a square.</p>
@@ -91,7 +93,9 @@
 			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group13" value="3"><label class="radioText" for="male">3</label></div><!-- end of 1st question -->		
 
 			<div class="questionText">2. Enter datatype of arguments :</div>
-			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group14" value="int"><label class="radioText">int</label></div>
+			<div class="radioButtonHolder">
+
+<input type="radio" class="radiobutton" name="radio_group14" value="int"><label class="radioText">int</label></div>
 			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group14" value="float"><label class="radioText">float</label></div><!-- end of 2nd question -->	
 
 			<div class="questionTextRich">3. Enter return datatype of the function :</div>
@@ -136,5 +140,27 @@
 		<div class="imageComplex hide" id = 'imageComplex'></div>
 	</div><!-- end of resultDisplay -->
 </div><!-- end of outputDivision -->
+	<script>
+function toggleFullScreen() {
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+      document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+      document.documentElement.mozRequestFullScreen();  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  } else {  
+    if (document.cancelFullScreen) {  
+      document.cancelFullScreen();  
+    } else if (document.mozCancelFullScreen) {  
+      document.mozCancelFullScreen();  
+    } else if (document.webkitCancelFullScreen) {  
+      document.webkitCancelFullScreen();  
+    }  
+  }  
+}
+</script>
 </body>
 </html>
