@@ -282,11 +282,18 @@ window.model = {
 			a = -a;
 		}
 		console.log("a: ", a, "b: ", b);
+
+
+if(a==0 && b==0 || a==0 && b==1 || a==1 && b==0 || a==1 && b==1)
+{
 		if( sub[i] == '&' )
 			c = (a && b);
 		else if( sub[i] == '|' )
 			c = (b || a);
-		
+}
+else
+alert("enter valid numbers")
+
 		while((start-1)>=0 && expression[start - 1] == '(' && (end+1)<expression.length && expression[end+1] == ')') {
 			start--;
 			end++;
