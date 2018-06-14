@@ -38,7 +38,7 @@ if ($Q5==1)
 $total=$total+1;
 echo "5 ";
 }
-if ($Q6==4)
+if ($Q6==1)
 {
 $total=$total+1;
 echo "6 ";
@@ -74,7 +74,7 @@ echo "	<h2>Correct Answers</h2>
                 contigously<br>
                 <br>
                 <li><b>If the memory address of the first element of an array is 2000, what is the memory address of the 6th emement</b></li>
-                2024<br>
+                2020<br>
                 <br>
                 <li><b>In C programming, a string is actually a </b></li>
                 array of characters<br>
