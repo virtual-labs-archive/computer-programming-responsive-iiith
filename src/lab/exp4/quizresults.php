@@ -74,7 +74,7 @@ echo "	<h2>Correct Answers</h2>
                 contigously<br>
                 <br>
                 <li><b>If the memory address of the first element of an array is 2000, what is the memory address of the 6th emement</b></li>
-                2020<br>
+                2024<br>
                 <br>
                 <li><b>In C programming, a string is actually a </b></li>
                 array of characters<br>
