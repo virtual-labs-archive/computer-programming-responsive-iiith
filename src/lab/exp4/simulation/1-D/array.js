@@ -55,13 +55,17 @@ window.view = {
 	proceedToStartButton: function() {
 		var userInput = this.getArraySize()
 		if( isNaN( userInput ) === false ) {
-			if( userInput !== 0 ) {
+			if( userInput >= 0 ) {
 				var element = document.getElementById('inputButtonRadio')
 				element.className = 'show, radioButtonDivision'
 				this.disableButton('btnOk')
 				this.changeClass( 'btnOk', 'okButton buttonDisable' )
 				this.enableButton( 'btnStart' )
 				this.changeClass( 'btnStart', 'startButton button' )
+			}
+			else if(userInput<0)
+			{
+				alert('size must be postive')
 			}
 			else
 				alert('Enter array size first !')
