@@ -89,8 +89,8 @@ window.view = {
 	getRowsAndCols: function() {
 		var row = Number(document.getElementById('row').value)
 		var col = Number(document.getElementById('col').value)
-		if ( row === 0 || col === 0 )
-			alert('Enter Matrix Size First !')
+		if ( row <= 0 || col <= 0 )
+			alert('Enter positive values for dimensions !')
 		else if ( isNaN(row) || isNaN(col) )
 			alert('Matrix Size Must Be An Integer Value !')
 		else
