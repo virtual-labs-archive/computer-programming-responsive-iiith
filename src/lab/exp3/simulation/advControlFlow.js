@@ -7,8 +7,12 @@ window.model = {
 		this.fact = 1
 	},
     computeNextFact: function() {
+
+if(this.inp>=1)
         this.fact =  this.fact * this.inp
-    }
+else
+       this.fact=this.fact 
+   }
 }
 
 window.view = {
@@ -241,8 +245,12 @@ window.view = {
 				this.highlightNextStep()		
 			else
 			{	
-				this.endTheSimpleLoopCode()			
-				this.changeClass(this.lastRedDiv.id, 'showDiv')
+			this.disp = model.fact
+			model.computeNextFact()
+			this.resultDisplay(this.disp, model.inp, model.fact)
+                                                model.inp--
+			
+	
 			}
 		}	
 		else
@@ -378,3 +386,5 @@ window.view = {
 	}
 }
 window.onload = function() { view.init() }
+
+
