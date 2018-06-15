@@ -45,6 +45,7 @@ window.view = {
 	getArraySize: function() {
 		var inputValue = document.getElementById('inputArraySize').value
 		inputValue = Number(inputValue)
+		inputValue = Math.floor(inputValue)
 		return inputValue
 	},
 	activateEvents: function() {
