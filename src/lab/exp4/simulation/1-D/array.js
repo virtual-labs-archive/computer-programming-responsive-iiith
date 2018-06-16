@@ -55,7 +55,7 @@ window.view = {
 	proceedToStartButton: function() {
 		var userInput = this.getArraySize()
 		if( isNaN( userInput ) === false ) {
-			if( userInput !== 0 ) {
+			if( userInput >= 0 && (userInput - Math.floor(userInput))===0) {
 				var element = document.getElementById('inputButtonRadio')
 				element.className = 'show, radioButtonDivision'
 				this.disableButton('btnOk')
@@ -63,9 +63,19 @@ window.view = {
 				this.enableButton( 'btnStart' )
 				this.changeClass( 'btnStart', 'startButton button' )
 			}
+			else if(userInput<0)
+			{
+				alert('size must be postive')
+			}
+			/*else if(userInput - Math.floor(userInput))!=0)
+			{
+				alert('Enter only integer values!')
+			}*/
+
 			else
-				alert('Enter array size first !')
+				alert('Enter an integer value for size of the array !')
 		}
+
 		else
 			alert( 'Size of the array must be an Integer !' )
 	},
