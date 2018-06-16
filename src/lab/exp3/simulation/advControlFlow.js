@@ -153,8 +153,11 @@ window.view = {
 		this.m = 1
 		this.k = 0
 	},
-	resultDisplay: function(previousState, currentState, nextState) {
-		document.getElementById('resultDisplay').innerHTML += previousState + ' ' + '*' + ' ' + currentState + '=' + ' ' + nextState + '<br>'
+
+
+resultDisplay: function(previousState, currentState, nextState) {
+                              if(model.input>=1){
+		document.getElementById('resultDisplay').innerHTML += previousState + ' ' + '*' + ' ' + currentState + '=' + ' ' + nextState + '<br>'}
 		document.getElementById('localVariableI').innerHTML = currentState
 		document.getElementById('localVariableFact').innerHTML = nextState
 	},
