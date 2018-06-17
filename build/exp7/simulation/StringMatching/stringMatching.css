@@ -1,0 +1,451 @@
+*{padding: 0 ; margin: 0 ;}
+
+body {
+	min-height: 564px;
+	min-width: 1100px;
+    text-align: center;
+    height: 100%;
+    font-size: 100%;
+    position:absolute; top:0%; bottom:0%; right:0%; left:0%;
+}
+
+#header {
+    position: absolute;
+    top: 0;bottom: 0;left: 0;right: 0;
+    width: 100%;
+    height: 6%;
+    font-size: 4vh;
+    padding-top: 1.3vmin;
+}
+
+.button, .buttonDisable {
+    position: relative;
+    padding: 0.5em 1em;
+    border-radius: 0.2em; 
+    overflow: visible;
+    outline: none;
+    white-space: nowrap;
+    -moz-background-clip: padding; 
+    background-clip: padding-box;
+    border: 1px solid #d4d4d4;
+    margin: 0;
+    text-align: center;
+    zoom: 1;
+    *display: inline;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+.button{
+    cursor: pointer;
+}
+
+#header, .button {
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    border-color: #3072b3;
+    border-bottom-color: #2a65a0;
+    color: #fff;
+    background-color: #3c8dde;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
+    background-image: -moz-linear-gradient(#599bdc, #3072b3);
+    background-image: -o-linear-gradient(#599bdc, #3072b3);
+    background-image: linear-gradient(#599bdc, #3072b3);
+}
+
+.buttonDisable {
+    text-shadow: 1px 1px 0 #fff;
+    color: #999999;
+    background-color: #ececec;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+    background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+    background-image: -ms-linear-gradient(#f4f4f4, #ececec);
+    background-image: -o-linear-gradient(#f4f4f4, #ececec);
+    background-image: linear-gradient(#f4f4f4, #ececec);
+}
+
+.buttonDisable, .button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+.vlabsIcon {
+    position: absolute;
+    top: 1.2%;
+    left: 8%;
+    width: 15vh;
+    height: 6.7vh;
+    background-image: url('iiitLogo.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.inputDivision, .outputDivision, .executionDivision {
+    position: absolute;
+    border-radius: 5px;
+    top: 11%;
+    height: 87%; 
+    color: #464646;
+}
+
+.inputDivision {
+    left: 2.2%;
+    width: 18%;
+}
+
+.executionDivision {
+    left: 22.4%;
+    width: 35%;
+    border: 1px solid #CCC;
+}
+
+.outputDivision {
+     border: 1px solid #CCC;
+    left: 59.6%;
+    width: 38%;
+}
+
+.inputDivisionTitle, .outputDivisionTitle, .executionDivisionTitle, .problemStatementTitle{
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #fff;
+    width: 100%;
+    color: #2a65a0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #F8F8F8;
+}
+
+.inputDivisionTitle {
+    float: left;
+    height: 18%;
+}
+
+.problemStatementTitle {
+    float: left;
+    height: 20%;
+}
+
+.outputDivisionTitle, .executionDivisionTitle {
+    top: 0%;
+    height: 9%;
+}
+
+.experimentPic{
+	margin-top: 1.8vh;
+	margin-left: 10%;
+	width: 20%;
+	float: left;
+	height: 100%;
+	background-image: url('initIcon.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.problemPic{
+    margin-top: 1vh;
+    margin-left: 10%;
+    width: 20%;
+    float: left;
+    height: 100%;
+    background-image: url('quesIcon.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.experimentText {
+	width: 60%;
+	float: left;
+	height: 100%;
+	padding-top: 1.8vmin; 
+}
+
+.executionPic {
+	margin-top: 1vh;
+	margin-left: 10%;
+	width: 25%;
+	float: left;
+	height: 100%;
+	background-image: url('pageIcon.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.executionText {
+	text-align: left;
+	width: 50%;
+	float: left;
+	height: 100%;
+	padding-top: 1.8vmin; 
+}
+
+.outputPic {
+	margin-top: 1.8vh;
+	margin-left: 10%;
+	width: 25%;
+	float: left;
+	height: 100%;
+	background-image: url('outputIcon.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.outputText{
+	text-align: left;
+	width: 50%;
+	float: left;
+	height: 100%;
+	padding-top: 1.8vmin; 
+}
+
+.problemStatementBody {
+    float: left;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    font-size: 1em;
+    border-top: 1px solid #CCC;
+}
+
+.inputDivisionBody {
+    float: left;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    font-size: 1em;
+    border-top: 1px solid #CCC;
+}
+
+.warningText1, .warningText2 {
+    float: left;
+    margin-left: 5%;
+    margin-top: 10px;
+    width: 90%;
+    height: 70px;
+}
+
+.problemBlock {
+    width: 100%;
+    height: 45%;
+    float: left;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    margin-bottom: 5%;
+}
+
+.inputBlock {
+    width: 100%;
+    height: 53%;
+    float: left;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+}
+
+.enterStringText {
+    float: left;
+    width: 100%;
+    min-width: 70px;
+    color: #727272;
+    height: 10%;
+    min-height: 25px;
+    margin-top: 15px; 
+}
+
+.inputField {
+    text-align: center;
+    font-size: 15px;
+    float: left;
+    margin-left: 9.5%;
+    height: 30px;
+    margin-top: 10px;
+    width: 81%;
+    min-width: 150px;
+    border: 1px solid #CCC;
+    outline: none;
+    border-radius: 3px;
+}
+
+.startButton {
+	font-size: 13px;
+	min-width: 144px;
+    margin-top: 10px;
+	float: left;
+    height: 30px;
+    margin-left: 10%;
+    width: 80%;
+}
+
+.myStartButton {
+    height: 30px;
+    width: 45%;
+    float: left;
+    font-size: 14px;
+}
+
+.nextButton {
+    margin-left: 10%; 
+    height: 30px;
+    width: 45%;
+    float: left;
+    font-size: 14px;
+}
+
+.buttonHolder {
+    width: 80%;
+    float: left;
+    margin-top: 10px;
+    margin-left: 10%;
+}
+
+.resultDisplay {
+    position: absolute;
+    top: 9%;
+    left: 0%;
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    font-size: 1em;
+    font-size: 3vmin;
+    border-top: 1px solid #CCC;
+}
+
+.stepExecutionDisplay {
+    padding-left: 2%;
+    overflow-x: auto;
+    font-size: 3vmin;
+    position: absolute;
+    top: 9%;
+    left: 0%;
+    width: 97.8%;
+    height: 90%;
+    text-align: center;
+    border-top: 1px solid #CCC;
+}
+
+.hide {
+    display: none;
+}
+
+.programCode {
+    text-align: left;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.memoryMapOfStr {
+    float: left;
+    height: 30px;
+    width: 100%;  
+    margin-top: 20px;
+}
+
+.tableDiv {
+    float: left;
+    width: 90%;
+    height: 8%;
+    margin-left: 5%;
+}
+
+.table1 { 
+    float: left;
+    font-size: 1em;
+    height: 98%;
+    width: 100%;
+    border: 1px solid #CCC;
+    border-collapse: collapse;
+}
+
+.tableBox1 {
+    height: 98%;
+    width: 10%;
+}
+
+.tableBox2 {
+    height: 20%;
+    width: 5%;
+}
+
+.table2 {
+    float: left;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1em;
+    height: 98%;
+    width: 100%; 
+}
+
+.gapBitweenMeamoryMap {
+    float: left;
+    width: 100%;
+    height: 5%;
+}
+
+.localVariables {
+    float: left;
+    text-align: left;
+    padding-left: 3%;
+    margin-top: 3%;
+}
+
+.variableDiv {
+    float: left;
+    width: 100%;
+    height: 25px;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+.output {
+    width: 90%;
+    float: left;
+    margin-top: 30px;
+    text-align: left;
+    margin: 5%;
+}
+
+.redClass {
+  display: block;
+  color: red;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 1000px) {
+
+.inputDivisionTitle, .outputDivisionTitle, .executionDivisionTitle, .problemStatementTitle {
+    font-size: 1.3em;
+}
+
+.experimentText, .executionText, .outputText {
+    padding-top: 1.8vmin; 
+}
+
+.enterStringText {
+    font-size: 1.2em;
+}
+
+}
+
+@media only screen and (max-width: 999px) and ( min-width: 600px) {
+
+.inputDivisionTitle, .outputDivisionTitle, .executionDivisionTitle, .problemStatementTitle {
+    font-size: 1.2em;
+}
+
+.stepExecutionDisplay {
+    line-height: 140%;
+    font-size: 1.2em;
+}
+
+.experimentText, .executionText, .outputText {
+    padding-top: 2vmin; 
+}
+
+.enterStringText {
+    font-size: 1.2em;
+}
+
+.warningText2 {
+    margin-top: 10px;
+    display: none;
+}
+
+}

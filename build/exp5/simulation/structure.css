@@ -1,0 +1,426 @@
+*{padding: 0 ; margin: 0 ;}
+
+body {
+	min-height: 564px;
+	min-width: 1100px;
+    text-align: center;
+    height: 100%;
+    font-size: 100%;
+    position:absolute; top: 0%; bottom: 0%; right: 0%; left: 0%;
+}
+
+#header {
+	position: absolute;
+	top: 0;bottom: 0;left: 0;right: 0;
+	width: 100%;
+	height: 6%;
+	font-size: 4vh;
+	padding-top: 1.3vmin;
+}
+
+.button, .buttonDisable {
+	position: relative;
+	padding: 0.5em 1em;
+  	border-radius: 0.2em; 
+  	overflow: visible;
+  	outline: none;
+	white-space: nowrap;
+  	-moz-background-clip: padding; 
+    background-clip: padding-box;
+	border: 1px solid #d4d4d4;
+    margin: 0;
+    text-align: center;
+	zoom: 1;
+    *display: inline;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+.button {
+	cursor: pointer;
+}
+
+#header, .button {
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+	border-color: #3072b3;
+    border-bottom-color: #2a65a0;
+	color: #fff;
+	background-color: #3c8dde;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
+    background-image: -moz-linear-gradient(#599bdc, #3072b3);
+    background-image: -o-linear-gradient(#599bdc, #3072b3);
+    background-image: linear-gradient(#599bdc, #3072b3);
+}
+
+.buttonDisable {
+   	text-shadow: 1px 1px 0 #fff;
+   	color: #999999;
+    background-color: #ececec;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+    background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+    background-image: -ms-linear-gradient(#f4f4f4, #ececec);
+    background-image: -o-linear-gradient(#f4f4f4, #ececec);
+    background-image: linear-gradient(#f4f4f4, #ececec);
+}
+
+.buttonDisable, .button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+.vlabsIcon {
+    position: absolute;
+    top: 1.2%;
+    left: 8%;
+    width: 15vh;
+    height: 6.7vh;
+    background-image: url('iiitLogo.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.outputDivision, .executionDivision {
+    top: 10%;
+    height: 50%; 
+    position: absolute;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    color: #464646;
+}
+
+.executionDivision {
+    left: 2%;
+    width: 50%;
+}
+
+.outputDivision {
+    left: 54%;
+    width: 44%;
+}
+
+.outputDivisionTitle, .executionDivisionTitle {
+    text-align: center;
+    color: #2a65a0;
+    top: 0%;
+    height: 13%;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0 #fff;
+    width: 100%;
+    background-color: #F8F8F8;
+    border-top-left-radius:5px;
+	border-top-right-radius:5px;
+}
+
+.codeOutputDivision, .codeExplanationDivision {
+	position: absolute;
+    color: #464646;
+    top: 62%;
+    height: 35%;
+    border:1px solid #CCC;
+    border-radius: 5px;
+}
+
+.codeOutputDivision {
+    left: 2%;
+    width: 50%;
+}
+
+.codeExplanationDivision {
+    left: 54%;
+    width: 44%;
+}
+
+.executionPic {
+	margin-top: .5vh;
+	width: 10%;
+	background-image: url('pageIcon.png');
+}
+
+.executionText {
+	text-align: left;
+	width: 50%;
+	float: left;
+	height: 100%;
+	padding-top: 1vh; 
+}
+
+.outputPic {
+	margin-top: 1vh;
+	width: 10%;
+	background-image: url('edit.png');
+}
+
+.outputText, .stepsText {
+	text-align: left;
+	float: left;
+	height: 100%;
+}
+
+.outputText {
+    width: 60%;
+}
+
+.stepsText {
+    width: 75%;
+}
+
+.buttonPosition {
+    float: right;
+    margin-right: 3%;
+    margin-top: .9vmin;
+    height: 30px;
+}
+
+.codeOutputTitle, .codeExplanationTitle {
+	position: absolute;
+	left: 0%;
+	width: 100%;
+    text-align: center;
+    top: 0%;
+    height: 17%;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0 #fff;
+    color: #2a65a0;
+    background-color: #F8F8F8;
+    border-top-left-radius:5px;
+	border-top-right-radius:5px;
+}
+
+.executionPic, .outputPic {
+	margin-left: 5%;
+	float: left;
+	height: 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.userInputPicture, .solutionPicture {
+	margin-top:1.4vh;
+	width: 10%;
+	background-image: url('output.png');
+	margin-left: 5%;
+	float: left;
+	height: 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.userInputText, .solutionText {
+	width: 50%;
+	float: left;
+	height: 100%;
+	text-align: left;
+}
+
+.codeOutputBody, .codeExplanationBody {
+	position: absolute;
+    overflow: auto;
+	top: 17%;
+	left: 0%;
+	width: 100%;
+	height: 82%;
+	border-top: 1px solid #CCC;
+}
+
+.textField {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    float: left;
+    margin-left: 20%;
+    height: 26px;
+    width: 70%;
+    min-width: 100px;
+    border: 1px solid #CCC;
+    outline: none;
+    border-radius: 3px;
+}
+
+.okButton {
+	font-size: 13px;
+	min-width: 150px;
+	float: left;
+	margin-top: 20px;
+	margin-left: 10%;
+    height: 30px;
+    width: 80%;
+}
+
+.radioButtonHolder {	
+    width: 100%;
+    height: 3.5%;
+    float: left;
+    font-size: 16px;
+    text-align: left;
+}
+
+.radiobutton {
+	margin-left: 7%;
+	float: left;
+	width: 10%;
+    height: 75%;
+}
+
+.radioText {
+ 	float: left;
+	width: 70%;
+    height: 5%;
+	text-align: left;
+}
+
+.resultDisplay {
+    position: absolute;
+    top: 13%;
+    left: 0%;
+    width: 100%;
+    height: 87%;
+    border-top:1px solid #CCC;
+}
+
+.codeEditArea, .explanationText, .codeOutputText, .instructionArea{ 
+    position: absolute;
+    left: 2%;
+    top: 3%;
+    height: 95%;
+    width: 96%;
+    outline: none;
+    border: none;
+    text-align: left;
+}
+
+.codeEditArea, .codeOutputText{
+    line-height: 130%;
+    font-size: 1.2em;
+}
+
+.instructionArea, .explanationText{
+    font-size: 1em;
+}
+
+.table1 {
+	float: left;
+	width: 100.4%;
+	height: 80%;
+  	font-size: .8em;
+  	border: 1px Solid #CCC;
+  	border-collapse: collapse;
+  	
+}
+
+.table2 {
+	float: left;
+	width: 100.4%;
+	height: 20%;
+  	font-size: .8em;
+  	border-collapse: collapse; 
+}
+
+.table1 td, .table1 th {
+  border: 1px solid #CCC;
+}
+
+.table2 td {
+    border-bottom: 1px solid #CCC;
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+}
+
+.td1 {
+    width: 16.2%;
+}
+
+.td2 {
+    width: 83.7%;
+}
+
+.stepExecutionDisplay {
+    padding-left: 2%;
+    overflow-x: auto;
+    position: absolute;
+    top: 13%;
+    left: 0%;
+    width: 97.8%;
+    height: 85%;
+    text-align: left;
+    border-top: 1px solid #CCC;
+}
+
+.executionDivisionFooter {
+	position: absolute;
+	top: 90%;
+	left: 0%;
+	height: 10%;
+    min-height: 38px;
+	width: 100%;
+	border-top: 1px solid #CCC;
+}
+
+.startButton {
+	margin-right: 15px; 
+    height: 28px;
+    width: 12%;
+    float: right;
+    font-size: 13px;
+}
+
+.nextButton {
+    margin-right: 15px; 
+    height: 28px;
+    width: 12%;
+    float: right;
+    font-size: 13px;
+}
+
+.buttonHolder {
+	margin-top: 5px;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+    display: block;
+}
+
+.redClass {
+    display: block;
+    color: red;
+    font-weight: bold;
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+.codeOutputTitle, .codeExplanationTitle, .outputDivisionTitle, .executionDivisionTitle {
+    font-size: 1.2em;
+}
+
+.userInputText, .solutionText, .outputText, .stepsText {
+    padding-top: 1.3vmin; 
+}
+
+}
+
+@media only screen and (max-width: 999px) and ( min-width: 600px) {
+
+.codeOutputTitle,.codeExplanationTitle, .outputDivisionTitle, .executionDivisionTitle {
+    font-size: 1.1em;
+}
+
+.stepExecutionDisplay {
+    line-height: 140%;
+    font-size: 1.2em;
+}
+
+.userInputText, .solutionText, .outputText, .stepsText {
+    padding-top: 1.3vmin; 
+}
+
+
+}

@@ -303,7 +303,7 @@ window.view = {
 	area_sq: function( param, functionCall ) {
 		this.area = param * param
 		this.totalArea += this.area
-		alert( 'area from function call ' + String( i + 1 ) + ' ) : ' + functionCall + ' is ' + this.area )
+		alert( 'area from function call ' + String( i + 1 ) + ' ) : ' + functionCall + ' is ' + this.area.toFixed(2) )
 		this.correctInputs ++
 	},
 	area_triangle: function( param, functionCall ) {
@@ -321,7 +321,7 @@ window.view = {
 	area_rect: function( param, functionCall ) {
 		this.area = Number(param[0]) * Number(param[1])
 		this.totalArea += this.area
-		alert( 'area from function call ' + String( i + 1 ) + ' ) : ' + functionCall + ' is ' + this.area )
+		alert( 'area from function call ' + String( i + 1 ) + ' ) : ' + functionCall + ' is ' + this.area.toFixed(2) )
 		this.correctInputs ++
 	},
 	resetToInitialState: function() {
