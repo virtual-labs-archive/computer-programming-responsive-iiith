@@ -10,6 +10,13 @@ window.model = {
 		this.b = document.getElementById('b').value
 		this.c = document.getElementById('c').value
 		this.d = document.getElementById('d').value
+                if(isNaN(this.a) || isNaN(this.b) || isNaN(this.c) || isNaN(this.d))
+                {
+			alert('Enter numeric values for a , b , c and d');
+			this.disableElement('buttonNext')
+			this.changeClass('buttonNext', 'buttonDisable nextButton')
+		}
+
 	},
 	findexp: function (expression) {
 		var isexpfinished = 1, offset = 0;
@@ -495,7 +502,7 @@ window.view = {
 		document.getElementById('b').value = b
 		document.getElementById('c').value = c
 		document.getElementById('d').value = d
-		document.getElementById('selectedExpression').value = expression	
+		document.getElementById('selectedExpression').value = expression
 		if ( environment === 'logical' ) {
 			document.getElementById('logicalExpressions').className = 'button loopList'
 			document.getElementById('arithmaticExpressions').className += ' hide'
@@ -511,6 +518,7 @@ window.view = {
 			document.getElementById('arithmaticExpressions').className += ' hide'
 			document.getElementById('logicalExpressions').className += ' hide'
 		}
+		
 	},
 	setOperatorEnvironment: function () {
 		var list = document.getElementById('operatorList')
@@ -550,6 +558,7 @@ window.view = {
 		this.enableElement('d')
 		document.getElementById('buttonEdit').className += ' hide'
 		document.getElementById('buttonSave').className = 'button saveButton'
+		
 	},
 	killWhiteSpaces: function (expression) {
 			return expression.replace(/\s+/g, '')
