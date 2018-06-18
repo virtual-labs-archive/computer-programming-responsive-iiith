@@ -54,7 +54,7 @@ window.view = {
 	},
 	proceedToStartButton: function() {
 		var userInput = this.getArraySize()
-		if( isNaN( userInput ) === false || userInput < 500000) {
+		if( (isNaN( userInput ) === false) && (userInput < 100000)) {
 			if( userInput !== 0 ) {
 				var element = document.getElementById('inputButtonRadio')
 				element.className = 'show, radioButtonDivision'
@@ -67,7 +67,7 @@ window.view = {
 				alert('Enter array size first !')
 		}
 		else
-			alert( 'Size of the array must be an Integer between 0 and 500000 !' )
+			alert( 'Size of the array must be an Integer between 0 and 100000 !' )
 	},
 	generateRandomNumbers: function() {
 		var inputValue = this.getArraySize()
