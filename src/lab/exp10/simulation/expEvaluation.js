@@ -11,7 +11,7 @@ window.model = {
 		this.c = document.getElementById('c').value
 		this.d = document.getElementById('d').value
 		if(this.a <  0 || this.b < 0 || this.c < 0 || this.d < 0){
-			alert('Enter Positive Values Only)}
+			alert('Enter Positive Values Only')}
 	},
 	
 	findexp: function (expression) {
