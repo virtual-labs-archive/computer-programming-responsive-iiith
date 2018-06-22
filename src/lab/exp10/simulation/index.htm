@@ -7,7 +7,6 @@
 		<title>Computer-Programming</title>
 	</head>
 	<body>
-                                 
 		<div class = 'header' id = 'headerSimpleLoop' >Expression Evaluation
 		    <div class = 'operatorSelection' >
 		        <div>Select Operator :
@@ -35,6 +34,7 @@
 			        <input class = 'inputValueField' type = 'text'	value = '10' id = 'c' disabled >
 			        <div class = 'inputValueText' >d:&nbsp;</div>
 			        <input class = 'inputValueField' type = 'text'	value = '11' id = 'd' disabled >
+
 		        </div>
 		        <button class = 'button saveButton hide' id = 'buttonSave' >Save</button>
 		        <button class = 'button editButton' id = 'buttonEdit' >Edit</button>
@@ -58,12 +58,26 @@
 		            <option> a << b </option>
 		            <option> a >> b </option>
 		        </select>
-		    	<input class = 'inputField marginBottom' type = 'text'  value = 'a + b - c'  id = 'selectedExpression'>
+<div class = 'inputFieldHolder1'>
+<input class = 'inputField marginBottom' type = 'text'  value = 'a + b - c'  id = 'selectedExpression'>
+</div>
+<br>
+<button onclick="myFunction()" class='button'>Save</button>
+		    	
 				<button class = 'button startButton' id = 'buttonStart'>Start</button>
 				<button class = 'button stopButton hide' id = 'stopButton'>Stop</button>
+<br>
 				<button class = 'buttonDisable nextButton' id = 'buttonNext' disabled>Next</button>
-<input type="button" value="Reset" onClick="window.location.reload()">
+
+<br>
+<br>
+<div class='resetbutton'>
+<input type="button" class="button" value="Reset" onClick="window.location.reload()">
+	
+</div> 
 			</div><!-- end of inputDivisionBody -->
+
+                                     
 		</div><!-- end of inputDivision -->
 		<div class = 'executionDivision'>
 			<div class = 'executionDivisionTitle' ><div class = 'executionPic' ></div><div class = 'executionText' >Evaluation Flow of Expression</div></div>
@@ -79,5 +93,10 @@
 				<div class = 'currentStepBox' id = 'currentStep'></div>
 			</div><!-- end of resultDisplay -->
 		</div><!-- end of outputDivision -->
+<script>
+function myFunction(){
+document.getElementById("selectedExpression").disabled=true;
+}
+</script>
 	</body>
 </html>
