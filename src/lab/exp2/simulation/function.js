@@ -259,7 +259,7 @@ window.view = {
 			alert('Incorrect datatype of input variables(arguments). The value of the radius of the circle need not be an integer. Try again.')
 		else if ( c !== 'float' )
 			alert('Incorrect datatype for return type. The value of the area of the circle need not be an integer. Try again.')
-		else if ( d !== 'pi*a*a' )
+		else if ( d !== '(pi*a*a)/2' )
 			alert('Incorrect formula for calculating the area of the circle. Try again.')
 		else
 			this.approveCircleInputs()
@@ -274,7 +274,7 @@ window.view = {
 		document.getElementById('functionTriangle').innerHTML += 'float area_triangle (float a)<br>{<br>&emsp;float area = (sqrt(3)/4.0)*a*a;<br>&emsp;return area;<br>}'
 	},
 	displayFunctionForCircle: function() {
-		document.getElementById('functionCircle').innerHTML += 'float area_circle (float a)<br>{<br>&emsp;float area = 3.14*a*a;<br>&emsp;return area;<br>}'
+		document.getElementById('functionCircle').innerHTML += 'float area_semicircle (float a)<br>{<br>&emsp;float area = (3.14*a*a)/2;<br>&emsp;return area;<br>}'
 	},
 	addClickEvent: function(id, method) {
 		var element = document.getElementById(id)
@@ -312,8 +312,8 @@ window.view = {
 		alert( 'area from function call ' + String( i + 1 ) + ' ) : ' + functionCall + ' is ' + this.area )
 		this.correctInputs ++
 	},
-	area_circle: function( param, functionCall ) {
-		this.area = Math.PI * param * param
+	area_semicircle: function( param, functionCall ) {
+		this.area = (Math.PI * param * param)/2
 		this.totalArea += this.area
 		alert( 'area from function call ' + String( i + 1 ) + ' ) : ' + functionCall + ' is ' + this.area )
 		this.correctInputs ++
@@ -361,8 +361,8 @@ window.view = {
 					this.area_sq(parameter, parsedValue)
 				else if ( functionCall === 'area_triangle()' && isNaN(parameter) === false )
 					this.area_triangle(parameter, parsedValue)
-				else if ( functionCall === 'area_circle()' && isNaN(parameter) === false )
-					this.area_circle(parameter, parsedValue)
+				else if ( functionCall === 'area_semicircle()' && isNaN(parameter) === false )
+					this.area_semicircle(parameter, parsedValue)
 				else
 					alert( 'Incorrect function call at line ' + String( i + 1 ) )
 			}
@@ -372,7 +372,7 @@ window.view = {
 		 	alert( 'Incorrect function call at line ' + String( i + 1 ) )
 		}	
 		if ( this.correctInputs === 7 ) {
-			alert( 'Total area is : ' + this.totalArea + ' ' + ' ' + 'Correct value is : 132.01738' )
+			alert( 'Total area is : ' + this.totalArea + ' ' + ' ' + 'Correct value is : 132.02272227950945' )
 			this.resetToInitialState()
 		}
 		else

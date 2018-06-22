@@ -265,7 +265,7 @@ body {
 .imageCircle {
     left: 50%;
     top: 50%;
-    background-image: url('circle.jpg');
+    background-image: url('semicircle.png');
     border: 1px dashed black;
 }
 
