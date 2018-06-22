@@ -179,7 +179,7 @@ window.view = {
 	},
 	// swapValueBetweenAddress60And56: swaps value in memory map between address 60 and 56.
 	swapValueBetweenAddress60And56: function () {
-		if (this.nextSiblingElement.id === 'codeContentCBR6') {
+		if (this.nextSiblingElement.id === 'codeContentCBR15') {
 			this.setInnerHtml('60byte4', '9');
 			this.setInnerHtml('56byte4', '5');
 		}
@@ -273,7 +273,7 @@ window.view = {
 		else if (this.nextSiblingElement.id === 'codeContentCBR6') {
 			this.codeExecutionWithColour();
 			this.eraseStringFromElement('outputText', 'explanationText', this.explanationCBR5);
-			this.swapValueBetweenAddress60And56();	
+			//this.swapValueBetweenAddress60And56();	
 		}
 		else if (this.nextSiblingElement.id === 'codeContentCBR7') {
 			this.codeExecutionWithColourAndId('codeContentCBR11');
@@ -287,14 +287,17 @@ window.view = {
 		}
 		else if (this.nextSiblingElement.id === 'codeContentCBR13') {
 			this.codeExecutionWithColour();
+this.setInnerHtml('40byte4','56');
 			this.setString('explanationText', this.explanationCBR8);
 		}
 		else if (this.nextSiblingElement.id === 'codeContentCBR14')	{
-			this.codeExecutionWithColour();
+  			this.codeExecutionWithColour();
+this.setInnerHtml('36byte4','32');
 			this.setString('explanationText', this.explanationCBR9);
 		}
 		else if (this.nextSiblingElement.id === 'codeContentCBR15')	{
 			this.codeExecutionWithColour();
+                                                this.swapValueBetweenAddress60And56();
 			this.setString('explanationText', this.explanationCBR10);
 			this.eraseValueAtAddress36And40();
 			this.eraseValueAtAddress32();
