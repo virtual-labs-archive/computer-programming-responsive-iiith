@@ -6,7 +6,7 @@ $total=0;
 $Q1 = $_POST['Q1'];
 $Q2 = $_POST['Q2'];
 $Q3 = $_POST['Q3'];
-$Q6 = $_POST['fib1'];
+$Q4 = $_POST['fib1'];
 
 echo "You answered the following questions correctly : ";
 if ($Q1==1)
