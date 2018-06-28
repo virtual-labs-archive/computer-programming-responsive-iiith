@@ -875,11 +875,17 @@ window.view = {
 		parent.appendChild(child)
 	},
 	evaluate: function () {
-		if(this.starting == -1 && this.countNext != 0) {
-			alert('Evaluation Complete');
-      location.reload()=true;
-			return ;
-		}
+		
+
+
+if(this.countNext==this.ending-1) 
+{
+this.disableElement('buttonNext');
+this.changeClass('buttonNext', 'buttonDisable nextButton')
+this.changeClass('buttonOK', 'button nextButton')
+this.enableElement('buttonOK')
+}
+
 		var res;
 		var list = document.getElementById('operatorList')
 		var selectedOption = list.options[list.selectedIndex].text
@@ -901,8 +907,14 @@ window.view = {
 		this.addClickEvent('buttonSave', function () { view.freezeInputs() })
 		this.addClickEvent('buttonEdit', function () { view.deFreezeInputs() })
 		this.addClickEvent('buttonStart', function () { view.validateExpression() })
-		this.addClickEvent('buttonNext', function () { view.evaluate() })
-		this.addChangeEvent('operatorList', function () { view.setOperatorEnvironment() })
+	
+
+	this.addClickEvent('buttonNext', function () { view.evaluate() })
+
+this.addClickEvent('buttonOK', function () { location.reload()=true; return; })
+
+
+	this.addChangeEvent('operatorList', function () { view.setOperatorEnvironment() })
 		this.addChangeEvent('arithmaticExpressions', function () { view.setSelectedEquation('arithmaticExpressions') })
 		this.addChangeEvent('logicalExpressions', function () { view.setSelectedEquation('logicalExpressions') })
 		this.addChangeEvent('bitwiseExpressions', function () { view.setSelectedEquation('bitwiseExpressions') })
