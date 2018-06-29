@@ -54,7 +54,7 @@ window.view = {
 	},
 	proceedToStartButton: function() {
 		var userInput = this.getArraySize()
-		if( (isNaN( userInput ) === false) && (userInput < 100000)) {
+		if( (isNaN( userInput ) === false) && (userInput < 100000) && (userInput > 0) {
 			if( userInput !== 0 ) {
 				var element = document.getElementById('inputButtonRadio')
 				element.className = 'show, radioButtonDivision'
