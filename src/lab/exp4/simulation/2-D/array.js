@@ -89,11 +89,22 @@ window.view = {
 	getRowsAndCols: function() {
 		var row = Number(document.getElementById('row').value)
 		var col = Number(document.getElementById('col').value)
-		if ( row === 0 || col === 0 )
+		 if((row - Math.floor(row))!==0 || (col - Math.floor(col))!==0)
+			{alert('Matrix Size Must Be An Integer Value !')}
+		else if(row<0 || col<0)
+			{
+				alert('size must be postive')
+			}
+		else if ( row === 0 || col === 0)
 			alert('Enter Matrix Size First !')
-		else if ( isNaN(row) || isNaN(col) )
+		else if (isNaN(row) || isNaN(col)) /*&& ((row - Math.floor(row))!==0) || ((col - Math.floor(col)!==0))*/
+			{
+			
 			alert('Matrix Size Must Be An Integer Value !')
-		else
+			}
+			/*else if((row - Math.floor(row))!==0) || ((col - Math.floor(col)!==0))
+			{alert('Matrix Size Must Be An Integer Value !')}*/
+		else 
 		{	
 			if ( this.matrixCount === 1 )
 			{	
@@ -102,13 +113,14 @@ window.view = {
 				this.rowsA = row
 				this.colsA = col
 			}
-			else
+			else 
 			{
 				this.enableButton('generateB')
 				this.changeClass( 'generateB', 'button GenerateValueButton' )
 				this.rowsB = row
 				this.colsB = col
 			}
+
 			this.disableButton('2DbtnOK')
 			this.changeClass( '2DbtnOK', 'startButton disableButton' )
 		}
