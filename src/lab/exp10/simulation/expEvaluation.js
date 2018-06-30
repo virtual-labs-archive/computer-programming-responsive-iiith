@@ -292,7 +292,7 @@ if(a==0 && b==0 || a==0 && b==1 || a==1 && b==0 || a==1 && b==1)
 			c = (b || a);
 }
 else
-alert("enter valid numbers")
+alert("enter only 0's and 1's")
 
 		while((start-1)>=0 && expression[start - 1] == '(' && (end+1)<expression.length && expression[end+1] == ')') {
 			start--;
