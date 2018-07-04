@@ -292,7 +292,7 @@ if(a==0 && b==0 || a==0 && b==1 || a==1 && b==0 || a==1 && b==1)
 			c = (b || a);
 }
 else
-alert("enter only 0's and 1's")
+alert("enter valid numbers")
 
 		while((start-1)>=0 && expression[start - 1] == '(' && (end+1)<expression.length && expression[end+1] == ')') {
 			start--;
@@ -874,6 +874,12 @@ window.view = {
 		}
 		parent.appendChild(child)
 	},
+                saveinput: function () {
+this.disableElement('buttonSav');
+this.changeClass('buttonSav', 'buttonDisable Button')
+this.changeClass('buttonStart', 'button savButton')
+this.enableElement('buttonStart')
+},
 	evaluate: function () {
 		
 
@@ -907,8 +913,7 @@ this.enableElement('buttonOK')
 		this.addClickEvent('buttonSave', function () { view.freezeInputs() })
 		this.addClickEvent('buttonEdit', function () { view.deFreezeInputs() })
 		this.addClickEvent('buttonStart', function () { view.validateExpression() })
-	
-
+ this.addClickEvent('buttonSav',function(){view.saveinput()})
 	this.addClickEvent('buttonNext', function () { view.evaluate() })
 
 this.addClickEvent('buttonOK', function () { location.reload()=true; return; })
