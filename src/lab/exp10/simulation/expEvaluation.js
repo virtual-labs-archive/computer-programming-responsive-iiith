@@ -555,6 +555,7 @@ window.view = {
         document.getElementById('arithmaticExpressions').className='button loopList hide'
         document.getElementById('bitwiseExpressions').className='button loopList hide'
         document.getElementById('logicalExpressions').className='button loopList hide'
+        document.getElementById('operatorList').className='button loopList hide'
 	},
     
 	deFreezeInputs: function () {
