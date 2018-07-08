@@ -1,181 +1,180 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Computer-Programming</title>
-  <link rel="stylesheet" type="text/css" href="../../normalize.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">    
-  <link rel="stylesheet" type="text/css" href="../style.css">
-  <link rel="stylesheet" type="text/css" href="../bstyle.css">
-  <link rel="stylesheet" type="text/css" href="../fonts.css">
-  <!-- <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'> -->
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
-      <![endif]-->
-      <style type="text/css">
-        body{
-          background-color: #f4f4f4;
-        }
-      </style>  
+<link rel="stylesheet" type="text/css" href="functions.css" />
+<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+<title>Computer-Programming</title>
+<script type="text/javascript" src="function.js"></script>
 </head>
-    <body>
 
-      <nav class="navbar navbar-default visible-lg" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Functions</a>
-        </div>
+<body>
+<div id="header">Functions
+</div>
+<div id="icon">
+<button type="button" onclick="toggleFullScreen()">  <img src="https://image.freepik.com/free-icon/exit-to-full-screen_318-9919.jpg" height="15" width="20"  align="right">
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse desk-nav">
-          <ul class="nav navbar-nav">
-            <li style="border-right: 1.5px solid white;"><a href="index.html">Lab Manual</a></li>
-            <li style="border-right: 1.5px solid white;"><a href="simulation/index.html">Simulation</a></li>
-            <li><a href="quiz.html">Quiz</a></li>
-          </ul>
-          <a href="../index.html"><span class="glyphicon glyphicon-home pull-right"></span></a>
-        </div><!-- /.navbar-collapse -->
-      </nav>
+</button>
 
-      <div class="hidden-lg">
-      <nav class="navbar navbar-default mobile-nav" role="navigation">
-      <div class="nav navbar-nav pull-right">
-    <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="simulation/index.html"><span class="glyphicon glyphicon-play-circle"></span></a><a href="quiz.html"><span class="glyphicon glyphicon-tower"></span></a><a href="../index.html"><span class="glyphicon glyphicon-home"></span></a>
-  </div>
-    </nav>
-    <p class="experiment-mobile-title"> Functions</p>
-    </div>
 
-<div class="row">
-  <div class="col-lg-2 visible-lg lab-index">
-    <ul class="nav nav-pills nav-stacked">
-      <li class="active"><a href="#intro">Introduction</a></li>
-      <li><a href="#theory">Theory</a></li>
-      <li><a href="#obj">Objective</a></li>
-      <li><a href="#man">Manual</a></li>
-      <li><a href="#proc">Procedure</a></li>
-      <li><a href="#further-reading">Further Reading</a></li>
-    </ul>
-  </div>
+</div>
 
-  <div class="col-lg-10 lab-manual">
-    <div id="intro" class="manual-section">
-      <p class="manual-section-title">Introduction</p><hr />
-      <div class="manual-section-description">
-        <p>
-          Writing large programs effectively requires decomposition of the code into several independent modules. This makes the program easier to maintain and edit. This is done by taking the problem and breaking it into small, managable pieces. A function is a portion of code within a larger program that performs a specific task and is relatively independent of the remaining code. This helps in decomposition of the code into smaller independent modules. The task performed by a function can be summarised as taking as input a set of variables and returning a value after doing computation with these values. The value of the input variables may also be updated during the computation. Since the functions are written independent of the main code, the same function can be called from the main program with different input variables. The allows reuse of the code and hence shortening of the code.
-        </p>
-        <p>
-          An example of a function, say you are making a program that calculates sales tax and returns the total payable amount.The function would ask for a subtotal(s_total) and the tax percentage(p) as arguments, then take that s_total and multiply it by p/100  to calculate the sales tax(s_tax). After this, the function would calculate the total payable amount by adding sales tax(s_tax) and sub total(s_total) and return it to the main program. This function can be called many times from the main program for different customers by proving thier sub total and sales tax to be applied.
-        </p> 
-      </div>
-    </div>
 
-    <div id="theory" class="manual-section">
-      <p class="manual-section-title">Theory</p><hr />
-      <div class="manual-section-description">
-        <p>
-          Function basically is a independent piece of code which takes some variables as input and returns a result. The function may optionally update the values of the input variables. Writing a function involves clearly specifying the characteristics of the funciton in its prototype. The prototype of a function looks like:<br>
-          <p>
-            <pre class="prettyprint lang-c">
-              return_type Function_name(datatypes_of_input_variables);
-            </pre>
-          </p>
-            <p>
-              For example, the prototype of a function for computing tax and returning the total payable amount may look like: <br>
-            </p>
-          <p>
-            <pre class="prettyprint lang-c">
-              float compute_total(float ,float );
-            </pre>
-          </p>
-        </p>
-        <p>
-          This states that the name of the function is <i>compute_total</i>. It accepts two float variables as input and returns a float value as output. Next, we define the function by writing the code corresponding to the computation of the return value of the function. <br> 
-        </p>
-        <p>
-          <pre class="prettyprint lang-c">
-            float compute_total(float subtotal,float tax_rate)
-              {
-                float total;
-                total=subtotal*(1+(tax_rate/100));
-                return total;
-              }
-          </pre>
-        </p>
-        <p>
-          The input variables in this function are named subtotal and tax_rate and both of them are of float datatype. The value which this function return will be type casted into float before returning. This function can be called from the main function as:<br>
-        </p>
-          <p>
-            <pre class="prettyprint lang-c">
-              total=compute_total(1000,8);
-            </pre>
-          </p>
-          <p>
-            A complete code with functions may look like this:<br>
-          </p>
-          <p>
-            <pre class="prettyprint lang-c">
-              function_prototypes;
-              main()
-              {
-              function_calls;
-              }
-              function definitions;
-            </pre>
-          </p>
-      </div>
-    </div>
-    <div id="obj" class="manual-section">
-      <p class="manual-section-title">Objective</p><hr />
-      <div class="manual-section-description">
-        <p>
-          <ol>
-          <li> To understand that a big program can be broken up into independent modules </li>
-          <li> To learn to define functions and call them with appropriate parameters </li>
-          </ol>
-        </p>
-      </div>
-    </div>
 
-    <div id="man" class="manual-section">
-      <p class="manual-section-title">Manual</p><hr />
-      <div class="manual-section-description">
-        <p> 
-          In this experiment you will learn how to write functions and how to call them with proper arguments. 
-        </p>  
-      </div>
-    </div>
-    <div id="proc" class="manual-section">
-      <p class="manual-section-title">Procedure</p><hr />
-      <div class="manual-section-description">
-        <p>
-          <ol>
-            <li>  Click on the square to define a function for calculating the area of a square. </li>
-            <li>  Similarly define functions for the other geometrical figures </li>
-            <li>  The defined functions are shown in the middle window </li>
-            <li>  Now do appropriate function calls in the main program to compute the area of the figure displayed </li>
-            <li>  Press execute to execute the code and see the output </li>
-          </ol>
-        </p>
-      </div>
-    </div>
+<a href="../index.html"><div class="vlabsIcon"></div></a>
 
-    <div id="further-reading" class="manual-section">
-      <p class="manual-section-title">Further Reading</p><hr />
-      <div class="manual-section-description">
-        <ol>
-          <li><a href="http://en.wikipedia.org/wiki/Function_(computer_science)" > http://en.wikipedia.org/wiki/Function_(computer_science) </a>
-          <li><a href="http://www.cprogramming.com/tutorial/lesson16.html" > www.cprogramming.com/tutorial/lesson16.html  </a>
-          <li><a href="http://erwnerve.tripod.com/prog/recursion/recintro.htm" >http://erwnerve.tripod.com/prog/recursion/recintro.htm</a>
-        </ol>
-      </div>
-    </div>
-  </div></div>
- 
+<div class="inputDivision">
+	<div class = "inputDivisionTitle" >
+
+<div class="initializePic"></div>
+
+<div class="initializeText">Initialize</div></div>
+	<div class="inputDivisionBody" id = 'inputDivision'>
+		  <div class="questionBlock" id = 'instructions'>
+           <p class="instruction">1. Click on the square to define a function for calculating the area of a square.</p>
+           <p class="instruction">2. Similarly define functions for the other geometrical figures.</p>
+           <p class="instruction">3. The defined functions are shown in the middle window.</p>
+           <p class="instruction">4. Now make appropriate function calls in the main program to compute the area of the figure displayed.</p>
+           <p class="instruction">5. Press execute to execute the code and see the output.</p>
+        </div><!-- end of instructions -->
+		<div class="questionBlock hide" id = 'questionSquare'>
+			<div class="questionText">1. Enter number of arguments :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group1" value="1"><label class="radioText" >1</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group1" value="2"><label class="radioText" >2</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group1" value="3"><label class="radioText" >3</label></div><!-- end of 1st question -->	
+
+			<div class="questionText">2. Enter datatype of arguments :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group2" value="int"><label class="radioText" >int</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group2" value="float"><label class="radioText" >float</label></div><!-- end of 2ns question -->	
+
+			<div class="questionTextRich">3. Enter return datatype of the function :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group3" value="int"><label class="radioText">int</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group3" value="float"><label class="radioText">float</label></div><!-- end of 3rd question -->	
+
+			<div class="questionTextRich">4. Choose formula for area of the square :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group4" value="a*a"><label class="radioText">a*a</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group4" value="&pi;*a*a"<label class="radioText">&pi;*a*a</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group4" value="2*&pi;*a"><label class="radioText">2*&pi;*a</label></div><!-- end of 4th question -->	
+
+			<button class="button okButton" id = 'okSquare'>OK</button>	
+		</div><!-- end of question block of square -->	
+		<div class="questionBlock hide" id = 'questionRectangle'>
+			<div class="questionText">1. Enter number of arguments :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group5" value="1"><label class="radioText">1</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group5" value="2"><label class="radioText">2</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group5" value="3"><label class="radioText">3</label></div><!-- end of 1st question -->	
+
+			<div class="questionText">2. Enter datatype of arguments :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group6" value="int"><label class="radioText">int</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group6" value="float"><label class="radioText">float</label></div><!-- end of 2nd question -->	
+
+			<div class="questionTextRich">3. Enter return datatype of the function :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group7" value="int"><label class="radioText">int</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group7" value="float"><label class="radioText">float</label></div><!-- end of 3rd question -->		
+
+			<div class="questionTextRich">4. Choose formula for area of the rectangle :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group8" value="a*a"><label class="radioText">a*a</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group8" value="a*b"><label class="radioText">a*b</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group8" value="2*&pi;*a"><label class="radioText">2*&pi;*a</label></div><!-- end of 4th question -->	
+
+			<button class="button okButton" id = 'okRectangle'>OK</button>	
+		</div><!-- end of question block of rectangle -->	
+		<div class="questionBlock hide" id = 'questionTriangle'>
+			<div class="questionText">1. Enter number of arguments :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group9" value="1"><label class="radioText">1</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group9" value="2"><label class="radioText">2</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group9" value="3"><label class="radioText">3</label></div><!-- end of 1st question -->		
+
+			<div class="questionText">2. Enter datatype of arguments :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group10" value="int"><label class="radioText">int</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group10" value="float"><label class="radioText">float</label></div><!-- end of 2nd question -->	
+
+			<div class="questionTextRich">3. Enter return datatype of the function :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group11" value="int"><label class="radioText">int</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group11" value="float"><label class="radioText">float</label></div><!-- end of 3rd question -->	
+
+			<div class="questionTextRich">4. Choose formula for area of the triangle :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group12" value="a*a"><label class="radioText">a*a</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group12" value="pi*a*a"><label class="radioText">&pi;*a*a</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group12" value="correct"><label class="radioText">(&radic;3/4.0)*a*a</label></div><!-- end of 4th question -->	
+
+			<button class="button okButton" id = 'okTriangle'>OK</button>	
+		</div><!-- end of question block of triangle -->	
+		<div class="questionBlock hide" id = 'questionCircle'>
+			<div class="questionText">1. Enter number of arguments :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group13" value="1"><label class="radioText" for="male">1</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group13" value="2"><label class="radioText" for="male">2</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group13" value="3"><label class="radioText" for="male">3</label></div><!-- end of 1st question -->		
+
+			<div class="questionText">2. Enter datatype of arguments :</div>
+			<div class="radioButtonHolder">
+
+<input type="radio" class="radiobutton" name="radio_group14" value="int"><label class="radioText">int</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group14" value="float"><label class="radioText">float</label></div><!-- end of 2nd question -->	
+
+			<div class="questionTextRich">3. Enter return datatype of the function :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group15" value="int"><label class="radioText">int</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group15" value="float"><label class="radioText">float</label></div><!-- end of 3rd question -->		
+
+			<div class="questionTextRich">4. Choose formula for area of the circle :</div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group16" value="a*a"><label class="radioText">a*a</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group16" value="pi*a*a"><label class="radioText">&pi;*a*a</label></div>
+			<div class="radioButtonHolder"><input type="radio" class="radiobutton" name="radio_group16" value="incorrect"><label class="radioText">(&radic;3/4.0)*a*a</label></div><!-- end of 4th question -->	
+
+			<button class="button okButton" id = 'okCircle'>OK</button>	
+		</div><!-- end of question block of circle -->	
+		<div class="questionBlock hide" id = 'calculateArea'>
+			<div class="programInitialization">int main() {<br>&emsp;float totalArea;</div>
+			<div class="computeArea">totalArea = </div>
+			<div id = 'inputBoxSection'><input  class="textArea" type="text"><input  class="textArea" type="text"><input  class="textArea" type="text"><input  class="textArea" type="text"><input  class="textArea" type="text"><input  class="textArea" type="text"><input  class="textArea" type="text"></div>	
+			<div class="programTail">&emsp;&emsp;printf("Total Area : %f/n", totalArea);<br>&emsp;&emsp;return 0;<br>}</div>
+		
+			<button class="button okButton" id = 'btnExecute'>EXECUTE</button>	
+		</div><!-- end of tatal area calculation block -->	
+	</div><!-- end of inputDivisionBody -->
+</div><!-- end of inputDivision -->
+<div class="executionDivision">
+	<div class="executionDivisionTitle"><div class="executionPic"></div><div class="executionText">Step Execution</div></div>
+	<div class="stepExecutionDisplay" >
+		<div class="functionForSquare"><span class="textColor">//function for square</span><br><div id = 'functionSquare'></div></div>
+		<div class="functionForRectangle"><span class="textColor">//function for rectangle</span><br><div id = 'functionRectangle'></div></div>
+		<div class="functionForTriangle"><span class="textColor">//function for triangle</span><br><div id = 'functionTriangle'></div></div>
+		<div class="functionForCircle"><span class="textColor">//function for circle</span><br><div  id = 'functionCircle'></div></div>
+	</div><!-- end of stepExecutionDisplay -->
+</div><!-- end of executionDivision -->
+<div class="outputDivision"> 
+	<div class="outputDivisionTitle"><div class="outputPic"></div><div class="outputText">Code Output</div></div>
+	<div class="resultDisplay" id = "resultDisplay" >
+		<div class="imageBlock" id = 'imageBlock'>
+			<div class="imageSquare" id = 'imageSquare'><img id='tickSquare' class='tick hide' src="tick.png"></div>
+			<div class="imageRectangle" id = 'imageRectangle'><img id='tickRectangle' class='tick hide' src="tick.png"></div>
+			<div class="imageTriangle" id = 'imageTriangle'><img id='tickTriangle' class='tick hide' src="tick.png"></div>
+			<div class="imageCircle" id = 'imageCircle'><img id='tickCircle' class='tick hide' src="tick.png"></div>
+		</div><!-- end of imageBlock -->
+		<div class="imageComplex hide" id = 'imageComplex'></div>
+	</div><!-- end of resultDisplay -->
+</div><!-- end of outputDivision -->
+	<script>
+function toggleFullScreen() {
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+      document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+      document.documentElement.mozRequestFullScreen();  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  } else {  
+    if (document.cancelFullScreen) {  
+      document.cancelFullScreen();  
+    } else if (document.mozCancelFullScreen) {  
+      document.mozCancelFullScreen();  
+    } else if (document.webkitCancelFullScreen) {  
+      document.webkitCancelFullScreen();  
+    }  
+  }  
+}
+</script>
 </body>
 </html>
