@@ -15,8 +15,7 @@
 </head>
 
 <body>
-<div id = 'header' > Numerical Integration ( Area Under Curve )   <input type="button" value="click to toggle fullscreen" onclick="toggleFullScreen()" >
-</div>
+<div id = 'header' > Numerical Integration ( Area Under Curve )</div>
 <a href="../index.html"><div class = 'vlabsIcon' ></div></a>
 <div class = 'inputDivision' >
 	<div class = 'FirstInputBlock' >
@@ -75,28 +74,7 @@
 	</div><!-- end of resultDisplay -->
 </div><!-- end of outputDivision -->
 
-<script>
-function toggleFullScreen() {
-  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
-   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
-    if (document.documentElement.requestFullScreen) {  
-      document.documentElement.requestFullScreen();  
-    } else if (document.documentElement.mozRequestFullScreen) {  
-      document.documentElement.mozRequestFullScreen();  
-    } else if (document.documentElement.webkitRequestFullScreen) {  
-      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
-    }  
-  } else {  
-    if (document.cancelFullScreen) {  
-      document.cancelFullScreen();  
-    } else if (document.mozCancelFullScreen) {  
-      document.mozCancelFullScreen();  
-    } else if (document.webkitCancelFullScreen) {  
-      document.webkitCancelFullScreen();  
-    }  
-  }  
-}
-</script>
+
 
 </body>
 </html>
