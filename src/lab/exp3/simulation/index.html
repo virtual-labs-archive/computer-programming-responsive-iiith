@@ -9,7 +9,19 @@
 
 <body>
 <div class = 'header' id="headerSimpleLoop" > Loops (Factorial Calculation) </div>
-<div class = 'hide' id="headerNestedLoop"> LOOPS (Height of Pyramid) </div>
+<div class = 'hide' id="headerNestedLoop"> LOOPS (Height of Pyramid) 
+
+</div>
+
+
+<div id="icon">
+<button type="button" onclick="toggleFullScreen()">  <img src="https://image.freepik.com/free-icon/exit-to-full-screen_318-9919.jpg" height="15" width="20"  align="right">
+
+</button>
+</div>
+
+
+
 <a href="../index.html"><div class="vlabsIcon"></div></a>
 
 <div class = 'inputDivision' >
@@ -140,6 +152,27 @@
 		</div>
 		<div class="outputResult" id = "resultDisplay" ></div>
 	</div><!-- end of resultDisplay -->
-</div><!-- end of outputDivision -->
+</div><!-- end of outputDivision --><script>
+function toggleFullScreen() {
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+      document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+      document.documentElement.mozRequestFullScreen();  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  } else {  
+    if (document.cancelFullScreen) {  
+      document.cancelFullScreen();  
+    } else if (document.mozCancelFullScreen) {  
+      document.mozCancelFullScreen();  
+    } else if (document.webkitCancelFullScreen) {  
+      document.webkitCancelFullScreen();  
+    }  
+  }  
+}
+</script>
 </body>
 </html>
