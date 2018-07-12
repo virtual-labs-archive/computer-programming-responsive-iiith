@@ -8,10 +8,10 @@ window.model = {
 	},
     computeNextFact: function() {
 
-if(this.inp>=1)
-        this.fact =  this.fact * this.inp
-else
-       this.fact=this.fact 
+if(this.inp>=1){
+        this.fact =  this.fact * this.inp }
+else{
+       this.fact=this.fact ;}
    }
 }
 
