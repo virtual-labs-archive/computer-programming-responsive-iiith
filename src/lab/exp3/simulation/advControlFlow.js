@@ -3,13 +3,13 @@ window.model = {
     nestedInp: 0,
     fact: 1,
     init: function() {
-		this.inp = 0
-		this.fact = 1
+		this.inp = 0;
+		this.fact = 1;
 	},
     computeNextFact: function() {
 
 if(this.inp>=1){
-        this.fact =  this.fact * this.inp }
+        this.fact =  this.fact * this.inp; }
 else{
        this.fact=this.fact ;}
    }
