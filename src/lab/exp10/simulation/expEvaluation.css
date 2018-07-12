@@ -8,6 +8,7 @@ body {
     font-size: 100%;
     position:absolute; top: 0%; bottom: 0%; right: 0%; left: 0%;
 }
+
 .header {
 	position: absolute;
 	top: 0;bottom: 0;left: 0;right: 0;
@@ -16,6 +17,13 @@ body {
 	font-size: 4vh;
 	padding-top: 1.3vmin;
 }
+#icon{
+position:fixed;
+   right:100px;
+   top:15px;
+
+}
+
 .button, .buttonDisable{
 	position: relative;
 	padding: 0.5em 1em;
