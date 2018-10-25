@@ -179,11 +179,11 @@ window.view = {
 	},
 	// swapValueBetweenAddress60And56: swaps value in memory map between address 60 and 56.
 	swapValueBetweenAddress60And56: function () {
-		if (this.nextSiblingElement.id === 'codeContentCBR6') {
+		if (this.nextSiblingElement.id === 'codeContentCBR14') {
 			this.setInnerHtml('60byte4', '9');
 			this.setInnerHtml('56byte4', '5');
 		}
-		else if (this.previousSiblingElement.id === 'codeContentCBR5') {
+		else if (this.previousSiblingElement.id === 'codeContentCBR13') {
 			this.setInnerHtml('60byte4', '5');
 			this.setInnerHtml('56byte4', '9');
 		}
