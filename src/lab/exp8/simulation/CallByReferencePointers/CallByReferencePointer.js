@@ -311,6 +311,7 @@ window.view = {
 			this.codeExecutionWithColour();
 			this.eraseStringFromElement('outputText', 'explanationText', this.explanationCBR13);
 		}
+		window.setTimeout(function() { view.continueExecution() },1000);
 	},
 	// reverseExecution: shows values in memory map  and shows Code Output or Explanation during reverse of code execution.
 	reverseExecution: function () {
