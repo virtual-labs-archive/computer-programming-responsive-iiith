@@ -311,6 +311,7 @@ window.view = {
 		else if (this.nextSiblingElement.id === 'codeContentSC17' || this.nextSiblingElement.id === 'codeContentSC19' || this.nextSiblingElement.id === 'codeContentSC15') {
 			this.codeExecutionWithColourAndId('codeContentSC19');
 		}
+		window.setTimeout(function() { view.compareString() },700);
 	},
 	// init: calls methods to activate events.	
 	init: function () {
