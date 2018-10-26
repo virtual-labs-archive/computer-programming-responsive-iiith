@@ -271,6 +271,7 @@ window.view = {
 					this.highlightNextStep()
 			}
 		}
+		window.setTimeout(function() { view.nextBtn() },700);
 	},
 	startBtnNested: function() {
 		this.getNestedInput()
