@@ -264,6 +264,7 @@ window.view = {
 		}
 		else
 			this.highlightNextStep()
+		window.setTimeout(function() { view.sortArray() },700);
 	},
 	init: function() {
 		this.activateEvents()
