@@ -38,7 +38,7 @@ window.view = {
 	activateEvents: function () {
 		this.addClickEvent('okBtnId', function() { view.validationInput() });
 		this.addClickEvent('startBtnId', function() { view.startExperiment() });
-		this.addClickEvent('nextBtnId', function() { view.plotCurveArea() });
+		//this.addClickEvent('nextBtnId', function() { view.plotCurveArea() });
 		this.addClickEvent('stopBtnId', function() { view.stopExperiment() });
 	},
 	// disableElement: makes element disable.
@@ -308,7 +308,7 @@ window.view = {
 		this.disableElement('okBtnId');
 		this.disableElement('valueA');
 		this.disableElement('valueB');
-		this.changeClass('okBtnId', 'buttonDisable startButton');
+		this.changeClass('okBtnId', 'buttonDisable myStartButton');
 		this.changeClass('startBtnId', 'button myStartButton');
 	},
 	// restoreCanvas: restor canvas it's initial state after clear previously drawed canvas.
@@ -321,12 +321,12 @@ window.view = {
 	startExperiment: function () {
 		this.replaceElement('startBtnId', 'stopBtnId');
 		this.enableElement('stopBtnId');
-		this.enableElement('nextBtnId');
+		//this.enableElement('nextBtnId');
 		this.disableElement('startBtnId');
 		this.applyColorClass('NumApproCodeContent1', 'redClass');
 		this.changeClass('startBtnId', 'myStartButton button');
 		this.changeClass('stopBtnId', 'myStartButton button');
-		this.changeClass('nextBtnId', 'nextButton button');
+		//this.changeClass('nextBtnId', 'nextButton button');
 	},
 	// stopExperiment: stop code execution at any point.
 	stopExperiment: function () {
@@ -380,7 +380,10 @@ window.view = {
 		}
 		else if (this.nextSiblingElement.id === 'NumApproCodeContent10') {
 			this.executionWithColour();
+			this.changePropertyOfElements();
+			return;
 		}
+		window.setTimeout(function() { view.plotCurveArea() },700);
 	},
 	// init: calls methods to draw canvas and activate events.
 	init: function () {
