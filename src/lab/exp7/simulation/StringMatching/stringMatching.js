@@ -336,6 +336,7 @@ window.view = {
 		}
 		else if (this.nextSiblingElement.id === 'codeContentId19')
 			this.codeExecutionWithColourAndId('codeContentId6');
+		window.setTimeout(function() { view.matchString() },1000);
 	},
 	// init: calls methods to activate events.	
 	init: function () {
