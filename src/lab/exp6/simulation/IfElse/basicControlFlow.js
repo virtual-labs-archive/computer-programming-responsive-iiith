@@ -403,6 +403,7 @@ window.view = {
 				}
 			}
 		}
+		window.setTimeout(function() { view.executionOfIfElse() },700);
 	},
 	// executionOfIfElseIfElse: shows code execution and gives final result at end of code.
 	executionOfIfElseIfElse: function () {
@@ -455,6 +456,7 @@ window.view = {
 		if (this.nextSiblingElement.id === 'codeContentIfElseIf18Id' || this.nextSiblingElement.id === 'codeContentIfElseIf22Id') {
 			this.codeExecutionWithColourAndId('codeContentIfElseIf23Id');
 		}	
+		window.setTimeout(function() { view.executionOfIfElseIfElse() },700);
 	},
 	// init: calls methods to draw canvas and activate events.
 	init: function () {
