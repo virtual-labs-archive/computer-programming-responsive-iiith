@@ -286,12 +286,12 @@ window.view = {
 		}
 		else if (this.nextSiblingElement.id === 'codeContentCBR13') {
 			this.codeExecutionWithColour();
-			this.setInnerHtml('40byte4','56');
+			this.setInnerHtml('60byte4','56');
 			this.setString('explanationText', this.explanationCBR8);
 		}
 		else if (this.nextSiblingElement.id === 'codeContentCBR14')	{
 			this.codeExecutionWithColour();
-			this.setInnerHtml('36byte4','32');
+			this.setInnerHtml('56byte4','32');
 			this.setString('explanationText', this.explanationCBR9);
 		}
 		else if (this.nextSiblingElement.id === 'codeContentCBR15')	{
