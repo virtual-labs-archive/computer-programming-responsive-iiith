@@ -412,6 +412,7 @@ window.view = {
 		}
 		else
 			this.highlightNextStep()
+		window.setTimeout(function() { view.multiplyMatrices() },700);
 	},
 	init: function() {
 		this.activateEvents()
