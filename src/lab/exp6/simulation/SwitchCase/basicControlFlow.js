@@ -252,6 +252,7 @@ window.view = {
 		if (this.nextSiblingElement.id === 'closeBrc2Id' || this.nextSiblingElement.id === 'elseId' || this.nextSiblingElement.id === 'elseIfId') {
 			this.codeExecutionWithColourAndId('closeBrc2Id');
 	 	}
+		window.setTimeout(function() { view.showDayOfWeek() },700);
 	},
 	// init: calls methods to draw canvas and activate events.
 	init: function () {
