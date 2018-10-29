@@ -220,6 +220,13 @@ body {
     min-width: 150px;
     height: 32px;
 }
+.inputFieldHolder1{
+    float: left;
+    width: 90%;
+    margin-left: 5%;
+    min-width: 150px;
+    height: 32px;
+}
 
 .inputField, .inputValueField {
     text-align: center;
@@ -255,9 +262,9 @@ body {
 .saveButton, .editButton {
     margin-top: 15px;
 }
-
 .startButton, .stopButton {
     top: 2%;
+    margin-top:25px;
     height: 30px;
     width: 36%;
     float: center;
@@ -270,7 +277,7 @@ body {
 
 .nextButton {
     top: 2%;
-    margin-left: 14px; 
+    margin-top:25px; 
     height: 30px;
     width: 36%;
     float: center;
@@ -422,6 +429,4 @@ body {
 .loopList {
 	margin-bottom: 20px;
     margin-top: 30px;
-}
-
 }
