@@ -283,7 +283,14 @@ body {
     float: center;
     font-size: 14px;
 }
-
+.savButton {
+    top: 2%;
+    margin-top:25px; 
+    height: 30px;
+    width: 36%;
+    float: center;
+    font-size: 14px;
+}
 .resultDisplay {
     position: absolute;
     padding-top: 2%;
@@ -429,4 +436,6 @@ body {
 .loopList {
 	margin-bottom: 20px;
     margin-top: 30px;
+}
+
 }
