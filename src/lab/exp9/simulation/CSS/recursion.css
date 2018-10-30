@@ -24,7 +24,11 @@ body {
 	font-size: 4vh;
 	padding-top: 1.3vmin;
 }
-
+#icon{
+position:fixed;
+   right:100px;
+   top:15px;
+ }
 .button, .buttonDisable {
 	position: relative;
 	padding: 0.5em 1em;
