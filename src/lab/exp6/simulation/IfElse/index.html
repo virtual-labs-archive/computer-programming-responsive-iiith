@@ -10,16 +10,19 @@
 <body>
 <div id = 'header' > Basic Control Flow </div>
 <a href="../../simulation.html"><div class="vlabsIcon"></div></a>
-
-<div class = 'inputDivision' >
+<div class='inputDivision'>
 	<div class = 'inputDivisionTitle' ><div class = 'initializePic' ></div><div class = 'initializeText' >Initialize</div></div>
 	<div class = 'inputDivisionBody' >
-		<div class = 'instructionText marginTop' > x1 = 075; &nbsp; y1 = 075;</div>
-		<div class = 'instructionText' > x2 = 275; &nbsp; y2 = 075;</div>
-		<div class = 'instructionText' > x3 = 275; &nbsp; y3 = 325;</div>
-		<div class = 'instructionText' > x4 = 075; &nbsp; y4 = 325;</div>
-		<div class = 'DayInputText' ><label class = 'dText' >X : </label><input value = '150' class = 'textField' type = 'text'  id = 'textFieldXId' ></div>
-		<div class = 'DayInputText' ><label class = 'dText'>Y : </label><input value = '150' class = 'textField' type = 'text'  id = 'textFieldYId' ></div>
+		<div class = 'DayInputText' ><label class = 'dText' >x1 </label><input value = '50' class = 'textField' type = 'text'  id = 'textx1id' ></div>
+		<div class = 'DayInputText' ><label class = 'dText' >y1  </label><input value = '50' class = 'textField' type = 'text'  id = 'texty1id' ></div>					
+		<div class = 'DayInputText' ><label class = 'dText' >x2  </label><input value = '250' class = 'textField' type = 'text'  id = 'textx2id' ></div>							
+		<div class = 'DayInputText' ><label class = 'dText' >y2  </label><input value = '50' class = 'textField' type = 'text'  id = 'texty2id' ></div>							
+		<div class = 'DayInputText' ><label class = 'dText' >x3 </label><input value = '50' class = 'textField' type = 'text'  id = 'textx3id' ></div>								
+		<div class = 'DayInputText' ><label class = 'dText' >y3  </label><input value = '200' class = 'textField' type = 'text'  id = 'texty3id' ></div>							
+		<div class = 'DayInputText' ><label class = 'dText' >x4 </label><input value = '250' class = 'textField' type = 'text'  id = 'textx4id' ></div>							
+		<div class = 'DayInputText' ><label class = 'dText' >y4 </label><input value = '200' class = 'textField' type = 'text'  id = 'texty4id' ></div>							
+		<div class = 'DayInputText' ><label class = 'dText'>X </label><input value = '' class = 'textField' type = 'text'  id = 'textFieldXId' ></div>								
+		<div class = 'DayInputText' ><label class = 'dText' >Y  </label><input value = '' class = 'textField' type = 'text'  id = 'textFieldYId' ></div>
         <div class = 'listDivision margin15' >
 			<select class = 'button expList' name = 'expression_input_list' id = 'loopList' >
      		<option>select code</option>
@@ -119,6 +122,7 @@
 <div class = 'outputDivision' > 
 	<div class = 'outputDivisionTitle' ><div class="outputPic"></div><div class="outputText">Code Output</div></div>
 	<div class = 'resultDisplay' id = 'resultDisplay' >
+		xi,yi represents the x and y coordinates of point i.<br>The coordinates for a point i should be given by following the convention shown below in the form of picture.<br> Ranges of xi and yi are:<br> 0<=xi<=340<br>   0<=yi<=390
 		<div id = 'canvasDiv1' class = 'canvasDiv' >
 			<canvas id = 'myCanvas' class = 'myCanvas' width = '350' height = '400'></canvas> 
 		</div>

@@ -88,7 +88,7 @@ body {
 
 .inputDivision, .outputDivision, .executionDivision {
     top: 11%;
-    height: 87%; 
+    height: 122%; 
 }
 
 .executionDivision {
@@ -105,6 +105,7 @@ body {
     left: 58%;
     width: 39%;
 }
+
 
 .inputDivisionTitle, .outputDivisionTitle, .executionDivisionTitle {
     text-align: center;
