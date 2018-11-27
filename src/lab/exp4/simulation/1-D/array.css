@@ -91,6 +91,7 @@ body {
 .executionDivision {
     left: 25%;
     width: 30%;
+	
 }
 
 .inputDivision {
@@ -99,14 +100,18 @@ body {
 }
 
 .outputDivision {
-    left: 58%;
-    width: 39%;
+    left: 108%;
+    width: 135%;
+	height: 99%;
+	position: top;
+	top: 0%;
+	
 }
 
 .inputDivisionTitle, .outputDivisionTitle, .executionDivisionTitle {
     text-align: center;
     top: 0%;
-    height: 9%;
+    height: 15%;
     color: #2a65a0;
     text-decoration: none;
     text-align: center;
@@ -355,7 +360,7 @@ body {
     position: absolute;
     height: 82%;
     width: 96%;
-    top: 10%;
+    top: 9%;
     left: 2%;
     border: 1px solid #CCC;
     overflow: auto;

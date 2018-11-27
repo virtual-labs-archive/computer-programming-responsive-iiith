@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<div id = 'header' > Array ( Insertion Sort ) </div>
+<div id = 'header' > Array ( Quick Sort ) </div>
 <a href="../../simulation.html"><div class="vlabsIcon"></div></a>
 
 <div class = 'inputDivision' >
@@ -33,27 +33,45 @@
 	<div class = 'stepExecutionDisplay' >
 		<div  class = 'hide' id = '1-dArray' >
 			<div  id = 'line1' > int main(){ </div>
-			<div  id = 'line2' > int i, j, size, key ; </div>
-			<div  id = 'line3' > int A[size]; </div>
-			<div  id = 'line4' > for( i = 1 ; i &lt; size ; i++ ) </div>
-			<div  id = 'line5' > { </div>
-			<div  id = 'line6' style = 'padding-left:5%;' > key = A[i]; </div>
-			<div  id = 'line7' style = 'padding-left:5%;' > j = i - 1; </div>
-			<div  id = 'line8' style = 'padding-left:5%;' > while ( j >= 0 &amp;&amp; A[j] > key  ) </div>
-			<div  id = 'line9' style = 'padding-left:5%;' > { </div>
-			<div  id = 'line10' style = 'padding-left:10%;' > A[j+1] = A[j];  </div>
-			<div  id = 'line11' style = 'padding-left:10%;' > j--; </div>
-			<div  id = 'line12' style = 'padding-left:5%;' > } </div>
-			<div  id = 'line13' style = 'padding-left:5%;' > A[j+1] = key; </div>
-			<div  id = 'line14' > } </div>
-			<div  id = 'line15' > return 0 ; </div>
-			<div  id = 'line16' > } </div>
+			<div  id = 'line2' > void quicksort(int low, int high) </div>
+			<div  id = 'line3' > {  </div>
+			<div  id = 'line4' > int pivot, i, j, temp, size; </div>
+			<div  id = 'line5' > int A[size];
+			<div  id = 'line6' > if (low < high) </div>
+			<div  id = 'line7' > { </div>
+			<div  id = 'line8' style = 'padding-left:5%;' > pivot = low; </div>
+			<div  id = 'line9' style = 'padding-left:5%;' > i = low; </div>
+			<div  id = 'line10' style = 'padding-left:5%;' > j = high; </div>
+			<div  id = 'line11' style = 'padding-left:5%;' > while (i < j) </div>
+			<div  id = 'line12' style = 'padding-left:5%;' > {  </div>
+			<div  id = 'line13' style = 'padding-left:10%;' > while (A[i] <= A[pivot] && i <= high) </div>
+			<div  id = 'line14' style = 'padding-left:10%;' > { </div>
+			<div  id = 'line15' style = 'padding-left:10%;' > i++; </div>
+			<div  id = 'line16' style = 'padding-left:10%;' > } </div>
+			<div  id = 'line17' style = 'padding-left:10%;' > while (A[j] > A[pivot] && j >= low) </div>
+			<div  id = 'line18' style = 'padding-left:10%;' > { </div>
+			<div  id = 'line19' style = 'padding-left:10%;' > j--; </div>
+			<div  id = 'line20' style = 'padding-left:10%;' > } </div>
+			<div  id = 'line21' style = 'padding-left:5%;' >	if (i < j) </div>	
+			<div  id = 'line22' style = 'padding-left:5%;' > { </div>
+			<div  id = 'line23' style = 'padding-left:5%;' >  temp = A[i];  </div>
+			<div  id = 'line24' style = 'padding-left:5%;' >  A[i] = A[j]; </div>
+			<div  id = 'line25' style = 'padding-left:5%;' >   A[j] = temp; </div>
+			<div  id = 'line26' style = 'padding-left:5%;' >  } </div>
+			<div  id = 'line27' style = 'padding-left:5%;' > } </div>
+			<div  id = 'line28' style = 'padding-left:5%;' > temp = A[j]; </div>
+			<div  id = 'line29' style = 'padding-left:5%;' > A[j] = A[pivot]; </div>
+			<div  id = 'line30' style = 'padding-left:5%;' >  A[pivot] = temp; </div>
+			<div  id = 'line31' style = 'padding-left:5%;' > quicksort(low, j - 1); </div>
+			<div  id = 'line32' style = 'padding-left:5%;' >  quicksort(j + 1, high); </div>
+			<div  id = 'line33' style = 'padding-left:5%;' >	} </div>
+			<div  id = 'line34' style = 'padding-left:5%;' > } </div>
 		</div><!-- end of 1-dArray -->
 	</div><!-- end of stepExecutionDisplay -->
 </div><!-- end of executionDivision -->
 	
 <div class = 'outputDivision' > 
-	<div class = 'outputDivisionTitle' ><div class = 'outputPic' ></div><div class = 'outputText' >Code Output</div></div>
+	<div class = 'outputDivisionTitle' ><div class = 'outputPic'  ></div><div class = 'outputText' >Code Output</div></div>
 	<div class = 'resultDisplay' id = 'resultDisplay' >
 		<div class = 'KeyPointerDisplayDivision' >
 			<div class = 'sortedKeyLabel' ></div>
