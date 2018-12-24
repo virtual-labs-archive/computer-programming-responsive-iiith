@@ -788,6 +788,7 @@ window.view = {
 			var child = document.createElement('div')
 			child.innerHTML = 'Here, variables are replaced by their values !!<br><br>'
 			parent.appendChild(child)
+			document.getElementById("operatorList").disabled=true;
 		}
 	},
 	printCurrentStep: function () {

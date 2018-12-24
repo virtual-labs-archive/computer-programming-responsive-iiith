@@ -17,6 +17,11 @@ body{
     font-size: 4vh;
     padding-top: 1.3vmin;
 }
+#solutionId{
+    color: black;
+    background-color: white;
+    size: 30px;
+}
 
 .button, .buttonDisable {
     position: relative;

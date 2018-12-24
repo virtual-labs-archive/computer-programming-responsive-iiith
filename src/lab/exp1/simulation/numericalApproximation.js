@@ -40,6 +40,8 @@ window.view = {
 		this.addClickEvent('startBtnId', function() { view.startExperiment() });
 		this.addClickEvent('nextBtnId', function() { view.plotCurveArea() });
 		this.addClickEvent('stopBtnId', function() { view.stopExperiment() });
+		this.addClickEvent('solutionId',function() { view.fullcurve()});
+
 	},
 	// disableElement: makes element disable.
 	disableElement: function(Id) {
@@ -327,6 +329,9 @@ window.view = {
 		this.changeClass('startBtnId', 'myStartButton button');
 		this.changeClass('stopBtnId', 'myStartButton button');
 		this.changeClass('nextBtnId', 'nextButton button');
+		document.getElementById("solutionId").disabled = false;
+		document.getElementById("solutionId").style.background = "blue";
+                document.getElementById("solutionId").style.color = "white";
 	},
 	// stopExperiment: stop code execution at any point.
 	stopExperiment: function () {
@@ -382,6 +387,28 @@ window.view = {
 			this.executionWithColour();
 		}
 	},
+	fullcurve: function () 
+{
+document.getElementById("solutionId").disabled = true;
+document.getElementById("solutionId").style.background = "white";
+document.getElementById("solutionId").style.color = "black";
+var valueA1 = document.getElementById("valueA").value;
+ var valueB1=document.getElementById("valueB").value;
+		
+var valueA2 = parseInt(valueA1);
+		
+var valueB2 = parseInt(valueB1);
+	        
+var k=valueB2-valueA2;
+	        
+var i;
+ for (i = 0; i < (k*3)+7; i++) 
+{ 
+  
+this.plotCurveArea();
+ }
+ }
+,
 	// init: calls methods to draw canvas and activate events.
 	init: function () {
 		this.drawCanvas();
