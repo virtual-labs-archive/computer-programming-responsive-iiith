@@ -230,16 +230,16 @@ window.view = {
 				this.setInnerHtml('outputDayId', 'WORKING DAY');
 	 		}
 	 	}
-		if ( model.inputNumber > 7 ) {
-	 		if (this.nextSiblingElement.id === 'holidayId')
+		if ( model.inputNumber > 7 || model.inputNumber<=0) {
+			if (this.nextSiblingElement.id === 'holidayId')
 				this.codeExecutionWithColourAndId('elseIfId');
 	 		else if (this.nextSiblingElement.id === 'workingdayId') 
 				this.codeExecutionWithColourAndId('elseId');
 	 		else if (this.nextSiblingElement.id === 'invalidIPId') {
 				this.codeExecutionWithColour();
 				this.setInnerHtml('outputDayId', 'INVALID INPUT');
-	 		}
 	 	}
+		}
 	 	if (model.inputNumber === 7) {
 	 		if (this.nextSiblingElement.id === 'holidayId') {
 				this.codeExecutionWithColour();

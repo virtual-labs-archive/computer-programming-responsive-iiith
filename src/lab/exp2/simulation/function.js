@@ -302,26 +302,26 @@ window.view = {
 	},
 	area_sq: function( param, functionCall ) {
 		this.area = param * param
-		this.totalArea += this.area
-		alert( 'area from function call ' + String( i + 1 ) + ' ) : ' + functionCall + ' is ' + this.area )
+		this.totalArea += this.area.toFixed(5);
+		alert( 'area from function call ' + String( i + 1 ) + ' ) : ' + functionCall + ' is ' + this.area.toFixed(5) )
 		this.correctInputs ++
 	},
 	area_triangle: function( param, functionCall ) {
 		this.area = Math.sqrt(3)/4 * param * param
-		this.totalArea += this.area
-		alert( 'area from function call ' + String( i + 1 ) + ' ) : ' + functionCall + ' is ' + this.area )
+		this.totalArea += this.area.toFixed(5);
+		alert( 'area from function call ' + String( i + 1 ) + ' ) : ' + functionCall + ' is ' + this.area.toFixed(5))
 		this.correctInputs ++
 	},
 	area_circle: function( param, functionCall ) {
-		this.area = Math.PI * param * param
-		this.totalArea += this.area
-		alert( 'area from function call ' + String( i + 1 ) + ' ) : ' + functionCall + ' is ' + this.area )
+		this.area = 0.5*Math.PI * param * param
+		this.totalArea += this.area.toFixed(5);
+		alert( 'area from function call ' + String( i + 1 ) + ' ) : ' + functionCall + ' is ' + this.area.toFixed(5))
 		this.correctInputs ++
 	},
 	area_rect: function( param, functionCall ) {
 		this.area = Number(param[0]) * Number(param[1])
-		this.totalArea += this.area
-		alert( 'area from function call ' + String( i + 1 ) + ' ) : ' + functionCall + ' is ' + this.area )
+		this.totalArea += this.area.toFixed(5);
+		alert( 'area from function call ' + String( i + 1 ) + ' ) : ' + functionCall + ' is ' + this.area.toFixed(5); )
 		this.correctInputs ++
 	},
 	resetToInitialState: function() {
@@ -372,7 +372,7 @@ window.view = {
 		 	alert( 'Incorrect function call at line ' + String( i + 1 ) )
 		}	
 		if ( this.correctInputs === 7 ) {
-			alert( 'Total area is : ' + this.totalArea + ' ' + ' ' + 'Correct value is : 132.01738' )
+			alert( 'Total area is : ' + this.totalArea.toFixed(5); + ' ' + ' ' + 'Correct value is : 132.02272' )
 			this.resetToInitialState()
 		}
 		else
