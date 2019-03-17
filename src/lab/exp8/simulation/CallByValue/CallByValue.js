@@ -26,7 +26,7 @@ window.view = {
 	explanationCBR12: 'The same old value in variable B is 9 is displayed in the output.',
 	explanationCBR13: 'Program Execution Complete',
 	outputCBR1: 'Value of A is 5',
-	outputCBR2: 'Address of B is 9',
+	outputCBR2: 'Value of B is 9',
 	outputCBR3: 'Value of A after swapping is 5',
 	outputCBR4: 'Value of B after swapping is 9',
 	// addClickEvent: add EventListener to other methods.
