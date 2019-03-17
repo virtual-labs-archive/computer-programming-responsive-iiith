@@ -179,12 +179,34 @@ window.view = {
 	},
 	// swapValueBetweenAddress60And56: swaps value in memory map between address 60 and 56.
 	swapValueBetweenAddress60And56: function () {
-		if (this.nextSiblingElement.id === 'codeContentCBR6') {
+		if (this.nextSiblingElement.id === 'codeContentCBR14') {
 			this.setInnerHtml('60byte4', '9');
 			this.setInnerHtml('56byte4', '5');
 		}
-		else if (this.previousSiblingElement.id === 'codeContentCBR5') {
+		else if (this.previousSiblingElement.id === 'codeContentCBR13') {
 			this.setInnerHtml('60byte4', '5');
+			this.setInnerHtml('56byte4', '9');
+		}
+	},
+	// Copies content of address 60 into 50 , reverse variable indicates whether action has to be reversed
+	copyValueOf60into56: function (reverse) {
+		if (reverse == 0 && this.nextSiblingElement.id === 'codeContentCBR13') {
+			this.setInnerHtml('60byte4', '9');
+			this.setInnerHtml('56byte4', '9');
+		}
+		if (reverse == 1 && this.previousSiblingElement.id === 'codeContentCBR12') {
+			this.setInnerHtml('60byte4', '5');
+			this.setInnerHtml('56byte4', '9');
+		}
+	},
+	// Copies content of address 60 into 50 , reverse variable indicates whether action has to be reversed
+	copyValueOf32into56: function (reverse) {
+		if (reverse == 0 && this.nextSiblingElement.id === 'codeContentCBR14') {
+			this.setInnerHtml('32byte4', '5');
+			this.setInnerHtml('56byte4', '5');
+		}
+		if (reverse == 1 && this.previousSiblingElement.id === 'codeContentCBR13') {
+			this.setInnerHtml('32byte4', '5');
 			this.setInnerHtml('56byte4', '9');
 		}
 	},
@@ -273,7 +295,6 @@ window.view = {
 		else if (this.nextSiblingElement.id === 'codeContentCBR6') {
 			this.codeExecutionWithColour();
 			this.eraseStringFromElement('outputText', 'explanationText', this.explanationCBR5);
-			this.swapValueBetweenAddress60And56();	
 		}
 		else if (this.nextSiblingElement.id === 'codeContentCBR7') {
 			this.codeExecutionWithColourAndId('codeContentCBR11');
@@ -287,10 +308,12 @@ window.view = {
 		}
 		else if (this.nextSiblingElement.id === 'codeContentCBR13') {
 			this.codeExecutionWithColour();
+			this.copyValueOf60into56(0);
 			this.setString('explanationText', this.explanationCBR8);
 		}
 		else if (this.nextSiblingElement.id === 'codeContentCBR14')	{
 			this.codeExecutionWithColour();
+			this.copyValueOf32into56(0);	
 			this.setString('explanationText', this.explanationCBR9);
 		}
 		else if (this.nextSiblingElement.id === 'codeContentCBR15')	{
@@ -338,7 +361,6 @@ window.view = {
 		else if (this.previousSiblingElement.id === 'codeContentCBR5') {
 			this.reverseCodeExecutionWithColour();
 			this.setStringInElement(this.outputCBR2, this.explanationCBR4);
-			this.swapValueBetweenAddress60And56();
 		}
 		else if (this.previousSiblingElement.id === 'codeContentCBR10')	{
 			this.codeExecutionWithColourAndId('codeContentCBR6');
@@ -352,10 +374,12 @@ window.view = {
 		}
 		else if (this.previousSiblingElement.id === 'codeContentCBR12') {
 			this.reverseCodeExecutionWithColour();
+			this.copyValueOf60into56(1);
 			this.setString('explanationText', this.explanationCBR7);
 		}
 		else if (this.previousSiblingElement.id === 'codeContentCBR13') {
 			this.reverseCodeExecutionWithColour();
+			this.copyValueOf32into56(1);	
 			this.setString('explanationText', this.explanationCBR8);
 		}
 		else if (this.previousSiblingElement.id === 'codeContentCBR14') {
