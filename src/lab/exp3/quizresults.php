@@ -46,7 +46,7 @@ if ($Q4==1)
 echo "4 ";
 $total=$total+1;
 }
-if ($Q5==3)
+if ($Q5==3 || $Q5==4 )
 {
 $total=$total+1;
 echo "5 ";
