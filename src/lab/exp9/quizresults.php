@@ -1,7 +1,7 @@
 <?php
 
 
-$total=0;
+$total = 0;
 
 $Q1 = $_POST['Q1'];
 $Q2 = $_POST['Q2'];
@@ -11,48 +11,43 @@ $Q5 = $_POST['Q5'];
 $Q6 = $_POST['fib1'];
 $Q7 = $_POST['fib2'];
 
-echo "You answered the following questions correctly : ";
-if ($Q1==2)
-{
-$total=$total+1;
-echo "1 ";
+echo 'You answered the following questions correctly : ';
+if ($Q1 == 2) {
+    $total = $total + 1;
+    echo '1 ';
 }
-if ($Q2==4)
-{
-$total=$total+1;
-echo "2 ";
+if ($Q2 == 1) {
+    $total = $total + 1;
+    echo '2 ';
 }
-if ($Q3==2)
-{
-$total=$total+1;
-echo "3 ";
+if ($Q3 == 2) {
+    $total = $total + 1;
+    echo '3 ';
 }
-if ($Q4==4)
-{
-echo "4 ";
-$total=$total+1;
+if ($Q4 == 4) {
+    echo '4 ';
+    $total = $total + 1;
 }
-if ($Q5==1)
-{
-$total=$total+1;
-echo "5 ";
+if ($Q5 == 1) {
+    $total = $total + 1;
+    echo '5 ';
 }
-if ((strcasecmp($Q6,"itself")==0)){
-$total= $total+1;
-echo "6 ";
+if ((strcasecmp($Q6, 'itself') == 0)) {
+    $total = $total + 1;
+    echo '6 ';
 }
-if ((strcasecmp($Q7,"base case")==0) || (strcasecmp($Q7,"end-condition")==0)|| (strcasecmp($Q7,"end condition")==0) || (strcasecmp($Q7,"base-case")==0)){
-$total= $total+1;
-echo "7 ";
+if ((strcasecmp($Q7, 'base case') == 0) || (strcasecmp($Q7, 'end-condition') == 0) || (strcasecmp($Q7, 'end condition') == 0) || (strcasecmp($Q7, 'base-case') == 0)) {
+    $total = $total + 1;
+    echo '7 ';
 }
 echo "\n\n\n\n";
-echo "<html>
-<head></head>";
-echo "<body class=\"page_bg\">";
+echo '<html>
+<head></head>';
+echo '<body class="page_bg">';
 
-echo "<br>Total number of correct answers : ".$total."/9";
+echo '<br>Total number of correct answers : '.$total.'/9';
 
-echo "	<h2>Correct Answers</h2>
+echo '	<h2>Correct Answers</h2>
 <br>
 <ol>
 
@@ -78,6 +73,5 @@ echo "	<h2>Correct Answers</h2>
 		 <li><b>A recursive function must necessarily make a call to itself. </b> </li>
 		 <li><b>A base case (or end-condition) is required so that there is no infinite recursive calling of the same function.</b> </li>
 		 <br>
-</ol>";
-echo "</body></html>";
-?>
+</ol>';
+echo '</body></html>';
