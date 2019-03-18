@@ -39,9 +39,14 @@ window.view = {
 	},
 	getNestedInput: function() {
 		var inputValue = document.getElementById('nestedLoopInput').value
-		if(inputValue%1==0)
+		if(inputValue%1==0 && inputValue>0)
 		{
 			model.nestedInp = Number(inputValue)
+		}
+		else if (inputValue<=0)
+		{
+			alert("Input should be an integer greater than 0 ");
+			getNestedInput();
 		}
 		else
 		{
