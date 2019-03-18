@@ -101,7 +101,7 @@ if ($Q15==1)
 $total=$total+1;
 echo "15 ";
 }
-if ($Q16==4)
+if ($Q16==2)
 {
 $total=$total+1;
 echo "16 ";
@@ -279,13 +279,13 @@ main()
  int i = 0;
    do
        {
-             printf(.Hello.);
+             printf(\"Hello\");
              i++;
        }
    while(i > 1);
 }
 		</code></pre>
-Infinite Loop<br>
+Hello<br>
 		<br>
 
                 <li> <b>What is the output of the following code:</b></li> 
@@ -295,7 +295,7 @@ main()
  int i = 0;
    do
        {
-             printf(.%d., i);
+             printf(\" %d \", i);
              i++;
        }
    while(i < 2);
