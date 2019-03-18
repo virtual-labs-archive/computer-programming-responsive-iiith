@@ -121,7 +121,7 @@ if ($Q19==3)
 $total=$total+1;
 echo "19 ";
 }
-if ($Q20==1)
+if ($Q20==1 || $Q20==2 || $Q20==3)
 {
 $total=$total+1;
 echo "20 ";
@@ -332,7 +332,7 @@ for (i =1; i<=5;i++)
  
            <li> <b>Which among the following is an unconditional control structure:</b></li> 
 
-		goto<br>
+		goto,break,continue<br>
  		<br>          
 
 
