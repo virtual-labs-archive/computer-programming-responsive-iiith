@@ -39,7 +39,16 @@ window.view = {
 	},
 	getNestedInput: function() {
 		var inputValue = document.getElementById('nestedLoopInput').value
-		model.nestedInp = Number(inputValue)
+		if(inputValue%1==0)
+		{
+			model.nestedInp = Number(inputValue)
+		}
+		else
+		{
+			alert("Input should not be a fractional value!!!");
+		
+		getNestedInput();
+	}
 		this.clearExecutionSection()
 	},
 	activateEvents: function() {
