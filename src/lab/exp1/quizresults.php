@@ -1,39 +1,36 @@
 <?php
 
 
-$total=0;
+$total = 0;
 
 $Q1 = $_POST['Q1'];
 $Q2 = $_POST['Q2'];
 $Q3 = $_POST['Q3'];
-$Q6 = $_POST['fib1'];
+$Q4 = $_POST['fib1'];
 
-echo "You answered the following questions correctly : ";
-if ($Q1==1)
-{
-$total=$total+1;
-echo "1 ";
+echo 'You answered the following questions correctly : ';
+if ($Q1 == 1) {
+    $total = $total + 1;
+    echo '1 ';
 }
-if ($Q2==1)
-{
-$total=$total+1;
-echo "2 ";
+if ($Q2 == 1) {
+    $total = $total + 1;
+    echo '2 ';
 }
-if ($Q3==3)
-{
-$total=$total+1;
-echo "3 ";
+if ($Q3 == 3) {
+    $total = $total + 1;
+    echo '3 ';
 }
-if ((strcasecmp($Q4,"practical")==0)){
-$total= $total+1;
-echo "4 ";
+if ((strcasecmp($Q4, 'practical') == 0)) {
+    $total = $total + 1;
+    echo '4 ';
 }
 echo "\n\n\n\n";
-echo "<html>
-<head></head>";
-echo "<body class=\"page_bg\">";
+echo '<html>
+<head></head>';
+echo '<body class="page_bg">';
 
-echo "<br>Total number of correct answers : ".$total."/4";
+echo '<br>Total number of correct answers : '.$total.'/4';
 
 echo '	<h2>Correct Answers</h2>
 <br>
@@ -61,10 +58,9 @@ echo '	<h2>Correct Answers</h2>
                 </pre>
                 Make the approximation worse<br>
                 <br>
-                <li><b> An approximate solution may be as good as the accurate solution for <input type="text" name="fib1"> purposes.</b></li><br><br>
+                <li><b> An approximate solution may be as good as the accurate solution for "practical" purposes.</b></li><br><br>
 
 
 
 </ol>';
-echo "</body></html>";
-?>
+echo '</body></html>';
