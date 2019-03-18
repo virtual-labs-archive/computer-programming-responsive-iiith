@@ -1,7 +1,7 @@
 <?php
 
 
-$total=0;
+$total = 0;
 
 $Q1 = $_POST['Q1'];
 $Q2 = $_POST['Q2'];
@@ -24,114 +24,93 @@ $Q18 = $_POST['Q18'];
 $Q19 = $_POST['Q19'];
 $Q20 = $_POST['Q20'];
 
-
-echo "You answered the following questions correctly : ";
-if ($Q1==1)
-{
-$total=$total+1;
-echo "1 ";
+echo 'You answered the following questions correctly : ';
+if ($Q1 == 1) {
+    $total = $total + 1;
+    echo '1 ';
 }
-if ($Q2==2)
-{
-$total=$total+1;
-echo "2 ";
+if ($Q2 == 2) {
+    $total = $total + 1;
+    echo '2 ';
 }
-if ($Q3==2)
-{
-$total=$total+1;
-echo "3 ";
+if ($Q3 == 2) {
+    $total = $total + 1;
+    echo '3 ';
 }
-if ($Q4==1)
-{
-echo "4 ";
-$total=$total+1;
+if ($Q4 == 1) {
+    echo '4 ';
+    $total = $total + 1;
 }
-if ($Q5==3)
-{
-$total=$total+1;
-echo "5 ";
+if ($Q5 == 3) {
+    $total = $total + 1;
+    echo '5 ';
 }
-if ($Q6==3)
-{
-$total=$total+1;
-echo "6 ";
+if ($Q6 == 3) {
+    $total = $total + 1;
+    echo '6 ';
 }
-if ($Q7==3)
-{
-$total=$total+1;
-echo "7 ";
+if ($Q7 == 3) {
+    $total = $total + 1;
+    echo '7 ';
 }
-if ($Q8==2)
-{
-$total=$total+1;
-echo "8 ";
+if ($Q8 == 2) {
+    $total = $total + 1;
+    echo '8 ';
 }
-if ($Q9==1)
-{
-$total=$total+1;
-echo "9 ";
+if ($Q9 == 1) {
+    $total = $total + 1;
+    echo '9 ';
 }
-if ($Q10==2)
-{
-$total=$total+1;
-echo "10 ";
+if ($Q10 == 2) {
+    $total = $total + 1;
+    echo '10 ';
 }
-if ($Q11==2)
-{
-$total=$total+1;
-echo "11 ";
+if ($Q11 == 2) {
+    $total = $total + 1;
+    echo '11 ';
 }
-if ($Q12==1)
-{
-$total=$total+1;
-echo "12 ";
+if ($Q12 == 1) {
+    $total = $total + 1;
+    echo '12 ';
 }
-if ($Q13==4)
-{
-$total=$total+1;
-echo "13 ";
+if ($Q13 == 4) {
+    $total = $total + 1;
+    echo '13 ';
 }
-if ($Q14==1)
-{
-$total=$total+1;
-echo "14 ";
+if ($Q14 == 1) {
+    $total = $total + 1;
+    echo '14 ';
 }
-if ($Q15==1)
-{
-$total=$total+1;
-echo "15 ";
+if ($Q15 == 1) {
+    $total = $total + 1;
+    echo '15 ';
 }
-if ($Q16==4)
-{
-$total=$total+1;
-echo "16 ";
+if ($Q16 == 4) {
+    $total = $total + 1;
+    echo '16 ';
 }
-if ($Q17==3)
-{
-$total=$total+1;
-echo "17 ";
+if ($Q17 == 3) {
+    $total = $total + 1;
+    echo '17 ';
 }
-if ($Q18==3)
-{
-$total=$total+1;
-echo "18 ";
+if ($Q18 == 3) {
+    $total = $total + 1;
+    echo '18 ';
 }
-if ($Q19==3)
-{
-$total=$total+1;
-echo "19 ";
+if ($Q19 == 3) {
+    $total = $total + 1;
+    echo '19 ';
 }
-if ($Q20==1)
-{
-$total=$total+1;
-echo "20 ";
+if ($Q20 == 1) {
+    $total = $total + 1;
+    echo '20 ';
 }
 echo "\n\n\n\n";
-echo "<html>
-<head></head>";
-echo "<body class=\"page_bg\">";
+echo '<html>
+<head></head>';
+echo '<body class="page_bg">';
 
-echo "<br>Total number of correct answers : ".$total."/20";
+echo '<br>Total number of correct answers : '.$total.'/20';
 
 echo "	<h2>Correct Answers</h2>
 <br>
@@ -301,7 +280,7 @@ main()
    while(i < 2);
 } 
 		</code></pre>
-		1 2<br>
+		0 1<br>
 
 		<br>
 
@@ -338,5 +317,4 @@ for (i =1; i<=5;i++)
 
 
 </ol>";
-echo "</body></html>";
-?>
+echo '</body></html>';
