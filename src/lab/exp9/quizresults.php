@@ -74,7 +74,7 @@ echo "	<h2>Correct Answers</h2>
 		<br>
 
 		 <li><b>What will be the ouptut of the following function call: fun4(4,3); where fun4 is defined as: </b> </li>
-		 13<br>
+		 14<br>
 		 <li><b>A recursive function must necessarily make a call to itself. </b> </li>
 		 <li><b>A base case (or end-condition) is required so that there is no infinite recursive calling of the same function.</b> </li>
 		 <br>
