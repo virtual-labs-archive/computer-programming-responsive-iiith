@@ -46,7 +46,7 @@ if ($Q4==1)
 echo "4 ";
 $total=$total+1;
 }
-if ($Q5==3)
+if ($Q5==3 || $Q5==4)
 {
 $total=$total+1;
 echo "5 ";
@@ -121,7 +121,7 @@ if ($Q19==3)
 $total=$total+1;
 echo "19 ";
 }
-if ($Q20==1)
+if ($Q20==1 )
 {
 $total=$total+1;
 echo "20 ";
@@ -171,7 +171,13 @@ echo "	<h2>Correct Answers</h2>
 
 		<pre><code>
 for(int i =1; i<100; i++)
-printf(.Hello World.);
+printf(\"Hello World\");
+
+int i = 0; 
+do{
+i--
+printf(\"%d \",i);
+}while(i>0);
 		</code></pre><br>
 
 
