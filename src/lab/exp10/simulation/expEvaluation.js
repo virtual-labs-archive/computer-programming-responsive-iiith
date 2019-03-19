@@ -556,7 +556,32 @@ window.view = {
 	},
 	validateArithmaticExpression: function (exp) {
 		var characterOrOperator = 0
-		var braces = 0 
+		var braces = 0
+		var g=document.getElementById('a').value
+		var t=document.getElementById('b').value
+		var k=document.getElementById('c').value
+		var h=document.getElementById('d').value
+		//var braces = 0
+		while ( isNaN(g) )
+		{
+			document.getElementById('a').value=prompt('Please enter "a" as integer','0')
+			g=document.getElementById('a').value
+		}	
+		while ( isNaN(t) )
+		{
+			document.getElementById('b').value=prompt('Please enter "b" as integer','0')
+			t=document.getElementById('b').value
+		}
+		while ( isNaN(k) )
+		{
+			document.getElementById('c').value=prompt('Please enter "c" as integer','0')
+			k=document.getElementById('c').value
+		}
+		while ( isNaN(h) )
+		{
+			document.getElementById('d').value=prompt('Please enter "d" as integer','0')
+			h=document.getElementById('d').value
+		}		
 		for ( var i = 0 ; i < exp.length ; i ++ ) {
 			if ( exp[i] !== 'a' && exp[i] !== 'b' && exp[i] !== 'c' && exp[i] !== 'd' && exp[i] !== '*' && exp[i] !== '/' && 
 			     exp[i] !== '+' && exp[i] !== '-' &&  exp[i] !== '(' && exp[i] !== ')' && exp[i] !== '%') {
@@ -614,6 +639,31 @@ window.view = {
 	validateLogicalExpression: function (exp) {
 		var characterOrOperator = 0
 		var braces = 0 
+		var g=document.getElementById('a').value
+		var t=document.getElementById('b').value
+		var k=document.getElementById('c').value
+		var h=document.getElementById('d').value
+		//var braces = 0
+		while ( isNaN(g) )
+		{
+			document.getElementById('a').value=prompt('Please enter "a" as integer','0')
+			g=document.getElementById('a').value
+		}	
+		while ( isNaN(t) )
+		{
+			document.getElementById('b').value=prompt('Please enter "b" as integer','0')
+			t=document.getElementById('b').value
+		}
+		while ( isNaN(k) )
+		{
+			document.getElementById('c').value=prompt('Please enter "c" as integer','0')
+			k=document.getElementById('c').value
+		}
+		while ( isNaN(h) )
+		{
+			document.getElementById('d').value=prompt('Please enter "d" as integer','0')
+			h=document.getElementById('d').value
+		}	
 		for ( var i = 0 ; i < exp.length ; i ++ ) {
 			if ( exp[i] !== 'a' && exp[i] !== 'b' && exp[i] !== 'c' && exp[i] !== 'd' && exp[i] !== '|' && exp[i] !== '&' &&  exp[i] !== '(' && exp[i] !== ')') {
 				alert('You Entered Wrong Expression !!!\n Only " a b c d " characters and " || && ( ) "\n operators are allowed !!!')
@@ -675,7 +725,32 @@ window.view = {
 	},
 	validateBitwiseExpression: function (exp) {
 		var characterOrOperator = 0
-		var braces = 0 
+		var braces = 0
+		var g=document.getElementById('a').value
+		var t=document.getElementById('b').value
+		var k=document.getElementById('c').value
+		var h=document.getElementById('d').value
+		//var braces = 0
+		while ( isNaN(g) )
+		{
+			document.getElementById('a').value=prompt('Please enter "a" as integer','0')
+			g=document.getElementById('a').value
+		}	
+		while ( isNaN(t) )
+		{
+			document.getElementById('b').value=prompt('Please enter "b" as integer','0')
+			t=document.getElementById('b').value
+		}
+		while ( isNaN(k) )
+		{
+			document.getElementById('c').value=prompt('Please enter "c" as integer','0')
+			k=document.getElementById('c').value
+		}
+		while ( isNaN(h) )
+		{
+			document.getElementById('d').value=prompt('Please enter "d" as integer','0')
+			h=document.getElementById('d').value
+		}	 
 		for ( var i = 0 ; i < exp.length ; i ++ ) {
 			if ( exp[i] !== 'a' && exp[i] !== 'b' && exp[i] !== 'c' && exp[i] !== 'd' && exp[i] !== '^' && exp[i] !== '&' && 
 			     exp[i] !== '|' && exp[i] !== '<' &&  exp[i] !== '(' && exp[i] !== ')' && exp[i] !== '>') {
