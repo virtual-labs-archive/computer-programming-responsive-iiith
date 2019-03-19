@@ -3,7 +3,8 @@
 <head>
   <title>Computer-Programming</title>
   <link rel="stylesheet" type="text/css" href="../../normalize.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">    
   <link rel="stylesheet" type="text/css" href="../style.css">
@@ -260,6 +261,10 @@
       </div>
     </div>
   </div></div>
-  
+	<script>
+  $('ul li a').on('click', function(){
+      $(this).parent().addClass('active').siblings().removeClass('active');
+  });
+</script>
 </body>
 </html>
