@@ -71,7 +71,6 @@ window.view = {
 	},
 	generateRandomNumbers: function() {
 		var inputValue = this.getArraySize()
-		// document.getElementsById('userInput').disabled=true;
 		for ( i = 0 ; i < inputValue ; i++ ) {
 			var random = Math.floor(Math.random()*15)
 			this.numbers.push(String(random))
@@ -271,19 +270,6 @@ window.view = {
 		else
 			this.highlightNextStep()
 	},
-	// takeInputFromRadioBox: function() {
-	// 	var element = document.getElementsByName('radio_group')
-	// 	if ( element[0].checked )
-	// 	{
-	// 	this.generateRandomNumbers()
-	// 	this.disableButton('userInput');
-	// 	// document.getElementsById(userInput).disabled = true;
-	// 	}
-	// 	else if (element[1].checked)
-	// 	{
-	// 		this.getUserInput()
-	// 	}
-	// },
 	init: function() {
 		this.activateEvents()
 	}
