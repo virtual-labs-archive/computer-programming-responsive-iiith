@@ -12,6 +12,9 @@ window.model = {
 		this.d = document.getElementById('d').value
 	},
 	findexp: function (expression) {
+		if(expression === "Infinity"){
+			return [-1, -1];
+		}
 		var isexpfinished = 1, offset = 0;
 		var j, i;
 		for(i=0;i<expression.length;i++) {   // returns if expression evaluation is complete
@@ -161,6 +164,9 @@ window.model = {
 		}
 	},
 	findexplogical: function (expression) {
+		if(expression === "Infinity"){
+			return [-1, -1];
+		}
 		var isexpfinished = 1, offset = 0;
 		var j, i;
 		for(i=0;i<expression.length;i++) {   // returns if expression evaluation is complete
@@ -313,6 +319,9 @@ window.model = {
 		}
 	},
 	findexpbitwise: function (expression) {
+		if(expression === "Infinity"){
+			return [-1, -1];
+		}
 		var isexpfinished = 1, offset = 0;
 		var j, i;
 		for(i=0;i<expression.length;i++) {   // returns if expression evaluation is complete
