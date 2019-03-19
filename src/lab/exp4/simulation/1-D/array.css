@@ -326,7 +326,7 @@ body {
 }
 
 .keyPositionLabel {
-    left: 60%;
+    left: 70%;
     background: #F5B941;
 }
 
@@ -337,25 +337,25 @@ body {
 }
 
 .sortedKeyLabelText {
-    left: 10%;
-    width: 14%;
+    /*left: 10%;*/
+    width: 25%;
 } 
 
 .unsortedKeyLabelText {
-    left: 36%;
-    width: 24%;
+    left: 28%;
+    width: 30%;
 }
 
 .keyPositionLabelText {
-    left: 68%;
-    width: 30%;	
+    left: 56%;
+    width: 40%;	
 }
 
 .sortingDivision {
     position: absolute;
-    height: 82%;
+    height: 78%;
     width: 96%;
-    top: 10%;
+    top: 15%;
     left: 2%;
     border: 1px solid #CCC;
     overflow: auto;
@@ -367,10 +367,9 @@ body {
 }
 
 .sortedArray, .unSortedArray, .keyPosition {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     border: 1px solid #CCC;
-    margin: 10%;
     float: left;
 }
 
@@ -437,7 +436,6 @@ body {
 }
 
 .outerDiv {
-    width: 10%;
     height: 7%;
     float: left;
 }
