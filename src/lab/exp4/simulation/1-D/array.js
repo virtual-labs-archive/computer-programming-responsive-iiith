@@ -275,11 +275,3 @@ window.view = {
 	}
 }
 window.onload = function() { view.init() }
-// function disable()
-// {
-// 	document.getElementById('userInput').disabled=true;
-// }
-// function enable()
-// {
-// 	document.getElementsById('userInput').disabled=false;
-// }
