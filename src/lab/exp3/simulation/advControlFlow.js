@@ -165,7 +165,7 @@ window.view = {
 	printSpace: function() {
 		var span = document.createElement('span')
 		span.style.color = '#FF4208'
-		span.innerHTML = '_'
+		span.innerHTML = ' '
 		document.getElementById('resultDisplay').appendChild(span)
 	},
 	printStar: function() {
