@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Control Flow</title>
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+  <link rel="stylesheet" href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" type="text/css" href="../bstyle.css">
+  <link rel="stylesheet" type="text/css" href="../fonts.css">
+<!--   <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'> -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  <style type="text/css">
+        body{
+          background-color: #f4f4f4;
+        }
+      </style>  
+  </head>
+  <body>
+
+    <nav class="navbar navbar-default visible-lg" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Advanced Control Flow</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse desk-nav">
+          <ul class="nav navbar-nav">
+            <li style="border-right: 1.5px solid white;"><a href="index.html">Lab Manual</a></li>
+            <li style="border-right: 1.5px solid white;"><a href="simulation.html">Simulation</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+          <a href="../index.html"><span class="glyphicon glyphicon-home pull-right"></span></a>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div class="hidden-lg">
+      <nav class="navbar navbar-default mobile-nav" role="navigation">
+      <div class="nav navbar-nav pull-right">
+    <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="simulation/index.html"><span class="glyphicon glyphicon-play-circle"></span></a><a href="quiz.html"><span class="glyphicon glyphicon-tower"></span></a><a href="../index.html"><span class="glyphicon glyphicon-home"></span></a>
+  </div>
+    </nav>
+    <p class="experiment-mobile-title">Advanced Control Flow</p>
+    </div>
+
+
+      <div class="manual-section">
+        <p class="manual-section-title">Quiz</p><hr />
+        <div class="manual-section-description">
+            <!-- Quiz body here -->
+            <form action="quizresults.php" method="post" name="quiz" onsubmit='return window.confirm("You are submitting information to an external page. \nAre you sure?");' target="_blank">
+<ol>
+<li><b>The execution of a loop typically starts with: </b></li>
+<input name="Q1" type="radio" value="1">initialization statements<br>
+<input name="Q1" type="radio" value="2">Loop body<br>
+<input name="Q1" type="radio" value="3">test condition<br>
+<input name="Q1" type="radio" value="4">update statements<br>
+<br>
+<li><b>The break statement is used to exit from:</b> </li>
+<input name="Q2" type="radio" value="1">an if statement<br>
+<input name="Q2" type="radio" value="2">a for loop<br>
+<input name="Q2" type="radio" value="3">a program<br>
+<input name="Q2" type="radio" value="4">the main( ) function<br>
+<br>
+<li><b>A do-while loop is useful when we want that the statements within the loop must be executed</b></li>
+<input name="Q3" type="radio" value="1">Only once<br>
+<input name="Q3" type="radio" value="2">At Least Once<br>
+<input name="Q3" type="radio" value="3">More than once<br>
+<input name="Q3" type="radio" value="4">None of the above<br>
+<br>
+<li><b>In what sequence the initialization, testing and execution of body is done in a do-while loop </b></li>
+<input name="Q4" type="radio" value="1">Initialization, execution of body, testing<br>
+<input name="Q4" type="radio" value="2">Execution of body, initialization, testing <br>
+<input name="Q4" type="radio" value="3">Initialization, testing, execution of body <br>
+<input name="Q4" type="radio" value="4">None of the above<br>
+<br>
+<li><b>Which of the following is not an infinite loop. </b></li>
+<input name="Q5" type="radio" value="1"><pre><code>int i = 1 ;             
+while ( 1 ) 
+{ 
+    i++ ; 
+}</code></pre><br>
+<input name="Q5" type="radio" value="2">
+<pre><code>for( int i =1; i&lt; 10; i--)
+printf("Hello World");
+    </code></pre><br>
+<input name="Q5" type="radio" value="3"><pre><code>for(int i =1; i&lt;100; i++)
+printf("Hello World");
+    </code></pre>
+<input name="Q5" type="radio" value="4"><pre><code>int i = 0; 
+do{
+i--
+printf("%d ",i);
+}while(i&gt;0);
+    </code></pre><br>
+<li> <b> Which of the following statement is used to take the control to the beginning of the loop? </b></li>
+<input name="Q6" type="radio" value="1">exit<br>
+<input name="Q6" type="radio" value="2">break<br>
+<input name="Q6" type="radio" value="3">continue<br>
+<input name="Q6" type="radio" value="4">None of the above<br>
+<br>
+<li> <b>How many * this code will print:</b></li>
+<pre><code>
+main()
+{
+   int i;
+    for (i=1;i&lt;3;i++)
+      printf("*");
+}
+    </code></pre>
+<input name="Q7" type="radio" value="1">0<br>
+<input name="Q7" type="radio" value="2">1<br>
+<input name="Q7" type="radio" value="3">2<br>
+<input name="Q7" type="radio" value="4">3<br>
+<br>
+<li> <b>Multiple intialization is not possible in for loop</b></li>
+<input name="Q8" type="radio" value="1">True<br>
+<input name="Q8" type="radio" value="2">False<br>
+<br>
+<li> <b>For loop can be converted into equivalent while loop</b></li>
+<input name="Q9" type="radio" value="1">True<br>
+<input name="Q9" type="radio" value="2">False<br>
+<br>
+<li> <b>Loop can not be nested</b></li>
+<input name="Q10" type="radio" value="1">True<br>
+<input name="Q10" type="radio" value="2">False<br>
+<br>
+<li> <b>When break is encountered inside any loop, control automatically passes to the beginning of the loop. </b></li>
+<input name="Q11" type="radio" value="1">True<br>
+<input name="Q11" type="radio" value="2">False<br>
+<br>
+<li> <b>Which of the following is not a loop in C</b></li>
+<input name="Q12" type="radio" value="1">Repeat<br>
+<input name="Q12" type="radio" value="2">Do while<br>
+<input name="Q12" type="radio" value="3">While<br>
+<input name="Q12" type="radio" value="4">For<br>
+<br>
+<li> <b>What is the output of the following code:</b></li>
+<pre><code>
+main( ) 
+{ 
+   int j =2; 
+   while ( j &lt;= 1) 
+   { 
+         printf ( "%d ", j ) ; 
+         j=j+1; 
+   } 
+} 
+    </code></pre>
+<input name="Q13" type="radio" value="1">Syntax Error<br>
+<input name="Q13" type="radio" value="2">1 2<br>
+<input name="Q13" type="radio" value="3">1 2 3<br>
+<input name="Q13" type="radio" value="4">Print nothing<br>
+<br>
+<li> <b>What is the output of the following code:</b></li>
+<pre><code>
+main( ) 
+{ 
+   int x = 1 ; 
+   while ( x == 1 ) 
+   { 
+        x=x-1; 
+        printf ( "\n%d", x ) ; 
+   } 
+} 
+    </code></pre>
+<input name="Q14" type="radio" value="1">0<br>
+<input name="Q14" type="radio" value="2">1<br>
+<input name="Q14" type="radio" value="3">2<br>
+<input name="Q14" type="radio" value="4">3<br>
+<br>
+<li> <b>What is the output of the following code:</b></li>
+<pre><code>
+main( ) 
+{ 
+   while ( 'a' &lt; 'b' ) 
+        printf ( "hello world" ) ; 
+}
+
+    </code></pre>
+<input name="Q15" type="radio" value="1">Hello world<br>
+<input name="Q15" type="radio" value="2">Syntax error<br>
+<input name="Q15" type="radio" value="3">Print nothing<br>
+<input name="Q15" type="radio" value="4">Run Time error<br>
+<br>
+<li> <b>What is the output of the following code:</b></li>
+<pre><code>
+main()
+{
+ int i = 0;
+   do
+       {
+             printf("Hello");
+             i++;
+       }
+   while(i &gt; 1);
+}
+    </code></pre>
+<input name="Q16" type="radio" value="1">Syntax Error<br>
+<input name="Q16" type="radio" value="2">Hello<br>
+<input name="Q16" type="radio" value="3">HelloHello<br>
+<input name="Q16" type="radio" value="4">Infinite Loop<br>
+<br>
+<li> <b>What is the output of the following code:</b></li>
+<pre><code>
+main()
+{
+ int i = 0;
+   do
+       {
+             printf("%d", i);
+             i++;
+       }
+   while(i &lt; 2);
+} 
+    </code></pre>
+<input name="Q17" type="radio" value="1">1<br>
+<input name="Q17" type="radio" value="2">2<br>
+<input name="Q17" type="radio" value="3">1 2<br>
+<input name="Q17" type="radio" value="4">1 2 3<br>
+<br>
+<li> <b>How many * this code will print:</b></li>
+<pre><code>
+main()
+{
+int i,j
+for (i =1; i&lt;=5;i++)
+     for(j=i;j&lt;=5;j++)
+           printf("*");
+}
+    </code></pre>
+<input name="Q18" type="radio" value="1">25<br>
+<input name="Q18" type="radio" value="2">20<br>
+<input name="Q18" type="radio" value="3">15<br>
+<input name="Q18" type="radio" value="4">10<br>
+<br>
+<li> <b>Which of the following is an exit controlled loop:</b></li>
+<input name="Q19" type="radio" value="1">For<br>
+<input name="Q19" type="radio" value="2">While<br>
+<input name="Q19" type="radio" value="3">Do-While<br>
+<input name="Q19" type="radio" value="4">None of the above<br>
+<br>
+<li> <b>Which among the following is an unconditional control structure:</b></li>
+<input name="Q20" type="radio" value="1">goto<br>
+<input name="Q20" type="radio" value="2">break<br>
+<input name="Q20" type="radio" value="3">continue<br>
+<input name="Q20" type="radio" value="4">if else<br>
+<br><br/>
+<p><input target="_blank" type="submit" value="Submit answers for evaluation"/></p>
+</form>
+        </div>
+    </div>
+
+    
+   
+  </body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Computer Programming Lab</title>
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+  <link rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="bstyle.css">
+  <link rel="stylesheet" type="text/css" href="fonts.css">
+  <link rel="stylesheet" type="text/css" href="overlay.css"> <!--style for overlay color changer, 
+  will be removed in production-->
+  <script type="text/javascript" src="colorchanger.js"></script> <!--script for overlay color changer-->
+<!--   <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'> -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  	<nav class="navbar navbar-default visible-lg" role="navigation">
+  		<!-- Brand and toggle get grouped for better mobile display -->
+  		<div class="navbar-header">
+  			<a class="navbar-brand" href="#">Computer Programming Lab</a>
+  		</div>
+
+  		<!-- Collect the nav links, forms, and other content for toggling -->
+  		<div class="desk-nav">
+  			<ul class="nav navbar-nav">
+  				<li style="border-right: 1.5px solid white;"><a href="index.html">Home</a></li>
+  				<li style="border-right: 1.5px solid white;"><a href="about.html">About this lab</a></li>
+  				<li><a href="#">Explore Vlabs</a></li>
+  			</ul>
+  			
+  			<ul class="nav navbar-nav navbar-right visible-lg">
+  				<li><div class="icons"><img src="images/iiit.png"></div></li>
+  				<li><div class="icons"><img src="images/vlabs.png"></div></li>
+  			</ul>
+  		</div><!-- /.navbar-collapse -->
+  	</nav>
+
+      <div class="hidden-lg">
+      <nav class="navbar navbar-default mobile-nav" role="navigation">
+      <div class="nav navbar-nav pull-right">
+    	<a href="index.html"><span class="glyphicon glyphicon-home"></span></a><a href="about.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="#"><span class="glyphicon glyphicon-send"></span></a>
+  	  </div>
+      </nav>
+    <p class="experiment-mobile-title">Computer Programming Lab</p>
+    </div>
+
+<div class="colorchanger">
+  <button type="button" id="color1" onclick="colorChange('#3652a4','#ced8ef');" class="btn btn-primary"></button>
+  <button type="button" id="color2" onclick="colorChange('#428bca','#E3ECF3');" class="btn btn-primary"></button>
+  <button type="button" id="color3" onclick="colorChange('#7FBC7C','#D4E9D3');" class="btn btn-primary"></button>
+  <button type="button" id="color4" onclick="colorChange('#2c373b','#cbd3d5');" class="btn btn-primary"></button>
+</div>
+
+    <div class="row">
+   
+     <a href="exp1/index.html">
+  <div class="col-lg-6">
+    <div class="experiment-card">
+      <p class="experiment-title">1. Numerical Approximation</p>
+
+
+      <div class="img-thum">
+       <img class="experiment-thumbnail" src="imgs/exp1.png">
+     </div>
+
+
+     <div class="experiment-description">
+      <p>This experiment demonstrates the idea that one can attain a perfect solution in the limit by suucessively computing approximations to the exact value. The intent behind this experiment is to make use of ideas laerned in the previous experiments. This is intended to introduce the student to numerical methods. 
+    </p> 
+    </div>
+    <p class="experiment-outcome"><i>Objectives of this experiments are :</i><br>
+      1. To understand that for some problems an approximate numerial solution is as good as the exact solution for practical purposes.<br>
+    </p>
+    <p class="experiment-prereq">Prerequisite : </p>
+
+  </div>
+</div>
+</a>
+
+    <a href="exp2/index.html">
+    <div class="col-lg-6">
+      <div class="experiment-card">
+        <p class="experiment-title">2. Functions</p>
+        <div class="img-thum">
+         <img class="experiment-thumbnail" src="imgs/exp2.png">
+       </div>
+
+
+       <div class="experiment-description">
+        <p>Functions enable modular decomposition of large programs. They allow reuse and improve readability and maintainability of programs. When constructed properly, functions also enable reasoning about their properties. A function typically receives arguments and returns a value. This experiment shows function definition and invocation within a program. </p>
+      </div>
+      <p class="experiment-outcome"><i>Objectives of this experiments are :</i><br>
+        1. To understand that a big program can be broken up into independent modules.<br>
+        2. To learn to define functions and call them with appropriate parameters. </p>
+      <p class="experiment-prereq">Prerequisite : </p>
+
+
+    </div>
+  </div>
+</a>
+
+  	</div>
+
+  <div class="row">
+  <a href="exp3/index.html">
+    <div class="col-lg-6">
+      <div class="experiment-card">
+        <p class="experiment-title">3. Advanced Control Flow</p>
+
+
+        <div class="img-thum">
+         <img class="experiment-thumbnail" src="imgs/exp3.png">
+       </div>
+
+
+       <div class="experiment-description">
+        <p>This experiment shows the execution of programs that use for loops and while loops. It includes programs with nested for loops to illustrate complex control flow within the program. The student will be able to visually comprehend the flow control.</p>
+      </div>
+      <p class="experiment-outcome"><i>Objectives of this experiments are :</i><br>
+        1. To learn how decision making is done while programming.<br>
+        2. To learn about the various advanced constructs used for control flow.
+      </p>
+      <p class="experiment-prereq">Prerequisite : </p>
+    </div>
+  </div>
+  </a>
+  <a href="exp4/index.html">
+  <div class="col-lg-6">
+    <div class="experiment-card">
+      <p class="experiment-title">4. Arrays</p>
+
+
+      <div class="img-thum">
+       <img class="experiment-thumbnail" src="imgs/exp4.png">
+     </div>
+
+
+     <div class="experiment-description">
+      <p> Arrays are used to store multiple data of same type. There are the most efficient means to store sequential collection of values. Programs use loops to process data stored in arrays. This experiment demonstrates steps involved in defining arrays, initializing them and processing the data contained in the arrays.  </p> 
+    </div>
+    <p class="experiment-outcome"><i>Objectives of this experiments are :</i><br>
+      1. To learn how to use arrays for storing large amount of data.<br>
+      2. To learn how to use array to create a common reference for a large number of variables. </p>
+    <p class="experiment-prereq">Prerequisite : </p>
+  </div>
+</div>
+</a>
+</div>
+
+<div class="row">
+<a href="exp5/index.html">
+    <div class="col-lg-6">
+      <div class="experiment-card">
+        <p class="experiment-title">5. Structures</p>
+        <div class="img-thum">
+         <img class="experiment-thumbnail" src="imgs/exp5.png">
+       </div>
+
+
+       <div class="experiment-description">
+        <p>Structures are used to represent records - a logical group of related items. Individual items in a structure are usually of different data types. Programming languages provide unique syntactic constructs to access fields of a record. This experiment demonstrates the use of structures within a program.</p>
+      </div>
+      <p class="experiment-outcome"><i>Objectives of this experiments are :</i><br>
+        1. To understand how to use structures as a compund datatype.<br>
+        2. To be able to design structures according to your requirement.
+      </p>
+      <p class="experiment-prereq">Prerequisite : </p>
+
+
+    </div>
+  </div>
+  </a>
+   </a>
+ <a href="exp6/index.html">
+    <div class="col-lg-6">
+      <div class="experiment-card">
+        <p class="experiment-title">6. Basic Control Flow</p>
+        
+        <div class="img-thum">
+          <img class="experiment-thumbnail" src="imgs/exp6.png">
+        </div>
+        
+        
+        <div class="experiment-description">
+          <p>Computer programs employ control structures such as conditional statements, multi-way branches and iteration. This experiment allows the student to execute programs that use if-then-else statements and switch-case statements. The execution of a program is animated and the intermediate results are displayed in seperate output sections for better comprehension.</p> 
+        </div>
+        <p class="experiment-outcome"><i>Objectives of this experiments are :</i><br>
+          1. To learn how decision making is done while programming.<br>
+          2. To learn about the various simple constructs used for control flow. </p>
+        <p class="experiment-prereq">Prerequisite : </p>
+        
+
+      </div>
+    </div>
+    </a>
+</div>
+
+<div class="row">
+<a href="exp7/index.html">
+  <div class="col-lg-6">
+    <div class="experiment-card">
+      <p class="experiment-title">7. Strings</p>
+
+
+      <div class="img-thum">
+       <img class="experiment-thumbnail" src="imgs/exp7.png">
+     </div>
+
+
+     <div class="experiment-description">
+      <p>Strings in the C programming language are represented by a sequence of characters terminated by an ASCII zero ('\0') charcter. Strings are processed using a charcter pointer that traverses the string from one end to the other. The ANSI C standard defines a standard string library containing useful functions. This experiment demonstrates the use of these functions.</p> 
+    </div>
+    <p class="experiment-outcome"><i>Objectives of this experiments are :</i><br>
+      1. To understand the concept of strings and how they are a special type of character arrays.<br>
+      2. To understand the usage of string libraries to do common string operations.
+    </p>
+    <p class="experiment-prereq">Prerequisite : </p>
+
+  </div>
+</div>
+</a>
+ <a href="exp8/index.html">
+    <div class="col-lg-6">
+      <div class="experiment-card">
+        <p class="experiment-title">8. Pointers</p>
+        <div class="img-thum">
+         <img class="experiment-thumbnail" src="imgs/exp8.png">
+       </div>
+
+
+       <div class="experiment-description">
+        <p>A pointer data type represnts addresses in program address space. In the C programming language, pointers are used for efficiency and for causing side-effects. They are also used for dynamic memory management within programs. This experiment demonstrates such uses of pointers in C programs.</p>
+      </div>
+      <p class="experiment-outcome"><i>Objectives of this experiments are :</i><br>
+        1. To understand the concept of memory adddress associated with every variable.<br>
+        2. To understand pointer referencing and dereferencing.
+      </p>
+      <p class="experiment-prereq">Prerequisite : </p>
+
+
+    </div>
+  </div>
+  </a>
+</div>
+
+<div class="row">
+<a href="exp9/index.html">
+<div class="col-lg-6">
+      <div class="experiment-card">
+        <p class="experiment-title">9. Recursion </p>
+        <div class="img-thum">
+          <img class="experiment-thumbnail" src="imgs/exp9.png">
+        </div>        
+        <div class="experiment-description"><p>
+  Many data structures are self-similar at different levels. Many operations over such data are naturally expressed as operations that repetitively process diminishing parts of such data. In many cases, ieration can be naturally viwed as a function that reflexively applies itself on the data. This experiment is intended to demonstrate the use of recursion in programs.</p>
+        </div>
+        <p class="experiment-outcome"><i>Objectives of this experiments are :</i><br>
+	  1. To understand that some problems can be broken down into smaller similar problems.<br>
+      	  2. To solve such problems using recursive procedures.
+        </p>
+        <p class="experiment-prereq">Prerequisite : </p>   
+      </div>
+    </div>
+</a>
+
+<a href="exp10/index.html">
+   <div class="col-lg-6">
+    <div class="experiment-card">
+      <p class="experiment-title">10. Expression Evaluation</p>
+
+
+      <div class="img-thum">
+       <img class="experiment-thumbnail" src="imgs/exp10.png">
+     </div>
+
+
+     <div class="experiment-description">
+      <p>
+         This experiment demostrates the automatic evaluation of expressions involving arithmetic and logical operators. Input expressions may be arbitrarily nested. The evaluation employs a stack to handle operator precedence and nesting. The evaluation steps are simple animation.
+      </p> 
+    </div>
+    <p class="experiment-outcome"><i>Objectives of this experiments are :</i><br>
+     1. To learn about different types of operators<br>
+     2. To learn about the precedence of the operators.
+    </p>
+    <p class="experiment-prereq">Prerequisite : </p>
+  </div>
+</div>
+</a>
+
+</div>
+
+<!-- <div class="row">
+    <div class="col-lg-6">
+      <div class="experiment-card">
+        <p class="experiment-title"><a href="exp11/index.html">11. Rasterization: Polygon</a></p>
+        <div class="img-thum">
+         <img class="experiment-thumbnail" src="imgs/exp11.png">
+       </div>
+
+
+       <div class="experiment-description">
+        <p>When a polygon is transformed from a set of edges in the continous form of y = mx + c into a set of pixels occupied by the interior of the polygon, this transformation is called polygon rasterization. When we rasterize a polygon, we obtain the set of pixels that are required to fill the interior area of a bounded polygon. This experiment demonstrates the working of Scan-Line Polygon Fill algorithm.</p>
+      </div>
+      <p class="experiment-outcome">The objective of this experiment is to understand the steps of filling a polygon in a 2D frame buffer. Given the vertices of the polygon, the experiment outputs a filled polygon. Here we have demonstrated the steps of Scan Line Poylgon Fill algorithm.</p>
+      <p class="experiment-prereq">Prerequisite : Exp1, Exp2, Exp3</p>
+
+
+    </div>
+  </div>
+  <div class="col-lg-6">
+  </div>
+</div> -->
+</div>
+  
+  </body>
+</html>

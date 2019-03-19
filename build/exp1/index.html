@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Computer-Programming</title>
+  <link rel="stylesheet" type="text/css" href="../../normalize.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" type="text/css" href="../bstyle.css">
+  <link rel="stylesheet" type="text/css" href="fonts.css">
+<!--   <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'> -->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+      <![endif]-->
+      <style type="text/css">
+        body{
+          background-color: #f4f4f4;
+        }
+      </style>  
+</head>
+    <body>
+
+      <nav class="navbar navbar-default visible-lg" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"> Numerical Approximation</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse desk-nav">
+          <ul class="nav navbar-nav">
+            <li style="border-right: 1.5px solid white;"><a href="index.html">Lab Manual</a></li>
+            <li style="border-right: 1.5px solid white;"><a href="simulation/index.html">Simulation</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+          <a href="../index.html"><span class="glyphicon glyphicon-home pull-right"></span></a>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+<div class = "col-sm-12">
+<a href="../index.html"><span id= "home" class="glyphicon glyphicon-home pull-right"></span></a>
+</div>
+      <div class="hidden-lg">
+      <nav class="navbar navbar-default mobile-nav" role="navigation">
+      <div class="nav navbar-nav pull-right">
+    <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="simulation/index.html"><span class="glyphicon glyphicon-play-circle"></span></a><a href="quiz.html"><span class="glyphicon glyphicon-tower"></span></a><a href="../index.html"><span class="glyphicon glyphicon-home"></span></a>
+  </div>
+    </nav>
+    <p class="experiment-mobile-title"> Numerical Approximation</p>
+    </div>
+
+<div class="row">
+  <div class="col-lg-2 visible-lg lab-index">
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active"><a href="#intro">Introduction</a></li>
+      <li><a href="#theory">Theory</a></li>
+      <li><a href="#obj">Objective</a></li>
+      <li><a href="#man">Manual</a></li>
+      <li><a href="#proc">Procedure</a></li>
+      <li><a href="#further-reading">Further Reading</a></li>
+    </ul>
+  </div>
+
+  <div class="col-lg-10 lab-manual">
+    <div id="intro" class="manual-section">
+      <p class="manual-section-title">Introduction</p><hr />
+      <div class="manual-section-description">
+        <p>
+          For many mathematical problems, such as finding area under a curve, it may not be possible to find an exact formula. But still these can be computed to arbitrary precision by using appoximate methods. In this lab you will learn how to code these approximation methods to solve these problems using a computer.  
+        </p>
+      </div>
+    </div>
+
+    <div id="theory" class="manual-section">
+      <p class="manual-section-title">Theory</p><hr />
+      <div class="manual-section-description">
+        <p>
+          The problem finding area under a curve means calculating the area between a give curve and the x-axis( the line y=0), between two limits, say x=a and x=b. As you can remember from you high school mathematics, this problem is easily solvable by finding the integral of the function and plugging the values of the limits in the intergral. The difference of the limits gives the area under then curve. But there are some mathematical functions which are not integrable. Also, this method is applicable for only smooth functions. Can something be done to find the area under the curves which are not well behaved?
+        </p>
+        <p>
+          It turns out that people were able to "approximate" the solution to this problem to any reasonable arbitrary degree, for any arbitrary curve much before integration was discovered. As we all know that rectangle is the easiest of geometrical figures to find the area of, so the task of finding the area under a curve was expressed as a problem of finding the area of vertical rectangular strips. The boundary limits is divided into some x equal intervals of length(l) equal to l=(b-a)/n. Now, the area falling under each of these strips is approximated using an rectangle whose width is equal to the width of interval and height is equal to the value of the function at the beginning of the interval. A variation of this algorithm takes the value of the function at the middle of the interval. Now, the area under the curve is just the sum of areas of the individual strips. 
+        </p><br>
+        <img src="arch.gif" width="279px" height="185px"><br>
+        <p>
+          It is easy to see that the result of this approximation would get better and better as the legnth of the interval is decreased. If they are made infinitesimally small, then we can get the exact area under the curve. But this is not possible using a computer where you can only specify numbers to a certain degree of precision. Still it is possible to approximate the area under the curve to a reasonable degree for practical purposes using a computer. 
+        </p>
+      </div>
+    </div>
+    <div id="obj" class="manual-section">
+      <p class="manual-section-title">Objective</p><hr />
+      <div class="manual-section-description">
+        <p>
+          <ol>
+            <li>  To understand that for some problems an approximate numerial solution is as good as the exact solution for practical purposes. </li>
+            <li>  To understand how to apply these solutions to obtain arbitrary precision. </li>
+          </ol>
+        </p>
+      </div>
+    </div>
+
+    <div id="man" class="manual-section">
+      <p class="manual-section-title">Manual</p><hr />
+      <div class="manual-section-description">
+        <p>
+          In this lab you calculate the area under the curve using approximation techniques.
+        </p>
+      </div>
+    </div>
+    <div id="proc" class="manual-section">
+      <p class="manual-section-title">Procedure</p><hr />
+      <div class="manual-section-description">
+        <p>
+          Procedure for the experiment is as follows.
+        </p>
+        <p>
+          <ol>
+            <li>  Read the Problem Statement.</li>
+            <li>  Press START to start the experiment </li>
+            <li>  Select the limits of Integration i.e.  a and b. </li>
+            <li>  Press OK to save the value of a and b. </li>
+            <li>  Press NEXT to see the execution of the code. </li>
+            <li>  Relavant line in the code is shown here. </li>
+            <li>  The visual simulation of area under curve and output of the code is shown in the right. </li>
+            <li>  Value of Local Variables are  shown here. </li>
+            <li>  Output of code is shown here. </li>
+          </ol>
+        </p>
+      </div>
+    </div>
+
+    <div id="further-reading" class="manual-section">
+      <p class="manual-section-title">Further Reading</p><hr />
+      <div class="manual-section-description">
+        <ol>
+          <li><a href="http://en.wikipedia.org/wiki/Numerical_integration"> http://en.wikipedia.org/wiki/Numerical_integration </a></li>
+          <li><a href="http://en.wikipedia.org/wiki/Numerical_analysis"> http://en.wikipedia.org/wiki/Numerical_analysis </a></li>
+        </ol>
+      </div>
+    </div>
+  </div></div>
+
+</body>
+</html>

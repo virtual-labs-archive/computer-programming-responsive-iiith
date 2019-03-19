@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = 'stylesheet' type = 'text/css' href = 'stringMatching.css' />
+<link href = 'http://fonts.googleapis.com/css?family=Inconsolata' rel = 'stylesheet' type = 'text/css' >
+<script src = 'stringMatching.js' ></script>
+<title>Computer-Programming</title>
+</head>
+
+<body>
+<div id = 'header' > String Matching </div>
+<a href="../../simulation.html"><div class="vlabsIcon"></div></a>
+
+<div class = 'inputDivision' >
+	<div class = 'problemBlock' >
+		<div class = 'problemStatementTitle' ><div class = 'problemPic' ></div><div class = 'experimentText' >Problem ?</div></div>
+		<div class = 'problemStatementBody' >
+			<div class = 'warningText1' >1. Given Two strings str1 and str2, Find out whether str2 is substring of str1 ?</div>
+			<div class = 'warningText2' >2. Initailize the value of str1 and str2 in below given section.</div>
+		</div><!-- end of problemStatementBody -->
+	</div><!-- end of problemBlock -->
+	<div class = 'inputBlock' >
+		<div class = 'inputDivisionTitle' ><div class = 'experimentPic' ></div><div class = 'experimentText' >Initialize</div></div>
+		<div class = 'inputDivisionBody' >
+			<div class = 'enterStringText' >Enter Strings</div>
+			<input  placeholder = '1st String' class = 'inputField' type = 'text' name = 'p_value_input'  id = 'str1Id' size = '10' >
+			<input  placeholder = '2nd String' class = 'inputField' type = 'text' name = 'p_value_input'  id = 'str2Id' size = '10' >
+			<button class = 'button startButton' id = 'okBtnId' >OK</button>
+			<div class = 'buttonHolder'>
+			 	<button class = 'buttonDisable myStartButton' id = 'startBtnId'  disabled>Start</button>
+			 	<button class = 'buttonDisable myStartButton hide' id = 'stopBtnId' disabled>Stop</button>
+			 	<button id = 'nextBtnId' class = 'buttonDisable nextButton' disabled>Next</button>
+			 </div><!-- end of buttonHolder -->
+		</div><!-- end of inputDivisionBody -->
+	</div><!-- end of inputBlock -->
+</div><!-- end of inputDivision -->
+
+<div class = 'executionDivision' >
+	<div class = 'executionDivisionTitle' ><div class = 'executionPic' ></div><div class = 'executionText' >Step Execution</div></div>
+	<div class = 'stepExecutionDisplay' >
+		<div id = 'strMatchCode' class = 'programCode' >
+			<div id = 'codeContentId1'  >main(){</div>
+			<div id = 'codeContentId2'  >&emsp;char str1[100], str2[100];</div>
+			<div id = 'codeContentId3'  >&emsp;int i, j, k;</div>
+			<div id = 'codeContentId4'  >&emsp;scanf( "%s%s", str1, str2 );</div>
+			<div id = 'codeContentId5'  >&emsp;i = 0; j = 0; k = 0;</div>
+			<div id = 'codeContentId6'  >&emsp;while ( str1[i] != 0 ){</div>
+			<div id = 'codeContentId7'  >&emsp;&emsp;&emsp;j = 0; k = i;</div>
+			<div id = 'codeContentId8'  >&emsp;&emsp;&emsp;while ( str2[j] != 0 && str1[k] != 0 ){</div>
+			<div id = 'codeContentId9'  >&emsp;&emsp;&emsp;&emsp;&emsp;if ( str2[j] != str1[k] ){</div>
+			<div id = 'codeContentId10' >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;break;</div>
+			<div id = 'codeContentId11' >&emsp;&emsp;&emsp;&emsp;&emsp;}</div>
+			<div id = 'codeContentId12' >&emsp;&emsp;&emsp;&emsp;&emsp;j++; k++;</div>
+			<div id = 'codeContentId13' >&emsp;&emsp;&emsp;}</div>
+			<div id = 'codeContentId14' >&emsp;&emsp;&emsp;if ( str2[j] == 0 ){</div>
+			<div id = 'codeContentId15' >&emsp;&emsp;&emsp;&emsp;&emsp;printf("String str2 is found in str1.");</div>
+			<div id = 'codeContentId16' >&emsp;&emsp;&emsp;&emsp;&emsp;break;</div>
+			<div id = 'codeContentId17' >&emsp;&emsp;&emsp;}</div>
+			<div id = 'codeContentId18' >&emsp;&emsp;&emsp;i++;</div>
+			<div id = 'codeContentId19' >&emsp;}</div>
+			<div id = 'codeContentId20' >}</div>
+		</div><!-- end of programCode -->
+	</div><!-- end of stepExecutionDisplay -->
+</div><!-- end of executionDivision -->
+	
+<div class = 'outputDivision' > 
+	<div class = 'outputDivisionTitle' ><div class = 'outputPic' ></div><div class = 'outputText'>Code Output</div></div>
+	<div class = 'resultDisplay' id = 'resultDisplay' >
+		<div class = 'memoryMapOfStr' >Memory Map Of Str1:</div>
+		<div class = 'tableDiv' >
+			<table id = 'memoryMap1' class = 'table1' border = '1' >
+				<tr>
+					<td class = 'tableBox1' >/0</td>
+					<td class = 'tableBox1' ></td>
+					<td class = 'tableBox1' ></td>
+					<td class = 'tableBox1' ></td>
+					<td class = 'tableBox1' ></td>
+					<td class = 'tableBox1' ></td>
+					<td class = 'tableBox1' ></td>
+					<td class = 'tableBox1' ></td>
+				</tr>
+			</table><!-- end of table1 -->
+		</div><!-- end of tableDiv -->
+		<div class = 'tableDiv' >
+			<table id = 'variableMap1' class = 'table2' >
+				<tr>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+				</tr>
+			</table><!-- end of table2 -->
+		</div><!-- end of tableDiv -->
+		
+		<div class = 'memoryMapOfStr' >Memory Map Of Str2:</div>
+		<div class = 'tableDiv' >
+			<table id = 'memoryMap2' class = 'table1' border = '1' >
+				<tr>
+					<td class = 'tableBox1' >/0</td>
+					<td class = 'tableBox1' ></td>
+					<td class = 'tableBox1' ></td>
+					<td class = 'tableBox1' ></td>
+					<td class = 'tableBox1' ></td>
+					<td class = 'tableBox1' ></td>
+					<td class = 'tableBox1' ></td>
+					<td class = 'tableBox1' ></td>
+				</tr>
+			</table><!-- end of table1 -->
+		</div><!-- end of tableDiv -->
+		<div class = 'tableDiv' >
+			<table id = 'variableMap2' class = 'table2' >
+				<tr>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+					<td class = 'tableBox2' ></td>
+				</tr>
+			</table><!-- end of table2 -->
+		</div><!-- end of tableDiv -->
+
+		<div class = 'output' ><span>OUTPUT :&emsp;</span><span id='outputStr'></span></div>
+		<div class = 'localVariables' >
+			<div class = 'variableDiv' >LOCAL VARIABLE:</div>
+			<div class = 'variableDiv' >
+				<span id = 'iVariable' ></span><span id = 'iValue'></span>
+			</div><!-- end of variableDiv -->
+			<div class = 'variableDiv' >
+				<span id = 'jVariable' ></span><span id = 'jValue'></span>
+			</div><!-- end of variableDiv -->
+			<div class = 'variableDiv' >
+				<span id = 'kVariable' ></span><span id = 'kValue'></span>
+			</div><!-- end of variableDiv -->
+		</div><!-- end of localVariables -->
+	</div><!-- end of resultDisplay -->
+</div><!-- end of outputDivision -->
+</body>
+</html>

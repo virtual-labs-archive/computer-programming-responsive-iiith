@@ -1,0 +1,355 @@
+*{padding: 0 ; margin: 0 ;}
+
+body {
+	min-height: 564px;
+	min-width: 1100px;
+    text-align: center;
+    height: 100%;
+    font-size: 100%;
+    position:absolute; top: 0%; bottom: 0%; right: 0%; left: 0%;
+}
+
+.header {
+	position: absolute;
+	top: 0;bottom: 0;left: 0;right: 0;
+	width: 100%;
+	height: 6%;
+	font-size: 4vh;
+	padding-top: 1.3vmin;
+}
+
+.button, .buttonDisable{
+	position: relative;
+	padding: 0.5em 1em;
+  	border-radius: 0.2em; 
+  	overflow: visible;
+  	outline: none;
+	white-space: nowrap;
+  	-moz-background-clip: padding; 
+    background-clip: padding-box;
+	border: 1px solid #d4d4d4;
+    margin: 0;
+    text-align: center;
+	zoom: 1;
+    *display: inline;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button{
+    cursor: pointer;
+}
+
+.header, .button {
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+	border-color: #3072b3;
+    border-bottom-color: #2a65a0;
+	color: #fff;
+	background-color: #3c8dde;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
+    background-image: -moz-linear-gradient(#599bdc, #3072b3);
+    background-image: -o-linear-gradient(#599bdc, #3072b3);
+    background-image: linear-gradient(#599bdc, #3072b3);
+}
+
+.buttonDisable {
+   	text-shadow: 1px 1px 0 #fff;
+   	color: #999999;
+    background-color: #ececec;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+    background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+    background-image: -ms-linear-gradient(#f4f4f4, #ececec);
+    background-image: -o-linear-gradient(#f4f4f4, #ececec);
+    background-image: linear-gradient(#f4f4f4, #ececec);
+}
+
+.buttonDisable, .button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+.vlabsIcon {
+    position: absolute;
+    top: 1.2%;
+    left: 8%;
+    width: 15vh;
+    height: 6.7vh;
+    background-image: url('iiitLogo.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.inputDivision, .outputDivision, .executionDivision {
+    top: 11%;
+    height: 87%; 
+    position: absolute;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    color: #464646;
+}
+
+.executionDivision {
+    left: 25%;
+    width: 30%;
+}
+
+.inputDivision {
+    left: 3%;
+    width: 19%;
+}
+
+.outputDivision {
+    left: 58%;
+    width: 39%;
+}
+
+.inputDivisionTitle, .outputDivisionTitle, .executionDivisionTitle {
+    text-align: center;
+    top: 0%;
+    height: 9%;
+    color: #2a65a0;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #fff;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #F8F8F8;
+}
+
+.initializePic, .executionPic, .outputPic {
+	margin-left: 10%;
+	float: left;
+	height: 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.initializePic {
+	margin-top: 1.5vh;
+	width: 20%;
+	background-image: url('initIcon.png');
+}
+
+.initializeText {
+	width: 60%;
+	float: left;
+	height: 100%;
+	padding-top: 1.8vmin; 
+}
+
+.executionPic {
+	margin-top: 1vh;
+	width: 25%;
+	background-image: url('pageIcon.png');
+}
+
+.executionText {
+	text-align: left;
+	width: 50%;
+	float: left;
+	height: 100%;
+	padding-top: 1.8vmin; 
+}
+
+.outputPic {
+	margin-top: 1.6vh;
+	width: 25%;
+	background-image: url('outputIcon.png');
+}
+
+.outputText {
+	text-align: left;
+	width: 50%;
+	float: left;
+	height: 100%;
+	padding-top: 1.8vmin; 
+}
+
+.inputDivisionBody {
+	position: absolute;
+	top: 9%;
+	left: 0%;
+	width: 100%;
+	height: 91%;
+	text-align: center;
+	font-size: 1em;
+	border-top: 1px solid #CCC;
+}
+
+.simpleLoopBlock, .nestedLoopBlock {
+	height: 35%;
+	float: left;
+}
+
+.instructionText {
+    float: left;
+    width: 80%;
+    min-width: 70px;
+    height: 30%;
+    min-height: 30px;
+    margin-left: 10%;
+    margin-top: 15px; 
+    font-size: 1.1em;
+}
+
+.inputField {
+    text-align: center;
+    font-size: 15px;
+    float: left;
+    margin-left: 10%;
+    height: 30px;
+    width: 80%;
+    min-width: 150px;
+    border: 1px solid #CCC;
+    outline: none;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+.switchButton, .loopList {
+	font-size: 13px;
+	min-width: 150px;
+	float: left;
+	margin-left: 10%;
+    height: 30px;
+    width: 80%;
+}
+
+.loopList {
+	margin-bottom: 15px;
+}
+
+.startButton{
+    height: 30px;
+    width: 36%;
+    float: center;
+    font-size: 14px;
+}
+
+.marginBottom {
+	margin-bottom: 40px;
+}
+
+.marginTop {
+	margin-top: 60px;
+}
+
+.nextButton {
+    margin-left: 14px; 
+    height: 30px;
+    width: 36%;
+    float: center;
+    font-size: 14px;
+}
+
+.resultDisplay {
+    position: absolute;
+    padding-top: 2%;
+    top: 9%;
+    left: 0%;
+    width: 100%;
+    height: 88%;
+    text-align: center;
+    border-top: 1px solid #CCC;
+}
+
+.stepExecutionDisplay {
+    padding-left: 2%;
+    padding-top: 2%;
+    overflow-x: auto;
+    position: absolute;
+    top: 9%;
+    left: 0%;
+    width: 97.8%;
+    height: 88%;
+    border-top: 1px solid #CCC;
+    line-height: 140%;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.hide {
+	display: none;
+}
+
+.showDiv {
+    display: block;
+    text-align: left;
+    color: black;
+}
+
+.showDivInRed {
+    display: block;
+    color: red;
+    text-align: left;
+}
+
+.localVariableTitle {
+	position: absolute;
+    top: 3%;
+    left: 5%;
+    width: 90%;
+    height: 6%;
+    text-align: left;
+    font-size: 1.2em;
+    border-bottom: 1px solid #CCC;
+}
+
+.localVariables {
+	position: absolute;
+    top: 12%;
+    left: 5%;
+    width: 90%;
+    height: 22%;
+    font-size: 1.1em;
+}
+
+.variableBox {
+	width: 80%;
+	height: 33%;
+	float: left;
+	margin-left: 10%
+
+}
+
+.variableName {
+	float: left;
+	width: 15%;
+	height: 99%;
+	text-align: left;
+}
+
+.variableValue {
+	float: left;
+	width: 70%;
+	height: 99%;
+	text-align: left;
+}
+
+.outputResult {
+	position: absolute;
+    padding-top: 3%;
+    top: 36%;
+    left: 5%;
+    width: 90%;
+    height: 60%;
+    border: 1px solid #CCC;
+    font-size: 1.2em;
+    border-radius: 5px;
+    overflow: auto;
+    line-height: 140%;
+}
+
+@media only screen and (min-width: 1000px) {
+
+.inputDivisionTitle, .outputDivisionTitle, .executionDivisionTitle {
+    font-size: 1.4em;
+}
+}
+
+@media only screen and (max-width: 999px) and ( min-width: 600px) {
+
+.inputDivisionTitle, .outputDivisionTitle, .executionDivisionTitle {
+    font-size: 1.2em;
+}
+}

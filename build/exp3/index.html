@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Computer-Programming</title>
+  <link rel="stylesheet" type="text/css" href="../../normalize.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" type="text/css" href="../bstyle.css">
+  <link rel="stylesheet" type="text/css" href="../fonts.css">
+<!--   <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'> -->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+      <![endif]-->
+      <style type="text/css">
+        body{
+          background-color: #f4f4f4;
+        }
+      </style>  
+</head>
+    <body>
+
+      <nav class="navbar navbar-default visible-lg" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Advanced Control Flow</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse desk-nav">
+          <ul class="nav navbar-nav">
+            <li style="border-right: 1.5px solid white;"><a href="index.html">Lab Manual</a></li>
+            <li style="border-right: 1.5px solid white;"><a href="simulation/index.html">Simulation</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+          <a href="../index.html"><span class="glyphicon glyphicon-home pull-right"></span></a>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div class="hidden-lg">
+      <nav class="navbar navbar-default mobile-nav" role="navigation">
+      <div class="nav navbar-nav pull-right">
+    <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="simulation/index.html"><span class="glyphicon glyphicon-play-circle"></span></a><a href="quiz.html"><span class="glyphicon glyphicon-tower"></span></a><a href="../index.html"><span class="glyphicon glyphicon-home"></span></a>
+  </div>
+    </nav>
+    <p class="experiment-mobile-title">Advanced Control Flow</p>
+    </div>
+
+<div class="row">
+  <div class="col-lg-2 visible-lg lab-index">
+    <ul class="nav nav-pills nav-stacked">
+      <li class="active"><a href="#intro">Introduction</a></li>
+      <li><a href="#theory">Theory</a></li>
+      <li><a href="#obj">Objective</a></li>
+      <li><a href="#man">Manual</a></li>
+      <li><a href="#proc">Procedure</a></li>
+      <li><a href="#further-reading">Further Reading</a></li>
+    </ul>
+  </div>
+
+  <div class="col-lg-10 lab-manual">
+    <div id="intro" class="manual-section">
+      <p class="manual-section-title">Introduction</p><hr />
+      <div class="manual-section-description">
+         <p>
+			 A computer program can be thought of as a sequence of instructions which are followed by a computer to solve a problem. However, the sequence in which they are written and the sequence in which they are executed may not be the same. If the execution of every program was sequential, it would run exactly the same way each time. Hence, to write programs of greater complexity, which can take decisions based on user input or values of variables, we need a decision making mechanism which can alter the sequential order of execution of statements. The order of execution of statements in a program is called <i>Control Flow</i> (or flow of control). 
+		</p> 
+		<p>
+			An example where we need to alter the sequential flow of control is when we want a set of instructions to be executed in one situation, and an entirely different set of instructions in another situation. A real life example of this sort of &quot;decision-making&quot; could be: &quot;If the traffic light is green, keep moving;if yellow, then wait; if red, then stop&quot;. In the case of programmming, &quot;decision-making&quot; essentially means deciding from which statement the execution should be resumed. This decision about where the execution should be resumed is made based on the value of a variable or an expression.
+		</p> 
+		<p>
+			The <i>if</i> construct excecutes a set of instructions only if a condition is true. A switching construct allows decision-making based on the state of a variable or an expression. Its purpose is to allow the value of a variable or an expression to control the flow of program execution via a multiway branch.Constructs like these can be placed inside another to create more complex flow of control. This enclosing of structures into one another is called nesting. These constructs are known as conditionals because they alter the flow of control based on a condition.
+		</p>
+		<p>	 
+			Apart from this, there is another class of constructs called loops, which can be used to repeat a set of instructions. This repetition can be done a fixed number of times or until some specific condition is met. Just like the conditionals, the loops can also be nested. Loops and conditionals can also be nested inside each other.
+		</p>	
+		<p>In this lab, we shall see the working of looping constructs.</p><br>
+      </div>
+    </div>
+
+    <div id="theory" class="manual-section">
+      <p class="manual-section-title">Theory</p><hr />
+      <div class="manual-section-description">
+    	<p>
+			In order to understand the working of looping constructs, it is important to understand the term block. A group of code statements that are associated and intended to be executed as a unit is referred to as a block. In C, the beginning of a block of code is denoted by writing a set of statements with in curly braces. It is not necessary to place a semicolon after the end of a block. Blocks can be left empty. A block and can be written inside another block of statements, in such a case the former block is said to be nesting inside the other block.
+		</p>
+		<p>	
+			A loop is a construct that instructs the computer to repeatedly execute a certain block of code until a certain condition is met or for a certain fixed number of times. Every such repetition is called an iteration. Break statement can be used to exit a looping construct and a Continue statement can used to start another iteration at any point. A looping construct typically has three sections:
+		</p>
+		<p>
+			<ol>
+				<li> An Initialization part where variables are initialized before looping is started. These are executed only once.</li>
+				<li> A Test expression which determines when to exit the looping construct.</li>
+				<li> An update section where variables are updated before the next iteration of the loop.</li>
+			</ol>
+		</p>
+		<p>
+			The following are the most commonly used looping constructs used in C programming:<br><br>
+			<big>For loop</big><br>
+			In a for loop, the initialization, test expression and update expressions sections are written together in a single line :
+			<p>
+				<pre class="prettyprint lang-c">	for(initialization; test expression; update statements) {
+				statements1;
+				}
+				</pre>
+			</p>	
+		</p>
+		<p>
+			This improves the readability of the construct. The initialization expression is executed only once and is immediately followed by checking of the <i>test expression</i>. Hence, it is an entry controlled loop. If the <i>test expression</i> is false, then the construct is exited.  So, it is possible that the <i>statements1</i> may not get executed even once. If the test expression is true then <i>statements1</i> are executed and it is followed by the execution of the <i>update statements</i>. Now, the <i>test expression</i> is evaluted again to check whether the loop should be exited. If not, the whole process is repeated, starting from the execution of <i>statements1</i>.<br>
+		</p>
+		<p>
+			The sequence of execution of statements is:
+		</p>
+		<p>
+			<ol>
+				<li>Initialization</li>
+				<li>Test Expression</li>
+				<li>Block Statements</li>
+				<li>Update statements</li>
+				<li>Test Expression</li>
+				<li>...</li>
+			</ol>
+		</p>
+		<p>
+			Everytime when the test expression is evaluated, if it becomes false, then the loop is exited. This image shows the steps taken for this.<br>
+			<img src="flowchart_for.jpg" width=600 height=300><br><br>
+			<big>While loop</big><br>
+			While loop is another entry controlled loop. It works in a similar way as a for loop the only difference is that the <i>initialization</i> statements, test expression and the update statements are not written together. In fact, the update statements are written along with the block statements. The looping is terminated only when the <i>test expression</i> becomes false.<br>
+		</p>
+		<p>
+			<pre class="prettyprint lang-c">			<i>initialization;</i>
+			while(<i>test expression</i>){
+				    statements1;
+				    update statements;
+				}
+			</pre>
+		</p>
+		<p><br>
+			The sequence of execution of statements is:
+		</p>
+		<p>
+			<ol>
+				<li>Initialization</li>
+				<li>Test Expression</li>
+				<li>Block Statements</li>
+				<li>Update statements</li>
+				<li>Test Expression</li>
+				<li>...</li>
+			</ol>
+		</p>
+		<p>
+			Everytime when the test expression is evaluated, if it becomes false, then the loop is exited. <br>
+		</p>
+		<p><br><br></p>
+		<p>
+			<big>Do-while loop</big>
+		</p><br>
+		<p>
+			The the block statements in the for and while loops may not get executed at all because the test condition is checked before the execution. The Do-while loops ensure that the block statements are executed at least once, because in this the test expression is checked after doing one execution of the loop body. As usual the update statements come before the test condition loop. The following is the syntax of Do-while loops:
+		</p><br>
+		<p>
+			<pre class="prettyprint lang-c">			do{
+			        statements1;
+			        update statements;
+			}while(<i>test expression</i>);
+			</pre>
+		</p>
+		<p><br>
+			The sequence of execution of statements is:
+		</p>
+		<p>
+			<ol>
+				<li>Initialization</li>
+				<li>Block Statements</li>
+				<li>Update statements</li>
+				<li>Test Expression</li>
+				<li>Block Statements</li>
+				<li>Update statements</li>
+				<li>Test Expression</li>
+				<li>...</li>
+			</ol>
+			Everytime when the test expression is evaluated, if it becomes false, then the loop is exited. <br>
+			</pre></code>
+		</p><br><br>
+		<p>
+			<big>Important:</big>
+				<p><br></p>
+				<p>
+					<ol>
+						<li>  Any loop can be exited at anytime by using a break  statement.</li>
+						<li>  Next iteration of the loop can be started at anypoint by using the continue statement.</li>
+					</ol>
+		</p><br>
+      </div>
+    </div>
+    <div id="obj" class="manual-section">
+      <p class="manual-section-title">Objective</p><hr />
+      <div class="manual-section-description">
+        	<p>
+			  1. To learn how decision making is done while programming. <br>
+		        2. To learn about the various advanced constructs used for control flow in order to achieve repetition of instructions.
+			</p><br>
+      </div>
+    </div>
+
+    <div id="man" class="manual-section">
+      <p class="manual-section-title">Manual</p><hr />
+      <div class="manual-section-description">
+        <p> 
+			Here we shall see how various looping constructs can be used to find the factorial of a positive integer.<br> 
+			In the other part of the experiment, we shall see how nesting of loops can be done to create a pattern of any size that looks like a pyramid.
+		</p><br>
+      </div>
+    </div>
+    <div id="proc" class="manual-section">
+      <p class="manual-section-title">Procedure</p><hr />
+      <div class="manual-section-description">
+	    <p>
+	    	Procedure for the experiment is as follows.
+		</p>
+		<p>
+		<ol>
+			<li> Choose experiment type by pressing the "Switch experiment" button on the bottom left. </li>
+		</ol>
+		<p>
+			<b>Experiment 1:</b><br>
+		</p>
+		<ol start="2">
+			<li> Select the looping construct with which you want to solve the problem. </li>
+			<li> Enter the number for which factorial has to be calculated and press OK. </li>
+			<li> Press Start to start the experiment.</li>
+			<li> Click Next to get a step by step execution of the code.</li>
+		</ol><br>
+		<p>
+			<b>Experiment 2:</b><br>
+		</p>
+		<ol start="2">
+			<li> Enter the height of pyramid and press OK.</li>
+			<li> Press Start to start the experiment.</li>
+			<li> Click Next to get a step by step execution of the code.</li>
+		</ol>
+		<p><br>
+      </div>
+    </div>
+
+    <div id="further-reading" class="manual-section">
+      <p class="manual-section-title">Further Reading</p><hr />
+      <div class="manual-section-description">
+      	<ol>
+			<li><a class="more" target="_blank" href="http://en.wikibooks.org/wiki/C_Programming/Control">http://en.wikibooks.org/wiki/C_Programming/Control</a></li>
+			<li><a class="more" target="_blank" href="http://en.wikipedia.org/wiki/Control_flow">http://en.wikipedia.org/wiki/Control_flow</a></li>
+			<li><a class="more" target="_blank" href="http://www.exforsys.com/tutorials/c-language/decision-making-looping-in-c.html">http://www.exforsys.com/tutorials/c-language/decision-making-looping-in-c.html</a></li>
+			<li><b>Section 3.5-3.8, The C Programming Language, Kernighan and Ritchie</b></li>
+			<li><b>Section 6.4-6.7, Practical C Programming, Steve Qualline</b></li>
+    	</ol>
+      </div>
+    </div>
+  </div></div>
+  
+</body>
+</html>
