@@ -15,6 +15,9 @@ window.model = {
 		if(expression === "Infinity"){
 			return [-1, -1];
 		}
+		if(expression.indexOf("NaN") != -1){
+			return [-2,-2];
+		}
 		var isexpfinished = 1, offset = 0;
 		var j, i;
 		for(i=0;i<expression.length;i++) {   // returns if expression evaluation is complete
@@ -166,6 +169,9 @@ window.model = {
 	findexplogical: function (expression) {
 		if(expression === "Infinity"){
 			return [-1, -1];
+		}
+		if(expression.indexOf("NaN") != -1){
+			return [-2,-2];
 		}
 		var isexpfinished = 1, offset = 0;
 		var j, i;
@@ -321,6 +327,9 @@ window.model = {
 	findexpbitwise: function (expression) {
 		if(expression === "Infinity"){
 			return [-1, -1];
+		}
+		if(expression.indexOf("NaN") != -1){
+			return [-2,-2];
 		}
 		var isexpfinished = 1, offset = 0;
 		var j, i;
@@ -813,42 +822,49 @@ window.view = {
 		var remainingString =  this.expression.substring(this.ending + 1)
 		exp = exp.replace(stringToEval, '<span class = "blue">' + stringToEval )
 		exp = exp.replace(remainingString, '<span class = "peach">' + remainingString )
-		for ( var i = 0 ; i < exp.length ; i ++ ) {
-			if ( exp[i] === '+' || exp[i] === '-' || exp[i] === '*' || exp[i] === '/' ||
-				 exp[i] === '%' || exp[i] === '(' || exp[i] === ')' || exp[i] === '||' ||
-				 exp[i] === '&&' || exp[i] === '|' || exp[i] === '&' || exp[i] === '^' ||
-				 exp[i] === '>>' || exp[i] === '<<' ) {
-				left = exp.substring(0, i)
-				right = exp.substring(i + 1)
-				exp = left + ' ' + exp[i] + ' ' + right
-				i ++
+		if(exp != "NaN"){
+			for ( var i = 0 ; i < exp.length ; i ++ ) {
+				if ( exp[i] === '+' || exp[i] === '-' || exp[i] === '*' || exp[i] === '/' ||
+					 exp[i] === '%' || exp[i] === '(' || exp[i] === ')' || exp[i] === '||' ||
+					 exp[i] === '&&' || exp[i] === '|' || exp[i] === '&' || exp[i] === '^' ||
+					 exp[i] === '>>' || exp[i] === '<<' ) {
+					left = exp.substring(0, i)
+					right = exp.substring(i + 1)
+					exp = left + ' ' + exp[i] + ' ' + right
+					i ++
+				}
 			}
 		}
 		secondSpan.innerHTML = '&emsp;&nbsp;' + '[ ' + exp + ' <span class = "peach"> ]</span>'
 		div.appendChild(secondSpan)
 		this.step ++
 		parent.appendChild(div)
-		this.printSingleStep(stringToEval)
-		this.showIllustration(this.expression)
+		var checkNaN = (exp == "NaN")
+		this.printSingleStep(stringToEval, checkNaN)
+		this.showIllustration(this.expression, checkNaN)
 	},
-	printSingleStep: function (string) {
+	printSingleStep: function (string, checkNaN) {
 		var method = new Function('return' + ' ' + string)
 		var element = document.getElementById('currentStep')
-		for ( var i = 0 ; i < string.length ; i ++ ) {
-			if ( string[i] === '+' || string[i] === '-' || string[i] === '*' || string[i] === '/' || 
-				 string[i] === '%' || string[i] === '(' || string[i] === ')' || string[i] === '||' || 
-				 string[i] === '&&' || string[i] === '|' || string[i] === '&' || string[i] === '^' || 
-				 string[i] === '>>' || string[i] === '<<' ) {
-				left = string.substring(0, i)
-				right = string.substring(i + 1)
-				string = left + ' ' + string[i] + ' ' + right
-				i ++
+		if(!checkNaN){
+			for ( var i = 0 ; i < string.length ; i ++ ) {
+				if ( string[i] === '+' || string[i] === '-' || string[i] === '*' || string[i] === '/' || 
+					 string[i] === '%' || string[i] === '(' || string[i] === ')' || string[i] === '||' || 
+					 string[i] === '&&' || string[i] === '|' || string[i] === '&' || string[i] === '^' || 
+					 string[i] === '>>' || string[i] === '<<' ) {
+					left = string.substring(0, i)
+					right = string.substring(i + 1)
+					string = left + ' ' + string[i] + ' ' + right
+					i ++
+				}
 			}
+			if ( string !== '' )
+				element.innerHTML = string + '&emsp;' + '=' + '&emsp;' + method()
+		} else {
+				element.innerHTML = "NaN";	
 		}
-		if ( string !== '' )
-			element.innerHTML = string + '&emsp;' + '=' + '&emsp;' + method()
 	},
-	showIllustration: function (equation) {
+	showIllustration: function (equation, checkNaN) {
 		var parent = document.getElementById('reasoningStep')
 		var child = document.createElement('p')
 		if ( model.isBracket === true ) {
@@ -859,7 +875,13 @@ window.view = {
 			model.isBracket = false
 		}
 		else {
-			if ( equation.length > 2 ) {
+			if(checkNaN){
+				var span = document.createElement('span')
+				span.innerHTML =  this.step - 1 + ' ) ' + 'Here since we have Division by zero & it is not a Number the result is NaN<br>'
+				span.className = 'illustrationText'
+				child.appendChild(span)	
+			}
+			else if ( equation.length > 2 ) {
 				var eq = equation.substring(this.starting, this.ending + 1)
 				var operator = ''
 				for ( var i = 0 ; i < eq.length ; i ++ ) {
@@ -895,6 +917,10 @@ window.view = {
 		this.expression = res[0].toString();
 		this.starting = res[1][0];
 		this.ending = res[1][1];
+		if(this.starting == -2){
+			this.expression = "NaN";
+			this.starting = -1;
+		}
 		this.printCurrentStep()
 		console.log(this.expression, this.starting, this.ending);
 		this.countNext += 1;
