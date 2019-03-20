@@ -2,56 +2,48 @@
 
 
 $total=0;
+$ques = 8;
+$responses = array_fill(0, $ques, 0);
+for($n = 1; $n <= $ques; $n++){
+	if($n <= 6)
+        {
+	       $responses[$n - 1] = $_POST['Q' . $n];
+ 	}
+        else if ($n == 7) 
+        {
+               $responses[$n - 1] = $_POST['fib1'];
+        }
+        else 
+        {
+	       $responses[$n - 1] = $_POST['fib2'];
+	}
+}
+$solution = array(2, 2, 1, 4, 2, 1);
+echo "You answered the following questions correctly: ";
+for($n = 0; $n < $ques; $n++)
+{
+    $f=0;
+    if(($n < 6 && $responses[$n] == $solution[$n]))
+    {
+        $f=1;
+    }
+    else if (($n == 6 && (strcasecmp($responses[$n],"prototype") == 0)||(strcasecmp($responses[$n],"definition") == 0)))
+    {
+        $f=1;
+    }
+    else if (($n == 7 && (strcasecmp($responses[$n],"int") == 0)||(strcasecmp($responses[$n],"Integer") == 0))) 
+    {
+          $f=1;  
+    }
+    if ($f==1)
+    {
+        echo ($n + 1), "\n";
+        $total++;
+    }
+}
 
-$Q1 = $_POST['Q1'];
-$Q2 = $_POST['Q2'];
-$Q3 = $_POST['Q3'];
-$Q4 = $_POST['Q4'];
-$Q5 = $_POST['Q5'];
-$Q6 = $_POST['Q6'];
-$Q7 = $_POST['fib1'];
-$Q8 = $_POST['fib2'];
-
-
-echo "You answered the following questions correctly : ";
-if ($Q1==2)
-{
-$total=$total+1;
-echo "1 ";
-}
-if ($Q2==2)
-{
-$total=$total+1;
-echo "2 ";
-}
-if ($Q3==1)
-{
-$total=$total+1;
-echo "3 ";
-}
-if ($Q4==4)
-{
-echo "4 ";
-$total=$total+1;
-}
-if ($Q5==2)
-{
-$total=$total+1;
-echo "5 ";
-}
-if ($Q6==1)
-{
-$total=$total+1;
-echo "6 ";
-}
-if ((strcasecmp($Q7,"prototype")==0) || (strcasecmp($Q7,"definition")==0)){
-$total= $total+1;
-echo "7 ";
-}
-if ((strcasecmp($Q8,"int")==0) || (strcasecmp($Q8,"Integer")==0)){
-$total= $total+1;
-echo "8 ";
-}
+	
+	
 echo "\n\n\n\n";
 echo "<html>
 <head></head>";
