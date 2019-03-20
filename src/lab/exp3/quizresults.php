@@ -1,131 +1,26 @@
 <?php
 
 
+
 $total=0;
-
-$Q1 = $_POST['Q1'];
-$Q2 = $_POST['Q2'];
-$Q3 = $_POST['Q3'];
-$Q4 = $_POST['Q4'];
-$Q5 = $_POST['Q5'];
-$Q6 = $_POST['Q6'];
-$Q7 = $_POST['Q7'];
-$Q8 = $_POST['Q8'];
-$Q9 = $_POST['Q9'];
-$Q10 = $_POST['Q10'];
-$Q11 = $_POST['Q11'];
-$Q12 = $_POST['Q12'];
-$Q13 = $_POST['Q13'];
-$Q14 = $_POST['Q14'];
-$Q15 = $_POST['Q15'];
-$Q16 = $_POST['Q16'];
-$Q17 = $_POST['Q17'];
-$Q18 = $_POST['Q18'];
-$Q19 = $_POST['Q19'];
-$Q20 = $_POST['Q20'];
-
-
+$ques = 20;
+$responses = array_fill(0, $ques, 0);
+for($n = 1; $n <= $ques; $n++)
+{
+      $responses[$n - 1] = $_POST['Q' . $n];  
+}
+$solution = array(1, 2, 2, 1, 3, 3, 3, 2, 1, 2, 2, 1, 4, 1, 1, 4, 3, 3, 3, 1);
+echo "You answered the following questions correctly: ";
+for($n = 0; $n < $ques; $n++)
+{
+    if($responses[$n] == $solution[$n])
+    {
+        echo ($n + 1), "\n";
+        $total++;
+    }
+}
 echo "You answered the following questions correctly : ";
-if ($Q1==1)
-{
-$total=$total+1;
-echo "1 ";
-}
-if ($Q2==2)
-{
-$total=$total+1;
-echo "2 ";
-}
-if ($Q3==2)
-{
-$total=$total+1;
-echo "3 ";
-}
-if ($Q4==1)
-{
-echo "4 ";
-$total=$total+1;
-}
-if ($Q5==3)
-{
-$total=$total+1;
-echo "5 ";
-}
-if ($Q6==3)
-{
-$total=$total+1;
-echo "6 ";
-}
-if ($Q7==3)
-{
-$total=$total+1;
-echo "7 ";
-}
-if ($Q8==2)
-{
-$total=$total+1;
-echo "8 ";
-}
-if ($Q9==1)
-{
-$total=$total+1;
-echo "9 ";
-}
-if ($Q10==2)
-{
-$total=$total+1;
-echo "10 ";
-}
-if ($Q11==2)
-{
-$total=$total+1;
-echo "11 ";
-}
-if ($Q12==1)
-{
-$total=$total+1;
-echo "12 ";
-}
-if ($Q13==4)
-{
-$total=$total+1;
-echo "13 ";
-}
-if ($Q14==1)
-{
-$total=$total+1;
-echo "14 ";
-}
-if ($Q15==1)
-{
-$total=$total+1;
-echo "15 ";
-}
-if ($Q16==4)
-{
-$total=$total+1;
-echo "16 ";
-}
-if ($Q17==3)
-{
-$total=$total+1;
-echo "17 ";
-}
-if ($Q18==3)
-{
-$total=$total+1;
-echo "18 ";
-}
-if ($Q19==3)
-{
-$total=$total+1;
-echo "19 ";
-}
-if ($Q20==1)
-{
-$total=$total+1;
-echo "20 ";
-}
+
 echo "\n\n\n\n";
 echo "<html>
 <head></head>";
