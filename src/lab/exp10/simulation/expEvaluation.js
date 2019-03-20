@@ -873,6 +873,9 @@ window.view = {
 		parent.appendChild(child)
 	},
 	evaluate: function () {
+		  document.getElementById("buttonSave").disabled = true;
+		    document.getElementById("buttonEdit").disabled = true;
+
 		if(this.starting == -1 && this.countNext != 0) {
 			alert('Evaluation Complete');
       location.reload()=true;
