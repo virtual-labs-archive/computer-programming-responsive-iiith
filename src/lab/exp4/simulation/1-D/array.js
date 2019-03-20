@@ -105,10 +105,13 @@ window.view = {
 		for ( i = 0 ; i < this.numbers.length ; i++ ) {
 			var outerDiv = document.createElement('div')
 			outerDiv.className = 'outerDiv'
+			outerDiv.style.backgroundSize = "auto" ;
 			var element = document.createElement('div')
 			element.innerHTML = this.numbers[i]
 			if ( i === 0 )
+			{
 				element.className = 'sortedArray'
+			}
 			else if ( i === 1 )
 				element.className = 'keyPosition'
 			else
