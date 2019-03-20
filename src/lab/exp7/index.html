@@ -5,204 +5,266 @@
   <link rel="stylesheet" type="text/css" href="../../normalize.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">
   <link rel="stylesheet" type="text/css" href="../style.css">
   <link rel="stylesheet" type="text/css" href="../bstyle.css">
   <link rel="stylesheet" type="text/css" href="../fonts.css">
- <!--  <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
+  <!--  <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'> -->
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+  <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
       <script src="../../assets/js/respond.min.js"></script>
       <![endif]-->
-      <style type="text/css">
-        body{
-          background-color: #f4f4f4;
-        }
-      </style>  
+  <style type="text/css">
+    body {
+      background-color: #f4f4f4;
+    }
+  </style>
 </head>
-    <body>
 
-      <nav class="navbar navbar-default visible-lg" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Strings</a>
-        </div>
+<body>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse desk-nav">
-          <ul class="nav navbar-nav">
-            <li style="border-right: 1.5px solid white;"><a href="index.html">Lab Manual</a></li>
-            <li style="border-right: 1.5px solid white;"><a href="simulation.html">Simulation</a></li>
-            <li><a href="quiz.html">Quiz</a></li>
-          </ul>
-          <a href="../index.html"><span class="glyphicon glyphicon-home pull-right"></span></a>
-        </div><!-- /.navbar-collapse -->
-      </nav>
+  <nav class="navbar navbar-default visible-lg" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Strings</a>
+    </div>
 
-      <div class="hidden-lg">
-      <nav class="navbar navbar-default mobile-nav" role="navigation">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse desk-nav">
+      <ul class="nav navbar-nav">
+        <li style="border-right: 1.5px solid white;"><a href="index.html">Lab Manual</a></li>
+        <li style="border-right: 1.5px solid white;"><a href="simulation.html">Simulation</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+      </ul>
+      <a href="../index.html"><span class="glyphicon glyphicon-home pull-right"></span></a>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+
+  <div class="hidden-lg">
+    <nav class="navbar navbar-default mobile-nav" role="navigation">
       <div class="nav navbar-nav pull-right">
-    <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="simulation.html"><span class="glyphicon glyphicon-play-circle"></span></a><a href="quiz.html"><span class="glyphicon glyphicon-tower"></span></a><a href="../index.html"><span class="glyphicon glyphicon-home"></span></a>
-  </div>
+        <a href="index.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="simulation.html"><span
+            class="glyphicon glyphicon-play-circle"></span></a><a href="quiz.html"><span
+            class="glyphicon glyphicon-tower"></span></a><a href="../index.html"><span
+            class="glyphicon glyphicon-home"></span></a>
+      </div>
     </nav>
     <p class="experiment-mobile-title">Strings</p>
-    </div>
-
-<div class="row">
-  <div class="col-lg-2 visible-lg lab-index">
-    <ul class="nav nav-pills nav-stacked">
-      <li class="active"><a href="#intro">Introduction</a></li>
-      <li><a href="#theory">Theory</a></li>
-      <li><a href="#obj">Objective</a></li>
-      <li><a href="#man">Manual</a></li>
-      <li><a href="#proc">Procedure</a></li>
-      <li><a href="#further-reading">Further Reading</a></li>
-    </ul>
   </div>
 
-  <div class="col-lg-10 lab-manual">
-    <div id="intro" class="manual-section">
-      <p class="manual-section-title">Introduction</p><hr />
-      <div class="manual-section-description">
-        <p>
-          A string is a sequence of characters -- it can contain a word, your name, a sentence, a paragraph or even an entire composition. A question that arises is that how the contents of a string can be stored. An array of characters seems like a very good choice. Apart from allowing you to store strings, C programming language provides you a large collection of associated string maniputaion functions under the string.h library. These functions will allow you to treat strings like variables and allow operations like addition(concatenation) of two strings, searching a string in another string, compare two strings etc.
-        </p>
-      </div>
+  <div class="row">
+    <div class="col-lg-2 visible-lg lab-index">
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#intro">Introduction</a></li>
+        <li><a href="#theory">Theory</a></li>
+        <li><a href="#obj">Objective</a></li>
+        <li><a href="#man">Manual</a></li>
+        <li><a href="#proc">Procedure</a></li>
+        <li><a href="#further-reading">Further Reading</a></li>
+      </ul>
     </div>
 
-    <div id="theory" class="manual-section">
-      <p class="manual-section-title">Theory</p><hr />
-      <div class="manual-section-description">
-        <p>
-          In C programming, a string is essentially an array of <a href="https://en.wikipedia.org/wiki/ASCII" >ASCII code</a> characters. Each character is stored by writing the corresponding 8-bit ASCII code of the character. So, One can initialize a string just like an array:
-        </p>
-        <p>
-          <pre class="prettyprint lang-c">
+    <div class="col-lg-10 lab-manual">
+      <div id="intro" class="manual-section">
+        <p class="manual-section-title">Introduction</p>
+        <hr />
+        <div class="manual-section-description">
+          <p>
+            A string is a sequence of characters -- it can contain a word, your name, a sentence, a paragraph or even an
+            entire composition. A question that arises is that how the contents of a string can be stored. An array of
+            characters seems like a very good choice. Apart from allowing you to store strings, C programming language
+            provides you a large collection of associated string maniputaion functions under the string.h library. These
+            functions will allow you to treat strings like variables and allow operations like addition(concatenation)
+            of two strings, searching a string in another string, compare two strings etc.
+          </p>
+        </div>
+      </div>
+
+      <div id="theory" class="manual-section">
+        <p class="manual-section-title">Theory</p>
+        <hr />
+        <div class="manual-section-description">
+          <p>
+            In C programming, a string is essentially an array of <a href="https://en.wikipedia.org/wiki/ASCII">ASCII
+              code</a> characters. Each character is stored by writing the corresponding 8-bit ASCII code of the
+            character. So, One can initialize a string just like an array:
+          </p>
+          <p>
+            <pre class="prettyprint lang-c">
             char str[50]={'C',' ','P','r','o','g','r','a','m'};
           </pre>
-        </p>
-        <p>
-          C programming allows a convenient alternative for this:
-        </p>
-        <p>
-          <pre class="prettyprint lang-c">
+          </p>
+          <p>
+            C programming allows a convenient alternative for this:
+          </p>
+          <p>
+            <pre class="prettyprint lang-c">
             char str[50]="C programming";
           </pre>
-        </p>
-        <p>
-          As you can notice, you can put spaces in a string. The C compiler terminates every string with a null character('\0') which has an ASCII value of 0. This is done to mark the end of the string. So, the given string would be represented as:
-        </p>
-        <p>
-          <table border=1>
-            <tr><td width=50>C</td ><td width=50> </td><td width=50>P</td><td width=50>r</td><td width=50>o</td><td width=50>g</td><td width=50>r</td><td width=50>a</td><td width=50>m</td><td width=50>m</td><td width=50>i</td><td width=50>n</td><td width=50>g</td><td width=50>\0</td></tr>
-            <tr><td width=50>67</td ><td width=50>32</td><td width=50>80</td><td width=50>114</td><td width=50>111</td><td width=50>103</td><td width=50>114</td><td width=50>97</td><td width=50>109</td><td width=50>109</td><td width=50>105</td><td width=50>110</td><td width=50>103</td><td width=50>0</td></tr>
-          </table><br>
-        </p>
-        <p>
-          Every string, thus, requires 1 extra storage space to store the NULL character. So, if you want to store a string of 20 characters then you must define an array of 21 characters. To input a string from the keyboard, you can use the scanf statement:
-        </p>
-        <p>
-          <pre class="prettyprint lang-c">
+          </p>
+          <p>
+            As you can notice, you can put spaces in a string. The C compiler terminates every string with a null
+            character('\0') which has an ASCII value of 0. This is done to mark the end of the string. So, the given
+            string would be represented as:
+          </p>
+          <p>
+            <table border=1>
+              <tr>
+                <td width=50>C</td>
+                <td width=50> </td>
+                <td width=50>P</td>
+                <td width=50>r</td>
+                <td width=50>o</td>
+                <td width=50>g</td>
+                <td width=50>r</td>
+                <td width=50>a</td>
+                <td width=50>m</td>
+                <td width=50>m</td>
+                <td width=50>i</td>
+                <td width=50>n</td>
+                <td width=50>g</td>
+                <td width=50>\0</td>
+              </tr>
+              <tr>
+                <td width=50>67</td>
+                <td width=50>32</td>
+                <td width=50>80</td>
+                <td width=50>114</td>
+                <td width=50>111</td>
+                <td width=50>103</td>
+                <td width=50>114</td>
+                <td width=50>97</td>
+                <td width=50>109</td>
+                <td width=50>109</td>
+                <td width=50>105</td>
+                <td width=50>110</td>
+                <td width=50>103</td>
+                <td width=50>0</td>
+              </tr>
+            </table><br>
+          </p>
+          <p>
+            Every string, thus, requires 1 extra storage space to store the NULL character. So, if you want to store a
+            string of 20 characters then you must define an array of 21 characters. To input a string from the keyboard,
+            you can use the scanf statement:
+          </p>
+          <p>
+            <pre class="prettyprint lang-c">
             scanf("%s",str);
           </pre>
-        </p>
-        <p>
-          This will input a string till a space or next line character is entered. Suppose you want to input a string like "Today is a sunny day.". Then you should use the gets() function which is defined in the string.h library.
-        </p>
-        <p>
-          <pre class="prettyprint lang-c">
+          </p>
+          <p>
+            This will input a string till a space or next line character is entered. Suppose you want to input a string
+            like "Today is a sunny day.". Then you should use the gets() function which is defined in the string.h
+            library.
+          </p>
+          <p>
+            <pre class="prettyprint lang-c">
             gets(str);
           </pre>
-        </p>
-        <p>
-          The string.h library also has many other useful functions. The strlen() is used to find the length of a string(str in this case) and return an integer.
-        </p>
-        <p>
-          <pre class="prettyprint lang-c">
+          </p>
+          <p>
+            The string.h library also has many other useful functions. The strlen() is used to find the length of a
+            string(str in this case) and return an integer.
+          </p>
+          <p>
+            <pre class="prettyprint lang-c">
             int result=strlen(str);
           </pre>
-        </p>
-        <p>
-          The variable result will get a value 13 in this case. The strcmp() function can be used to compare 2 strings(str1 and str2 in this case):
-        </p>
-        <p>
-          <pre class="prettyprint lang-c">
+          </p>
+          <p>
+            The variable result will get a value 13 in this case. The strcmp() function can be used to compare 2
+            strings(str1 and str2 in this case):
+          </p>
+          <p>
+            <pre class="prettyprint lang-c">
             int result=strcmp(str1,str2);
           </pre>
-        </p>
-        <p>
-          The strcmp() function returns 1 if the two strings are identical and 0 otherwise. The strcat() function is used to concatenate 2 string. Writing
-        </p>
-        <p>
-          <pre class="prettyprint lang-c">
+          </p>
+          <p>
+            The strcmp() function returns 1 if the two strings are identical and 0 otherwise. The strcat() function is
+            used to concatenate 2 string. Writing
+          </p>
+          <p>
+            <pre class="prettyprint lang-c">
             strcmp(str1,str2);
           </pre>
-        </p>
-        <p>
-          will add the contents of str2 to str1. Before writing this sentence make sure the there is enough memory allocated at str1 so as to hold both str1 and str2, and also a NULL character. Other useful string functions are listed <a href="http://en.wikipedia.org/wiki/String.h">here</a>.
-        </p>
+          </p>
+          <p>
+            will add the contents of str2 to str1. Before writing this sentence make sure the there is enough memory
+            allocated at str1 so as to hold both str1 and str2, and also a NULL character. Other useful string functions
+            are listed <a href="http://en.wikipedia.org/wiki/String.h">here</a>.
+          </p>
+        </div>
       </div>
-    </div>
-    <div id="obj" class="manual-section">
-      <p class="manual-section-title">Objective</p><hr />
-      <div class="manual-section-description">
-        <p>
-          <ol>
-            <li> To understand the concept of strings and how they are a special type of character arrays.   </li>
-            <li> To understand the usage of string libraries to do common string operations. </li>
-          </ol>
-        </p>
+      <div id="obj" class="manual-section">
+        <p class="manual-section-title">Objective</p>
+        <hr />
+        <div class="manual-section-description">
+          <p>
+            <ol>
+              <li> To understand the concept of strings and how they are a special type of character arrays. </li>
+              <li> To understand the usage of string libraries to do common string operations. </li>
+            </ol>
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div id="man" class="manual-section">
-      <p class="manual-section-title">Manual</p><hr />
-      <div class="manual-section-description">
-        <p>
-          In this lab you will do string manipulations by calling string functions with proper arguments.
-        </p>
+      <div id="man" class="manual-section">
+        <p class="manual-section-title">Manual</p>
+        <hr />
+        <div class="manual-section-description">
+          <p>
+            In this lab you will do string manipulations by calling string functions with proper arguments.
+          </p>
+        </div>
       </div>
-    </div>
-    <div id="proc" class="manual-section">
-      <p class="manual-section-title">Procedure</p><hr />
-      <div class="manual-section-description">
-        <p>
-          <b>String Matching </b>
-        </p>
-        <p>
-          <ol>
-            <li>  Press start to start the experiment and select two string str1 and str2 to compare. </li>
-            <li>  Press next to see the execution of the code </li>
-            <li>  Relavant line in the code is shown here </li>
-            <li>  The output of the code is shown in the right </li>
-          </ol>
-        </p>
-        <p>
-          <b>String Comparison</b>
-        </p>
-        <p>
-          <ol>
-            <li>   Press start to start the experiment and select two string str1 and str2 to compare. </li>
-            <li>   Press next to see the execution of the code </li>
-            <li>   The output of the code is shown in the right </li>
-            <li>   You can stop the code using stop button </li>
-          </ol>   
-        </p>
+      <div id="proc" class="manual-section">
+        <p class="manual-section-title">Procedure</p>
+        <hr />
+        <div class="manual-section-description">
+          <p>
+            <b>String Matching </b>
+          </p>
+          <p>
+            <ol>
+              <li> Press start to start the experiment and select two string str1 and str2 to compare. </li>
+              <li> Press next to see the execution of the code </li>
+              <li> Relavant line in the code is shown here </li>
+              <li> The output of the code is shown in the right </li>
+            </ol>
+          </p>
+          <p>
+            <b>String Comparison</b>
+          </p>
+          <p>
+            <ol>
+              <li> Press start to start the experiment and select two string str1 and str2 to compare. </li>
+              <li> Press next to see the execution of the code </li>
+              <li> The output of the code is shown in the right </li>
+              <li> You can stop the code using stop button </li>
+            </ol>
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div id="further-reading" class="manual-section">
-      <p class="manual-section-title">Further Reading</p><hr />
-      <div class="manual-section-description">
-        <ol>
-          <li><a href="http://en.wikipedia.org/wiki/String_%28computer_science%29"> http://en.wikipedia.org/wiki/String_(computer_science)</a></li>
-          <li><a href="http://www.exforsys.com/tutorials/c-language/handling-of-character-strings-in-c.html">http://www.exforsys.com/tutorials/c-language/handling-of-character-strings-in-c.html</a></li>
-        </ol>
+      <div id="further-reading" class="manual-section">
+        <p class="manual-section-title">Further Reading</p>
+        <hr />
+        <div class="manual-section-description">
+          <ol>
+            <li><a href="http://en.wikipedia.org/wiki/String_%28computer_science%29">
+                http://en.wikipedia.org/wiki/String_(computer_science)</a></li>
+            <li><a
+                href="http://www.exforsys.com/tutorials/c-language/handling-of-character-strings-in-c.html">http://www.exforsys.com/tutorials/c-language/handling-of-character-strings-in-c.html</a>
+            </li>
+          </ol>
+        </div>
       </div>
     </div>
-  </div></div>
-  
+  </div>
+
 </body>
 </html>

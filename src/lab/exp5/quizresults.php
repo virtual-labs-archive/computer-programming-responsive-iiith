@@ -8,8 +8,10 @@ $Q2 = $_POST['Q2'];
 $Q3 = $_POST['Q3'];
 $Q4 = $_POST['Q4'];
 $Q5 = $_POST['Q5'];
-$Q6 = $_POST['fib1'];
-$Q7 = $_POST['fib2'];
+$Q6 = $_POST['Q6'];
+$Q7 = $_POST['Q7'];
+$Q8 = $_POST['Q8'];
+$Q9 = $_POST['Q9'];
 
 echo "You answered the following questions correctly : ";
 if ($Q1==1)
