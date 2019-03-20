@@ -2,7 +2,7 @@
 
 
 $total=0;
-$ques = 8;
+$ques = 7;
 $responses = array_fill(0, $ques, 0);
 for($n = 1; $n <= $ques; $n++)
 {		
