@@ -875,6 +875,10 @@ window.view = {
 	evaluate: function () {
 		  document.getElementById("buttonSave").disabled = true;
 		    document.getElementById("buttonEdit").disabled = true;
+		    document.getElementById("arithmaticExpressions").disabled = true;
+		    document.getElementById("logicalExpressions").disabled = true;
+		    document.getElementById("bitwiseExpressions").disabled = true;
+
 
 		if(this.starting == -1 && this.countNext != 0) {
 			alert('Evaluation Complete');
