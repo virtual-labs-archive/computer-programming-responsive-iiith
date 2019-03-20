@@ -240,7 +240,11 @@ window.view = {
 			if( this.lastRedDiv.id !== 'codeContentFor6' && this.lastRedDiv.id !== 'codeContentWhile6' && this.lastRedDiv.id !== 'codeContentDoWhile7' )
 				this.highlightNextStep()		
 			else
-			{	
+			{
+	                       document.getElementById('resultDisplay').innerHTML += "1"
+				document.getElementById('localVariableFact').innerHTML = "1"
+                                 document.getElementById('localVariableI').innerHTML = "0"
+
 				this.endTheSimpleLoopCode()			
 				this.changeClass(this.lastRedDiv.id, 'showDiv')
 			}
