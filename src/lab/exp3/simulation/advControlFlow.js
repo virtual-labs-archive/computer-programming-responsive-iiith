@@ -34,8 +34,15 @@ window.view = {
  	},
 	getInput: function() {
 		var inputValue = document.getElementById('simpleLoopInput').value
-		model.inp = Number(inputValue)
-		this.clearExecutionSection()
+		if(isNaN(inputValue)){
+			alert("Input should be a non-negative Integer")
+			return false
+		}
+		else{
+			model.inp = Number(inputValue)
+			this.clearExecutionSection()
+			return true
+		}
 	},
 	getNestedInput: function() {
 		var inputValue = document.getElementById('nestedLoopInput').value
@@ -163,7 +170,9 @@ window.view = {
     	document.getElementById('nestedlocalVariableJ').innerHTML = ''
 	},
     startBtn: function() {
-    	this.getInput()
+    	if(this.getInput()==false){
+    		return false
+    	}
     	this.clearDivs()
     	var selected_loop = this.getSelectedLoop()
 		var inputValue = document.getElementById('simpleLoopInput').value
@@ -186,6 +195,7 @@ window.view = {
 		this.disableButton('loopList')
 		this.changeClass( 'loopList', 'buttonDisable loopList')
 		this.disableButton('simpleLoopInput')
+		return true
 	},
 	updateModelAndShowResult: function() {
 		if( model.inp >= 1)
@@ -241,6 +251,9 @@ window.view = {
 				this.highlightNextStep()		
 			else
 			{	
+				document.getElementById('resultDisplay').innerHTML += "1"
+				// document.getElementById('localVariableI').innerHTML = currentState
+				document.getElementById('localVariableFact').innerHTML = "1"
 				this.endTheSimpleLoopCode()			
 				this.changeClass(this.lastRedDiv.id, 'showDiv')
 			}
