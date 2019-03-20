@@ -305,25 +305,25 @@ window.view = {
 	area_sq: function( param, functionCall ) {
 		this.area = param * param;
 		this.totalArea += this.area;
-		alert( "area from function call " + String( i + 1 ) + " ) : " + functionCall + " is " + this.area );
+		alert( "area from function call " + functionCall + " is " + this.area );
 		this.correctInputs ++;
 	},
 	area_triangle: function( param, functionCall ) {
 		this.area = Math.sqrt(3)/4 * param * param;
 		this.totalArea += this.area;
-		alert( "area from function call " + String( i + 1 ) + " ) : " + functionCall + " is " + this.area );
+		alert( "area from function call " + functionCall + " is " + this.area );
 		this.correctInputs ++;
 	},
 	area_circle: function( param, functionCall ) {
 		this.area = Math.PI * param * param;
 		this.totalArea += this.area;
-		alert( "area from function call " + String( i + 1 ) + " ) : " + functionCall + " is " + this.area );
+		alert( "area from function call " + functionCall + " is " + this.area );
 		this.correctInputs ++;
 	},
 	area_rect: function( param, functionCall ) {
 		this.area = Number(param[0]) * Number(param[1]);
 		this.totalArea += this.area;
-		alert( "area from function call " + String( i + 1 ) + " ) : " + functionCall + " is " + this.area );
+		alert( "area from function call " + functionCall + " is " + this.area );
 		this.correctInputs ++;
 	},
 	resetToInitialState: function() {
