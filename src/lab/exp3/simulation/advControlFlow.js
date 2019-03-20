@@ -1,4 +1,4 @@
-window.model = {
+	window.model = {
 	inp: 0,
     nestedInp: 0,
     fact: 1,
@@ -206,6 +206,11 @@ window.view = {
 		this.highlightNextStep()
 	},
 	endTheSimpleLoopCode: function() {
+		if(document.getElementById('simpleLoopInput').value=='0')
+		{
+			document.getElementById('localVariableI')="-"
+			document.getElementById('localVariableFact')="1"
+		}
 		alert('code running is over')
 		clearInterval(this.stampSimple)
 		this.disableButton('btnNext')
@@ -219,6 +224,11 @@ window.view = {
 		document.getElementById('loopList').options.selectedIndex = 0
 	},
 	endTheNestedLoopCode: function() {
+		if(document.getElementById('simpleLoopInput').value=='0')
+		{
+			document.getElementById('localVariableI')="-"
+			document.getElementById('localVariableFact')="1"
+		}
 		alert('code running is over')
 		clearInterval(this.stampNested)
 		this.nextRedDiv = this.jumpTo('codeContentNested22')
@@ -326,7 +336,14 @@ window.view = {
 		 	else
 		 		this.processNestedLoopStep('codeContentNested21')
 		 	if ( this.lastRedDiv.id === 'codeContentNested21' )
+		 	{
+				if(document.getElementById('simpleLoopInput').value=='0')
+				{
+					document.getElementById('localVariableI')="-"
+					document.getElementById('localVariableFact')="1"
+				}
 		 		alert('code running is over')
+		 	}
 		}
 		else
 		{	
