@@ -1,39 +1,29 @@
 <?php
 
-
 $total=0;
 
-$Q1 = $_POST['Q1'];
-$Q2 = $_POST['Q2'];
-$Q3 = $_POST['Q3'];
-$Q4 = $_POST['Q4'];
-$Q5 = $_POST['fib1'];
+$qCount = 5;
+$ans_actual = array_fill(0, $qCount, 0);
+for($n = 1; $n <= $qCount; $n++){
+	if($n <= 4){
+		$ans_actual[$n - 1] = $_POST['Q' . $n];
+	}else{
+		$ans_actual[$n - 1] = $_POST['fib1'];
+	}
+}
+$ans_exp = array(2, 2, 3, 4, 1);
 
-echo "You answered the following questions correctly : ";
-if ($Q1==2)
-{
-$total=$total+1;
-echo "1 ";
+echo "You answered the following questions correctly: ";
+
+for($n = 0; $n < $qCount; $n++){
+	if(($n < 4 && $ans_actual[$n] == $ans_exp[$n]) ||
+	        ($n == 4 && strcasecmp($ans_actual[$n],"itself") == 0))
+	{
+		echo ($n + 1), "\n";
+		$total++;
+	}
 }
-if ($Q2==2)
-{
-$total=$total+1;
-echo "2 ";
-}
-if ($Q3==3)
-{
-$total=$total+1;
-echo "3 ";
-}
-if ($Q4==4)
-{
-echo "4 ";
-$total=$total+1;
-}
-if ((strcasecmp($Q5,"itself")==0)){
-$total= $total+1;
-echo "5 ";
-}
+
 echo "\n\n\n\n";
 echo "<html>
 <head></head>";
