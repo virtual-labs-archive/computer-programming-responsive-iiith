@@ -587,6 +587,9 @@ window.view = {
 				else
 					characterOrOperator = 1
 			}
+			else if(i==0 &&(exp[i]=='+'|| exp[i]=='-')){
+					characterOrOperator = 0;
+			}
 			else {
 				if ( characterOrOperator === 0 ) {
 					alert('You Have Entered  Wrong Expression Syntax !!!')
@@ -604,7 +607,7 @@ window.view = {
 			alert('You Have Entered Wrong Expression Syntax.\n "()" Operators are not complete !!!')
 			return false
 		}
-		else if ( characterOrOperator === 0 ) {
+		else if ( characterOrOperator === 0 && (exp[0]!='+'&& exp[0]!='-' ) {
 				alert('You Have Entered  Wrong Expression Syntax !!!')
 				return false
 		}

@@ -15,7 +15,12 @@
 </head>
 
 <body>
-<div id = 'header' > Numerical Integration ( Area Under Curve )</div>
+<div id = 'header' > Numerical Integration ( Area Under Curve )  
+</div>
+ <div id="icon">
+<button type="button" onclick="toggleFullScreen()">  <img src="https://image.freepik.com/free-icon/exit-to-full-screen_318-9919.jpg" height="15" width="20"  align="right">
+ </button>
+</div>
 <a href="../index.html"><div class = 'vlabsIcon' ></div></a>
 <div class = 'inputDivision' >
 	<div class = 'FirstInputBlock' >
@@ -36,6 +41,7 @@
 			<button  class = 'button startButton' id = 'okBtnId' >OK</button>
 			<button class = 'buttonDisable myStartButton' id = 'startBtnId' disabled>Start</button><button class = 'buttonDisable myStartButton hide' id = 'stopBtnId' disabled>Stop</button>
 			<button class = 'buttonDisable nextButton' id = 'nextBtnId' disabled>Next</button>
+			<button id = 'solutionId' disabled>solution</button>
 		</div><!-- end of inputDivisionSimpleLoop -->
 	</div><!-- end of SecondInputBlock -->
 </div><!-- end of inputDivision -->
@@ -73,7 +79,28 @@
 		</div>
 	</div><!-- end of resultDisplay -->
 </div><!-- end of outputDivision -->
-
+<script>
+function toggleFullScreen() {
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+      document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+      document.documentElement.mozRequestFullScreen();  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  } else {  
+    if (document.cancelFullScreen) {  
+      document.cancelFullScreen();  
+    } else if (document.mozCancelFullScreen) {  
+      document.mozCancelFullScreen();  
+    } else if (document.webkitCancelFullScreen) {  
+      document.webkitCancelFullScreen();  
+    }  
+  }  
+}
+</script>
 
 
 </body>
