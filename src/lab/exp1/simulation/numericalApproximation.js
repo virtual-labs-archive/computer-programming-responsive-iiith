@@ -280,8 +280,8 @@ window.view = {
 	validationInput: function () {
 		var valueA1 = this.getValue('valueA');
 		var valueB1 = this.getValue('valueB');
-		var valueA2 = parseInt(valueA1);
-		var valueB2 = parseInt(valueB1);
+		var valueA2 = parseFloat(valueA1);
+		var valueB2 = parseFloat(valueB1);
 		if (valueA1 === '' || valueB1 === '') {
 			alert('Enter Value of a and b');
 			return false;
@@ -290,7 +290,7 @@ window.view = {
 			alert('Enter numeric value of a and b');
 			return false;
 		} 
-		else if (valueA2 >= valueB2 || valueB2 > 30) {
+		else if (valueA2 >= valueB2 || valueB2 > 30 || valueB2 - valueA2 < 1) {
 			alert('Integration Limits are from 0 to 30, b > a and b-a >= 1');
 			return false;
 		}
@@ -392,3 +392,4 @@ window.view = {
 window.onload = function () {
 	view.init();
 }
+
