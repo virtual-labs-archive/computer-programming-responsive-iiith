@@ -131,7 +131,7 @@ window.view = {
     solution4: 'account findMaxBal(account src[], int size){</br>' +
         'int i=0;</br>' +
         'int maxBalIndex=0;</br>' +
-        'for (;i<size;i++){</br>' +
+        'for (;i < size;i++){ </br>' +
         'if (src[i].bal>src[maxBalIndex].bal)</br>' +
         'maxBalIndex=i;</br>' +
         '}</br>' +
