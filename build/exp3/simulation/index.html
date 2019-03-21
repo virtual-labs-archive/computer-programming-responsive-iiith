@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel = 'stylesheet' type = 'text/css' href = 'advControlFlow.css' />
+<link href = 'http://fonts.googleapis.com/css?family=Inconsolata' rel = 'stylesheet' type = 'text/css' >
+<script src = 'advControlFlow.js' ></script>
+<title>Computer-Programming</title>
+</head>
+
+<body>
+<div class = 'header' id="headerSimpleLoop" > Loops (Factorial Calculation) </div>
+<div class = 'hide' id="headerNestedLoop"> LOOPS (Height of Pyramid) </div>
+<a href="../index.html"><div class="vlabsIcon"></div></a>
+
+<div class = 'inputDivision' >
+	<div class = 'inputDivisionTitle' ><div class = 'initializePic' ></div><div class = 'initializeText' >Initialize</div></div>
+	<div class = 'inputDivisionBody' >
+		<div class = 'simpleLoopBlock' id = "inputDivisionSimpleLoop">
+			<div class = 'instructionText' >Select Loop Type</div>
+			<select class="button loopList" id = "loopList" >
+         		<option value="for" id = 'optionFor'>for</option>
+                <option value="while" id = 'optionWhile'>while</option>
+                <option value="do-while" id = 'optionDoWhile'>do-while</option>
+            </select>
+        	<div class = 'instructionText' >Enter number for calculating P!</div>
+			<input  class = 'inputField marginBottom' type = 'text'   id = "simpleLoopInput">
+			<button class = 'button startButton' id = "btnStart" >Start</button>
+			<button class = 'buttonDisable nextButton' id = "btnNext" disabled>Next</button>
+			<button class = 'button switchButton marginTop' id = "btnNestedLoop" >Switch to Nested Loop</button>
+			<input type="button" value="Reset" onClick="window.location.reload()">
+		</div><!-- end of arraySizeInputBlock -->
+		<div class = 'nestedLoopBlock' id = "nested" style = "display: none">
+			<div class = 'instructionText' >Enter height of pyramid </div>
+			<input  class = 'inputField marginBottom' type = 'text'  id = "nestedLoopInput">
+			<button class = 'button startButton' id = 'nestedStartBtn' >Start</button>
+			<button class = 'buttonDisable nextButton' id = 'nestedNextBtn' disabled>Next</button>
+			<button class = 'button switchButton marginTop' id = 'btnSimpleLoop' >Switch to Simple Loop</button>
+			<input type="button" value="Reset" onClick="window.location.reload()">
+		</div><!-- end of arraySizeInputBlock -->
+	</div><!-- end of inputDivisionBody -->
+</div><!-- end of inputDivision -->
+<div class = 'executionDivision' >
+	<div class = 'executionDivisionTitle' ><div class = 'executionPic' ></div><div class = 'executionText' >Step Execution</div></div>
+	<div class = 'stepExecutionDisplay' >
+		<div id = "forLoopContent">
+			<div class = "hide" id = 'codeContentFor1'> int main(){ </div>
+			<div class = "hide" id = 'codeContentFor2'> &emsp;int p; </div>
+			<div class = "hide" id = 'codeContentFor3'> &emsp;int fact=1; </div>
+			<div class = "hide" id = 'codeContentFor4'> &emsp;if(p==0) </div>
+			<div class = "hide" id = 'codeContentFor5'> &emsp;{ </div>
+			<div class = "hide" id = 'codeContentFor6'> &emsp;&emsp;return 1; </div>
+			<div class = "hide" id = 'codeContentFor7'> &emsp;} </div>
+			<div class = "hide" id = 'forLoopHead'> &emsp;for(int i=p;i>=1;i--) </div>
+			<div class = "hide" id = 'forLoopBody1'> &emsp;{ </div>
+			<div class = "hide" id = 'forLoopBody2' >&emsp;&emsp; fact=fact*i;  </div>
+			<div class = "hide" id = 'forLoopTail'> &emsp;} </div>
+			<div class = "hide" id = 'codeContentFor8'> &emsp;return fact; </div>
+			<div class = "hide" id = 'codeContentFor9'> } </div>
+		</div>
+		<div id = "whileLoopContent">	
+			<div class = "hide" id = 'codeContentWhile1'> int main(){ </div>
+			<div class = "hide" id = 'codeContentWhile2'> &emsp;int p; </div>
+			<div class = "hide" id = 'codeContentWhile3'> &emsp;int fact=1; </div>
+			<div class = "hide" id = 'codeContentWhile4'> &emsp;if(p==0) </div>
+			<div class = "hide" id = 'codeContentWhile5'> &emsp;{ </div>
+			<div class = "hide" id = 'codeContentWhile6' >&emsp;&emsp; return 1; </div>
+			<div class = "hide" id = 'codeContentWhile7'> &emsp;} </div>
+			<div class = "hide" id = 'whileLoopHead'> &emsp;while (i>=1) </div>
+			<div class = "hide" id = 'whileLoopBody1'> &emsp;{ </div>
+			<div class = "hide" id = 'whileLoopBody2'> &emsp;&emsp;fact=fact*i;  </div>
+			<div class = "hide" id = 'whileLoopBody3'> &emsp;&emsp;i--; </div>
+			<div class = "hide" id = 'whileLoopTail'> &emsp;} </div>
+			<div class = "hide" id = 'codeContentWhile8'> &emsp;return fact; </div>
+			<div class = "hide" id = 'codeContentWhile9'> } </div>
+		</div>
+		<div id = "dowhileLoopContent">	
+			<div class = "hide" id = 'codeContentDoWhile1'> int main(){ </div>
+			<div class = "hide" id = 'codeContentDoWhile2'> &emsp;int p; </div>
+			<div class = "hide" id = 'codeContentDoWhile3'> &emsp;int fact=1; </div>
+			<div class = "hide" id = 'codeContentDoWhile4'> &emsp;int i=p; </div>
+			<div class = "hide" id = 'codeContentDoWhile5'> &emsp;if(p==0) </div>
+			<div class = "hide" id = 'codeContentDoWhile6'> &emsp;{ </div>
+			<div class = "hide" id = 'codeContentDoWhile7' > &emsp;&emsp;return 1; </div>
+			<div class = "hide" id = 'codeContentDoWhile8'>&emsp; } </div>
+			<div class = "hide" id = 'dowhileLoopHead'> &emsp;do </div>
+			<div class = "hide" id = 'dowhileLoopBody1'> &emsp;{ </div>
+			<div class = "hide" id = 'dowhileLoopBody2' > &emsp;&emsp;fact=fact*i;  </div>
+			<div class = "hide" id = 'dowhileLoopBody3'>&emsp;&emsp; i--; </div>
+			<div class = "hide" id = 'dowhileLoopTail'>&emsp; }while(i>=1); </div>
+			<div class = "hide" id = 'codeTail'> } </div>
+		</div>
+		<div id = "nestedLoopContent">	
+			<div class = "hide" id = 'codeContentNested1'> int main(){ </div>
+			<div class = "hide" id = 'codeContentNested2'> int i,j,k; </div>
+			<div class = "hide" id = 'codeContentNested3'> int height; </div>
+			<div class = "hide" id = 'codeContentNested4'> for (i=0;i&lt;height;i++) </div>
+			<div class = "hide" id = 'codeContentNested5'> { </div>
+			<div class = "hide" id = 'codeContentNested6' style = "padding-left:5%;"> for(j=0;j&lt;height-i-1;j++) </div>
+			<div class = "hide" id = 'codeContentNested7' style = "padding-left:5%;"> { </div>
+			<div class = "hide" id = 'codeContentNested8' style = "padding-left:10%;"> printf(" "); </div>
+			<div class = "hide" id = 'codeContentNested9' style = "padding-left:5%;"> } </div>
+			<div class = "hide" id = 'codeContentNested10' style = "padding-left:5%;"> for(k=j;k&lt;height-1;k++)  </div>
+			<div class = "hide" id = 'codeContentNested11' style = "padding-left:5%;"> { </div>
+			<div class = "hide" id = 'codeContentNested12' style = "padding-left:10%;"> printf("*"); </div>
+			<div class = "hide" id = 'codeContentNested13' style = "padding-left:10%;"> printf(" "); </div>
+			<div class = "hide" id = 'codeContentNested14' style = "padding-left:5%;"> } </div>
+			<div class = "hide" id = 'codeContentNested15' style = "padding-left:5%;"> printf("*"); </div>
+			<div class = "hide" id = 'codeContentNested16' style = "padding-left:5%;"> for(j=0;j&lt;height-i-1;j++)  </div>
+			<div class = "hide" id = 'codeContentNested17' style = "padding-left:5%;"> { </div>
+			<div class = "hide" id = 'codeContentNested18' style = "padding-left:10%;"> printf(" "); </div>
+			<div class = "hide" id = 'codeContentNested19' style = "padding-left:5%;"> } </div>
+			<div class = "hide" id = 'codeContentNested20' style = "padding-left:5%;"> printf("\n"); </div>
+			<div class = "hide" id = 'codeContentNested21'> } </div>
+			<div class = "hide" id = 'codeContentNested22'> return 0; </div>
+			<div class = "hide" id = 'codeContentNested23'> } </div>
+		</div>	
+	</div><!-- end of stepExecutionDisplay -->
+</div><!-- end of executionDivision -->
+	
+<div class = 'outputDivision' > 
+	<div class = 'outputDivisionTitle' ><div class = 'outputPic' ></div><div class = 'outputText' >Code Output</div></div>
+	<div class = 'resultDisplay' >
+		<div class="localVariableTitle">Local Variables : </div>
+		<div class="localVariables" id="simpleLoopLocalVariables">
+			<div class="variableBox">
+				<div class="variableName" id = 'simpleLocalI'>i : </div><div class="variableValue" id = 'localVariableI'></div>
+			</div>
+			<div class="variableBox">
+				<div class="variableName" id = 'simpleLocalFact'>fact : </div><div class="variableValue" id = 'localVariableFact'></div>
+			</div>
+		</div>
+		<div class="localVariables hide" id="nestedLoopLocalVariables">
+			<div class="variableBox">
+				<div class="variableName" id = 'nestedLocalI'>i : </div><div class="variableValue" id = 'nestedlocalVariableI'></div>
+			</div>
+			<div class="variableBox">
+				<div class="variableName" id = 'nestedLocalJ'>j : </div><div class="variableValue" id = 'nestedlocalVariableJ'></div>
+			</div>
+			<div class="variableBox">
+				<div class="variableName" id = 'nestedLocalK'>k : </div><div class="variableValue" id = 'nestedlocalVariableK'></div>
+			</div>
+		</div>
+		<div class="outputResult" id = "resultDisplay" ></div>
+	</div><!-- end of resultDisplay -->
+</div><!-- end of outputDivision -->
+</body>
+</html>

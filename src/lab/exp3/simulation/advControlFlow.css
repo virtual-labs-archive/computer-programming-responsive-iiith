@@ -206,7 +206,7 @@ body {
     margin-bottom: 15px;
 }
 
-.switchButton, .loopList {
+.switchButton, .loopList , .resetButton {
 	font-size: 13px;
 	min-width: 150px;
 	float: left;
@@ -231,7 +231,7 @@ body {
 }
 
 .marginTop {
-	margin-top: 60px;
+	margin-top: 40px;
 }
 
 .nextButton {
