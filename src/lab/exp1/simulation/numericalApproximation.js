@@ -280,9 +280,10 @@ window.view = {
 	validationInput: function () {
 		var valueA1 = this.getValue('valueA');
 		var valueB1 = this.getValue('valueB');
-		if ( valueA1.trim() == '' || valueA2.trim() == '' )
+		if ( valueA1.trim() == '' || valueB1.trim() == '' )
 		{
-   			 alert('input is blank');
+   			 alert('Input is blank');
+   			 return false;
 		}
 		var valueA2 = parseInt(valueA1);
 		var valueB2 = parseInt(valueB1);
