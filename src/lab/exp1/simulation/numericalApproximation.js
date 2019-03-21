@@ -280,9 +280,14 @@ window.view = {
 	validationInput: function () {
 		var valueA1 = this.getValue('valueA');
 		var valueB1 = this.getValue('valueB');
+		if ( valueA1.trim() == '' || valueB1.trim() == '' )
+		{
+   			 alert('Input is blank');
+   			 return false;
+		}
 		var valueA2 = parseInt(valueA1);
 		var valueB2 = parseInt(valueB1);
-		if (valueA1 === '' || valueB1 === '') {
+		if (valueA1 === '' || valueB1 === '' ) {
 			alert('Enter Value of a and b');
 			return false;
 		}
