@@ -5,14 +5,14 @@ body {
          margin: 0px;
          margin-left: 1em;
          margin-right: 1em;
-         font-family: Calibri, Georgia, Helvetica, Arial, sans-serif; 
+         font-family: Calibri, Georgia, Helvetica, Arial, sans-serif;
          font-size: 1.25em;
          line-height: 1.49em;
-      } 
+      }
 
 .experiment-title a{
    color: rgb(80, 80, 80);
-}                
+}
 
 .experiment-mobile-title{
   text-align: center;
@@ -35,12 +35,16 @@ color: #fff;
 background-color: #3652a4;
 }
 
+.nav-pills>li.thr>a:hover, .nav-pills>li.obj>a:hover, .nav-pills>li.Man>a:hover, .nav-pills>li.Procd>a:hover, .nav-pills>li.Furtherread>a:hover{
+color: white;
+background-color: #3652a4;
+}
 .lab-manual{
   float: right;
 }
 
 .experiment-card {
-         position:relative; 
+         position:relative;
          /*padding: 1.5em 2em 1.5em 2em;*/
          border-radius: 1em;
          border:0px solid #3652a4;
@@ -71,23 +75,23 @@ background-color: #3652a4;
 }
 
 .manual-section {
-         position:relative; 
+         position:relative;
          min-height: 0.5%;
          margin-top: 1em;
          margin-bottom: 3%;
          padding-left: 4%;
          padding-right: 4%;
          font-family: 'Source Sans Pro', sans-serif;
-       }      
-      
+       }
+
 hr{
     border: 0;
     height: 1px;
     background: #333;
-    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc); 
-    background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc); 
-    background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc); 
-    background-image:      -o-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc);
+    background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc);
+    background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc);
+    background-image:      -o-linear-gradient(left, #ccc, #333, #ccc);
 }
 
 .manual-section-title{
@@ -109,7 +113,7 @@ hr{
    border-radius: 1em;
    border: 1px solid #aaa;
    max-width: 100%;
-}    
+}
 
 .img-thum{
    margin: 0em 1em 1em 1em;
@@ -161,7 +165,7 @@ hr{
    margin-left: 20%;
    margin-top: 5%;
    float: none;
-  }    
+  }
   .experiment-description {
   margin-top: 2%;
   height: 100%;
