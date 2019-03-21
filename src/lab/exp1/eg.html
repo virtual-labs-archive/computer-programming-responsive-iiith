@@ -20,9 +20,13 @@
         body{
           background-color: #f4f4f4;
         }
-        .active, .btn:hover {
+
+/* Style the active class, and buttons on mouse-over */
+.active, .btn:hover {
   color: blue;
 }
+       }
+
       </style>  
 </head>
     <body>
@@ -54,16 +58,15 @@
     </nav>
     <p class="experiment-mobile-title"> Numerical Approximation</p>
     </div>
-
-<div class="row" id="myDIV">
+<div class="row" id="myDIV">>
   <div class="col-lg-2 visible-lg lab-index">
     <ul class="nav nav-pills nav-stacked">
-      <li class="btn active"><a href="#intro">Introduction</a></li>
-      <li class="btn"><a href="#theory">Theory</a></li>
+      <li class="btn"><a href="#intro">Introduction</a></li>
+      <li class="btn  active"><a href="#theory">Theory</a></li>
       <li class="btn"><a href="#obj">Objective</a></li>
       <li class="btn"><a href="#man">Manual</a></li>
       <li class="btn"><a href="#proc">Procedure</a></li>
-      <li class="btn"s><a href="#further-reading">Further Reading</a></li>
+      <li class="btn"><a href="#further-reading">Further Reading</a></li>
     </ul>
   </div>
 
@@ -145,7 +148,6 @@
     </div>
   </div></div>
 
-
 <script>
 // Add active class to the current button (highlight it)
 var header = document.getElementById("myDIV");
@@ -158,8 +160,6 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 </script>
-
-
 
 </body>
 </html>
