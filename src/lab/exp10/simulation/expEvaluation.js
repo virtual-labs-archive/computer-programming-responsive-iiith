@@ -555,6 +555,11 @@ window.view = {
 			return expression.replace(/\s+/g, '')
 	},
 	validateArithmaticExpression: function (exp) {
+		model.getInputs()
+		if(isNaN(model.a) || isNaN(model.b) || isNaN(model.c) || isNaN(model.d)){
+			alert("Input numeral values only")
+			return false;
+		}
 		var characterOrOperator = 0
 		var braces = 0 
 		for ( var i = 0 ; i < exp.length ; i ++ ) {
@@ -612,6 +617,11 @@ window.view = {
 			return true
 	},
 	validateLogicalExpression: function (exp) {
+		model.getInputs()
+		if(isNaN(model.a) || isNaN(model.b) || isNaN(model.c) || isNaN(model.d)){
+			alert("Input numeral values only")
+			return false;
+		}
 		var characterOrOperator = 0
 		var braces = 0 
 		for ( var i = 0 ; i < exp.length ; i ++ ) {
@@ -674,6 +684,11 @@ window.view = {
 			return true
 	},
 	validateBitwiseExpression: function (exp) {
+		model.getInputs()
+		if(isNaN(model.a) || isNaN(model.b) || isNaN(model.c) || isNaN(model.d)){
+			alert("Input numeral values only")
+			return false;
+		}
 		var characterOrOperator = 0
 		var braces = 0 
 		for ( var i = 0 ; i < exp.length ; i ++ ) {
@@ -746,7 +761,7 @@ window.view = {
 		var parent = document.getElementById('executionDisplay')
 		var div = document.createElement('div')
 		div.className = 'peach'
-        model.getInputs()
+				model.getInputs()
         this.expression = this.expression.replace(/a/g, Math.floor(model.a))
         this.expression = this.expression.replace(/b/g, Math.floor(model.b))
         this.expression = this.expression.replace(/c/g, Math.floor(model.c))
