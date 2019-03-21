@@ -210,10 +210,10 @@ window.view = {
 		}
 		document.getElementById('resultantMatrix').appendChild(matResultant)
 		var elements = document.getElementById('resultantMatrix').getElementsByTagName('td')
-		for ( i = 0 ; i < elements.length ; i++ )
-		{
-			elements[i].innerHTML = -1
-		}
+	//	for ( i = 0 ; i < elements.length ; i++ )
+	//	{
+	//		elements[i].innerHTML = -1
+	//	}
 	},
 	generateMatrices: function() {
 		this.showCode()
