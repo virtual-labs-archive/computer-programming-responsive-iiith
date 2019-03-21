@@ -8,8 +8,10 @@ $Q2 = $_POST['Q2'];
 $Q3 = $_POST['Q3'];
 $Q4 = $_POST['Q4'];
 $Q5 = $_POST['Q5'];
-$Q6 = $_POST['fib1'];
-$Q7 = $_POST['fib2'];
+$Q6 = $_POST['Q6'];
+$Q7 = $_POST['Q7'];
+$Q8 = $_POST['Q8'];
+$Q9 = $_POST['fib1'];
 
 echo "You answered the following questions correctly : ";
 if ($Q1==1)
@@ -52,7 +54,7 @@ if ($Q8==2)
 $total=$total+1;
 echo "8 ";
 }
-if ((strcasecmp($Q9,"single")==0)){
+if ((strcasecmp($Q9,"single")==0) || (strcasecmp($Q9, "Single")==0) || (strcasecmp($Q9, "common")==0) || (strcasecmp($Q9, "Common")==0)){
 $total= $total+1;
 echo "9 ";
 }
@@ -83,7 +85,7 @@ echo '	<h2>Correct Answers</h2>
                 False<br>
 		<br>
 
-                <li><b>What will be the ouptut of the following function call: fun4(4,3); where fun4 is defined as: </b> </li>
+                <li><b>What will be the ouptut of the following program: </b> </li>
 		<pre class="prettyprint lang-c">
 		typedef struct S
 		{
