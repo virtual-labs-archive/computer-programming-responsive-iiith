@@ -135,6 +135,10 @@ window.view = {
 			alert('Enter Numeric Values Only');
 			return false;
 		} 
+		else if (textFieldValue == 0){
+			alert('Enter Numbers between 1 and 7');
+			return false;
+				}
 		else {
 			this.changePropertyOfElements();
 			model.inputNumber = Number(textFieldValue);
