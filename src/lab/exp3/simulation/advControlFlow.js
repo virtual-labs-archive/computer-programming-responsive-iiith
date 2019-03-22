@@ -324,6 +324,13 @@ window.view = {
 		this.j++
 	},
 	nextBtnNested: function() {
+		if(document.getElementById('nestedLoopInput').value==0)
+		{
+			document.getElementById('nestedlocalVariableI').innerHTML = 0
+			document.getElementById('nestedlocalVariableJ').innerHTML = 0
+			document.getElementById('nestedlocalVariableK').innerHTML = 0
+		 	alert('code running is over')
+		}
 		this.lastRedDiv = this.getLastHighlightedDiv()
 		this.nextRedDiv = this.getNextDivToHighlight(this.lastRedDiv)
 		if ( model.nestedInp === 0 )
