@@ -9,8 +9,7 @@ $Q3 = $_POST['Q3'];
 $Q4 = $_POST['Q4'];
 $Q5 = $_POST['Q5'];
 $Q6 = $_POST['Q6'];
-$Q7 = $_POST['fib1'];
-$Q8 = $_POST['fib2'];
+
 
 
 echo "You answered the following questions correctly : ";
@@ -44,20 +43,20 @@ if ($Q6==1)
 $total=$total+1;
 echo "6 ";
 }
-if ((strcasecmp($Q7,"prototype")==0) || (strcasecmp($Q7,"definition")==0)){
+<!--if ((strcasecmp($Q7,"prototype")==0) || (strcasecmp($Q7,"definition")==0)){
 $total= $total+1;
 echo "7 ";
 }
 if ((strcasecmp($Q8,"int")==0) || (strcasecmp($Q8,"Integer")==0)){
 $total= $total+1;
 echo "8 ";
-}
+} -->
 echo "\n\n\n\n";
 echo "<html>
 <head></head>";
 echo "<body class=\"page_bg\">";
 
-echo "<br>Total number of correct answers : ".$total."/8";
+echo "<br>Total number of correct answers : ".$total."/6";
 
 echo "	<h2>Correct Answers</h2>
 <br>
@@ -78,10 +77,10 @@ echo "	<h2>Correct Answers</h2>
                 int <br>
                 <br>
                 <li><b> What is printed when this program is executed</b></li>
-                4 <br>
+                4 <!--<br>
                 <li><b> The function prototype (or definition) gives a summary of the function</b></li><br>
                 <li><b> The default return type of a function is int (or Integer).</b></li><br>
-                <br>
+                <br>-->
 
 </ol>";
 echo "</body></html>";
