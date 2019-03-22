@@ -21,11 +21,11 @@ body {
 .button, .buttonDisable{
 	position: relative;
 	padding: 0.5em 1em;
-  	border-radius: 0.2em; 
+  	border-radius: 0.2em;
   	overflow: visible;
   	outline: none;
 	white-space: nowrap;
-  	-moz-background-clip: padding; 
+  	-moz-background-clip: padding;
     background-clip: padding-box;
 	border: 1px solid #d4d4d4;
     margin: 0;
@@ -72,7 +72,7 @@ body {
     position: absolute;
     top: 1.2%;
     left: 8%;
-    width: 15vh;
+    width: 7vh;
     height: 6.7vh;
     background-image: url('iiitLogo.png');
     background-repeat: no-repeat;
@@ -81,7 +81,7 @@ body {
 
 .inputDivision, .outputDivision, .executionDivision {
     top: 15%;
-    height: 83%; 
+    height: 83%;
     position: absolute;
     border: 1px solid #CCC;
     border-radius: 5px;
@@ -151,7 +151,7 @@ body {
 	width: 60%;
 	float: left;
 	height: 100%;
-	padding-top: 1.8vmin; 
+	padding-top: 1.8vmin;
 }
 
 .executionPic {
@@ -165,7 +165,7 @@ body {
 	width: 70%;
 	float: left;
 	height: 100%;
-	padding-top: 1.8vmin; 
+	padding-top: 1.8vmin;
 }
 
 .outputPic {
@@ -179,7 +179,7 @@ body {
 	width: 50%;
 	float: left;
 	height: 100%;
-	padding-top: 1.8vmin; 
+	padding-top: 1.8vmin;
 }
 
 .inputDivisionBody {
@@ -198,7 +198,7 @@ body {
     width: 80%;
     min-width: 70px;
     margin-left: 10%;
-    margin-top: 15px; 
+    margin-top: 15px;
     font-size: 1.3em;
 }
 
@@ -270,7 +270,7 @@ body {
 
 .nextButton {
     top: 2%;
-    margin-left: 14px; 
+    margin-left: 14px;
     height: 30px;
     width: 36%;
     float: center;
