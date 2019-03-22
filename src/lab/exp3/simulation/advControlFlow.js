@@ -220,8 +220,6 @@ window.view = {
 		this.enableButton('loopList')
 		this.changeClass( 'loopList', 'button loopList')
 		this.enableButton('simpleLoopInput')
-		document.getElementById('simpleLoopInput').value = ''
-		document.getElementById('loopList').options.selectedIndex = 0
 	},
 	endTheNestedLoopCode: function() {
 		if(document.getElementById('simpleLoopInput').value=='0')
@@ -240,7 +238,6 @@ window.view = {
 		this.disableButton('nestedNextBtn')
 		this.changeClass( 'nestedNextBtn', 'buttonDisable nextButton')
 		this.enableButton('nestedLoopInput')
-		document.getElementById('nestedLoopInput').value = ''
 	},
 	nextBtn: function () {
 		this.lastRedDiv = this.getLastHighlightedDiv()
