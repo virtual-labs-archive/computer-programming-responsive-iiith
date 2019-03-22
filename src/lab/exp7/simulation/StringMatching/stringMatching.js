@@ -21,7 +21,7 @@ window.view = {
 	outputStrSM2: 'String str2 is not found in str1.',
 	// addClickEvent: add EventListener to other methods.
 	addClickEvent: function (id, method) {
-		var element = document.getElementById(id);
+		var element = docuCment.getElementById(id);
 		element.addEventListener('click', method, false);
 	},
 	// activateEvents: calls addClickEvent method to add EventListener to other methods.
@@ -330,7 +330,8 @@ window.view = {
 				this.setInnerHtml('outputStr', this.outputStrSM1);
 			}
 			else if (this.s2j != model.inputString2.length) 
-				this.assignStringVariableValueiTok();
+				this.codeExecutionWithColour();
+			        this.setInnerHtml('outputStr',this.outputStrSM2);
 		}
 		else if (this.nextSiblingElement.id === 'codeContentId17') {
 		}
