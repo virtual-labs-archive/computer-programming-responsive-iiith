@@ -1,4 +1,4 @@
-window.model = {	
+window.model = {
 	a: '',
 	b: '',
 	c: '',
@@ -112,7 +112,7 @@ window.model = {
 				start--;
 				end++;
 			}
-		//	if(start>0 && expression[start - 1] == '(' && (end+1) < expression.length && expression[end+1] == ')') 
+		//	if(start>0 && expression[start - 1] == '(' && (end+1) < expression.length && expression[end+1] == ')')
 		//			expression = expression.substring(0, start-1) + sub.toString() + expression.substring(end+2, expression.length);
 			expression = expression.substring(0, start) + sub.toString() + expression.substring(end+1, expression.length);
 			return expression;
@@ -262,7 +262,7 @@ window.model = {
 				end++;
 			}
 
-		//	if(start>0 && expression[start - 1] == '(' && (end+1) < expression.length && expression[end+1] == ')') 
+		//	if(start>0 && expression[start - 1] == '(' && (end+1) < expression.length && expression[end+1] == ')')
 		//			expression = expression.substring(0, start-1) + sub.toString() + expression.substring(end+2, expression.length);
 			expression = expression.substring(0, start) + sub.toString() + expression.substring(end+1, expression.length);
 			return expression;
@@ -286,7 +286,7 @@ window.model = {
 			c = (a && b);
 		else if( sub[i] == '|' )
 			c = (b || a);
-		
+
 		while((start-1)>=0 && expression[start - 1] == '(' && (end+1)<expression.length && expression[end+1] == ')') {
 			start--;
 			end++;
@@ -415,7 +415,7 @@ window.model = {
 				end++;
 			}
 
-	//		if(start>0 && expression[start - 1] == '(' && (end+1) < expression.length && expression[end+1] == ')') 
+	//		if(start>0 && expression[start - 1] == '(' && (end+1) < expression.length && expression[end+1] == ')')
 	//				expression = expression.substring(0, start-1) + sub.toString() + expression.substring(end+2, expression.length);
 			expression = expression.substring(0, start) + sub.toString() + expression.substring(end+1, expression.length);
 			return expression;
@@ -476,7 +476,7 @@ window.model = {
 }
 
 window.view = {
-	expression: '',	
+	expression: '',
 	countNext : 0,
 	starting : -1,
 	ending : -1,
@@ -495,7 +495,7 @@ window.view = {
 		document.getElementById('b').value = b
 		document.getElementById('c').value = c
 		document.getElementById('d').value = d
-		document.getElementById('selectedExpression').value = expression	
+		document.getElementById('selectedExpression').value = expression
 		if ( environment === 'logical' ) {
 			document.getElementById('logicalExpressions').className = 'button loopList'
 			document.getElementById('arithmaticExpressions').className += ' hide'
@@ -507,7 +507,7 @@ window.view = {
 			document.getElementById('bitwiseExpressions').className += ' hide'
 		}
 		else {
-			document.getElementById('bitwiseExpressions').className = 'button loopList'	
+			document.getElementById('bitwiseExpressions').className = 'button loopList'
 			document.getElementById('arithmaticExpressions').className += ' hide'
 			document.getElementById('logicalExpressions').className += ' hide'
 		}
@@ -556,9 +556,9 @@ window.view = {
 	},
 	validateArithmaticExpression: function (exp) {
 		var characterOrOperator = 0
-		var braces = 0 
+		var braces = 0
 		for ( var i = 0 ; i < exp.length ; i ++ ) {
-			if ( exp[i] !== 'a' && exp[i] !== 'b' && exp[i] !== 'c' && exp[i] !== 'd' && exp[i] !== '*' && exp[i] !== '/' && 
+			if ( exp[i] !== 'a' && exp[i] !== 'b' && exp[i] !== 'c' && exp[i] !== 'd' && exp[i] !== '*' && exp[i] !== '/' &&
 			     exp[i] !== '+' && exp[i] !== '-' &&  exp[i] !== '(' && exp[i] !== ')' && exp[i] !== '%') {
 				alert('You Entered Wrong Expression !!!\n Only " a b c d " characters and " * / - + ( ) % "\n operators are allowed !!!')
 				return false
@@ -608,12 +608,12 @@ window.view = {
 				alert('You Have Entered  Wrong Expression Syntax !!!')
 				return false
 		}
-		else 
+		else
 			return true
 	},
 	validateLogicalExpression: function (exp) {
 		var characterOrOperator = 0
-		var braces = 0 
+		var braces = 0
 		for ( var i = 0 ; i < exp.length ; i ++ ) {
 			if ( exp[i] !== 'a' && exp[i] !== 'b' && exp[i] !== 'c' && exp[i] !== 'd' && exp[i] !== '|' && exp[i] !== '&' &&  exp[i] !== '(' && exp[i] !== ')') {
 				alert('You Entered Wrong Expression !!!\n Only " a b c d " characters and " || && ( ) "\n operators are allowed !!!')
@@ -670,14 +670,14 @@ window.view = {
 				alert('You Have Entered  Wrong Expression Syntax !!!')
 				return false
 		}
-		else 
+		else
 			return true
 	},
 	validateBitwiseExpression: function (exp) {
 		var characterOrOperator = 0
-		var braces = 0 
+		var braces = 0
 		for ( var i = 0 ; i < exp.length ; i ++ ) {
-			if ( exp[i] !== 'a' && exp[i] !== 'b' && exp[i] !== 'c' && exp[i] !== 'd' && exp[i] !== '^' && exp[i] !== '&' && 
+			if ( exp[i] !== 'a' && exp[i] !== 'b' && exp[i] !== 'c' && exp[i] !== 'd' && exp[i] !== '^' && exp[i] !== '&' &&
 			     exp[i] !== '|' && exp[i] !== '<' &&  exp[i] !== '(' && exp[i] !== ')' && exp[i] !== '>') {
 				alert('You Entered Wrong Expression !!!\n Only " a b c d " characters and " | & ^ >> << "\n operators are allowed !!!')
 				return false
@@ -724,7 +724,7 @@ window.view = {
 					}
 					else if(exp[i] == '<' || exp[i] == '>')
 						i++;
-				}	
+				}
 			}
 			if ( braces < 0 ) {
 				alert('You Have Entered  Wrong Expression Syntax for "()" operator !!!')
@@ -739,7 +739,7 @@ window.view = {
 				alert('You Have Entered  Wrong Expression Syntax !!!')
 				return false
 		}
-		else 
+		else
 			return true
 	},
 	printFirstStep: function () {
@@ -753,9 +753,9 @@ window.view = {
         this.expression = this.expression.replace(/d/g, Math.floor(model.d))
         var string = this.expression
 		for ( var i = 0 ; i < string.length ; i ++ ) {
-			if ( string[i] === '+' || string[i] === '-' || string[i] === '*' || string[i] === '/' || 
-				 string[i] === '%' || string[i] === '(' || string[i] === ')' || string[i] === '||' || 
-				 string[i] === '&&' || string[i] === '|' || string[i] === '&' || string[i] === '^' || 
+			if ( string[i] === '+' || string[i] === '-' || string[i] === '*' || string[i] === '/' ||
+				 string[i] === '%' || string[i] === '(' || string[i] === ')' || string[i] === '||' ||
+				 string[i] === '&&' || string[i] === '|' || string[i] === '&' || string[i] === '^' ||
 				 string[i] === '>>' || string[i] === '<<' ) {
 				left = string.substring(0, i)
 				right = string.substring(i + 1)
@@ -826,9 +826,9 @@ window.view = {
 		var method = new Function('return' + ' ' + string)
 		var element = document.getElementById('currentStep')
 		for ( var i = 0 ; i < string.length ; i ++ ) {
-			if ( string[i] === '+' || string[i] === '-' || string[i] === '*' || string[i] === '/' || 
-				 string[i] === '%' || string[i] === '(' || string[i] === ')' || string[i] === '||' || 
-				 string[i] === '&&' || string[i] === '|' || string[i] === '&' || string[i] === '^' || 
+			if ( string[i] === '+' || string[i] === '-' || string[i] === '*' || string[i] === '/' ||
+				 string[i] === '%' || string[i] === '(' || string[i] === ')' || string[i] === '||' ||
+				 string[i] === '&&' || string[i] === '|' || string[i] === '&' || string[i] === '^' ||
 				 string[i] === '>>' || string[i] === '<<' ) {
 				left = string.substring(0, i)
 				right = string.substring(i + 1)
@@ -854,16 +854,29 @@ window.view = {
 				var eq = equation.substring(this.starting, this.ending + 1)
 				var operator = ''
 				for ( var i = 0 ; i < eq.length ; i ++ ) {
-					if ( eq[i] === '+' || eq[i] === '-' || eq[i] === '/' || eq[i] === '*' || eq[i] === '%' )  {
-						operator = eq[i]
-						break
+						if (eq[i] === '|' || eq[i] === '&' ||  eq[i] === '+' || eq[i] === '-' || eq[i] === '/' || eq[i] === '*' || eq[i] === '%')  {
+
+							if(eq[i] == '&' && eq[i+1] == eq[i])
+							{
+								operator = '&&'
+								i++;
+							}
+							else if(eq[i] == '|' && eq[i+1] == eq[i])
+							{
+								operator = '||'
+								i++;
+							}
+							else
+							{
+								operator = eq[i]
+							}
 					}
 				}
 				var span = document.createElement('span')
 				span.innerHTML =  this.step - 1 + ' ) ' + 'Here ' + operator + ' have higher precedence than other operators. So, it will be solved first.<br>'
 				span.className = 'illustrationText'
-				child.appendChild(span)	
-			}	
+				child.appendChild(span)
+			}
 		}
 		parent.appendChild(child)
 	},
@@ -882,7 +895,7 @@ window.view = {
 			res = model.calclogical(this.expression, this.countNext, this.starting, this.ending)
 		else if ( selectedOption === 'Bitwise' )
 			res = model.calcbitwise(this.expression, this.countNext, this.starting, this.ending)
-		
+
 		this.expression = res[0].toString();
 		this.starting = res[1][0];
 		this.ending = res[1][1];
@@ -903,6 +916,6 @@ window.view = {
 	init: function () {
 		this.activateEvents()
 	}
-} 
+}
 
 window.onload = function () { view.init() }
