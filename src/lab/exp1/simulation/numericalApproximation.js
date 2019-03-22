@@ -389,6 +389,8 @@ window.view = {
 				this.executionWithColour();
 				this.setInnerHtml('integrText', 'INTEGRATION VALUE = ');
 				this.setInnerHtml('integrValue', this.sum);
+				alert('INTEGRATION VALUE = ' + this.sum);
+				
 			}
 		}
 		else if (this.nextSiblingElement.id === 'NumApproCodeContent10') {
