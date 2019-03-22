@@ -1,3 +1,4 @@
+var x=""
 window.model = {	
 	a: '',
 	b: '',
@@ -767,6 +768,12 @@ window.view = {
 		parent.appendChild(div)
 	},
 	validateExpression: function () {
+		if(document.getElementById('a').value=="" || document.getElementById('b').value=="" || document.getElementById('c').value=="" || document.getElementById('d').value=="")
+		{
+			alert('Please enter the value for variables');
+			return ;
+		}
+		x=""
 		this.expression = document.getElementById('selectedExpression').value
 		this.expression = this.killWhiteSpaces(this.expression)
 		var list = document.getElementById('operatorList')
@@ -889,6 +896,16 @@ window.view = {
 		this.printCurrentStep()
 		console.log(this.expression, this.starting, this.ending);
 		this.countNext += 1;
+		if(x==this.expression)
+		{
+			alert('Evaluation Complete');
+      location.reload()=true;
+			return ;
+		}
+		else
+		{
+			x=this.expression;
+		}
     },
 	activateEvents: function() {
 		this.addClickEvent('buttonSave', function () { view.freezeInputs() })

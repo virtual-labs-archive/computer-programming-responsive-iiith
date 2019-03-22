@@ -363,7 +363,7 @@ echo "	<h2>Correct Answers</h2>
                 main( )
                   {
                   int a=100 ;
-                  if((a &lt;&lt; 2) == 102))
+                  if((a &lt;&lt; 2) == 102)
                      printf(&quot;Hello&quot;);
                   printf(&quot;World&quot;);
                                    

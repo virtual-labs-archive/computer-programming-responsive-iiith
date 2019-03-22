@@ -1,4 +1,4 @@
-window.model = {
+	window.model = {
 	inp: 0,
     nestedInp: 0,
     fact: 1,
@@ -206,6 +206,11 @@ window.view = {
 		this.highlightNextStep()
 	},
 	endTheSimpleLoopCode: function() {
+		if(document.getElementById('simpleLoopInput').value=='0')
+		{
+			document.getElementById('localVariableI')="-"
+			document.getElementById('localVariableFact')="1"
+		}
 		alert('code running is over')
 		clearInterval(this.stampSimple)
 		this.disableButton('btnNext')
@@ -215,10 +220,13 @@ window.view = {
 		this.enableButton('loopList')
 		this.changeClass( 'loopList', 'button loopList')
 		this.enableButton('simpleLoopInput')
-		document.getElementById('simpleLoopInput').value = ''
-		document.getElementById('loopList').options.selectedIndex = 0
 	},
 	endTheNestedLoopCode: function() {
+		if(document.getElementById('simpleLoopInput').value=='0')
+		{
+			document.getElementById('localVariableI')="-"
+			document.getElementById('localVariableFact')="1"
+		}
 		alert('code running is over')
 		clearInterval(this.stampNested)
 		this.nextRedDiv = this.jumpTo('codeContentNested22')
@@ -230,7 +238,6 @@ window.view = {
 		this.disableButton('nestedNextBtn')
 		this.changeClass( 'nestedNextBtn', 'buttonDisable nextButton')
 		this.enableButton('nestedLoopInput')
-		document.getElementById('nestedLoopInput').value = ''
 	},
 	nextBtn: function () {
 		this.lastRedDiv = this.getLastHighlightedDiv()
@@ -317,6 +324,13 @@ window.view = {
 		this.j++
 	},
 	nextBtnNested: function() {
+		if(document.getElementById('nestedLoopInput').value==0)
+		{
+			document.getElementById('nestedlocalVariableI').innerHTML = 0
+			document.getElementById('nestedlocalVariableJ').innerHTML = 0
+			document.getElementById('nestedlocalVariableK').innerHTML = 0
+		 	alert('code running is over')
+		}
 		this.lastRedDiv = this.getLastHighlightedDiv()
 		this.nextRedDiv = this.getNextDivToHighlight(this.lastRedDiv)
 		if ( model.nestedInp === 0 )
@@ -326,7 +340,14 @@ window.view = {
 		 	else
 		 		this.processNestedLoopStep('codeContentNested21')
 		 	if ( this.lastRedDiv.id === 'codeContentNested21' )
+		 	{
+				if(document.getElementById('simpleLoopInput').value=='0')
+				{
+					document.getElementById('localVariableI')="-"
+					document.getElementById('localVariableFact')="1"
+				}
 		 		alert('code running is over')
+		 	}
 		}
 		else
 		{	
