@@ -1,3 +1,4 @@
+var x=""
 window.model = {	
 	a: '',
 	b: '',
@@ -767,6 +768,7 @@ window.view = {
 		parent.appendChild(div)
 	},
 	validateExpression: function () {
+		x=""
 		this.expression = document.getElementById('selectedExpression').value
 		this.expression = this.killWhiteSpaces(this.expression)
 		var list = document.getElementById('operatorList')
@@ -868,7 +870,7 @@ window.view = {
 		parent.appendChild(child)
 	},
 	evaluate: function () {
-		if((this.starting == -1 && this.countNext != 0) || (this.expression)%10==this.expression) {
+		if(this.starting == -1 && this.countNext != 0) {
 			alert('Evaluation Complete');
       location.reload()=true;
 			return ;
@@ -889,6 +891,16 @@ window.view = {
 		this.printCurrentStep()
 		console.log(this.expression, this.starting, this.ending);
 		this.countNext += 1;
+		if(x==this.expression)
+		{
+			alert('Evaluation Complete');
+      location.reload()=true;
+			return ;
+		}
+		else
+		{
+			x=this.expression;
+		}
     },
 	activateEvents: function() {
 		this.addClickEvent('buttonSave', function () { view.freezeInputs() })
