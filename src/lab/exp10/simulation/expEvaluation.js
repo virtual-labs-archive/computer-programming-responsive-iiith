@@ -768,6 +768,11 @@ window.view = {
 		parent.appendChild(div)
 	},
 	validateExpression: function () {
+		if(document.getElementById('a').value=="" || document.getElementById('b').value=="" || document.getElementById('c').value=="" || document.getElementById('d').value=="")
+		{
+			alert('Please enter the value for variables');
+			return ;
+		}
 		x=""
 		this.expression = document.getElementById('selectedExpression').value
 		this.expression = this.killWhiteSpaces(this.expression)
