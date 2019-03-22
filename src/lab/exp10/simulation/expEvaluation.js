@@ -838,7 +838,7 @@ window.view = {
 		parent.appendChild(child)
 	},
 	evaluate: function () {
-		if (this.starting == -1 && this.countNext != 0) {
+		if (this.starting == -1 && this.countNext != 0 || this.expression.includes('Infinity') || this.expression.includes("NaN")) {
 			alert('Evaluation Complete');
 			location.reload();
 			return;
@@ -868,6 +868,16 @@ window.view = {
 			view.deFreezeInputs()
 		})
 		this.addClickEvent('buttonStart', function () {
+			var proceed = true
+			model.getInputs()
+			for (var i of [model.a, model.b, model.c, model.d]) {
+				if(isNaN(i)) {
+					proceed = false
+					alert(i+" is not a number")
+					break
+				}
+			}
+			if(proceed)
 			view.validateExpression()
 		})
 		this.addClickEvent('buttonNext', function () {
