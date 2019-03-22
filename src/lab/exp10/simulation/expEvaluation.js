@@ -854,8 +854,26 @@ window.view = {
 				var eq = equation.substring(this.starting, this.ending + 1)
 				var operator = ''
 				for ( var i = 0 ; i < eq.length ; i ++ ) {
-					if ( eq[i] === '+' || eq[i] === '-' || eq[i] === '/' || eq[i] === '*' || eq[i] === '%' )  {
-						operator = eq[i]
+					if (eq[i] === '>' || eq[i] === '<' || eq[i] === '|' || eq[i] === '&' ||  eq[i] === '^' || eq[i] === '+' || eq[i] === '-' || eq[i] === '/' || eq[i] === '*' || eq[i] === '%')  {
+						if(eq[i] === '|' && eq[i+1] === '|'){
+							operator = '||'
+							++i;
+						}
+						else if(eq[i] === '&' && eq[i+1] === '&'){
+							operator = '&&'
+							++i;
+						}
+						else if(eq[i] === '<' && eq[i+1] === '<'){
+							operator = '<<'
+							++i;
+						}
+						else if(eq[i] === '>' && eq[i+1] === '>'){
+							operator = '>>'
+							++i;
+						}
+						else{
+							operator = eq[i]
+						}
 						break
 					}
 				}
