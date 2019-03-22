@@ -8,11 +8,21 @@ body {
     font-size: 100%;
     position:absolute;
     top: 0%;
-    bottom: 0%; 
-    right: 0%; 
+    bottom: 0%;
+    right: 0%;
     left: 0%;
 }
 
+.tip{
+	position: absolute;
+	font-weight: bold;
+	width: 96%;
+	height: 60px;
+	margin-top: 15px;
+	font-size: 16px;
+	top: 180px;
+	text-align: center;
+}
 #header {
 	position: absolute;
 	top: 0;
@@ -28,11 +38,11 @@ body {
 .button, .buttonDisable {
 	position: relative;
 	padding: 0.5em 1em;
-  	border-radius: 0.2em; 
+  	border-radius: 0.2em;
   	overflow: visible;
   	outline: none;
 	white-space: nowrap;
-  	-moz-background-clip: padding; 
+  	-moz-background-clip: padding;
     background-clip: padding-box;
 	border: 1px solid #d4d4d4;
     margin: 0;
@@ -88,7 +98,7 @@ body {
 
 .inputDivision, .outputDivision, .executionDivision {
     top: 11%;
-    height: 87%; 
+    height: 87%;
     position: absolute;
     border: 1px solid #CCC;
     border-radius: 5px;
@@ -140,7 +150,7 @@ body {
 	width: 60%;
 	float: left;
 	height: 100%;
-	padding-top: 1.8vmin; 
+	padding-top: 1.8vmin;
 }
 
 .executionPic {
@@ -154,7 +164,7 @@ body {
 	width: 50%;
 	float: left;
 	height: 100%;
-	padding-top: 1.8vmin; 
+	padding-top: 1.8vmin;
 }
 
 .outputPic {
@@ -168,7 +178,7 @@ body {
 	width: 50%;
 	float: left;
 	height: 100%;
-	padding-top: 1.8vmin; 
+	padding-top: 1.8vmin;
 }
 
 .inputDivisionBody {
@@ -219,7 +229,7 @@ body {
 }
 
 .nextButton {
-    margin-left: 14px; 
+    margin-left: 14px;
     height: 30px;
     width: 37%;
     float: center;
