@@ -868,7 +868,7 @@ window.view = {
 		parent.appendChild(child)
 	},
 	evaluate: function () {
-		if(this.starting == -1 && this.countNext != 0) {
+		if((this.starting == -1 && this.countNext != 0) || (this.expression)%10==this.expression) {
 			alert('Evaluation Complete');
       location.reload()=true;
 			return ;
