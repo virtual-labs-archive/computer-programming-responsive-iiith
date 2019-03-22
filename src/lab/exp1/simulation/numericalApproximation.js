@@ -294,6 +294,10 @@ window.view = {
 			alert('Integration Limits are from 0 to 30, b > a and b-a >= 1');
 			return false;
 		}
+		else if (valueA2 <0 || valueB2 <0 ) {
+			alert('a and b must be positive');
+			return false;
+		}
 		else {
 			model.inputValueA = valueA2;
 			model.inputValueB = valueB2;
