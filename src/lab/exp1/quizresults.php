@@ -61,7 +61,7 @@ echo '	<h2>Correct Answers</h2>
                 </pre>
                 Make the approximation worse<br>
                 <br>
-                <li><b> An approximate solution may be as good as the accurate solution for <input type="text" name="fib1"> purposes.</b></li><br><br>
+                <li><b> An approximate solution may be as good as the accurate solution for <"practical"> purposes.</b></li><br><br>
 
 
 
