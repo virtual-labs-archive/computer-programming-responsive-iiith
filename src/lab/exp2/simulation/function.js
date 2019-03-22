@@ -112,6 +112,49 @@ window.view = {
 		this.i ++
 		this.replaceDivs()
 	},
+
+
+                approveRectangleInputs1: function() {
+		this.displayFunctionForRectangle1()
+        this.showInstructions()
+		document.getElementById('questionRectangle').className = 'questionBlock hide'
+		document.getElementById('imageRectangle').className += ' disabledImage'
+		document.getElementById('tickRectangle').className = 'tick'
+		document.getElementById('imageRectangle').style.opacity = '0.3'
+		this.i ++
+		this.replaceDivs()
+	},
+	approveSquareInputs1: function() {
+		this.displayFunctionForSquare1()
+        this.showInstructions()
+		document.getElementById('questionSquare').className = 'questionBlock hide'
+		document.getElementById('imageSquare').className += ' disabledImage'
+		document.getElementById('tickSquare').className = 'tick'
+		document.getElementById('imageSquare').style.opacity = '0.3'
+		this.i ++
+		this.replaceDivs()
+	},
+	approveCircleInputs1: function() {
+		this.displayFunctionForCircle1()
+        this.showInstructions()
+		document.getElementById('questionCircle').className = 'questionBlock hide'
+		document.getElementById('imageCircle').className += ' disabledImage'
+		document.getElementById('tickCircle').className = 'tick'
+		document.getElementById('imageCircle').style.opacity = '0.3'
+		this.i ++
+		this.replaceDivs()
+	},
+	approveTriangleInputs1: function() {
+		this.displayFunctionForTriangle1()
+        this.showInstructions()
+		document.getElementById('questionTriangle').className = 'questionBlock hide'
+		document.getElementById('imageTriangle').className += ' disabledImage'
+		document.getElementById('tickTriangle').className = 'tick'
+		document.getElementById('imageTriangle').style.opacity = '0.3'
+		this.i ++
+		this.replaceDivs()
+	},
+
 	validateSquareInputs: function() {
 		var options1, options2, options3, options4
 		var a, b, c, d
@@ -141,14 +184,13 @@ window.view = {
 		}
 		if ( a !== '1')
 			alert('Incorrect value of input variables(arguments). Calculating the area of a square only requires the length of the side of the square. Try again.')
-		else if ( b !== 'float' )
-			alert('Incorrect datatype of input variables(arguments). The value of the side of a square need not be an integer. Try again.')
-		else if ( c !== 'float' )
-			alert('Incorrect datatype for return type. The value of the area of a square need not be an integer. Try again.')
+		
 		else if ( d !== 'a*a' )
 			alert('Incorrect formula for calculating the area of a square. Try again.')
-		else
+		else if(b==='float' && c==='float')
 			this.approveSquareInputs()
+                                 else if(b==='int' && c==='int')
+			this.approveSquareInputs1()
 	}, 
 	validateRectangleInputs: function() {
 		var options1, options2, options3, options4
@@ -179,14 +221,13 @@ window.view = {
 		}
 		if ( a !== '2')
 			alert('Incorrect value of input variables(arguments). Calculating the area of a rectangle requires the length of the two different parallel sides of the rectangle. Try again.')
-		else if ( b !== 'float' )
-			alert('Incorrect datatype of input variables(arguments). The value of the sides of a rectangle need not be integers. Try again.')
-		else if ( c !== 'float' )
-			alert('Incorrect datatype for return type. The value of the area of a rectangle need not be an integer. Try again.')
+		
 		else if ( d !== 'a*b' )
 			alert('Incorrect formula for calculating the area of a rectangle. Try again.')
-		else
+		else if(b==='float' && c==='float')
 			this.approveRectangleInputs()
+                                else if(b==='int' && c==='int')
+			this.approveRectangleInputs1()
 	},
 	validateTriangleInputs: function() {
 		var options1, options2, options3, options4
@@ -217,14 +258,13 @@ window.view = {
 		}
 		if ( a !== '1')
 			alert('Incorrect value of input variables(arguments). Calculating the area of an equilateral triangle only requires the length of one of the sides of the triangle. Try again.')
-		else if ( b !== 'float' )
-			alert('Incorrect datatype of input variables(arguments). The value of the side of an equilateral triangle need not be an integer. Try again.')
-		else if ( c !== 'float' )
-			alert('Incorrect datatype for return type. The value of the area of an equilateral triangle need not be an integer. Try again.')
+		
 		else if ( d !== 'correct' )
 			alert('Incorrect formula for calculating the area of an equilateral triangle. Try again.')
-		else
+		else if(b==='float' && c==='float')
 			this.approveTriangleInputs()
+                                else if(b==='int' && c==='int')
+			this.approveTriangleInputs1()
 	},
 	validateCircleInputs: function() {
 		var options1, options2, options3, options4
@@ -255,27 +295,49 @@ window.view = {
 		}
 		if ( a !== '1')
 			alert('Incorrect value of input variables(arguments). Calculating the area of circle only requires the radius. Try again.')
-		else if ( b !== 'float' )
-			alert('Incorrect datatype of input variables(arguments). The value of the radius of the circle need not be an integer. Try again.')
-		else if ( c !== 'float' )
-			alert('Incorrect datatype for return type. The value of the area of the circle need not be an integer. Try again.')
+	
 		else if ( d !== 'pi*a*a' )
 			alert('Incorrect formula for calculating the area of the circle. Try again.')
-		else
+		else  if(b==='float' && c==='float')
 			this.approveCircleInputs()
+                                 else  if(b==='int' && c==='int')
+			this.approveCircleInputs1()
 	},
-	displayFunctionForSquare: function() {
+	
+
+
+displayFunctionForSquare: function() {
 		document.getElementById('functionSquare').innerHTML += 'float area_sq (float a)<br>{<br> &emsp; float area = a*a;<br>&emsp; return area;<br>}'
 	},
+
 	displayFunctionForRectangle: function() {
 		document.getElementById('functionRectangle').innerHTML += 'float area_rect (float a,float b)<br>{<br> &emsp; float area = a*b;<br> &emsp; return area;<br>}'
 	},
 	displayFunctionForTriangle: function() {
 		document.getElementById('functionTriangle').innerHTML += 'float area_triangle (float a)<br>{<br>&emsp;float area = (sqrt(3)/4.0)*a*a;<br>&emsp;return area;<br>}'
 	},
+
 	displayFunctionForCircle: function() {
 		document.getElementById('functionCircle').innerHTML += 'float area_circle (float a)<br>{<br>&emsp;float area = 3.14*a*a;<br>&emsp;return area;<br>}'
 	},
+
+
+displayFunctionForSquare1: function() {
+		document.getElementById('functionSquare').innerHTML += 'int area_sq (int a)<br>{<br> &emsp; int area = a*a;<br>&emsp; return area;<br>}'
+	},
+
+	displayFunctionForRectangle1: function() {
+		document.getElementById('functionRectangle').innerHTML += 'int area_rect (int a,int b)<br>{<br> &emsp; int area = a*b;<br> &emsp; return area;<br>}'
+	},
+	displayFunctionForTriangle1: function() {
+		document.getElementById('functionTriangle').innerHTML += 'int area_triangle (int a)<br>{<br>&emsp;int area = (sqrt(3)/4.0)*a*a;<br>&emsp;return area;<br>}'
+	},
+
+	displayFunctionForCircle1: function() {
+		document.getElementById('functionCircle').innerHTML += 'int area_circle (int a)<br>{<br>&emsp;int area = 3.14*a*a;<br>&emsp;return area;<br>}'
+	},
+
+
 	addClickEvent: function(id, method) {
 		var element = document.getElementById(id)
 		element.addEventListener('click', method, false)

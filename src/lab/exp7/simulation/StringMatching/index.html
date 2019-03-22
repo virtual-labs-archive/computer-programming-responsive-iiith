@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +9,18 @@
 </head>
 
 <body>
-<div id = 'header' > String Matching </div>
+<div id = 'header' > String Matching
+	</div>
+
+
+<div id="icon">
+<button type="button" onclick="toggleFullScreen()">  <img src="https://image.freepik.com/free-icon/exit-to-full-screen_318-9919.jpg" height="15" width="20"  align="right">
+
+</button>
+
+
+
+	</div>
 <a href="../../simulation.html"><div class="vlabsIcon"></div></a>
 
 <div class = 'inputDivision' >
@@ -57,8 +69,9 @@
 			<div id = 'codeContentId16' >&emsp;&emsp;&emsp;&emsp;&emsp;break;</div>
 			<div id = 'codeContentId17' >&emsp;&emsp;&emsp;}</div>
 			<div id = 'codeContentId18' >&emsp;&emsp;&emsp;i++;</div>
-			<div id = 'codeContentId19' >&emsp;}</div>
-			<div id = 'codeContentId20' >}</div>
+                                                  <div id = 'codeContentId19' >&emsp;}</div>
+                                                 <div id = 'codeContentId20' >&emsp;&emsp;&emsp;&emsp;&emsp;printf("String str2 is not found in str1.");</div>
+			<div id = 'codeContentId21' >}</div>
 		</div><!-- end of programCode -->
 	</div><!-- end of stepExecutionDisplay -->
 </div><!-- end of executionDivision -->
@@ -157,5 +170,28 @@
 		</div><!-- end of localVariables -->
 	</div><!-- end of resultDisplay -->
 </div><!-- end of outputDivision -->
+	<script>
+function toggleFullScreen() {
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+      document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+      document.documentElement.mozRequestFullScreen();  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  } else {  
+    if (document.cancelFullScreen) {  
+      document.cancelFullScreen();  
+    } else if (document.mozCancelFullScreen) {  
+      document.mozCancelFullScreen();  
+    } else if (document.webkitCancelFullScreen) {  
+      document.webkitCancelFullScreen();  
+    }  
+  }  
+}
+</script>
+
 </body>
 </html>

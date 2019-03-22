@@ -100,7 +100,7 @@ window.view = {
 	},
 	// jumpToDay: to jump on desire day.
 	jumpToDay: function () {
-		switch (model.inputNumber) {
+                           		switch (model.inputNumber) {
 			case 1:
 				this.showDay('case1Id', this.currentSiblingElement.id, 'mondayImages', 'strNullId', 'Monday');
   				break;
@@ -230,7 +230,7 @@ window.view = {
 				this.setInnerHtml('outputDayId', 'WORKING DAY');
 	 		}
 	 	}
-		if ( model.inputNumber > 7 ) {
+		if ( model.inputNumber > 7 || model.inputNumber<=0 ) {
 	 		if (this.nextSiblingElement.id === 'holidayId')
 				this.codeExecutionWithColourAndId('elseIfId');
 	 		else if (this.nextSiblingElement.id === 'workingdayId') 

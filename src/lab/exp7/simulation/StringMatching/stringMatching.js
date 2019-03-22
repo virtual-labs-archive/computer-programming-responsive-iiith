@@ -283,7 +283,8 @@ window.view = {
 	// matchString: match two string characters during code execution and show final result at end of code.
 	matchString: function() {
 		this.currentSiblingElement = this.getElementByClass('redClass');
-		if ((this.currentSiblingElement.id === 'codeContentId6' && this.s1i === model.inputString1.length) || this.currentSiblingElement.id === 'codeContentId16') {
+		if (this.currentSiblingElement.id === 'codeContentId16') {
+                                                
 			this.endOfExecution();
 		}
 		this.nextSiblingElement = this.getNextSiblingElement(this.currentSiblingElement);
@@ -305,9 +306,14 @@ window.view = {
 			if (this.s1i != model.inputString1.length)
 				this.assignValueiTok();
 			else if (this.s1i === model.inputString1.length) {
-				this.setInnerHtml('outputStr', this.outputStrSM2);
+                                                               this.codeExecutionWithColourAndId('codeContentId20');
+			               this.setInnerHtml('outputStr', this.outputStrSM2);
+                                                                this.nextSiblingElement.id = 'codeContentId21';
+                                                                
 			}
 		}
+                               else if (this.nextSiblingElement.id === 'codeContentId21'&& this.s1i === model.inputString1.length) {this.endOfExecution();}
+
 		else if (this.nextSiblingElement.id === 'codeContentId9') {
 			if (this.s1k != model.inputString1.length && this.s2j != model.inputString2.length)
 				this.codeExecutionWithColour();

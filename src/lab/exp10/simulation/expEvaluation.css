@@ -17,7 +17,6 @@ body {
 	font-size: 4vh;
 	padding-top: 1.3vmin;
 }
-
 .button, .buttonDisable{
 	position: relative;
 	padding: 0.5em 1em;
@@ -220,6 +219,13 @@ body {
     min-width: 150px;
     height: 32px;
 }
+.inputFieldHolder1{
+    float: left;
+    width: 90%;
+    margin-left: 5%;
+    min-width: 150px;
+    height: 32px;
+}
 
 .inputField, .inputValueField {
     text-align: center;
@@ -255,9 +261,9 @@ body {
 .saveButton, .editButton {
     margin-top: 15px;
 }
-
 .startButton, .stopButton {
     top: 2%;
+    margin-top:25px;
     height: 30px;
     width: 36%;
     float: center;
@@ -270,13 +276,20 @@ body {
 
 .nextButton {
     top: 2%;
-    margin-left: 14px; 
+    margin-top:25px; 
     height: 30px;
     width: 36%;
     float: center;
     font-size: 14px;
 }
-
+.savButton {
+    top: 2%;
+    margin-top:25px; 
+    height: 30px;
+    width: 36%;
+    float: center;
+    font-size: 14px;
+}
 .resultDisplay {
     position: absolute;
     padding-top: 2%;

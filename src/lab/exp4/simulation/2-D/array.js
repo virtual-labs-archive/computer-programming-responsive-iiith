@@ -89,8 +89,8 @@ window.view = {
 	getRowsAndCols: function() {
 		var row = Number(document.getElementById('row').value)
 		var col = Number(document.getElementById('col').value)
-		if ( row === 0 || col === 0 )
-			alert('Enter Matrix Size First !')
+		if ( row <= 0 || col <= 0 )
+			alert(' Matrix Size must be positive !')
 		else if ( isNaN(row) || isNaN(col) )
 			alert('Matrix Size Must Be An Integer Value !')
 		else
@@ -212,7 +212,7 @@ window.view = {
 		var elements = document.getElementById('resultantMatrix').getElementsByTagName('td')
 		for ( i = 0 ; i < elements.length ; i++ )
 		{
-			elements[i].innerHTML = -1
+			elements[i].innerHTML = 0
 		}
 	},
 	generateMatrices: function() {

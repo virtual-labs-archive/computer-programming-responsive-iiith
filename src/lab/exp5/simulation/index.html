@@ -9,6 +9,14 @@
 
 <body>
 <div id="header">Structure </div>
+
+
+<div id="icon">
+<button type="button" onclick="toggleFullScreen()">  <img src="https://image.freepik.com/free-icon/exit-to-full-screen_318-9919.jpg" height="15" width="20"  align="right">
+
+</button>
+
+</div>
 <a href="../index.html"><div class="vlabsIcon"></div></a>
 
 <div class="executionDivision" >
@@ -48,6 +56,31 @@
 		<div class="explanationText" id='solutionArea'></div>
 	</div><!-- end of codeExplanationBody -->
 </div><!-- end of codeExplanationDivision -->
+
+<script>
+function toggleFullScreen() {
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+      document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+      document.documentElement.mozRequestFullScreen();  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  } else {  
+    if (document.cancelFullScreen) {  
+      document.cancelFullScreen();  
+    } else if (document.mozCancelFullScreen) {  
+      document.mozCancelFullScreen();  
+    } else if (document.webkitCancelFullScreen) {  
+      document.webkitCancelFullScreen();  
+    }  
+  }  
+}
+</script>
+
+
 
 </body>
 </html>

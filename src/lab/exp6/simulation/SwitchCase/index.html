@@ -8,7 +8,16 @@
 </head>
 
 <body>
-<div id = 'header' >Basic Control Flow</div>
+<div id = 'header' >Basic Control Flow
+	
+	</div>
+
+
+<div id="icon">
+<button type="button" onclick="toggleFullScreen()">  <img src="https://image.freepik.com/free-icon/exit-to-full-screen_318-9919.jpg" height="15" width="20"  align="right">
+
+</button>
+</div>
 <a href="../../simulation.html"><div class="vlabsIcon"></div></a>
 
 <div class = 'inputDivision' >
@@ -54,7 +63,7 @@
 		<div 	id = 'defaultId'      >&emsp;&emsp;default : str = null;</div>
 		<div 	id = 'defaultBreakId'   class='break'	 >&emsp;&emsp;&emsp;break; </div>
 		<div 	id = 'closeBrc1Id'    >&emsp;}</div>
-		<div 	id = 'ifId'           >&emsp;if ( strcmp( str, 'Sunday' ) == 0 ) {</div>
+		<div 	id = 'ifId'           >&emsp;if ( strcmp( str, 'Sunday' ) == 7 ) {</div>
 		<div 	id = 'holidayId'      >&emsp;&emsp;printf ( 'HOLIDAY' ); }</div>
 		<div 	id = 'elseIfId'       >&emsp;else if ( str != null ) {</div>
 		<div 	id = 'workingdayId'   >&emsp;&emsp;printf ( 'WORKING DAY' ); }</div>
@@ -87,5 +96,28 @@
 		</div>
 	</div>
 </div>
+	<script>
+function toggleFullScreen() {
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+      document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+      document.documentElement.mozRequestFullScreen();  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  } else {  
+    if (document.cancelFullScreen) {  
+      document.cancelFullScreen();  
+    } else if (document.mozCancelFullScreen) {  
+      document.mozCancelFullScreen();  
+    } else if (document.webkitCancelFullScreen) {  
+      document.webkitCancelFullScreen();  
+    }  
+  }  
+}
+</script>
+
 </body>
 </html>

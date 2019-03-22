@@ -3,12 +3,16 @@ window.model = {
     nestedInp: 0,
     fact: 1,
     init: function() {
-		this.inp = 0
-		this.fact = 1
+		this.inp = 0;
+		this.fact = 1;
 	},
     computeNextFact: function() {
-        this.fact =  this.fact * this.inp
-    }
+
+if(this.inp>=1){
+        this.fact =  this.fact * this.inp; }
+else{
+       this.fact=this.fact ;}
+   }
 }
 
 window.view = {
@@ -149,8 +153,11 @@ window.view = {
 		this.m = 1
 		this.k = 0
 	},
-	resultDisplay: function(previousState, currentState, nextState) {
-		document.getElementById('resultDisplay').innerHTML += previousState + ' ' + '*' + ' ' + currentState + '=' + ' ' + nextState + '<br>'
+
+
+resultDisplay: function(previousState, currentState, nextState) {
+                              if(model.input>=1){
+		document.getElementById('resultDisplay').innerHTML += previousState + ' ' + '*' + ' ' + currentState + '=' + ' ' + nextState + '<br>'}
 		document.getElementById('localVariableI').innerHTML = currentState
 		document.getElementById('localVariableFact').innerHTML = nextState
 	},
@@ -241,8 +248,12 @@ window.view = {
 				this.highlightNextStep()		
 			else
 			{	
-				this.endTheSimpleLoopCode()			
-				this.changeClass(this.lastRedDiv.id, 'showDiv')
+			this.disp = model.fact
+			model.computeNextFact()
+			this.resultDisplay(this.disp, model.inp, model.fact)
+                                                model.inp--
+			
+	
 			}
 		}	
 		else
@@ -378,3 +389,5 @@ window.view = {
 	}
 }
 window.onload = function() { view.init() }
+
+
