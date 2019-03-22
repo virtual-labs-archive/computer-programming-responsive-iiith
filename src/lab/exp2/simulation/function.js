@@ -140,15 +140,30 @@ window.view = {
 			options4[i].checked = false
 		}
 		if ( a !== '1')
-			alert('Incorrect value of input variables(arguments). Calculating the area of a square only requires the length of the side of the square. Try again.')
-		else if ( b !== 'float' )
-			alert('Incorrect datatype of input variables(arguments). The value of the side of a square need not be an integer. Try again.')
-		else if ( c !== 'float' )
+			alert('Incorrect value of input variables(arguments). Calculating the area of a square only requires the length of the side of the square. Try again.');
+		else if ( b !== 'float' ){
+			alert('Incorrect datatype of input variables(arguments). The value of the side of a square need not be an integer. Try again.');
+			let a = document.querySelectorAll('.warning_s');
+			a.forEach(ele=>{
+				ele.style.display = 'block';
+			});
+		} 
+		else if ( c !== 'float' ){
 			alert('Incorrect datatype for return type. The value of the area of a square need not be an integer. Try again.')
+			let a = document.querySelectorAll('.warning_s');
+			a.forEach(ele=>{
+				ele.style.display = 'block';
+			});
+		}
 		else if ( d !== 'a*a' )
 			alert('Incorrect formula for calculating the area of a square. Try again.')
-		else
+		else{
 			this.approveSquareInputs()
+			let a = document.querySelectorAll('.warning_s');
+			a.forEach(ele=>{
+				ele.style.display = 'none';
+			});
+		}
 	}, 
 	validateRectangleInputs: function() {
 		var options1, options2, options3, options4
@@ -179,14 +194,29 @@ window.view = {
 		}
 		if ( a !== '2')
 			alert('Incorrect value of input variables(arguments). Calculating the area of a rectangle requires the length of the two different parallel sides of the rectangle. Try again.')
-		else if ( b !== 'float' )
+		else if ( b !== 'float' ){
 			alert('Incorrect datatype of input variables(arguments). The value of the sides of a rectangle need not be integers. Try again.')
-		else if ( c !== 'float' )
+			let a = document.querySelectorAll('.warning_s');
+			a.forEach(ele=>{
+				ele.style.display = 'block';
+			});
+		}
+		else if ( c !== 'float' ){
 			alert('Incorrect datatype for return type. The value of the area of a rectangle need not be an integer. Try again.')
+			let a = document.querySelectorAll('.warning_s');
+			a.forEach(ele=>{
+				ele.style.display = 'block';
+			});
+		}
 		else if ( d !== 'a*b' )
 			alert('Incorrect formula for calculating the area of a rectangle. Try again.')
-		else
+		else{
 			this.approveRectangleInputs()
+			let a = document.querySelectorAll('.warning_s');
+			a.forEach(ele=>{
+				ele.style.display = 'none';
+			});
+		}
 	},
 	validateTriangleInputs: function() {
 		var options1, options2, options3, options4

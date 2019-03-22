@@ -508,4 +508,10 @@ body {
     font-size: 1.2em;
 }
 
+.warning_s{
+    color: red;
+    display: none; 
+}
+
+
 }
