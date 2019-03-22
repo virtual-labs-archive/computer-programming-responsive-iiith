@@ -78,6 +78,7 @@ window.view = {
 	},
 	getUserInput: function() {
 		var inputValue = document.getElementById('userInput').value
+		inputValue = inputValue.replace(/ /g,'')
 		inputValue = inputValue.replace(/\s/g, ',')
 		this.numbers = inputValue.split(',')
 	},
@@ -202,6 +203,7 @@ window.view = {
 		document.getElementById('inputButtonRadio').className = 'radioButtonDivision hide'
 		document.getElementById('btnRandom').checked = false
 		document.getElementById('btnManual').checked = false
+		document.getElementById('userInput').value = ''
 	},
 	sortArray: function() {
 		this.lastRedDiv = this.getLastHighlightedDiv()

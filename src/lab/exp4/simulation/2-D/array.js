@@ -99,15 +99,15 @@ window.view = {
 			{	
 				this.enableButton('generateA')
 				this.changeClass( 'generateA', 'button GenerateValueButton' )
-				this.rowsA = row
-				this.colsA = col
+				this.rowsA = Math.ceil(row)
+				this.colsA = Math.ceil(col)
 			}
 			else
 			{
 				this.enableButton('generateB')
 				this.changeClass( 'generateB', 'button GenerateValueButton' )
-				this.rowsB = row
-				this.colsB = col
+				this.rowsB = Math.ceil(row)
+				this.colsB = Math.ceil(col)
 			}
 			this.disableButton('2DbtnOK')
 			this.changeClass( '2DbtnOK', 'startButton disableButton' )
