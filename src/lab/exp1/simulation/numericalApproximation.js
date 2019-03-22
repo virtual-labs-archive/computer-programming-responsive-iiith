@@ -283,7 +283,20 @@ window.view = {
 		var valueA2 = parseInt(valueA1);
 		var valueB2 = parseInt(valueB1);
 		if (valueA1 === '' || valueB1 === '') {
-			alert('Enter Value of a and b');
+			if(valueA1 === '' && valueB1 === '')
+			{
+				alert('Enter values for both a and b');
+				return false;
+			}
+			
+			if(valueA1 === '')
+			{
+				alert('Enter Value of a ');
+			}
+			else
+			{
+				alert('Enter Value of b ');
+			}
 			return false;
 		}
 		else if ( isNaN(valueA1) || isNaN(valueB1)) {
