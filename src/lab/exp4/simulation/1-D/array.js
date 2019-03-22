@@ -78,6 +78,7 @@ window.view = {
 	},
 	getUserInput: function() {
 		var inputValue = document.getElementById('userInput').value
+		inputValue = inputValue.replace(/ /g,'')
 		inputValue = inputValue.replace(/\s/g, ',')
 		this.numbers = inputValue.split(',')
 	},
