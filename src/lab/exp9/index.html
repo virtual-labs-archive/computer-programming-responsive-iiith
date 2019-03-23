@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href="../../normalize.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">
   <link rel="stylesheet" type="text/css" href="../style.css">
   <link rel="stylesheet" type="text/css" href="../bstyle.css">
   <link rel="stylesheet" type="text/css" href="../fonts.css">
@@ -20,7 +20,7 @@
         body{
           background-color: #f4f4f4;
         }
-      </style>  
+      </style>
 </head>
     <body>
 
@@ -70,7 +70,7 @@
           Sometimes solving a big problem may require us to solve smaller problems of similar nature. For example, computing the xth number in the fibonacci sequence may require us to find the x-1th and the x-2th numbers in the sequence. If we are able to break the main problem into smaller instances of the same problem again and again, so that eventually the smaller problems become trivial, then we can use the solutions to the trivial problems to progressively build bigger solutions. Consequently, we can reach the solution of our main problem. This concept when used in coding is called recursion.<br>
         <p>
           For writing a recursive code for a problem, we simply call a function inside the definition of the same function. Thus the definition of GNU (the source of much free software) is said to be recursive because GNU stands for 'GNU's Not Unix', i.e. GNU is part of the definition of GNU! Or maybe two mirrors placed parallely! The nested images are a form of infinite recursion.
-        </p>  
+        </p>
       </div>
     </div>
 
@@ -86,10 +86,10 @@
         <p>Hence a feasible recursive solution will have the following two properties:</p>
         <ol>
           <li>
-            A simple base case (or cases), and 
+            A simple base case (or cases), and
           </li>
           <li>
-            A set of rules which reduce all other cases toward the base case.   
+            A set of rules which reduce all other cases toward the base case.
           </li>
         </0l>
       </div>
@@ -140,4 +140,10 @@
   </div></div>
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$('ul.nav.nav-pills li a').click(function() {
+  $(this).parent().addClass('active').siblings().removeClass('active');
+})
+</script>
 </html>

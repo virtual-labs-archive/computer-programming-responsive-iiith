@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href="../../normalize.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">
   <link rel="stylesheet" type="text/css" href="../style.css">
   <link rel="stylesheet" type="text/css" href="../bstyle.css">
   <link rel="stylesheet" type="text/css" href="../fonts.css">
@@ -20,7 +20,7 @@
         body{
           background-color: #f4f4f4;
         }
-      </style>  
+      </style>
 </head>
     <body>
 
@@ -76,7 +76,7 @@
       <p class="manual-section-title">Theory</p><hr />
       <div class="manual-section-description">
         <p>
-          A pointer is a programming language data type which can store memory addresses of other variables. A pointer variable corresponding to any data type can be declared by using * before the name of the pointer. 
+          A pointer is a programming language data type which can store memory addresses of other variables. A pointer variable corresponding to any data type can be declared by using * before the name of the pointer.
         </p>
         <p>
           <pre  class="prettyprint lang-c">
@@ -101,7 +101,7 @@
           </pre>
         </p>
         <p>
-          would assign the memory address of var_i to pointer1_i. 
+          would assign the memory address of var_i to pointer1_i.
         </p>
         <p>
           <table border=0 ><tr><td><img src="pointers.png" height="70%" width="100%"  title="Figure explaining the working of pointers."><caption align="Top" ><h4>Figure explaining the working of the statement: a=&b; <h4></caption></td></tr></table>
@@ -115,10 +115,10 @@
           </pre>
         </p>
         <p>
-          would print 5 on the console. This process of accessing the value stored at a given position is known as dereferencing a pointer. Similarly, to store references to character or float variables one can define char or float type pointers. 
+          would print 5 on the console. This process of accessing the value stored at a given position is known as dereferencing a pointer. Similarly, to store references to character or float variables one can define char or float type pointers.
         </p>
         <p>
-          A pointer can be used to allocate memory in the runtime using the malloc() function, defined in stdlib.h, by doing dynamic memory allocation. Writing 
+          A pointer can be used to allocate memory in the runtime using the malloc() function, defined in stdlib.h, by doing dynamic memory allocation. Writing
         </p>
         <p>
           <pre  class="prettyprint lang-c">
@@ -174,7 +174,7 @@
       <p class="manual-section-title">Procedure</p><hr />
       <div class="manual-section-description">
         <p>
-        <b>Call By Value</b>  
+        <b>Call By Value</b>
           <ol>
             <li>  Press start to start the experiment. </li>
             <li>  Press next to see the execution of the code. </li>
@@ -183,7 +183,7 @@
           </ol>
         </p>
         <p>
-        <b>Call By Reference</b>  
+        <b>Call By Reference</b>
           <ol>
             <li>   Press start to start the experiment. </li>
             <li>   Press next to see the execution of the code. </li>
@@ -206,4 +206,10 @@
   </div></div>
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$('ul.nav.nav-pills li a').click(function() {
+  $(this).parent().addClass('active').siblings().removeClass('active');
+})
+</script>
 </html>

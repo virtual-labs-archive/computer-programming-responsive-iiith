@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href="../../normalize.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="screen">
   <link rel="stylesheet" type="text/css" href="../style.css">
   <link rel="stylesheet" type="text/css" href="../bstyle.css">
   <link rel="stylesheet" type="text/css" href="../fonts.css">
@@ -20,7 +20,7 @@
         body{
           background-color: #f4f4f4;
         }
-      </style>  
+      </style>
 </head>
     <body>
 
@@ -92,9 +92,9 @@
               Here also, the use of paranthesis has helped us in evaluating the expression the way we need it.<br>
             </li>
           </ol>
-        </p>  
+        </p>
         <p>
-          An expression used in a computer program is very similar to an algebraic expression and when many operators are specified in an expression, then the evaluation takes place according to the precedence of operators.The order of the precedence is given by a <a href="table.html"><span style = 'color: brown;'>table of precedence</span></a>.<br> 
+          An expression used in a computer program is very similar to an algebraic expression and when many operators are specified in an expression, then the evaluation takes place according to the precedence of operators.The order of the precedence is given by a <a href="table.html"><span style = 'color: brown;'>table of precedence</span></a>.<br>
         </p>
         <p>
           A paranthesis can be used to override the precedence of operators and force the evalutation of a sub-expression within an expression. Expression is evaluated according to assosciativity of the operator. The assosciativity of the operator is a property that determines how operators of the same precedence are grouped in the absence of paranthesis. The objective in evaluating an expression is to consider the precedence and aasosciativity of the individual operators and compute the value of the sub-expressions.
@@ -119,13 +119,13 @@
             Arithmetic Operators: These operators are used for arithmetic operations like addition,subtraction and multiplication. Ex: DIVISION(/),MODULUS OR REMAINDER (%)
           </li>
           <li>
-            Relational Operators: These operators are typically used for comparison of two operands.Ex: GREATER THAN(>),GREATER THAN OR EQUAL TO(>=) etc.  
+            Relational Operators: These operators are typically used for comparison of two operands.Ex: GREATER THAN(>),GREATER THAN OR EQUAL TO(>=) etc.
           </li>
           <li>
-            Logical Operators: These operators are used for conducting logical operations like AND,OR. Ex: LOGICAL AND( && ),LOGICAL OR (||) etc.  
+            Logical Operators: These operators are used for conducting logical operations like AND,OR. Ex: LOGICAL AND( && ),LOGICAL OR (||) etc.
           </li>
           <li>
-            Bitwise Operators: These operators are used to perform operations on bits. Ex: BITWISE AND( & ), BITWISE OR ( | ) etc.  
+            Bitwise Operators: These operators are used to perform operations on bits. Ex: BITWISE AND( & ), BITWISE OR ( | ) etc.
           </li>
         </ol>
       </div>
@@ -192,4 +192,10 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$('ul.nav.nav-pills li a').click(function() {
+  $(this).parent().addClass('active').siblings().removeClass('active');
+})
+</script>
 </html>

@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href="../../normalize.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">
   <link rel="stylesheet" type="text/css" href="../style.css">
   <link rel="stylesheet" type="text/css" href="../bstyle.css">
   <link rel="stylesheet" type="text/css" href="../fonts.css">
@@ -20,7 +20,7 @@
         body{
           background-color: #f4f4f4;
         }
-      </style>  
+      </style>
 </head>
     <body>
 
@@ -70,24 +70,24 @@
           An array is a group of items which have similar nature.
         </p>
         <p>
-          Arrays play a significant role in any programming language, as they 
-          allow the programmer to store more than one value in a variable. That is, 
-          you can use the same variable name to refer to all the values. 
-          An array is analogus to a shelf with many identical compartments. 
-          To identify a compartment, you just need to specify its position. 
-          Similarly, in a array variable, you can store many values of a single datatype. 
-          For example: 10 integers, 4 floating numbers, 12 characters etc. 
+          Arrays play a significant role in any programming language, as they
+          allow the programmer to store more than one value in a variable. That is,
+          you can use the same variable name to refer to all the values.
+          An array is analogus to a shelf with many identical compartments.
+          To identify a compartment, you just need to specify its position.
+          Similarly, in a array variable, you can store many values of a single datatype.
+          For example: 10 integers, 4 floating numbers, 12 characters etc.
           Not surprisingly, an array variable takes larger memory than a single variable of a datatype.
         </p>
         <p>
-          We can use the same name to access the values, but how do we differentiate between them. To do this we use an 
+          We can use the same name to access the values, but how do we differentiate between them. To do this we use an
           index into the array. For example, take an array(myArray) of 100 integers, we can access the hundredth unit:
         </p>
         <p>
           myArray[99] = 3;
         </p>
         <p>
-          Notice something unusual? The index is usually zero based. So, the hundredth element is shown accessed using [99]. 
+          Notice something unusual? The index is usually zero based. So, the hundredth element is shown accessed using [99].
           In other words, the index to the first item is at [0] and the index to the last item is [#elements -1].
         </p>
       </div>
@@ -97,10 +97,10 @@
       <p class="manual-section-title">Theory</p><hr />
       <div class="manual-section-description">
         <p>
-          Array is a data structure consisting of a collection of elements of same datatype. This collection is arranged in a way such that each element can be uniquly identified and addressed. These adresses are called indices. These are integer values. The memory allocation for an array is done contigously. For example, an array of 10 integer variables, with indices 0 through 9, may be stored as 10 words  at memory addresses 2000, 2004, 2008 to 2036 (this memory allocation can vary because some computers use other than 4 bytes to store integer type vrables), so that the element with index i has address 2000 + 4*i . Hence, the address of each element can be computed from its index by a simple mathematical formula. 
+          Array is a data structure consisting of a collection of elements of same datatype. This collection is arranged in a way such that each element can be uniquly identified and addressed. These adresses are called indices. These are integer values. The memory allocation for an array is done contigously. For example, an array of 10 integer variables, with indices 0 through 9, may be stored as 10 words  at memory addresses 2000, 2004, 2008 to 2036 (this memory allocation can vary because some computers use other than 4 bytes to store integer type vrables), so that the element with index i has address 2000 + 4*i . Hence, the address of each element can be computed from its index by a simple mathematical formula.
         </p>
         <p>
-          Arrays are different from structure because structures can have elements of different datatypes. We can also make an array of equally sized arrays. In that case, we call that array a multi dimensional array. Please note again that an array is a collection of similar elements. So, can make only an array of arrays of same datatype having same lengths. And hence, we cannot create an array of 10 elements containing 5 integer arrays and 5 integers. But as showing the example below, we can create an multidimensional array of 10 integer arrays each having a size of 20 elements. Now, We will require 2 indices for referencing an element of the multidimensional array. The first one is used to specify the array and the second one is used to specify the location in the array. For example: 
+          Arrays are different from structure because structures can have elements of different datatypes. We can also make an array of equally sized arrays. In that case, we call that array a multi dimensional array. Please note again that an array is a collection of similar elements. So, can make only an array of arrays of same datatype having same lengths. And hence, we cannot create an array of 10 elements containing 5 integer arrays and 5 integers. But as showing the example below, we can create an multidimensional array of 10 integer arrays each having a size of 20 elements. Now, We will require 2 indices for referencing an element of the multidimensional array. The first one is used to specify the array and the second one is used to specify the location in the array. For example:
         </p>
         <p>
           <pre class="prettyprint lang-c">
@@ -132,7 +132,7 @@
           </pre>
         </p>
         <p>
-          It can be argued that every array can be replaced by declaring an equivalent set of distinct variables. For example, 
+          It can be argued that every array can be replaced by declaring an equivalent set of distinct variables. For example,
         </p>
         <p>
           <pre class="prettyprint lang-c">
@@ -148,7 +148,7 @@
           </pre>
         </p>
         <p>
-          Now, let us take an example which show the utility of arrays over an equivalent set of variables. Let us consider that you want to take as input 10 numbers and then for the input(x) given by user from 2 to 9 you want to display the Average with neighbouring numbers i.e. the x-1, x and x+1th numbers. We can easily solve this problem using an array: 
+          Now, let us take an example which show the utility of arrays over an equivalent set of variables. Let us consider that you want to take as input 10 numbers and then for the input(x) given by user from 2 to 9 you want to display the Average with neighbouring numbers i.e. the x-1, x and x+1th numbers. We can easily solve this problem using an array:
         </p>
         <p>
           <pre class="prettyprint lang-c">
@@ -158,7 +158,7 @@
             printf("Enter 10 numbers\n");
             for(i=0;i&lt;10;i++)
               scanf("%d",&amp;arr[i]);
-            printf("Enter an index(2-9) to find 
+            printf("Enter an index(2-9) to find
                     average with neighbouring values\n");
             int x;
             scanf("%d",&amp;x);
@@ -179,16 +179,16 @@
         <p>
           1. To learn how to use arrays for storing large amount of data.<br>
           2. To learn how to use array to create a common reference for a large number of variables.<br>
-        </p> 
+        </p>
       </div>
     </div>
 
     <div id="man" class="manual-section">
       <p class="manual-section-title">Manual</p><hr />
       <div class="manual-section-description">
-        <p> 
+        <p>
           Here you will do two experiments relating to sorting of elements of an array and multiplying 2 matrices.
-        </p>   
+        </p>
       </div>
     </div>
     <div id="proc" class="manual-section">
@@ -233,6 +233,12 @@
       </div>
     </div>
   </div></div>
-  
+
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$('ul.nav.nav-pills li a').click(function() {
+  $(this).parent().addClass('active').siblings().removeClass('active');
+})
+</script>
 </html>
