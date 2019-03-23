@@ -25,7 +25,8 @@ body {
 
 .lab-index{
    margin-top: 2%;
-   position:fixed;
+   position:sticky;
+   top: 20px;
    font-family: 'Actor', sans-serif;
 
 }
