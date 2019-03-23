@@ -5,11 +5,11 @@
     <link rel="stylesheet" type="text/css" href="../normalize.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-  <link rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="bstyle.css">
   <link rel="stylesheet" type="text/css" href="fonts.css">
-  <link rel="stylesheet" type="text/css" href="overlay.css"> <!--style for overlay color changer, 
+  <link rel="stylesheet" type="text/css" href="overlay.css"> <!--style for overlay color changer,
   will be removed in production-->
   <script type="text/javascript" src="colorchanger.js"></script> <!--script for overlay color changer-->
 <!--   <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
@@ -36,7 +36,7 @@
   				<li style="border-right: 1.5px solid white;"><a href="about.html">About this lab</a></li>
   				<li><a href="#">Explore Vlabs</a></li>
   			</ul>
-  			
+
   			<ul class="nav navbar-nav navbar-right visible-lg">
   				<li><div class="icons"><img src="images/iiit.png"></div></li>
   				<li><div class="icons"><img src="images/vlabs.png"></div></li>
@@ -48,7 +48,9 @@
       <nav class="navbar navbar-default mobile-nav" role="navigation">
       <div class="nav navbar-nav pull-right">
     	<a href="index.html"><span class="glyphicon glyphicon-home"></span></a><a href="about.html"><span class="glyphicon glyphicon-list-alt"></span></a><a href="#"><span class="glyphicon glyphicon-send"></span></a>
-  	  </div>
+      <span class="glyphicon"><div class="icons"><img src="images/iiit.png"></div></span>
+      <span class="glyphicon"><div class="icons"><img src="images/vlabs.png"></div></span>
+      </div>
       </nav>
     <p class="experiment-mobile-title">Computer Programming Lab</p>
     </div>
@@ -61,7 +63,7 @@
 </div>
 
     <div class="row">
-   
+
      <a href="exp1/index.html">
   <div class="col-lg-6">
     <div class="experiment-card">
@@ -74,8 +76,8 @@
 
 
      <div class="experiment-description">
-      <p>This experiment demonstrates the idea that one can attain a perfect solution in the limit by suucessively computing approximations to the exact value. The intent behind this experiment is to make use of ideas laerned in the previous experiments. This is intended to introduce the student to numerical methods. 
-    </p> 
+      <p>This experiment demonstrates the idea that one can attain a perfect solution in the limit by suucessively computing approximations to the exact value. The intent behind this experiment is to make use of ideas laerned in the previous experiments. This is intended to introduce the student to numerical methods.
+    </p>
     </div>
     <p class="experiment-outcome"><i>Objectives of this experiments are :</i><br>
       1. To understand that for some problems an approximate numerial solution is as good as the exact solution for practical purposes.<br>
@@ -145,7 +147,7 @@
 
 
      <div class="experiment-description">
-      <p> Arrays are used to store multiple data of same type. There are the most efficient means to store sequential collection of values. Programs use loops to process data stored in arrays. This experiment demonstrates steps involved in defining arrays, initializing them and processing the data contained in the arrays.  </p> 
+      <p> Arrays are used to store multiple data of same type. There are the most efficient means to store sequential collection of values. Programs use loops to process data stored in arrays. This experiment demonstrates steps involved in defining arrays, initializing them and processing the data contained in the arrays.  </p>
     </div>
     <p class="experiment-outcome"><i>Objectives of this experiments are :</i><br>
       1. To learn how to use arrays for storing large amount of data.<br>
@@ -184,20 +186,20 @@
     <div class="col-lg-6">
       <div class="experiment-card">
         <p class="experiment-title">6. Basic Control Flow</p>
-        
+
         <div class="img-thum">
           <img class="experiment-thumbnail" src="imgs/exp6.png">
         </div>
-        
-        
+
+
         <div class="experiment-description">
-          <p>Computer programs employ control structures such as conditional statements, multi-way branches and iteration. This experiment allows the student to execute programs that use if-then-else statements and switch-case statements. The execution of a program is animated and the intermediate results are displayed in seperate output sections for better comprehension.</p> 
+          <p>Computer programs employ control structures such as conditional statements, multi-way branches and iteration. This experiment allows the student to execute programs that use if-then-else statements and switch-case statements. The execution of a program is animated and the intermediate results are displayed in seperate output sections for better comprehension.</p>
         </div>
         <p class="experiment-outcome"><i>Objectives of this experiments are :</i><br>
           1. To learn how decision making is done while programming.<br>
           2. To learn about the various simple constructs used for control flow. </p>
         <p class="experiment-prereq">Prerequisite : </p>
-        
+
 
       </div>
     </div>
@@ -217,7 +219,7 @@
 
 
      <div class="experiment-description">
-      <p>Strings in the C programming language are represented by a sequence of characters terminated by an ASCII zero ('\0') charcter. Strings are processed using a charcter pointer that traverses the string from one end to the other. The ANSI C standard defines a standard string library containing useful functions. This experiment demonstrates the use of these functions.</p> 
+      <p>Strings in the C programming language are represented by a sequence of characters terminated by an ASCII zero ('\0') charcter. Strings are processed using a charcter pointer that traverses the string from one end to the other. The ANSI C standard defines a standard string library containing useful functions. This experiment demonstrates the use of these functions.</p>
     </div>
     <p class="experiment-outcome"><i>Objectives of this experiments are :</i><br>
       1. To understand the concept of strings and how they are a special type of character arrays.<br>
@@ -259,7 +261,7 @@
         <p class="experiment-title">9. Recursion </p>
         <div class="img-thum">
           <img class="experiment-thumbnail" src="imgs/exp9.png">
-        </div>        
+        </div>
         <div class="experiment-description"><p>
   Many data structures are self-similar at different levels. Many operations over such data are naturally expressed as operations that repetitively process diminishing parts of such data. In many cases, ieration can be naturally viwed as a function that reflexively applies itself on the data. This experiment is intended to demonstrate the use of recursion in programs.</p>
         </div>
@@ -267,7 +269,7 @@
 	  1. To understand that some problems can be broken down into smaller similar problems.<br>
       	  2. To solve such problems using recursive procedures.
         </p>
-        <p class="experiment-prereq">Prerequisite : </p>   
+        <p class="experiment-prereq">Prerequisite : </p>
       </div>
     </div>
 </a>
@@ -286,7 +288,7 @@
      <div class="experiment-description">
       <p>
          This experiment demostrates the automatic evaluation of expressions involving arithmetic and logical operators. Input expressions may be arbitrarily nested. The evaluation employs a stack to handle operator precedence and nesting. The evaluation steps are simple animation.
-      </p> 
+      </p>
     </div>
     <p class="experiment-outcome"><i>Objectives of this experiments are :</i><br>
      1. To learn about different types of operators<br>
@@ -321,6 +323,6 @@
   </div>
 </div> -->
 </div>
-  
+
   </body>
 </html>
