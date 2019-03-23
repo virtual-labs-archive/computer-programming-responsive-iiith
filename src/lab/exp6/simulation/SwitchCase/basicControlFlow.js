@@ -131,15 +131,19 @@ window.view = {
 	then make submit button disable and make start button enable. */
 	validationInput: function () {
 		var textFieldValue = this.getValue('textFieldId');
-		if (textFieldValue === '' || isNaN(textFieldValue)) {
-			alert('Enter Numeric Values Only');
+		if (textFieldValue === '' || isNaN(textFieldValue)){
+				alert('Enter Numeric Values Only');
+				return false;
+		}
+		else if(Number(textFieldValue) <= 0 || Number(textFieldValue) > 7){
+			alert("Enter the numbers in the interval [1,7]");
 			return false;
-		} 
+		}
 		else {
 			this.changePropertyOfElements();
 			model.inputNumber = Number(textFieldValue);
 			this.setInnerHtml('idOfDay', model.inputNumber);
-		}		
+		}   	 
 	},
 	// changePropertyOfElements: changes property of elemants with enableElement, disableElement and changeClass.
 	changePropertyOfElements: function () {
