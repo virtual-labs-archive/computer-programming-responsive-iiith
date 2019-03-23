@@ -5,7 +5,7 @@
   <link rel="stylesheet" type="text/css" href="../../normalize.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">    
+  <link rel="stylesheet" href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">
   <link rel="stylesheet" type="text/css" href="../style.css">
   <link rel="stylesheet" type="text/css" href="../bstyle.css">
   <link rel="stylesheet" type="text/css" href="../fonts.css">
@@ -20,7 +20,7 @@
         body{
           background-color: #f4f4f4;
         }
-      </style>  
+      </style>
 </head>
     <body>
 
@@ -188,7 +188,7 @@
             <li>   Press next to see the execution of the code </li>
             <li>   The output of the code is shown in the right </li>
             <li>   You can stop the code using stop button </li>
-          </ol>   
+          </ol>
         </p>
       </div>
     </div>
@@ -203,6 +203,12 @@
       </div>
     </div>
   </div></div>
-  
+
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$('ul.nav.nav-pills li a').click(function() {
+  $(this).parent().addClass('active').siblings().removeClass('active');
+})
+</script>
 </html>
