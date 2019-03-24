@@ -1,202 +1,213 @@
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #666666;
+  padding: 50px;
+  font-size: 20px;
+}
+</style>
 </head>
 <body>
-<center>
-<table cellspacing="1" cellpadding="5" border="0">
-<tr align = center bgcolor = "#666666">
-<th>Operator</th>
-<th>Description</th>
+	<center>
+		<table cellspacing="1" cellpadding="5" border="0">
+			<tr align = center bgcolor = "#666666" class="sticky">
+				<th>Operator</th>
+				<th>Description</th>
 
-<th>Level</th>
-<th>Associativity</th>
-</tr>
+				<th>Level</th>
+				<th>Associativity</th>
+			</tr>
 
-<tr align = center bgcolor = "#ebebeb">
-<td>
-<tt>[]</tt><br>
-<tt> .</tt><br>
-<tt>()</tt><br>
-<tt>++</tt><br>
+			<tr align = center bgcolor = "#ebebeb">
+				<td>
+					<tt>[]</tt><br>
+					<tt> .</tt><br>
+					<tt>()</tt><br>
+					<tt>++</tt><br>
 
-<tt>--</tt>
-</td>
-<td>
-access array element<br>
-access object member<br>
-invoke a method<br>
-post-increment<br>
-post-decrement
-</td>
-<td>1</td>
-<td>left to right</td>
+					<tt>--</tt>
+				</td>
+				<td>
+					access array element<br>
+					access object member<br>
+					invoke a method<br>
+					post-increment<br>
+					post-decrement
+				</td>
+				<td>1</td>
+				<td>left to right</td>
 
-</tr>
+			</tr>
 
-<tr align = center bgcolor = "#ebebeb">
-<td>
-<tt>++</tt><br>
-<tt>--</tt><br>
-<tt>+</tt><br>
-<tt>-</tt><br>
-<tt>!</tt><br>
-<tt>~</tt>
-</td>
+			<tr align = center bgcolor = "#ebebeb">
+				<td>
+					<tt>++</tt><br>
+					<tt>--</tt><br>
+					<tt>+</tt><br>
+					<tt>-</tt><br>
+					<tt>!</tt><br>
+					<tt>~</tt>
+				</td>
 
-<td>
-pre-increment<br>
-pre-decrement<br>
-unary plus<br>
-unary minus<br>
-logical NOT<br>
-bitwise NOT
-</td>
-<td>2</td>
-<td>right to left</td>
+				<td>
+					pre-increment<br>
+					pre-decrement<br>
+					unary plus<br>
+					unary minus<br>
+					logical NOT<br>
+					bitwise NOT
+				</td>
+				<td>2</td>
+				<td>right to left</td>
 
-</tr>
+			</tr>
 
-<tr align = center bgcolor = "#ebebeb">
-<td>
-<tt>()</tt><br>
-<tt>new</tt>
-</td>
-<td>
-cast<br>
-object creation
-</td>
-<td>3</td>
-<td>right to left</td>
+			<tr align = center bgcolor = "#ebebeb">
+				<td>
+					<tt>()</tt><br>
+					<tt>new</tt>
+				</td>
+				<td>
+					cast<br>
+					object creation
+				</td>
+				<td>3</td>
+				<td>right to left</td>
 
-</tr>
+			</tr>
 
-<tr align = center bgcolor = "#ebebeb">
-<td>
-<tt>*</tt><br>
-<tt>/</tt><br>
-<tt>%</tt>
-</td>
-<td>
-multiplicative
-</td>
-<td>4</td>
-<td>left to right</td>
+			<tr align = center bgcolor = "#ebebeb">
+				<td>
+					<tt>*</tt><br>
+					<tt>/</tt><br>
+					<tt>%</tt>
+				</td>
+				<td>
+					multiplicative
+				</td>
+				<td>4</td>
+				<td>left to right</td>
 
-</tr>
+			</tr>
 
 
-<tr align = center bgcolor = "#ebebeb">
-<td>
-<tt>+ -</tt><br>
-</td>
-<td>
-additive<br>
-</td>
-<td>5</td>
+			<tr align = center bgcolor = "#ebebeb">
+				<td>
+					<tt>+ -</tt><br>
+				</td>
+				<td>
+					additive<br>
+				</td>
+				<td>5</td>
 
-<td>left to right</td>
-</tr>
+				<td>left to right</td>
+			</tr>
 
-<tr align = center bgcolor = "#ebebeb">
-<td>
-<tt><< >></tt><br>
-</td>
-<td>
-shift
-</td>
-<td>6</td>
+			<tr align = center bgcolor = "#ebebeb">
+				<td>
+					<tt><< >></tt><br>
+				</td>
+				<td>
+					shift
+				</td>
+				<td>6</td>
 
-<td>left to right</td>
-</tr>
+				<td>left to right</td>
+			</tr>
 
-<tr align = center bgcolor = "#ebebeb">
-<td>
-<pre>
+			<tr align = center bgcolor = "#ebebeb">
+				<td>
+					<pre>
 <  <=
->  >=
-</pre>
-</td>
-<td>
-relational<br>
+					 >  >=
+					</pre>
+				</td>
+				<td>
+					relational<br>
 
-</td>
-<td>7</td>
-<td>left to right</td>
-</tr>
+				</td>
+				<td>7</td>
+				<td>left to right</td>
+			</tr>
 
 
-<tr align = center bgcolor = "#ebebeb">
-<td>
-<tt>==</tt><br>
-<tt>!=</tt>
-</td>
-<td>
-equality
+			<tr align = center bgcolor = "#ebebeb">
+				<td>
+					<tt>==</tt><br>
+					<tt>!=</tt>
+				</td>
+				<td>
+					equality
 
-</td>
-<td>8</td>
-<td>left to right</td>
-</tr>
+				</td>
+				<td>8</td>
+				<td>left to right</td>
+			</tr>
 
-<tr align = center bgcolor = "#ebebeb">
-<td><tt>&</tt></td>
-<td>bitwise AND</td>
-<td>9</td>
-<td>left to right</td>
-</tr>
+			<tr align = center bgcolor = "#ebebeb">
+				<td><tt>&</tt></td>
+				<td>bitwise AND</td>
+				<td>9</td>
+				<td>left to right</td>
+			</tr>
 
-<tr align = center bgcolor = "#ebebeb">
-<td><tt>^</tt></td>
-<td>bitwise XOR</td>
-<td>10</td>
-<td>left to right</td>
-</tr>
+			<tr align = center bgcolor = "#ebebeb">
+				<td><tt>^</tt></td>
+				<td>bitwise XOR</td>
+				<td>10</td>
+				<td>left to right</td>
+			</tr>
 
-<tr align = center bgcolor = "#ebebeb">
-<td><tt>|</tt></td>
-<td>bitwise OR</td>
+			<tr align = center bgcolor = "#ebebeb">
+				<td><tt>|</tt></td>
+				<td>bitwise OR</td>
 
-<td>11</td>
-<td>left to right</td>
-</tr>
+				<td>11</td>
+				<td>left to right</td>
+			</tr>
 
-<tr align = center bgcolor = "#ebebeb">
-<td><tt>&&</tt></td>
-<td>conditional AND</td>
-<td>12</td>
-<td>left to right</td>
-</tr>
+			<tr align = center bgcolor = "#ebebeb">
+				<td><tt>&&</tt></td>
+				<td>conditional AND</td>
+				<td>12</td>
+				<td>left to right</td>
+			</tr>
 
-<tr align = center bgcolor = "#ebebeb">
-<td><tt>||</tt></td>
-<td>conditional OR</td>
-<td>13</td>
-<td>left to right</td>
-</tr>
+			<tr align = center bgcolor = "#ebebeb">
+				<td><tt>||</tt></td>
+				<td>conditional OR</td>
+				<td>13</td>
+				<td>left to right</td>
+			</tr>
 
-<tr align = center bgcolor = "#ebebeb">
-<td><tt>?:</tt></td>
-<td>conditional</td>
+			<tr align = center bgcolor = "#ebebeb">
+				<td><tt>?:</tt></td>
+				<td>conditional</td>
 
-<td>14</td>
-<td>right to left</td>
-</tr>
+				<td>14</td>
+				<td>right to left</td>
+			</tr>
 
-<tr align = center bgcolor = "#ebebeb">
-<td>
-<pre>
+			<tr align = center bgcolor = "#ebebeb">
+				<td>
+					<pre>
   =   +=   -=
  *=   /=   %=
  &=   ^=   |=
 <<=  >>= 
-</pre>
-</td>
-<td align>
+					</pre>
+				</td>
+				<td align>
 
-assignment
-</td>
-<td>15</td>
-<td>right to left</td>
-</tr>
+					assignment
+				</td>
+				<td>15</td>
+				<td>right to left</td>
+			</tr>
 
-</table> </center>
-<body>
+		</table> </center>
+		<body>
