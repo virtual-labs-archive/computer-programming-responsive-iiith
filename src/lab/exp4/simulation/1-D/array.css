@@ -318,16 +318,19 @@ body {
     left: 0%;
     border-right: 1px solid #CCC;
     background: #41B247;
+    background-size: auto;
 }
 
 .unsortedKeyLabel {
     left: 28%;
     background: #599bdc;
+    background-size: auto;
 }
 
 .keyPositionLabel {
     left: 60%;
     background: #F5B941;
+    background-size: auto;
 }
 
 .sortedKeyLabelText, .unsortedKeyLabelText, .keyPositionLabelText {
@@ -372,6 +375,7 @@ body {
     border: 1px solid #CCC;
     margin: 10%;
     float: left;
+    background-size: auto;
 }
 
 .sortedArray {
@@ -434,18 +438,22 @@ body {
 
 .show {
     display: block;
+    background-size: auto;
 }
 
 .outerDiv {
     width: 10%;
     height: 7%;
     float: left;
+
 }
 
 .showDivInRed {
 	display: block;
 	color: red;
 	text-align: left;
+    background-size: auto;
+
 }
 
 @media only screen and (min-width: 1000px) {

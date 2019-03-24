@@ -27,7 +27,7 @@ if ($Q3==3)
 $total=$total+1;
 echo "3 ";
 }
-if ($Q4==3)
+if ($Q4==2)
 {
 echo "4 ";
 $total=$total+1;
@@ -95,7 +95,7 @@ echo '	<h2>Correct Answers</h2>
                 w[5] = \'n\';
                 printf("%s\n",w);
                 </pre>
-                segmentation fault<br>
+                indian<br>
                 <br>
 
                 <li><b> What will the follwing function output if word is "heLlO_WOrLd !" ?</b> </li>

@@ -1,3 +1,11 @@
+function disable()
+{
+	document.getElementById('userInput').disabled=true;
+}
+function enable()
+{
+	document.getElementsById('userInput').disabled=false;
+}
 window.view = {
 	numbers: new Array(),
 	lastRedDiv: new Object(),
@@ -84,18 +92,26 @@ window.view = {
 	takeInputFromRadioBox: function() {
 		var element = document.getElementsByName('radio_group')
 		if ( element[0].checked )
-			this.generateRandomNumbers()
-		else if (element[1].checked)
+		{
+		this.generateRandomNumbers()
+		}
+		else if ( element[1].checked )
+		{
 			this.getUserInput()
+		}
+		this.disableButton('userInput');
 	},
 	createBoxes: function() {
 		for ( i = 0 ; i < this.numbers.length ; i++ ) {
 			var outerDiv = document.createElement('div')
 			outerDiv.className = 'outerDiv'
+			outerDiv.style.backgroundSize = "auto" ;
 			var element = document.createElement('div')
 			element.innerHTML = this.numbers[i]
 			if ( i === 0 )
+			{
 				element.className = 'sortedArray'
+			}
 			else if ( i === 1 )
 				element.className = 'keyPosition'
 			else
