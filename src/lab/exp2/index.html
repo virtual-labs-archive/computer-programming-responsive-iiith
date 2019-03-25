@@ -20,6 +20,9 @@
         body{
           background-color: #f4f4f4;
         }
+        .active, .btn:hover {
+  color: blue;
+}
       </style>  
 </head>
     <body>
@@ -50,15 +53,15 @@
     <p class="experiment-mobile-title"> Functions</p>
     </div>
 
-<div class="row">
+<div class="row" id="myDIV">
   <div class="col-lg-2 visible-lg lab-index">
     <ul class="nav nav-pills nav-stacked">
-      <li class="active"><a href="#intro">Introduction</a></li>
-      <li><a href="#theory">Theory</a></li>
-      <li><a href="#obj">Objective</a></li>
-      <li><a href="#man">Manual</a></li>
-      <li><a href="#proc">Procedure</a></li>
-      <li><a href="#further-reading">Further Reading</a></li>
+      <li class="btn active"><a href="#intro">Introduction</a></li>
+      <li class="btn"><a href="#theory">Theory</a></li>
+      <li class="btn"><a href="#obj">Objective</a></li>
+      <li class="btn"><a href="#man">Manual</a></li>
+      <li class="btn"><a href="#proc">Procedure</a></li>
+      <li class="btn"><a href="#further-reading">Further Reading</a></li>
     </ul>
   </div>
 
@@ -177,5 +180,20 @@
     </div>
   </div></div>
  
+
+<script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myDIV");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script>
+
+
 </body>
 </html>
