@@ -24,6 +24,7 @@ window.view = {
 	},
 	getNextDivToHighlight: function(lastHighlightedDiv) {
 		var next = lastHighlightedDiv.nextSibling
+        //        var next = lastHIghlightedDiv
 		next = next.nextSibling
 		return next
 	},
@@ -141,6 +142,7 @@ window.view = {
 		return position
 	},
 	highlightNextStep: function() {
+        //        this.changeClass(this.nextRedDiv.id, 'showDivInRed')
 		this.changeClass(this.lastRedDiv.id, 'show')
 		this.changeClass(this.nextRedDiv.id, 'showDivInRed')
 	},
@@ -216,9 +218,10 @@ window.view = {
 				this.highlightNextStep()
 			}
 		}
-		else if ( this.lastRedDiv.id === 'line7' ) {
-			this.setKey()
+		else if ( this.lastRedDiv.id === 'line6' ) {
+         		this.setKey()
 			this.highlightNextStep()
+       //                 this.setkey()
 			this.j = this.i - 1
 			this.key = this.numbers[this.i]
 		}
