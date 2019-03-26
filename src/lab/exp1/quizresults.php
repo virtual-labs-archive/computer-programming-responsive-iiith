@@ -3,31 +3,48 @@
 
 $total=0;
 
-$Q1 = $_POST['Q1'];
-$Q2 = $_POST['Q2'];
-$Q3 = $_POST['Q3'];
-$Q6 = $_POST['fib1'];
+$noofques = 4;
+<<<<<<< Updated upstream
+$givenans = array_fill(0,$noofques,0);
 
+for($n=1;$n<=$noofques;$n++){
+        if($n <= 3){
+                $givenans[$n-1] = $_POST['Q'.$n];
+        }
+        else{
+                $givenans[$n-1] = $_POST['fib1'];
+        }
+}
+
+$correctans = array(1, 1, 3, 1);
 echo "You answered the following questions correctly : ";
-if ($Q1==1)
-{
-$total=$total+1;
-echo "1 ";
+
+for($n=0; $n < $noofques; $n++){
+        if(($n < 3 && $givenans[$n] == $correctans[$n]) ||($n == 3 && strcasecmp($givenans[$n],"practical") == 0))
+=======
+$correctans = array_fill(0,$noofques,0);
+
+for($n=1;$n<=$noofques;$n++){
+        if($n <= 3){
+                $correctans[$n-1] = $_POST['Q'.$n];
+        }
+        else{
+                $correctans[$n-1] = $_POST['fib1'];
+        }
 }
-if ($Q2==1)
-{
-$total=$total+1;
-echo "2 ";
+
+$givenans = array(1, 1, 3, 1);
+echo "You answered the following questions correctly : ";
+
+for($n=0; $n < $noofques; $n++){
+        if(($n < 3 && $correctans[$n] == $givenans[$n]) ||($n == 3 && strcasecmp($correctans[$n],"practical") == 0))
+>>>>>>> Stashed changes
+        {
+                echo ($n + 1),"\n";
+                $total = $total + 1;
+        }
 }
-if ($Q3==3)
-{
-$total=$total+1;
-echo "3 ";
-}
-if ((strcasecmp($Q4,"practical")==0)){
-$total= $total+1;
-echo "4 ";
-}
+
 echo "\n\n\n\n";
 echo "<html>
 <head></head>";
@@ -61,7 +78,7 @@ echo '	<h2>Correct Answers</h2>
                 </pre>
                 Make the approximation worse<br>
                 <br>
-                <li><b> An approximate solution may be as good as the accurate solution for <input type="text" name="fib1"> purposes.</b></li><br><br>
+                <li><b> An approximate solution may be as good as the accurate solution for <input  name="fib1" type="text"> purposes.</b></li><br><br>
 
 
 
