@@ -93,6 +93,8 @@ window.view = {
 			alert('Enter Matrix Size First !')
 		else if ( isNaN(row) || isNaN(col) )
 			alert('Matrix Size Must Be An Integer Value !')
+		else if ( row > 100 || col > 100)
+			alert('Matrix size is too big!')
 		else
 		{	
 			if ( this.matrixCount === 1 )

@@ -55,7 +55,9 @@ window.view = {
 	proceedToStartButton: function() {
 		var userInput = this.getArraySize()
 		if( isNaN( userInput ) === false ) {
-			if( userInput !== 0 ) {
+			if( userInput >= 10000)
+				alert('Enter a value smaller than 10000 for the size of the array!')
+			else if( userInput !== 0) {
 				var element = document.getElementById('inputButtonRadio')
 				element.className = 'show, radioButtonDivision'
 				this.disableButton('btnOk')
