@@ -53,7 +53,7 @@ window.view = {
     	// replaceElement: replace one element by another element.
     	replaceElement: function (id1, id2) {
     		document.getElementById(id1).style.display = 'none';
-    		document.getElementById(id2).style.display = 'block';  	 
+    		document.getElementById(id2).style.display = 'block';
     	},
 	// setValue: set given value to a element.
     	setValue: function (id, value) {
@@ -87,7 +87,7 @@ window.view = {
  	setInnerHtml: function (id, innerText) {
  		document.getElementById(id).innerHTML = innerText;
  	},
- 	// hideCode: hides code content that is not selected in drop down list. 
+ 	// hideCode: hides code content that is not selected in drop down list.
  	hideCode: function(loopId) {
 		var node = document.getElementById(loopId);
 		var allChild = node.childNodes;
@@ -122,7 +122,7 @@ window.view = {
 			}
 			if (ifElseCodeContent.className !== 'hide') {
 				this.hideCode('ifElseCode');
-			}	
+			}
 		}
 	},
  	// changeFlagValue: change flag value to 1 when point is inside of square.
@@ -156,7 +156,7 @@ window.view = {
 		this.removeColorClass(this.currentSiblingElement.id, 'redClass');
 		this.applyColorClass(id, 'redClass');
 	},
-	// resetVariables: reset all variables to it's initial state. 
+	// resetVariables: reset all variables to it's initial state.
  	resetVariables: function () {
  		model.valueOfX = 150;
 		model.valueOfY = 150;
@@ -236,12 +236,12 @@ window.view = {
  		this.canvasContext.fillRect (75, 75, 200, 250);
  		this.canvasContext.strokeStyle = '#000000';
  		this.canvasContext.rect(75, 75, 200, 250);
- 		this.canvasContext.stroke();	
+ 		this.canvasContext.stroke();
  	},
  	// drawCircle: draws circle on canvasContext according given x and y coordinates.
   	drawCircle: function (x, y, colour) {
  		this.canvasContext.beginPath();
- 		this.canvasContext.fillStyle = colour; 
+ 		this.canvasContext.fillStyle = colour;
  		this.canvasContext.arc(x, y, 3, 0, 2 * Math.PI, true);
  		this.canvasContext.fill();
  	},
@@ -256,7 +256,7 @@ window.view = {
     		this.canvasContext.beginPath();
        		this.canvasContext.font = 'italic 20px Arial';
        		this.canvasContext.fillStyle = color;
-		this.canvasContext.fillText(text, x, y);		
+		this.canvasContext.fillText(text, x, y);
     	},
     	// displayFigures: display figures on canvasContext according given x and y coordinates.
     	displayFigures: function () {
@@ -266,13 +266,13 @@ window.view = {
 		this.drawCircle(275, 75, '#000000');
 		this.drawCircle(75, 325, '#000000');
 		this.drawCircle(275, 325, '#000000');
-		this.displayText('(x1, y1)', 65, 65); 
+		this.displayText('(x1, y1)', 65, 65);
 		this.displayText('(x2, y2)', 265, 65);
 		this.displayText('(x3, y3)', 265, 345);
 		this.displayText('(x4, y4)', 75, 345);
 		this.canvasContext.save();
     	},
-	/* validationInput: check validation of input that is given by user and if input value is valid 
+	/* validationInput: check validation of input that is given by user and if input value is valid
 	then make text field and ok button disable and make start button enable. */
 	validationInput: function () {
     		var valueOfX = this.getValue('textFieldXId');
@@ -304,7 +304,7 @@ window.view = {
 		this.changeClass('startBtnId', 'button startButton margin15');
 		this.disableElement('okBtnId');
 		this.changeClass('okBtnId', 'buttonDisable okButton');
-		this.changeClass('loopList', 'buttonDisable expList');	
+		this.changeClass('loopList', 'buttonDisable expList');
 	},
     	// startExperiment: work to start code execution.
 	startExecution: function () {
@@ -346,32 +346,32 @@ window.view = {
 			this.codeExecutionWithColourAndId('codeContentIfElse28Id');
 		}
 		else {
-			if (this.nextSiblingElement.id === 'codeContentIfElse2Id' || this.nextSiblingElement.id === 'codeContentIfElse3Id') {	
+			if (this.nextSiblingElement.id === 'codeContentIfElse2Id' || this.nextSiblingElement.id === 'codeContentIfElse3Id') {
 				if (this.nextSiblingElement.id === 'codeContentIfElse2Id')
 					this.setFlagText();
 				else
 					this.setFlagValue();
 			}
 			if (this.nextSiblingElement.id === 'codeContentIfElse4Id' || this.nextOfnextSiblingElement.id === 'codeContentIfElse6Id') {
-				if (this.nextSiblingElement.id === 'codeContentIfElse4Id') 
+				if (this.nextSiblingElement.id === 'codeContentIfElse4Id')
 					this.codeExecutionWithColour();
-				else if (model.valueOfX >= 75) 
+				else if (model.valueOfX >= 75)
 					this.changeFlagValue('flagValue1', 'codeContentIfElse6Id', '1');
 				else
 					this.codeExecutionWithColourAndId('codeContentIfElse8Id');
 			}
 			if (this.nextOfnextSiblingElement.id === 'codeContentIfElse8Id' || this.nextOfnextSiblingElement.id === 'codeContentIfElse10Id') {
-				if (this.nextOfnextSiblingElement.id === 'codeContentIfElse8Id') 
+				if (this.nextOfnextSiblingElement.id === 'codeContentIfElse8Id')
 					this.codeExecutionWithColourAndId('codeContentIfElse8Id');
-				else if (model.valueOfX <= 275) 
+				else if (model.valueOfX <= 275)
 					this.changeFlagValue('flagValue2', 'codeContentIfElse10Id', '1');
 				else
 					this.codeExecutionWithColourAndId('codeContentIfElse12Id');
 			}
 			if (this.nextOfnextSiblingElement.id === 'codeContentIfElse12Id' || this.nextOfnextSiblingElement.id === 'codeContentIfElse14Id') {
-				if (this.nextOfnextSiblingElement.id === 'codeContentIfElse12Id') 
+				if (this.nextOfnextSiblingElement.id === 'codeContentIfElse12Id')
 					this.codeExecutionWithColourAndId('codeContentIfElse12Id');
-				else if (model.valueOfY >= 75) 
+				else if (model.valueOfY >= 75)
 					this.changeFlagValue('flagValue3', 'codeContentIfElse14Id', '1');
 				else
 					this.codeExecutionWithColourAndId('codeContentIfElse16Id');
@@ -379,15 +379,15 @@ window.view = {
 			if (this.nextOfnextSiblingElement.id === 'codeContentIfElse16Id' || this.nextOfnextSiblingElement.id === 'codeContentIfElse18Id') {
 				if (this.nextOfnextSiblingElement.id === 'codeContentIfElse16Id')
 					this.codeExecutionWithColourAndId('codeContentIfElse16Id');
-				else if (model.valueOfY <= 325) 
+				else if (model.valueOfY <= 325)
 					this.changeFlagValue('flagValue4', 'codeContentIfElse18Id', '1');
 				else
 					this.codeExecutionWithColourAndId('codeContentIfElse20Id');
 			}
 			if (this.nextOfnextSiblingElement.id === 'codeContentIfElse20Id' || this.nextOfnextSiblingElement.id === 'codeContentIfElse22Id') {
-				if (this.nextOfnextSiblingElement.id === 'codeContentIfElse20Id') 
+				if (this.nextOfnextSiblingElement.id === 'codeContentIfElse20Id')
 					this.codeExecutionWithColourAndId('codeContentIfElse20Id');
-				else if (model.valueOfX > 75 && model.valueOfX < 275 && model.valueOfY > 75 && model.valueOfY < 325) {
+				else if (model.valueOfX >=75 && model.valueOfX <=275 && model.valueOfY >=75 && model.valueOfY <=325) {
 					this.codeExecutionWithColourAndId('codeContentIfElse22Id');
 					this.displayTextWithColour('Output: INSIDE', 100, 40, '#FF2400');
 				}
@@ -395,7 +395,7 @@ window.view = {
 					this.codeExecutionWithColourAndId('codeContentIfElse24Id');
 			}
 			if (this.nextOfnextSiblingElement.id === 'codeContentIfElse24Id' || this.nextOfnextSiblingElement.id === 'codeContentIfElse26Id') {
-				if (this.nextOfnextSiblingElement.id === 'codeContentIfElse24Id') 
+				if (this.nextOfnextSiblingElement.id === 'codeContentIfElse24Id')
 					this.codeExecutionWithColourAndId('codeContentIfElse24Id');
 				else if (this.nextOfnextSiblingElement.id === 'codeContentIfElse26Id') {
 					this.codeExecutionWithColourAndId('codeContentIfElse26Id');
@@ -416,27 +416,27 @@ window.view = {
 			this.codeExecutionWithColour();
 			this.setInnerHtml('flag1Id', 'flag = ');
 		}
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf3Id')			
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf3Id')
 			this.codeExecutionWithColourAndId('codeContentIfElseIf3aId');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf3bId' && model.valueOfX < 75) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf3bId' && model.valueOfX < 75)
 			this.changeFlagValue('flagValue1', 'codeContentIfElseIf5Id', '0');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf3bId' && model.valueOfX > 275) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf3bId' && model.valueOfX > 275)
 			this.codeExecutionWithColourAndId('codeContentIfElseIf3cId');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf3dId' && model.valueOfX > 275) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf3dId' && model.valueOfX > 275)
 			this.changeFlagValue('flagValue1', 'codeContentIfElseIf5Id', '0');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf3bId' && (75 <= model.valueOfX) && (model.valueOfX <= 275)) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf3bId' && (75 <= model.valueOfX) && (model.valueOfX <= 275))
 			this.codeExecutionWithColourAndId('codeContentIfElseIf3cId');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf3dId' && (75 <= model.valueOfX) && (model.valueOfX <= 275)) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf3dId' && (75 <= model.valueOfX) && (model.valueOfX <= 275))
 			this.codeExecutionWithColourAndId('codeContentIfElseIf7aId');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf7bId' && model.valueOfY < 75) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf7bId' && model.valueOfY < 75)
 			this.changeFlagValue('flagValue1', 'codeContentIfElseIf9Id', '0');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf7bId' && model.valueOfY > 325) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf7bId' && model.valueOfY > 325)
 			this.codeExecutionWithColourAndId('codeContentIfElseIf7cId');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf7dId' && model.valueOfY > 325) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf7dId' && model.valueOfY > 325)
 			this.changeFlagValue('flagValue1', 'codeContentIfElseIf9Id', '0');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf7bId' && (75 <= model.valueOfY) && (model.valueOfY <= 325)) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf7bId' && (75 <= model.valueOfY) && (model.valueOfY <= 325))
 			this.codeExecutionWithColourAndId('codeContentIfElseIf7cId');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf7dId' && (75 <= model.valueOfX) && (model.valueOfX <= 275) && (75 <= model.valueOfY) && (model.valueOfY <= 325)) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf7dId' && (75 <= model.valueOfX) && (model.valueOfX <= 275) && (75 <= model.valueOfY) && (model.valueOfY <= 325))
 			this.codeExecutionWithColourAndId('codeContentIfElseIf11Id');
 		if ((this.nextSiblingElement.id === 'codeContentIfElseIf12Id' || this.nextSiblingElement.id === 'codeContentIfElseIf14Id' || this.nextSiblingElement.id === 'codeContentIfElseIf16Id') && (75 <= model.valueOfX) && (model.valueOfX <= 275) && (75 <= model.valueOfY) && (model.valueOfY <= 325))	{
 			this.changeFlagValue('flagValue1', this.nextOfnextSiblingElement.id, '1');
@@ -444,9 +444,9 @@ window.view = {
 				this.displayTextWithColour('Output: INSIDE', 100, 40, '#FF2400');
 			}
 		}
-		if (this.nextSiblingElement.id ==='codeContentIfElseIf6Id' || this.nextSiblingElement.id ==='codeContentIfElseIf10Id') 
+		if (this.nextSiblingElement.id ==='codeContentIfElseIf6Id' || this.nextSiblingElement.id ==='codeContentIfElseIf10Id')
 			this.codeExecutionWithColourAndId('codeContentIfElseIf15Id');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf16Id' && !((75 <= model.valueOfX) && (model.valueOfX <= 275) && (75 <= model.valueOfY) && (model.valueOfY <= 325))) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf16Id' && !((75 <= model.valueOfX) && (model.valueOfX <= 275) && (75 <= model.valueOfY) && (model.valueOfY <= 325)))
 			this.codeExecutionWithColourAndId('codeContentIfElseIf19Id');
 		if (this.nextSiblingElement.id === 'codeContentIfElseIf20Id') {
 			this.codeExecutionWithColourAndId('codeContentIfElseIf21Id');
@@ -454,7 +454,7 @@ window.view = {
 		}
 		if (this.nextSiblingElement.id === 'codeContentIfElseIf18Id' || this.nextSiblingElement.id === 'codeContentIfElseIf22Id') {
 			this.codeExecutionWithColourAndId('codeContentIfElseIf23Id');
-		}	
+		}
 	},
 	// init: calls methods to draw canvas and activate events.
 	init: function () {
@@ -463,6 +463,6 @@ window.view = {
 	}
 }
 // onload function: call init method on window onload.
-window.onload = function () { 
+window.onload = function () {
 	window.view.init();
 }
