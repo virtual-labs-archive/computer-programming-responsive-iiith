@@ -837,7 +837,16 @@ window.view = {
 			}
 		}
 		if ( string !== '' )
-			element.innerHTML = string + '&emsp;' + '=' + '&emsp;' + method()
+		{
+			console.log("abcd "+ method())
+			if(Number.isNaN(method()))
+			{
+				alert("expresion contains modulo by 0 which is not defined")
+				location.reload()
+			}
+			else
+				element.innerHTML = string + '&emsp;' + '=' + '&emsp;' + method()
+		}
 	},
 	showIllustration: function (equation) {
 		var parent = document.getElementById('reasoningStep')
