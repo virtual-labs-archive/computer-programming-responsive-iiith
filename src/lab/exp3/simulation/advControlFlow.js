@@ -18,6 +18,7 @@ window.view = {
 	k: 0,
 	n: 0,
 	disp: 0,
+	prevRedDiv:new Object(),
 	lastRedDiv: new Object(),
 	nextRedDiv: new Object(),
 	addClickEvent: function(id, method) {
@@ -43,6 +44,7 @@ window.view = {
 		this.clearExecutionSection()
 	},
 	activateEvents: function() {
+		this.addClickEvent('btnPrev',function(){view.prevBtn() } )
 		this.addClickEvent('btnNext', function() { view.nextBtn() })
 		this.addClickEvent('optionFor', function() { view.clearExecutionSection() })
 		this.addClickEvent('optionWhile', function() { view.clearExecutionSection() })
@@ -232,6 +234,7 @@ window.view = {
 		this.enableButton('nestedLoopInput')
 		document.getElementById('nestedLoopInput').value = ''
 	},
+	
 	nextBtn: function () {
 		this.lastRedDiv = this.getLastHighlightedDiv()
 		this.nextRedDiv = this.getNextDivToHighlight(this.lastRedDiv)
