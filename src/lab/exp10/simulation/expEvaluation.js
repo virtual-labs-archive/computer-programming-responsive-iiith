@@ -843,8 +843,8 @@ window.view = {
 		console.log(method())
 		if ( string !== '' ){
 			if(method()=='Infinity'){
-				alert("division by zero....");
-				location.reload();
+				alert(" Division by zero, Please enter correct expression.... ");
+				location.reload()=true;
 				return;
 
 			}
@@ -882,6 +882,7 @@ window.view = {
 		parent.appendChild(child)
 	},
 	evaluate: function () {
+
 		if(this.starting == -1 && this.countNext != 0) {
 			alert('Evaluation Complete');
       location.reload()=true;
