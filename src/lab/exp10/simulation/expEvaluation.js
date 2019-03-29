@@ -20,7 +20,7 @@ window.model = {
 				break;
 			}
 		}
-		if(isexpfinished == 1)
+		if(isexpfinished === 1)
 			return [-1, -1]
 		var sub;
 		var symbols = ['%', '*', '/', '-', '+'];
@@ -28,7 +28,7 @@ window.model = {
 
 		if( closeindex != -1) {    // finding the part in bracket to be highlighted
 			for ( i = closeindex ; i >= 0 ; i-- ) {
-				if(expression[i] == '(') {
+				if(expression[i] === '(') {
 					this.isBracket = true
 					break;
 				}
@@ -42,14 +42,14 @@ window.model = {
 		for ( j = 0 ; j < symbols.length ; j++ ) {
 			var found = 0;
 			for ( i = 0 ; i < sub.length ; i++ ) {
-				if(sub[i] == symbols[j]) {
+				if(sub[i] === symbols[j]) {
 					var tmp = i;
 					a = 0;
 					var unary = 0;
-					if( i==0 || (i!=0 && isNaN(sub[i-1])) ) {
+					if( i===0 || (i!=0 && isNaN(sub[i-1])) ) {
 						continue;
 					}
-					if(sub[i+1] == '-')
+					if(sub[i+1] === '-')
 					{
 						unary = 1;
 						i++;
@@ -57,7 +57,7 @@ window.model = {
 					for( var end = i+1 ; end < sub.length && !isNaN(sub[end]) ; end++){
 						a = a*10 + parseInt(sub[end]);
 					}
-					if(unary == 1) {
+					if(unary === 1) {
 						i--;
 						a = -a;
 					}
@@ -67,11 +67,11 @@ window.model = {
 						b = b + ten*parseInt(sub[start]);
 						ten *= 10;
 					}
-					if(start==0 && sub[start] == '-') {
+					if(start===0 && sub[start] === '-') {
 						b = -b;
 						start--;
 					}
-					else if(start > 0 && sub[start] == '-' && isNaN(sub[start])) {
+					else if(start > 0 && sub[start] === '-' && isNaN(sub[start])) {
 						b = -b;
 						start--;
 					}
@@ -79,10 +79,10 @@ window.model = {
 					break;
 				}
 			}
-			if(found == 1)
+			if(found === 1)
 				break;
 		}
-		if(found == 0){
+		if(found === 0){
 			return [offset, offset+sub.length-1];
 		}
 		return [offset+start+1, offset+end-1];
@@ -94,7 +94,7 @@ window.model = {
 		var i=0, j;
 		var a = 0, b = 0, c;
 		var unary = 0;
-		if(sub[0] == '-')
+		if(sub[0] === '-')
 		{
 			unary = 1;
 			i++;
@@ -103,23 +103,23 @@ window.model = {
 		for( ; i < sub.length && !isNaN(sub[i]) ; i++ ){
 			b = b*10 + parseInt(sub[i]);
 		}
-		if(unary == 1) {
+		if(unary === 1) {
 			b = -b;
 		}
 		unary = 0;
 		if(sub[i]!='%' && sub[i] != '*' && sub[i] != '/' && sub[i] != '+' && sub[i] != '-'){
-			while((start-1)>=0 && expression[start - 1] == '(' && (end+1)<expression.length && expression[end+1] == ')') {
+			while((start-1)>=0 && expression[start - 1] === '(' && (end+1)<expression.length && expression[end+1] === ')') {
 				start--;
 				end++;
 			}
-		//	if(start>0 && expression[start - 1] == '(' && (end+1) < expression.length && expression[end+1] == ')') 
+		//	if(start>0 && expression[start - 1] === '(' && (end+1) < expression.length && expression[end+1] === ')') 
 		//			expression = expression.substring(0, start-1) + sub.toString() + expression.substring(end+2, expression.length);
 			expression = expression.substring(0, start) + sub.toString() + expression.substring(end+1, expression.length);
 			return expression;
 		}
 
 		j = i+1;
-		if(sub[j] == '-')
+		if(sub[j] === '-')
 		{
 			unary = 1;
 			j++;
@@ -128,21 +128,21 @@ window.model = {
 		for( ; j < sub.length && !isNaN(sub[j]) ; j++ ){
 			a = a*10 + parseInt(sub[j]);
 		}
-		if(unary == 1) {
+		if(unary === 1) {
 			a = -a;
 		}
 		console.log("a: ", a, "b: ", b);
-		if( sub[i] == '+' )
+		if( sub[i] === '+' )
 			c = a + b;
-		else if( sub[i] == '-' )
+		else if( sub[i] === '-' )
 			c = b - a;
-		else if( sub[i] == '*' )
+		else if( sub[i] === '*' )
 			c = a * b;
-		else if( sub[i] == '/' )
+		else if( sub[i] === '/' )
 			c = Math.floor(b / a);
-		else if( sub[i] == '%' )
+		else if( sub[i] === '%' )
 			c = b % a;
-		while((start-1)>=0 && expression[start - 1] == '(' && (end+1)<expression.length && expression[end+1] == ')') {
+		while((start-1)>=0 && expression[start - 1] === '(' && (end+1)<expression.length && expression[end+1] === ')') {
 			start--;
 			end++;
 		}
@@ -150,7 +150,7 @@ window.model = {
 		return expression;
 	},
 	calculate: function (exp, count, start, end) {
-		if(count == 0) {
+		if(count === 0) {
 			highlight = this.findexp(exp); //findexp returns the indices which are to be highlighted now, and evaluated in the next step
 			return [exp, highlight];
 		}
@@ -169,7 +169,7 @@ window.model = {
 				break;
 			}
 		}
-		if(isexpfinished == 1)
+		if(isexpfinished === 1)
 			return [-1, -1]
 		var sub;
 		var symbols = ['&', '|'];
@@ -177,7 +177,7 @@ window.model = {
 
 		if( closeindex != -1) {    // finding the part in bracket to be highlighted
 			for ( i = closeindex ; i >= 0 ; i-- ) {
-				if(expression[i] == '(') {
+				if(expression[i] === '(') {
 					break;
 				}
 			}
@@ -190,15 +190,15 @@ window.model = {
 		for ( j = 0 ; j < symbols.length ; j++ ) {
 			var found = 0;
 			for ( i = 0 ; i < sub.length ; i++ ) {
-				if(sub[i] == symbols[j]) {
+				if(sub[i] === symbols[j]) {
 					var tmp = i;
 					i++;    // the operators always exist in pairs
 					a = 0;
 					var unary = 0;
-				//	if( i==0 || (i!=0 && isNaN(sub[i-1])) ) {
+				//	if( i===0 || (i!=0 && isNaN(sub[i-1])) ) {
 				//		continue;
 				//	}
-					if(sub[i+1] == '-')
+					if(sub[i+1] === '-')
 					{
 						unary = 1;
 						i++;
@@ -206,7 +206,7 @@ window.model = {
 					for( var end = i+1 ; end < sub.length && !isNaN(sub[end]) ; end++){
 						a = a*10 + parseInt(sub[end]);
 					}
-					if(unary == 1) {
+					if(unary === 1) {
 						i--;
 						a = -a;
 					}
@@ -216,11 +216,11 @@ window.model = {
 						b = b + ten*parseInt(sub[start]);
 						ten *= 10;
 					}
-					if(start==0 && sub[start] == '-') {
+					if(start===0 && sub[start] === '-') {
 						b = -b;
 						start--;
 					}
-					else if(start > 0 && sub[start] == '-' && isNaN(sub[start])) {
+					else if(start > 0 && sub[start] === '-' && isNaN(sub[start])) {
 						b = -b;
 						start--;
 					}
@@ -228,10 +228,10 @@ window.model = {
 					break;
 				}
 			}
-			if(found == 1)
+			if(found === 1)
 				break;
 		}
-		if(found == 0){
+		if(found === 0){
 			return [offset, offset+sub.length-1];
 		}
 		return [offset+start+1, offset+end-1];
@@ -243,7 +243,7 @@ window.model = {
 		var i=0, j;
 		var a = 0, b = 0, c;
 		var unary = 0;
-		if(sub[0] == '-')
+		if(sub[0] === '-')
 		{
 			unary = 1;
 			i++;
@@ -252,24 +252,24 @@ window.model = {
 		for( ; i < sub.length && !isNaN(sub[i]) ; i++ ){
 			b = b*10 + parseInt(sub[i]);
 		}
-		if(unary == 1) {
+		if(unary === 1) {
 			b = -b;
 		}
 		unary = 0;
 		if(sub[i]!='&' && sub[i] != '|'){
-			while((start-1)>=0 && expression[start - 1] == '(' && (end+1)<expression.length && expression[end+1] == ')') {
+			while((start-1)>=0 && expression[start - 1] === '(' && (end+1)<expression.length && expression[end+1] === ')') {
 				start--;
 				end++;
 			}
 
-		//	if(start>0 && expression[start - 1] == '(' && (end+1) < expression.length && expression[end+1] == ')') 
+		//	if(start>0 && expression[start - 1] === '(' && (end+1) < expression.length && expression[end+1] === ')') 
 		//			expression = expression.substring(0, start-1) + sub.toString() + expression.substring(end+2, expression.length);
 			expression = expression.substring(0, start) + sub.toString() + expression.substring(end+1, expression.length);
 			return expression;
 		}
 
 		j = i+2;
-		if(sub[j] == '-')
+		if(sub[j] === '-')
 		{
 			unary = 1;
 			j++;
@@ -278,21 +278,21 @@ window.model = {
 		for( ; j < sub.length && !isNaN(sub[j]) ; j++ ){
 			a = a*10 + parseInt(sub[j]);
 		}
-		if(unary == 1) {
+		if(unary === 1) {
 			a = -a;
 		}
 		console.log("a: ", a, "b: ", b);
-		if( sub[i] == '&' )
+		if( sub[i] === '&' )
 			c = (a && b);
-		else if( sub[i] == '|' )
+		else if( sub[i] === '|' )
 			c = (b || a);
 		
-		while((start-1)>=0 && expression[start - 1] == '(' && (end+1)<expression.length && expression[end+1] == ')') {
+		while((start-1)>=0 && expression[start - 1] === '(' && (end+1)<expression.length && expression[end+1] === ')') {
 			start--;
 			end++;
 		}
 
-		//if(expression[start - 1] == '(' && expression[end+1] == ')') {
+		//if(expression[start - 1] === '(' && expression[end+1] === ')') {
 		//		expression = expression.substring(0, start-1) + c.toString() + expression.substring(end+2, expression.length);
 		//}
 		//else {
@@ -302,7 +302,7 @@ window.model = {
 
 	},
 	calclogical: function (exp, count, start, end) {
-		if(count == 0) {
+		if(count === 0) {
 			highlight = this.findexplogical(exp); //findexp returns the indices which are to be highlighted now, and evaluated in the next step
 			return [exp, highlight];
 		}
@@ -321,7 +321,7 @@ window.model = {
 				break;
 			}
 		}
-		if(isexpfinished == 1)
+		if(isexpfinished === 1)
 			return [-1, -1]
 		var sub;
 		var symbols = ['<', '>', '&', '^', '|'];
@@ -329,7 +329,7 @@ window.model = {
 
 		if( closeindex != -1) {    // finding the part in bracket to be highlighted
 			for ( i = closeindex ; i >= 0 ; i-- ) {
-				if(expression[i] == '(') {
+				if(expression[i] === '(') {
 					break;
 				}
 			}
@@ -342,16 +342,16 @@ window.model = {
 		for ( j = 0 ; j < symbols.length ; j++ ) {
 			var found = 0;
 			for ( i = 0 ; i < sub.length ; i++ ) {
-				if(sub[i] == symbols[j]) {
+				if(sub[i] === symbols[j]) {
 					var tmp = i;
 					if(j<2)
 						i++;    // the first two operators exist in pairs
 					a = 0;
 					var unary = 0;
-				//	if( i==0 || (i!=0 && isNaN(sub[i-1])) ) {
+				//	if( i===0 || (i!=0 && isNaN(sub[i-1])) ) {
 				//		continue;
 				//	}
-					if(sub[i+1] == '-')
+					if(sub[i+1] === '-')
 					{
 						unary = 1;
 						i++;
@@ -359,7 +359,7 @@ window.model = {
 					for( var end = i+1 ; end < sub.length && !isNaN(sub[end]) ; end++){
 						a = a*10 + parseInt(sub[end]);
 					}
-					if(unary == 1) {
+					if(unary === 1) {
 						i--;
 						a = -a;
 					}
@@ -369,11 +369,11 @@ window.model = {
 						b = b + ten*parseInt(sub[start]);
 						ten *= 10;
 					}
-					if(start==0 && sub[start] == '-') {
+					if(start===0 && sub[start] === '-') {
 						b = -b;
 						start--;
 					}
-					else if(start > 0 && sub[start] == '-' && isNaN(sub[start])) {
+					else if(start > 0 && sub[start] === '-' && isNaN(sub[start])) {
 						b = -b;
 						start--;
 					}
@@ -381,10 +381,10 @@ window.model = {
 					break;
 				}
 			}
-			if(found == 1)
+			if(found === 1)
 				break;
 		}
-		if(found == 0){
+		if(found === 0){
 			return [offset, offset+sub.length-1];
 		}
 		return [offset+start+1, offset+end-1];
@@ -396,7 +396,7 @@ window.model = {
 		var i=0, j;
 		var a = 0, b = 0, c;
 		var unary = 0;
-		if(sub[0] == '-')
+		if(sub[0] === '-')
 		{
 			unary = 1;
 			i++;
@@ -405,25 +405,25 @@ window.model = {
 		for( ; i < sub.length && !isNaN(sub[i]) ; i++ ){
 			b = b*10 + parseInt(sub[i]);
 		}
-		if(unary == 1) {
+		if(unary === 1) {
 			b = -b;
 		}
 		unary = 0;
-		if(sub[i] == ')'){
-			while((start-1)>=0 && expression[start - 1] == '(' && (end+1)<expression.length && expression[end+1] == ')') {
+		if(sub[i] === ')'){
+			while((start-1)>=0 && expression[start - 1] === '(' && (end+1)<expression.length && expression[end+1] === ')') {
 				start--;
 				end++;
 			}
 
-	//		if(start>0 && expression[start - 1] == '(' && (end+1) < expression.length && expression[end+1] == ')') 
+	//		if(start>0 && expression[start - 1] === '(' && (end+1) < expression.length && expression[end+1] === ')') 
 	//				expression = expression.substring(0, start-1) + sub.toString() + expression.substring(end+2, expression.length);
 			expression = expression.substring(0, start) + sub.toString() + expression.substring(end+1, expression.length);
 			return expression;
 		}
-		if(sub[i] == '<' || sub[i] == '>')
+		if(sub[i] === '<' || sub[i] === '>')
 			j = i+2;
 		else j = i+1;
-		if(sub[j] == '-')
+		if(sub[j] === '-')
 		{
 			unary = 1;
 			j++;
@@ -432,27 +432,27 @@ window.model = {
 		for( ; j < sub.length && !isNaN(sub[j]) ; j++ ){
 			a = a*10 + parseInt(sub[j]);
 		}
-		if(unary == 1) {
+		if(unary === 1) {
 			a = -a;
 		}
 		console.log("a: ", a, "b: ", b);
-		if( sub[i] == '&' )
+		if( sub[i] === '&' )
 			c = (a & b);
-		else if( sub[i] == '|' )
+		else if( sub[i] === '|' )
 			c = (b | a);
-		else if( sub[i] == '>' )
+		else if( sub[i] === '>' )
 			c = (b>>a);
-		else if( sub[i] == '<' )
+		else if( sub[i] === '<' )
 			c = (b<<a);
-		else if( sub[i] == '^' )
+		else if( sub[i] === '^' )
 			c = (b^a);
 
-		while((start-1)>=0 && expression[start - 1] == '(' && (end+1)<expression.length && expression[end+1] == ')') {
+		while((start-1)>=0 && expression[start - 1] === '(' && (end+1)<expression.length && expression[end+1] === ')') {
 			start--;
 			end++;
 		}
 
-		//if(expression[start - 1] == '(' && expression[end+1] == ')') {
+		//if(expression[start - 1] === '(' && expression[end+1] === ')') {
 		//		expression = expression.substring(0, start-1) + c.toString() + expression.substring(end+2, expression.length);
 		//}
 		//else {
@@ -462,7 +462,7 @@ window.model = {
 
 	},
 	calcbitwise: function (exp, count, start, end) {
-		if(count == 0) {
+		if(count === 0) {
 			highlight = this.findexpbitwise(exp); //findexp returns the indices which are to be highlighted now, and evaluated in the next step
 			return [exp, highlight];
 		}
@@ -572,8 +572,8 @@ window.view = {
 				}
 				braces ++
 			}
-			else if ( exp[i] == ')' ) {
-				if ( characterOrOperator == 0 ) {
+			else if ( exp[i] === ')' ) {
+				if ( characterOrOperator === 0 ) {
 					alert('Wrong use of "()" operator !!!')
 					return false
 				}
@@ -628,8 +628,8 @@ window.view = {
 				}
 				braces ++
 			}
-			else if ( exp[i] == ')' ) {
-				if ( characterOrOperator == 0 ) {
+			else if ( exp[i] === ')' ) {
+				if ( characterOrOperator === 0 ) {
 					alert('Wrong use of "()" operator !!!')
 					return false
 				}
@@ -650,7 +650,7 @@ window.view = {
 				}
 				else {
 					characterOrOperator = 0
-					if((i+1) == exp.length || exp[i+1]!=exp[i] ){
+					if((i+1) === exp.length || exp[i+1]!=exp[i] ){
 						alert('You Have Entered  Wrong Expression Syntax !!!')
 						return false;
 					}
@@ -691,8 +691,8 @@ window.view = {
 				}
 				braces ++
 			}
-			else if ( exp[i] == ')' ) {
-				if ( characterOrOperator == 0 ) {
+			else if ( exp[i] === ')' ) {
+				if ( characterOrOperator === 0 ) {
 					alert('Wrong use of "()" operator !!!')
 					return false
 				}
@@ -714,15 +714,15 @@ window.view = {
 				}
 				else {
 					characterOrOperator = 0
-					if(exp[i] == '<' && ((i+1) == exp.length || exp[i+1]!=exp[i]) ){
+					if(exp[i] === '<' && ((i+1) === exp.length || exp[i+1]!=exp[i]) ){
 						alert('You Have Entered  Wrong Expression Syntax !!!')
 						return false;
 					}
-					else if(exp[i] == '>' && ((i+1) == exp.length || exp[i+1]!=exp[i]) ){
+					else if(exp[i] === '>' && ((i+1) === exp.length || exp[i+1]!=exp[i]) ){
 						alert('You Have Entered  Wrong Expression Syntax !!!')
 						return false;
 					}
-					else if(exp[i] == '<' || exp[i] == '>')
+					else if(exp[i] === '<' || exp[i] === '>')
 						i++;
 				}	
 			}
@@ -868,7 +868,7 @@ window.view = {
 		parent.appendChild(child)
 	},
 	evaluate: function () {
-		if(this.starting == -1 && this.countNext != 0) {
+		if(this.starting === -1 && this.countNext != 0) {
 			alert('Evaluation Complete');
       location.reload()=true;
 			return ;
