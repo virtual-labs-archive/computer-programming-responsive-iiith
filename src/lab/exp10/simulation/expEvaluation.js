@@ -608,8 +608,17 @@ window.view = {
 				alert('You Have Entered  Wrong Expression Syntax !!!')
 				return false
 		}
-		else 
-			return true
+		if(exp[3]=='%')
+		{
+			var x=document.getElementById('b').value
+			var y=document.getElementById('c').value
+			if(x-y==0)
+			{
+				alert('modulus by zero is not defined')
+				return false
+			}
+		}
+		return true
 	},
 	validateLogicalExpression: function (exp) {
 		var characterOrOperator = 0
