@@ -55,10 +55,10 @@ line-height: 5px;
 }
 
 .navbar-default {
-height: 80px;
-padding-top: 15px;
-padding-left: 45px;
-font-size: 1.7em;
+height: 8rem;
+padding-top: 1rem;
+padding-left: 4rem;
+font-size: 1.7rem;
 font-family: 'Actor', sans-serif;
 background: #3652a4;
 border-color: #e7e7e7;
@@ -79,9 +79,3 @@ color: #fff;
 background: #3652a4;
 }
 
-@media (max-width: 480px) {
-  .manual-section-description {
-	padding: 0em 0em 0em 0em;
-	margin: 0em 0em 0em 0em;
-}
-}
