@@ -132,21 +132,14 @@ hr{
 }
 
 .experiment-outcome{
-   padding: 1em 1em 0em 1em;
-   margin: 0em 1em 0em 1em;
+   padding: 1em 1em 2em 1em;
+   margin: 0em 1em 2em 1em;
    font-family: 'Source Sans Pro', sans-serif;
    /*border-radius: 1em;
    border: 1px solid #aaa;*/
 }
 
-.experiment-prereq{
-   padding: 1em 1em 1em 1em;
-   margin: 0.5em 1em 1em 1em;
-   /*border-radius: 1em;
-   border: 1px solid #aaa;*/
-   font-weight: bold;
-   text-align: right;
-}
+
 
 @media (max-width: 480px) {
   body {
