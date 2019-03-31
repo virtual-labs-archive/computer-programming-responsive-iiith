@@ -4,11 +4,13 @@
   <title>Computer-Programming</title>
   <link rel="stylesheet" type="text/css" href="../../normalize.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="../bootstrap-3.1.1-dist/css/bootstrap.min.css" media="screen">    
   <link rel="stylesheet" type="text/css" href="../style.css">
   <link rel="stylesheet" type="text/css" href="../bstyle.css">
   <link rel="stylesheet" type="text/css" href="fonts.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!--   <link href='http://fonts.googleapis.com/css?family=Actor' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'> -->
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -55,12 +57,12 @@
 <div class="row">
   <div class="col-lg-2 visible-lg lab-index">
     <ul class="nav nav-pills nav-stacked">
-      <li class="active"><a href="#intro">Introduction</a></li>
-      <li><a href="#theory">Theory</a></li>
-      <li><a href="#obj">Objective</a></li>
-      <li><a href="#man">Manual</a></li>
-      <li><a href="#proc">Procedure</a></li>
-      <li><a href="#further-reading">Further Reading</a></li>
+      <li id="Introduction"class="active"><a href="#intro" >Introduction</a></li>
+      <li id="Theory"><a href="#theory">Theory</a></li>
+      <li id="Objective"><a href="#obj">Objective</a></li>
+      <li id="Manual"><a href="#man">Manual</a></li>
+      <li id="Procedure"><a href="#proc">Procedure</a></li>
+      <li id="Further_reading"><a href="#further-reading">Further Reading</a></li>
     </ul>
   </div>
 
@@ -141,6 +143,47 @@
       </div>
     </div>
   </div></div>
-
+  <script>
+      $(window).scroll(function(){
+        var window_top = $(window).scrollTop();
+        var div_tag_intro=$("#intro").offset().top;
+        var div_tag_theory=$("#theory").offset().top;
+        var div_tag_objective=$("#obj").offset().top;
+        var div_tag_manual=$("#man").offset().top;
+        var div_tag_procedure=$("#proc").offset().top;
+        var div_tag_further=$("#further-reading").offset().top;
+        console.log(window_top);
+        console.log(div_tag_intro);
+        console.log(div_tag_theory);
+        console.log(div_tag_objective);
+        console.log(div_tag_manual);
+        console.log(div_tag_procedure);
+        console.log(div_tag_further);
+        if(window_top<div_tag_theory &&window_top>=0){
+          $("#Introduction").addClass("active");
+          $("#Theory").removeClass("active");
+        }
+        if(window_top>=div_tag_theory && window_top<div_tag_objective){
+          $("#Introduction").removeClass("active");
+          $("#Theory").addClass("active");
+          $("#Objective").removeClass("active");
+        }
+        else if(window_top>=div_tag_objective && window_top<div_tag_manual){
+          $("#Theory").removeClass("active");
+          $("#Manual").removeClass("active");
+          $("#Objective").addClass("active");
+        }
+        else if(window_top>=div_tag_manual && window_top<div_tag_further){
+          $("Objective").removeClass("active");
+          $("#Manual").addClass("active");
+          $("#Procedure").removeClass("active");
+        }
+        else if(window_top>=div_tag_further && window_top<div_tag_further){
+          $("#Manual").removeClass("active");
+          $("#Procedure").addClass("active");
+          $("#Further-reading").removeClass("active");
+        }
+      });  
+      </script>
 </body>
 </html>
