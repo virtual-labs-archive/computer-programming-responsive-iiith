@@ -152,13 +152,6 @@
         var div_tag_manual=$("#man").offset().top;
         var div_tag_procedure=$("#proc").offset().top;
         var div_tag_further=$("#further-reading").offset().top;
-        console.log(window_top);
-        console.log(div_tag_intro);
-        console.log(div_tag_theory);
-        console.log(div_tag_objective);
-        console.log(div_tag_manual);
-        console.log(div_tag_procedure);
-        console.log(div_tag_further);
         if(window_top<div_tag_theory &&window_top>=0){
           $("#Introduction").addClass("active");
           $("#Theory").removeClass("active");
@@ -174,11 +167,11 @@
           $("#Objective").addClass("active");
         }
         else if(window_top>=div_tag_manual && window_top<div_tag_further){
-          $("Objective").removeClass("active");
+          $("#Objective").removeClass("active");
           $("#Manual").addClass("active");
           $("#Procedure").removeClass("active");
         }
-        else if(window_top>=div_tag_further && window_top<div_tag_further){
+        else if(window_top>=div_tag_further){
           $("#Manual").removeClass("active");
           $("#Procedure").addClass("active");
           $("#Further-reading").removeClass("active");
