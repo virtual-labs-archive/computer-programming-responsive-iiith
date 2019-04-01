@@ -56,11 +56,11 @@
   <div class="col-lg-2 visible-lg lab-index">
     <ul class="nav nav-pills nav-stacked">
       <li class="active"><a href="#intro">Introduction</a></li>
-      <li><a href="#theory">Theory</a></li>
-      <li><a href="#obj">Objective</a></li>
-      <li><a href="#man">Manual</a></li>
-      <li><a href="#proc">Procedure</a></li>
-      <li><a href="#further-reading">Further Reading</a></li>
+      <li><a class="tabOption" href="#theory">Theory</a></li>
+      <li><a class="tabOption" href="#obj">Objective</a></li>
+      <li><a class="tabOption" href="#man">Manual</a></li>
+      <li><a class="tabOption" href="#proc">Procedure</a></li>
+      <li><a class="tabOption" href="#further-reading">Further Reading</a></li>
     </ul>
   </div>
 
@@ -142,5 +142,13 @@
     </div>
   </div></div>
 
+<script>
+  let list = document.querySelectorAll('.tabOption')
+  console.log(list);
+  list.forEach(li=>li.addEventListener('click',e=>{
+    list.forEach(item => item.style.backgroundColor="#eee");
+    e.target.style.backgroundColor="#ddd";
+  }));
+</script>
 </body>
 </html>
