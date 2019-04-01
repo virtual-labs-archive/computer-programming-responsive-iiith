@@ -142,13 +142,7 @@
     </div>
   </div></div>
 
-<script>
-  let list = document.querySelectorAll('.tabOption')
-  console.log(list);
-  list.forEach(li=>li.addEventListener('click',e=>{
-    list.forEach(item => item.style.backgroundColor="#eee");
-    e.target.style.backgroundColor="#ddd";
-  }));
-</script>
+<!-- Note: please leave the script tag on bottom of page. onload() not used, because of other issues. -->
+<script src="../CommonExp.js"></script>
 </body>
 </html>

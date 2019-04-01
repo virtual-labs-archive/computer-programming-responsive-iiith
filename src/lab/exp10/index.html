@@ -52,15 +52,15 @@
 
 <div class="row">
   <div class="col-lg-2 visible-lg lab-index">
-    <ul class="nav nav-pills nav-stacked">
-      <li class="active"><a href="#intro">Introduction</a></li>
-      <li><a href="#theory">Theory</a></li>
-      <li><a href="#obj">Objective</a></li>
-      <li><a href="#man">Manual</a></li>
-      <li><a href="#proc">Procedure</a></li>
-      <li><a href="#further-reading">Further Reading</a></li>
-    </ul>
-  </div>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#intro">Introduction</a></li>
+        <li><a class="tabOption" href="#theory">Theory</a></li>
+        <li><a class="tabOption" href="#obj">Objective</a></li>
+        <li><a class="tabOption" href="#man">Manual</a></li>
+        <li><a class="tabOption" href="#proc">Procedure</a></li>
+        <li><a class="tabOption" href="#further-reading">Further Reading</a></li>
+      </ul>
+    </div>
 
   <div class="col-lg-10 lab-manual">
     <div id="intro" class="manual-section">
@@ -191,5 +191,9 @@
   <script src="http://code.jquery.com/jquery.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+<!-- Note: please leave the script tag on bottom of page. onload() not used, because of other issues. -->
+<script src="../CommonExp.js"></script>
+
 </body>
 </html>
