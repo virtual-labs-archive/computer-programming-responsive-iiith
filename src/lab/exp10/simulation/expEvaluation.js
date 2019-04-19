@@ -133,15 +133,39 @@ window.model = {
 		}
 		console.log("a: ", a, "b: ", b);
 		if( sub[i] == '+' )
+		{	
 			c = a + b;
+		}
 		else if( sub[i] == '-' )
 			c = b - a;
 		else if( sub[i] == '*' )
+		{	
+			if (a * b>1000000000000000)
+			 {
+				  alert("expression value exceeded than 10^15")
+				  location.reload(true)				
+			 }
+			else
 			c = a * b;
+		}
 		else if( sub[i] == '/' )
+		{
+			if ( a==0 )
+			 {	
+				  alert("Division by zero!!!")
+				  location.reload(true)
+			 }
 			c = Math.floor(b / a);
+		}		
 		else if( sub[i] == '%' )
+		{
+			if ( a==0)
+			 {	
+				 alert("Modulo with zero!!!")
+			         location.reload(true)
+			 }
 			c = b % a;
+		}
 		while((start-1)>=0 && expression[start - 1] == '(' && (end+1)<expression.length && expression[end+1] == ')') {
 			start--;
 			end++;
@@ -556,7 +580,52 @@ window.view = {
 	},
 	validateArithmaticExpression: function (exp) {
 		var characterOrOperator = 0
-		var braces = 0 
+		var braces = 0
+		var g = document.getElementById('a').value
+		var t = document.getElementById('b').value
+		var k = document.getElementById('c').value
+		var h = document.getElementById('d').value
+		//var braces = 0
+		while ( g >10000000 )
+		{	
+		 	 document.getElementById('a').value=prompt('Please enter "a" as integer less than 10000000','0')
+		 	 g=document.getElementById('a').value
+		}
+		while ( t >10000000 )
+		{	
+			 document.getElementById('b').value=prompt('Please enter "b" as integer less than 10000000','0')
+			 t=document.getElementById('b').value
+		}
+		while ( k >10000000 )
+		{	
+			 document.getElementById('c').value=prompt('Please enter "c" as integer less than 10000000','0')
+			 k=document.getElementById('c').value
+		}
+		while ( h >10000000 )
+		{	
+			 document.getElementById('d').value=prompt('Please enter "d" as integer less than 10000000','0')
+			 h=document.getElementById('d').value
+		}    
+		while (  isNaN(g) )
+		{
+			 document.getElementById('a').value=prompt('Please enter "a" as integer','0')
+			 g=document.getElementById('a').value
+		}	
+		while (  isNaN(t) )
+		{
+			 document.getElementById('b').value=prompt('Please enter "b" as integer','0')
+			 t=document.getElementById('b').value
+		}
+		while (  isNaN(k) )
+		{
+			 document.getElementById('c').value=prompt('Please enter "c" as integer','0')
+			 k=document.getElementById('c').value
+		}
+		while (  isNaN(h) )
+		{
+			 document.getElementById('d').value=prompt('Please enter "d" as integer','0')
+			 h=document.getElementById('d').value
+		}		
 		for ( var i = 0 ; i < exp.length ; i ++ ) {
 			if ( exp[i] !== 'a' && exp[i] !== 'b' && exp[i] !== 'c' && exp[i] !== 'd' && exp[i] !== '*' && exp[i] !== '/' && 
 			     exp[i] !== '+' && exp[i] !== '-' &&  exp[i] !== '(' && exp[i] !== ')' && exp[i] !== '%') {
@@ -614,6 +683,51 @@ window.view = {
 	validateLogicalExpression: function (exp) {
 		var characterOrOperator = 0
 		var braces = 0 
+		var g = document.getElementById('a').value
+		var t =document.getElementById('b').value
+		var k =document.getElementById('c').value
+		var h =document.getElementById('d').value
+		//var braces = 0
+		while ( g  >10000000 )
+		{	
+			 document.getElementById('a').value=prompt('Please enter "a" as integer less than 10000000','0')
+		 	 g=document.getElementById('a').value
+		}
+		while ( t  >10000000 )
+		{	
+			 document.getElementById('b').value=prompt('Please enter "b" as integer less than 10000000','0')
+			 t=document.getElementById('b').value
+		}
+		while ( k  >10000000 )
+		{	
+			 document.getElementById('c').value=prompt('Please enter "c" as integer less than 10000000','0')
+			 k=document.getElementById('c').value
+		}
+		while ( h >10000000 )
+		{	
+			 document.getElementById('d').value=prompt('Please enter "d" as integer less than 10000000','0')
+			 h=document.getElementById('d').value
+		}    
+		while ( isNaN(g) )
+		{
+			 document.getElementById('a').value=prompt('Please enter "a" as integer','0')
+			 g=document.getElementById('a').value
+		}	
+		while ( isNaN(t) )
+		{
+			 document.getElementById('b').value=prompt('Please enter "b" as integer','0')
+			 t=document.getElementById('b').value
+		}
+		while ( isNaN(k) )
+		{
+			 document.getElementById('c').value=prompt('Please enter "c" as integer','0')
+			 k=document.getElementById('c').value
+		}
+		while ( isNaN(h) )
+		{
+			 document.getElementById('d').value=prompt('Please enter "d" as integer','0')
+			 h=document.getElementById('d').value
+		}	
 		for ( var i = 0 ; i < exp.length ; i ++ ) {
 			if ( exp[i] !== 'a' && exp[i] !== 'b' && exp[i] !== 'c' && exp[i] !== 'd' && exp[i] !== '|' && exp[i] !== '&' &&  exp[i] !== '(' && exp[i] !== ')') {
 				alert('You Entered Wrong Expression !!!\n Only " a b c d " characters and " || && ( ) "\n operators are allowed !!!')
@@ -675,7 +789,52 @@ window.view = {
 	},
 	validateBitwiseExpression: function (exp) {
 		var characterOrOperator = 0
-		var braces = 0 
+		var braces = 0
+		var g = document.getElementById('a').value
+		var t = document.getElementById('b').value
+		var k = document.getElementById('c').value
+		var h = document.getElementById('d').value
+		//var braces = 0
+		while ( g >10000000 )
+		{	
+			 document.getElementById('a').value=prompt('Please enter "a" as integer less than 10000000','0')
+			 g=document.getElementById('a').value
+		}
+		while ( t >10000000 )
+		{	
+			 document.getElementById('b').value=prompt('Please enter "b" as integer less than 10000000','0')
+			 t=document.getElementById('b').value
+		}
+		while ( k >10000000 )
+		{	
+			 document.getElementById('c').value=prompt('Please enter "c" as integer less than 10000000','0')
+			 k=document.getElementById('c').value
+		}
+		while ( h >10000000 )
+		{	
+			 document.getElementById('d').value=prompt('Please enter "d" as integer less than 10000000','0')
+			 h=document.getElementById('d').value
+		}    
+		while (  isNaN(g) )
+		{
+			 document.getElementById('a').value=prompt('Please enter "a" as integer','0')
+			 g=document.getElementById('a').value
+		}	
+		while (  isNaN(t) )
+		{
+			 document.getElementById('b').value=prompt('Please enter "b" as integer','0')
+			 t=document.getElementById('b').value
+		}
+		while (  isNaN(k) )
+		{
+			 document.getElementById('c').value=prompt('Please enter "c" as integer','0')
+			 k=document.getElementById('c').value
+		}
+		while (  isNaN(h) )
+		{
+			 document.getElementById('d').value=prompt('Please enter "d" as integer','0')
+			 h=document.getElementById('d').value
+		}	 
 		for ( var i = 0 ; i < exp.length ; i ++ ) {
 			if ( exp[i] !== 'a' && exp[i] !== 'b' && exp[i] !== 'c' && exp[i] !== 'd' && exp[i] !== '^' && exp[i] !== '&' && 
 			     exp[i] !== '|' && exp[i] !== '<' &&  exp[i] !== '(' && exp[i] !== ')' && exp[i] !== '>') {
@@ -727,7 +886,7 @@ window.view = {
 				}	
 			}
 			if ( braces < 0 ) {
-				alert('You Have Entered  Wrong Expression Syntax for "()" operator !!!')
+			  	alert('You Have Entered  Wrong Expression Syntax for "()" operator !!!')
 				return false
 			}
 		}

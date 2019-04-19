@@ -22,7 +22,7 @@ if ($Q2==4)
 $total=$total+1;
 echo "2 ";
 }
-if ($Q3==2)
+if ($Q3==1)
 {
 $total=$total+1;
 echo "3 ";
@@ -50,7 +50,7 @@ echo "<html>
 <head></head>";
 echo "<body class=\"page_bg\">";
 
-echo "<br>Total number of correct answers : ".$total."/9";
+echo "<br>Total number of correct answers : ".$total."/7";
 
 echo "	<h2>Correct Answers</h2>
 <br>
@@ -66,7 +66,7 @@ echo "	<h2>Correct Answers</h2>
 		<br>
 		
 		<li><b>What will be the ouptut of the following function call: fun2(20); where fun2 is defined as: </b> </li>
-		20 40 60 80 80 60 40 20<br>
+		20 40 80 80 40 20<br>
 		<br>	
 
 		<li><b>What will be the ouptut of the following function call: fun3(100); where fun3 is defined as: </b> </li>
@@ -74,7 +74,7 @@ echo "	<h2>Correct Answers</h2>
 		<br>
 
 		 <li><b>What will be the ouptut of the following function call: fun4(4,3); where fun4 is defined as: </b> </li>
-		 14<br>
+		 13<br>
 		 <li><b>A recursive function must necessarily make a call to itself. </b> </li>
 		 <li><b>A base case (or end-condition) is required so that there is no infinite recursive calling of the same function.</b> </li>
 		 <br>
