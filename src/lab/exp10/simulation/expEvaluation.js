@@ -460,6 +460,9 @@ window.model = {
 		//}
 		return expression;
 
+
+
+
 	},
 	calcbitwise: function (exp, count, start, end) {
 		if(count == 0) {
@@ -778,7 +781,7 @@ window.view = {
 		else if ( selectedOption === 'Bitwise' )
 			var isValid = this.validateBitwiseExpression(this.expression)
 		if ( isValid ) {
-      console.log("hello");
+      
 			this.printFirstStep(this.expression)
 			this.disableElement('buttonStart')
 			this.changeClass('buttonStart', 'buttonDisable startButton')
@@ -836,9 +839,20 @@ window.view = {
 				i ++
 			}
 		}
-		if ( string !== '' )
+		console.log("hii");
+		console.log(method())
+		if ( string !== '' ){
+			if(method()=='Infinity'){
+				alert(" Division by zero, Please enter correct expression.... ");
+				location.reload()=true;
+				return;
+
+			}
+			else{
 			element.innerHTML = string + '&emsp;' + '=' + '&emsp;' + method()
-	},
+				}
+		}
+		},
 	showIllustration: function (equation) {
 		var parent = document.getElementById('reasoningStep')
 		var child = document.createElement('p')
@@ -868,6 +882,7 @@ window.view = {
 		parent.appendChild(child)
 	},
 	evaluate: function () {
+
 		if(this.starting == -1 && this.countNext != 0) {
 			alert('Evaluation Complete');
       location.reload()=true;
