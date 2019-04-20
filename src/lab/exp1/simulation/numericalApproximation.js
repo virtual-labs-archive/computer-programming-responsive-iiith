@@ -245,7 +245,7 @@ window.view = {
 		model.incrementInWidth();
 		this.sum = Math.round(model.sum * 100) / 100;
 		this.setInnerHtml('valuesum', this.sum);
-		this.setInnerHtml('valuei', model.inputValueA);
+		this.setInnerHtml('valuei', model.inputValueA-1);
 	},
 	// calculateXCoordinates: compute starting position of xCoordinatesValue on x-axis.
 	calculateXCoordinates: function () {
