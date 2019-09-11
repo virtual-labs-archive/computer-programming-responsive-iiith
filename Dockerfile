@@ -1,5 +1,5 @@
 # Usage: Pulling Ubuntu-16.04
-FROM ubuntu:12.04
+FROM ubuntu:16.04
 
 # Usage: File Author/Maintainer
 MAINTAINER vlead-systems "systems@vlabs.ac.in"
@@ -12,7 +12,7 @@ MAINTAINER vlead-systems "systems@vlabs.ac.in"
 RUN apt-get update
 
 # Usage: Installing dependencies for system operations
-RUN apt-get install -y git sudo net-tools wget apache2 make php5
+RUN apt-get install -y git sudo net-tools wget apache2 make rsync
 
 RUN mkdir computer-programming-responsive-iiith
 
@@ -24,13 +24,13 @@ WORKDIR ./computer-programming-responsive-iiith/src
 RUN make 
 
 # Usage: Copying lab sources into web server path
-RUN rm -rf /var/www/*
-RUN cp -r ../build/* /var/www/
+RUN rm -rf /var/www/html/*
+RUN rsync -a ../build/ /var/www/html/
 
 EXPOSE 80
 EXPOSE 443
 
 # Usage: Setting permissions in /var/www 
-RUN chmod -R 755 /var/www/*
+RUN chmod -R 755 /var/www/html/*
 
 CMD /usr/sbin/apache2ctl -D FOREGROUND
