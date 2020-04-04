@@ -104,6 +104,33 @@ window.view = {
 			alert('Maximum String Size allowed is Seven, Minimum Size is One and size of str2 should be less than equal to size of str1');
 			return false;
 		}
+		else{
+			var i=0;
+			var j=0;
+			var k=0;
+			for(i=0 ; i < model.inputString1.length ; i++){
+					if( model.inputString1[i] == ' '){
+							j=1;
+					}
+			}
+			for(i=0; i < model.inputString2.length ; i++){
+					if(model.inputString2[i]== ' '){
+							k=1;
+					}
+			}
+			if(j==1 && k==1){
+				alert("Input the strings with no spaces in it");
+				return false;
+			}
+			else if(j==1 && k==0){
+				alert("Input the string str1 with no spaces in it");
+				return false;
+			}
+			else if(j==0 && k==1){
+				alert("Input the string str2 with no spaces in it");
+				return false;
+			}
+		}
 		this.changePropertyOfElements();
 		this.resetStrings();
 		this.resetTable();

@@ -6,7 +6,7 @@
 window.model = {
 	inputNumber: 0, //user input text field.
 }
-
+var x;
 window.view = {
 	currentSiblingElement: new Object(), // Object value of current sibling.
 	nextSiblingElement: new Object(), // Object value of next sibling.
@@ -24,10 +24,20 @@ window.view = {
 		this.addClickEvent('radioBtn5Id', function() { view.setValue('textFieldId', this.value) });
 		this.addClickEvent('radioBtn6Id', function() { view.setValue('textFieldId', this.value) });
 		this.addClickEvent('radioBtn7Id', function() { view.setValue('textFieldId', this.value) });
+		this.addClickEvent('radioBtn1Id', function() { view.setValu('radioBtn1Id') });
+		this.addClickEvent('radioBtn2Id', function() { view.setValu('radioBtn2Id') });
+		this.addClickEvent('radioBtn3Id', function() { view.setValu('radioBtn3Id') });
+		this.addClickEvent('radioBtn4Id', function() { view.setValu('radioBtn4Id') });
+		this.addClickEvent('radioBtn5Id', function() { view.setValu('radioBtn5Id') });
+		this.addClickEvent('radioBtn6Id', function() { view.setValu('radioBtn6Id') });
+		this.addClickEvent('radioBtn7Id', function() { view.setValu('radioBtn7Id') });
 		this.addClickEvent('submitBtnId', function() { view.validationInput() });
 		this.addClickEvent('startBtnId', function() { view.startStepExecution() });
 		this.addClickEvent('nextBtnId', function() { view.showDayOfWeek() });
 		this.addClickEvent('resetBtnId', function() { view.resetButtonSwitch() });	
+	},
+	setValu: function (id){
+		x=document.getElementById(id).value;	
 	},
 	// setInnerHtml: set innerText to a element.
  	setInnerHtml: function (id, innerHTML) {
@@ -131,15 +141,23 @@ window.view = {
 	then make submit button disable and make start button enable. */
 	validationInput: function () {
 		var textFieldValue = this.getValue('textFieldId');
-		if (textFieldValue === '' || isNaN(textFieldValue)) {
-			alert('Enter Numeric Values Only');
+		if (textFieldValue === '' || isNaN(textFieldValue)){
+				alert('Enter Numeric Values Only');
+				return false;
+		}
+		else if( textFieldValue != x){
+			alert("enter the value same in the text box as the option selected in the radio buttons");
 			return false;
-		} 
+		}
+		else if(Number(textFieldValue) <= 0 || Number(textFieldValue) > 7){
+			alert("Enter the numbers in the interval [1,7]");
+			return false;
+		}
 		else {
 			this.changePropertyOfElements();
 			model.inputNumber = Number(textFieldValue);
 			this.setInnerHtml('idOfDay', model.inputNumber);
-		}		
+		}   	 
 	},
 	// changePropertyOfElements: changes property of elemants with enableElement, disableElement and changeClass.
 	changePropertyOfElements: function () {

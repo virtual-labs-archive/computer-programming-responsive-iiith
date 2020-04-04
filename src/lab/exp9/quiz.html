@@ -20,7 +20,14 @@
         body{
           background-color: #f4f4f4;
         }
-      </style>  
+      </style>
+      <script>
+          function myFunction(id){
+            id+="1";
+            var x=document.getElementById(id);
+            x.checked=true; 
+          }
+      </script>  
   </head>
   <body>
 
@@ -68,14 +75,14 @@
          printf(" * ");
     }
     </pre>
-<input name="Q1" type="radio" value="1">a. n<br>
-<input name="Q1" type="radio" value="2">b. n^2<br>
-<input name="Q1" type="radio" value="3">c. n(n-1)/2<br>
-<input name="Q1" type="radio" value="4">d. n(n+1)/2<br>
+<input name="Q1" type="radio" value="1" id="Q1a1"><span onclick="myFunction(id)" id="Q1a">a. n</span><br>
+<input name="Q1" type="radio" value="2" id="Q1b1"><span onclick="myFunction(id)" id="Q1b" >b. n^2</span><br>
+<input name="Q1" type="radio" value="3" id="Q1c1"><span onclick="myFunction(id)" id="Q1c">c. n(n-1)/2</span><br>
+<input name="Q1" type="radio" value="4" id="Q1d1"><span onclick="myFunction(id)" id="Q1d">d. n(n+1)/2</span>><br>
 <br>
 <li><b>For every recursive solution, there is a corresponding iterative solution</b></li>
-<input name="Q2" type="radio" value="1">a. True<br>
-<input name="Q2" type="radio" value="2">b. False<br>
+<input name="Q2" type="radio" value="1" id="Q2a1"><span onclick="myFunction(id)" id="Q2a">a. True</span><br>
+<input name="Q2" type="radio" value="2" id="Q2b1"><span onclick="myFunction(id)" id="Q2b">b. False</span><br>
 <br>
 <li><b>What will be the ouptut of the following function call: fun2(20); where fun2 is defined as: </b> </li>
 <pre class="prettyprint lang-c">
@@ -88,10 +95,10 @@
       printf("%d ", n);
     }
     </pre>
-<input name="Q3" type="radio" value="1">a. 20 40 60 80 60 40 20<br>
-<input name="Q3" type="radio" value="2">b. 80 60 40 20<br>
-<input name="Q3" type="radio" value="3">c. 20 40 60 80 80 60 40 20<br>
-<input name="Q3" type="radio" value="4">d. 20 40 60 80<br>
+<input name="Q3" type="radio" value="1" id="Q3a1"><span onclick="myFunction(id)" id="Q3a">a. 20 40 60 80 60 40 20</span><br>
+<input name="Q3" type="radio" value="2" id="Q3b1"><span onclick="myFunction(id)" id="Q3b">b. 80 60 40 20</span><br>
+<input name="Q3" type="radio" value="3" id="Q3c1"><span onclick="myFunction(id)" id="Q3c">c. 20 40 60 80 80 60 40 20</span><br>
+<input name="Q3" type="radio" value="4" id="Q3d1"><span onclick="myFunction(id)" id="Q3d">d. 20 40 60 80</span><br>
 <br>
 <li><b>What will be the ouptut of the following function call: fun3(100); where fun3 is defined as: </b> </li>
 <pre class="prettyprint lang-c">
@@ -103,10 +110,10 @@
          return 1 + fun1(n/2);
     }
     </pre>
-<input name="Q4" type="radio" value="1">a. 6<br>
-<input name="Q4" type="radio" value="2">b. 7<br>
-<input name="Q4" type="radio" value="3">c. 5<br>
-<input name="Q4" type="radio" value="4">d. 4<br>
+<input name="Q4" type="radio" value="1" id="Q4a1"><span onclick="myFunction(id)" id="Q4a">a. 6</span><br>
+<input name="Q4" type="radio" value="2" id="Q4b1"><span onclick="myFunction(id)" id="Q4b">b. 7</span><br>
+<input name="Q4" type="radio" value="3" id="Q4c1"><span onclick="myFunction(id)" id="Q4c">c. 5</span><br>
+<input name="Q4" type="radio" value="4" id="Q4d1"><span onclick="myFunction(id)" id="Q4d">d. 4</span><br>
 <br>
 <li><b>What will be the ouptut of the following function call: fun4(4,3); where fun4 is defined as: </b> </li>
 <pre class="prettyprint lang-c">
@@ -118,10 +125,10 @@
         return fun1(x - 1,  x + y);
     }
     </pre>
-<input name="Q5" type="radio" value="1">a. 13<br>
-<input name="Q5" type="radio" value="2">b. 14<br>
-<input name="Q5" type="radio" value="3">c. 3<br>
-<input name="Q5" type="radio" value="4">d. 7<br>
+<input name="Q5" type="radio" value="1" id="Q5a1"><span onclick="myFunction(id)" id="Q5a">a. 13</span><br>
+<input name="Q5" type="radio" value="2" id="Q5b1"><span onclick="myFunction(id)" id="Q5b">b. 14</span><br>
+<input name="Q5" type="radio" value="3" id="Q5c1"><span onclick="myFunction(id)" id="Q5c">c. 3</span><br>
+<input name="Q5" type="radio" value="4" id="Q5d1"><span onclick="myFunction(id)" id="Q5d">d. 7</span><br>
 <br>
 <li><b>A recursive function must necessarily make a call to </b> <input name="fib1" type="text"/> </li>
 <li><b>A <input name="fib2" type="text"/> is required so that there is no infinite recursive calling of the same function.</b></li><br><br/>

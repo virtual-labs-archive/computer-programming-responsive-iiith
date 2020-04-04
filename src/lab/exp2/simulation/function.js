@@ -141,10 +141,8 @@ window.view = {
 		}
 		if ( a !== '1')
 			alert('Incorrect value of input variables(arguments). Calculating the area of a square only requires the length of the side of the square. Try again.')
-		else if ( b !== 'float' )
-			alert('Incorrect datatype of input variables(arguments). The value of the side of a square need not be an integer. Try again.')
-		else if ( c !== 'float' )
-			alert('Incorrect datatype for return type. The value of the area of a square need not be an integer. Try again.')
+		else if( b != 'int' && c == 'int')
+			alert('Incorrect data types');
 		else if ( d !== 'a*a' )
 			alert('Incorrect formula for calculating the area of a square. Try again.')
 		else
@@ -179,10 +177,8 @@ window.view = {
 		}
 		if ( a !== '2')
 			alert('Incorrect value of input variables(arguments). Calculating the area of a rectangle requires the length of the two different parallel sides of the rectangle. Try again.')
-		else if ( b !== 'float' )
-			alert('Incorrect datatype of input variables(arguments). The value of the sides of a rectangle need not be integers. Try again.')
-		else if ( c !== 'float' )
-			alert('Incorrect datatype for return type. The value of the area of a rectangle need not be an integer. Try again.')
+		else if( b != 'int' && c == 'int')
+			alert('Incorrect data types');
 		else if ( d !== 'a*b' )
 			alert('Incorrect formula for calculating the area of a rectangle. Try again.')
 		else
@@ -217,10 +213,8 @@ window.view = {
 		}
 		if ( a !== '1')
 			alert('Incorrect value of input variables(arguments). Calculating the area of an equilateral triangle only requires the length of one of the sides of the triangle. Try again.')
-		else if ( b !== 'float' )
-			alert('Incorrect datatype of input variables(arguments). The value of the side of an equilateral triangle need not be an integer. Try again.')
-		else if ( c !== 'float' )
-			alert('Incorrect datatype for return type. The value of the area of an equilateral triangle need not be an integer. Try again.')
+		else if( b != 'int' && c == 'int')
+			alert('Incorrect data types');
 		else if ( d !== 'correct' )
 			alert('Incorrect formula for calculating the area of an equilateral triangle. Try again.')
 		else
@@ -255,10 +249,8 @@ window.view = {
 		}
 		if ( a !== '1')
 			alert('Incorrect value of input variables(arguments). Calculating the area of circle only requires the radius. Try again.')
-		else if ( b !== 'float' )
-			alert('Incorrect datatype of input variables(arguments). The value of the radius of the circle need not be an integer. Try again.')
-		else if ( c !== 'float' )
-			alert('Incorrect datatype for return type. The value of the area of the circle need not be an integer. Try again.')
+		else if( b != 'int' && c == 'int')
+			alert('Incorrect data types');
 		else if ( d !== 'pi*a*a' )
 			alert('Incorrect formula for calculating the area of the circle. Try again.')
 		else
