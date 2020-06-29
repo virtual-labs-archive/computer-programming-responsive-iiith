@@ -233,9 +233,9 @@ window.view = {
  		//this.getCanvas();
  		this.canvasContext.beginPath();
  		this.canvasContext.fillStyle = '#C2D995';
- 		this.canvasContext.fillRect (75, 75, 200, 250);
+ 		this.canvasContext.fillRect (50, 50, 200, 250);
  		this.canvasContext.strokeStyle = '#000000';
- 		this.canvasContext.rect(75, 75, 200, 250);
+ 		this.canvasContext.rect(50, 50, 200, 250);
  		this.canvasContext.stroke();	
  	},
  	// drawCircle: draws circle on canvasContext according given x and y coordinates.
