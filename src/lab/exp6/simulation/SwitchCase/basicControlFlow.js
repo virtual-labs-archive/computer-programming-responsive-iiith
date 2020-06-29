@@ -222,7 +222,7 @@ window.view = {
 	 	if (this.currentSiblingElement.className === 'break redClass')
 			this.codeExecutionWithColourAndId('closeBrc1Id');
 		if (1 <= model.inputNumber && model.inputNumber <= 6) {
-	 		if (this.nextSiblingElement.id === 'holidayId')
+	 		if (this.nextSiblingElement.id === 'holidayId' || this.nextSiblingElement.id === 'holiday2Id')
 				this.codeExecutionWithColourAndId('elseIfId');
 	 		else if (this.nextSiblingElement.id === 'workingdayId') {
 	 			this.codeExecutionWithColour();
@@ -232,7 +232,10 @@ window.view = {
 	 	}
 		if ( model.inputNumber > 7 ) {
 	 		if (this.nextSiblingElement.id === 'holidayId')
+				this.codeExecutionWithColourAndId('If2Id');
+			else if (this.nextSiblingElement.id === 'holiday2Id')
 				this.codeExecutionWithColourAndId('elseIfId');
+	 		
 	 		else if (this.nextSiblingElement.id === 'workingdayId') 
 				this.codeExecutionWithColourAndId('elseId');
 	 		else if (this.nextSiblingElement.id === 'invalidIPId') {
@@ -240,6 +243,14 @@ window.view = {
 				this.setInnerHtml('outputDayId', 'INVALID INPUT');
 	 		}
 	 	}
+	 	if (model.inputNumber === 6) {
+	 		if (this.nextSiblingElement.id === 'holidayId') {
+				this.codeExecutionWithColour();
+				this.changeOpacity('holidayImage');
+				this.setInnerHtml('outputDayId', 'HOLIDAY');
+	 		}
+	 	}
+		
 	 	if (model.inputNumber === 7) {
 	 		if (this.nextSiblingElement.id === 'holidayId') {
 				this.codeExecutionWithColour();
@@ -249,7 +260,7 @@ window.view = {
 	 	}
 		if (this.nextSiblingElement.id === 'ifId')
 			this.codeExecutionWithColour();
-		if (this.nextSiblingElement.id === 'closeBrc2Id' || this.nextSiblingElement.id === 'elseId' || this.nextSiblingElement.id === 'elseIfId') {
+		if (this.nextSiblingElement.id === 'closeBrc2Id' || this.nextSiblingElement.id === 'elseId' || this.nextSiblingElement.id === 'elseIfId'||this.nextSiblingElement.id === 'If2Id') {
 			this.codeExecutionWithColourAndId('closeBrc2Id');
 	 	}
 	},
