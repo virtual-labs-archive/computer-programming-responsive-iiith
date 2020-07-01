@@ -1,511 +1,568 @@
-*{padding: 0 ; margin: 0 ;}
+* {
+  padding: 0;
+  margin: 0;
+}
 
 body {
-	min-height: 564px;
-	min-width: 1100px;
-    text-align: center;
-    height: 100%;
-    font-size: 100%;
-    position:absolute; top: 0%; bottom: 0%; right: 0%; left: 0%;
+  min-height: 564px;
+  min-width: 1100px;
+  text-align: center;
+  height: 100%;
+  font-size: 100%;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
 }
 
 #header {
-	position: absolute;
-	top: 0;bottom: 0;left: 0;right: 0;
-	width: 100%;
-	height: 6%;
-	font-size: 4vh;
-	padding-top: 1.3vmin;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 6%;
+  font-size: 4vh;
+  padding-top: 1.3vmin;
 }
 
-.button, .buttonDisable {
-	position: relative;
-	padding: 0.5em 1em;
-  	cursor: pointer;
-  	border-radius: 0.2em; 
-  	overflow: visible;
-  	outline: none;
-	white-space: nowrap;
-  	-moz-background-clip: padding; 
-    background-clip: padding-box;
-	border: 1px solid #d4d4d4;
-    margin: 0;
-    text-align: center;
-	zoom: 1;
-    *display: inline;
-    text-decoration: none;
-    display: inline-block;
+.button,
+.buttonDisable {
+  position: relative;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 0.2em;
+  overflow: visible;
+  outline: none;
+  white-space: nowrap;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  border: 1px solid #d4d4d4;
+  margin: 0;
+  text-align: center;
+  zoom: 1;
+  *display: inline;
+  text-decoration: none;
+  display: inline-block;
 }
 
-#header, .button {
-	text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
-	border-color: #3072b3;
-    border-bottom-color: #2a65a0;
-	color: #fff;
-	background-color: #3c8dde;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
-    background-image: -moz-linear-gradient(#599bdc, #3072b3);
-    background-image: -o-linear-gradient(#599bdc, #3072b3);
-    background-image: linear-gradient(#599bdc, #3072b3);
+#header,
+.button {
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+  border-color: #3072b3;
+  border-bottom-color: #2a65a0;
+  color: #fff;
+  background-color: #3c8dde;
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    from(#599bdc),
+    to(#3072b3)
+  );
+  background-image: -moz-linear-gradient(#599bdc, #3072b3);
+  background-image: -o-linear-gradient(#599bdc, #3072b3);
+  background-image: linear-gradient(#599bdc, #3072b3);
 }
 
 .buttonDisable {
-   	text-shadow: 1px 1px 0 #fff;
-   	color: #999999;
-    background-color: #ececec;
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
-    background-image: -moz-linear-gradient(#f4f4f4, #ececec);
-    background-image: -ms-linear-gradient(#f4f4f4, #ececec);
-    background-image: -o-linear-gradient(#f4f4f4, #ececec);
-    background-image: linear-gradient(#f4f4f4, #ececec);
+  text-shadow: 1px 1px 0 #fff;
+  color: #999999;
+  background-color: #ececec;
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    from(#f4f4f4),
+    to(#ececec)
+  );
+  background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+  background-image: -ms-linear-gradient(#f4f4f4, #ececec);
+  background-image: -o-linear-gradient(#f4f4f4, #ececec);
+  background-image: linear-gradient(#f4f4f4, #ececec);
 }
 
-.buttonDisable::-moz-focus-inner, .button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
+.buttonDisable::-moz-focus-inner,
+.button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
 }
 
 .vlabsIcon {
-    position: absolute;
-    top: 1.2%;
-    left: 8%;
-    width: 15vh;
-    height: 6.7vh;
-    background-image: url('iiitLogo.png');
-    background-repeat: no-repeat;
-    background-color: transparent;
+  position: absolute;
+  top: 1.2%;
+  left: 8%;
+  width: 15vh;
+  height: 6.7vh;
+  background-image: url("iiitLogo.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
 }
 
-.inputDivision, .outputDivision, .executionDivision {
-    top: 11%;
-    height: 87%; 
-    position: absolute;
-    border: 1px solid #CCC;
-    border-radius: 5px;
-    color: #464646;
+.inputDivision,
+.outputDivision,
+.executionDivision {
+  top: 11%;
+  height: 87%;
+  position: absolute;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #464646;
 }
 
 .executionDivision {
-    left: 25%;
-    width: 30%;
-    overflow-x: auto;
+  left: 25%;
+  width: 30%;
+  overflow-x: auto;
 }
 
 .inputDivision {
-    left: 3%;
-    width: 19%;
+  left: 3%;
+  width: 19%;
 }
 
 .outputDivision {
-    left: 58%;
-    width: 39%;
+  left: 58%;
+  width: 39%;
 }
 
-.inputDivisionTitle, .outputDivisionTitle, .executionDivisionTitle {
-    text-align: center;
-    color: #2a65a0;
-    top: 0%;
-    height: 9%;
-    text-decoration: none;
-    text-align: center;
-    text-shadow: 1px 1px 0 #fff;
-    width: 100%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    background-color: #F8F8F8;
+.inputDivisionTitle,
+.outputDivisionTitle,
+.executionDivisionTitle {
+  text-align: center;
+  color: #2a65a0;
+  top: 0%;
+  height: 9%;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 1px 1px 0 #fff;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #f8f8f8;
 }
 
-.initializePic, .executionPic, .outputPic {
-	margin-left: 10%;
-	float: left;
-	height: 100%;
-    background-repeat: no-repeat;
-    background-color: transparent;
+.initializePic,
+.executionPic,
+.outputPic {
+  margin-left: 10%;
+  float: left;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
 }
 
 .initializePic {
-	margin-top: 1.5vh;
-	width: 20%;
-	background-image: url('initIcon.png');
+  margin-top: 1.5vh;
+  width: 20%;
+  background-image: url("initIcon.png");
 }
 
 .initializeText {
-	width: 60%;
-	float: left;
-	height: 100%; 
+  width: 60%;
+  float: left;
+  height: 100%;
 }
 
 .executionPic {
-	margin-top: 1vh;
-	width: 25%;
-	background-image: url('pageIcon.png');
+  margin-top: 1vh;
+  width: 25%;
+  background-image: url("pageIcon.png");
 }
 
 .executionText {
-	text-align: left;
-	width: 50%;
-	float: left;
-	height: 100%;
+  text-align: left;
+  width: 50%;
+  float: left;
+  height: 100%;
 }
 
 .outputPic {
-	margin-top: 1.6vh;
-	width: 25%;
-	background-image: url('outputIcon.png');
+  margin-top: 1.6vh;
+  width: 25%;
+  background-image: url("outputIcon.png");
 }
 
 .outputText {
-	text-align: left;
-	width: 50%;
-	float: left;
-	height: 100%;
+  text-align: left;
+  width: 50%;
+  float: left;
+  height: 100%;
 }
 
 .inputDivisionBody {
-	position: absolute;
-	top: 9%;
-	left: 0%;
-	width: 100%;
-	height: 91%;
-	text-align: center;
-	font-size: 1em;
-	border-top: 1px solid #CCC;
-    overflow: auto;
+  position: absolute;
+  top: 9%;
+  left: 0%;
+  width: 100%;
+  height: 91%;
+  text-align: center;
+  font-size: 1em;
+  border-top: 1px solid #ccc;
+  overflow: auto;
 }
 
 .questionBlock {
-	width: 100%;
-	height: 100%;
-	float: left;
-	min-width: 200px;
+  width: 100%;
+  height: 100%;
+  float: left;
+  min-width: 200px;
 }
 
-.questionText, .questionTextRich {
-    float: left;
-    text-align: left;
-    width: 95%;
-    min-width: 70px;
-    margin-left: 5%;
-    margin-top: 20px; 
+.questionText,
+.questionTextRich {
+  float: left;
+  text-align: left;
+  width: 95%;
+  min-width: 70px;
+  margin-left: 5%;
+  margin-top: 20px;
 }
 
-.programInitialization, .computeArea, .programTail{
-    padding: 5px;
-    float: left;
-    text-align: left;
-    width: 76%;
-    font-size: 17px;
-    margin-left: 10%;
-    margin-top: 10px; 
-    border:1px solid #CCC;
+.programInitialization,
+.computeArea,
+.programTail {
+  padding: 5px;
+  float: left;
+  text-align: left;
+  width: 76%;
+  font-size: 17px;
+  margin-left: 10%;
+  margin-top: 10px;
+  border: 1px solid #ccc;
 }
 
 .programInitialization {
-   height: 8%;
+  height: 8%;
 }
 
 .computeArea {
-    height: 4%;
+  height: 4%;
 }
 
 .programTail {
-    height: 15%;
+  height: 15%;
 }
 
 .textArea {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 15px;
-    float: left;
-    margin-left: 20%;
-    height: 26px;
-    width: 70%;
-    min-width: 100px;
-    border: 1px solid #CCC;
-    outline: none;
-    border-radius: 3px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 15px;
+  float: left;
+  margin-left: 20%;
+  height: 26px;
+  width: 70%;
+  min-width: 100px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 3px;
 }
 
-.imageSquare, .imageRectangle, .imageTriangle, .imageCircle {
-    position: absolute;
-    height: 49%;
-    width: 49%;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-position:center;
-    cursor: pointer;
-    opacity: 0.3;
+.imageSquare,
+.imageRectangle,
+.imageTriangle,
+.imageCircle {
+  position: absolute;
+  height: 49%;
+  width: 49%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: center;
+  cursor: pointer;
+  opacity: 0.3;
 }
 
-.imageSquare:hover, .imageRectangle:hover, .imageTriangle:hover, .imageCircle:hover {
-    opacity: 1;
+.imageSquare:hover,
+.imageRectangle:hover,
+.imageTriangle:hover,
+.imageCircle:hover {
+  opacity: 1;
 }
 
 .imageSquare {
-    left: 0%;
-    top: 0%;
-    background-image: url('square.jpg');
-    border: 1px dashed black;
+  left: 0%;
+  top: 0%;
+  background-image: url("square.jpg");
+  border: 1px dashed black;
 }
 
 .imageRectangle {
-    left: 50%;
-    top: 0%;
-    background-image: url('rectangle.jpg');
-    border: 1px dashed black;
+  left: 50%;
+  top: 0%;
+  background-image: url("rectangle.jpg");
+  border: 1px dashed black;
 }
 
 .imageTriangle {
-    left: 0%;
-    top: 50%;
-    background-image: url('triangle.jpg');
-    border: 1px dashed black;
+  left: 0%;
+  top: 50%;
+  background-image: url("triangle.jpg");
+  border: 1px dashed black;
 }
 
 .imageCircle {
-    left: 50%;
-    top: 50%;
-    background-image: url('circle.jpg');
-    border: 1px dashed black;
+  left: 50%;
+  top: 50%;
+  background-image: url("circle.jpg");
+  border: 1px dashed black;
 }
 
 .imageComplex {
-    left: 0%;
-    top: 0%;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    background-image: url('figure.jpg');
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: url("figure.jpg");
 }
 
 .disabledImage {
-	pointer-events: none;
+  pointer-events: none;
 }
 
 .tick {
-	position: absolute;
-	left: 6px;
-	top: 6px;
-	width: 41px;
-	height: 41px;
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  width: 41px;
+  height: 41px;
 }
 
-.functionForSquare, .functionForRectangle, .functionForTriangle, .functionForCircle {
-    font-size: 17px;
-    position: absolute;
-    left: 0%;
-    width: 100%;
+.functionForSquare,
+.functionForRectangle,
+.functionForTriangle,
+.functionForCircle {
+  font-size: 17px;
+  position: absolute;
+  left: 0%;
+  width: 100%;
 }
 
-.functionForSquare, .functionForRectangle, .functionForTriangle{
-    border-bottom: 1px dashed #CCC;
+.functionForSquare,
+.functionForRectangle,
+.functionForTriangle {
+  border-bottom: 1px dashed #ccc;
 }
 
 .textColor {
-	color: #727272;
-	margin-right: 5%;
-	opacity: 0.5;
+  color: #727272;
+  margin-right: 5%;
+  opacity: 0.5;
 }
-
 
 .okButton {
-	font-size: 13px;
-	min-width: 150px;
-	float: left;
-	margin-top: 20px;
-    margin-bottom: 40px;
-	margin-left: 10%;
-    height: 30px;
-    width: 80%;
+  font-size: 13px;
+  min-width: 150px;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-left: 10%;
+  height: 30px;
+  width: 80%;
 }
 
-.radioButtonHolder {	
-    width: 100%;
-    float: left;
-    text-align: left;
+.radioButtonHolder {
+  width: 100%;
+  float: left;
+  text-align: left;
 }
 
 .radiobutton {
-	margin-left: 7%;
-	float: left;
-    cursor: pointer;
+  margin-left: 7%;
+  float: left;
+  cursor: pointer;
 }
 
 .radioText {
- 	float: left;
-	text-align: left;
+  float: left;
+  text-align: left;
 }
 
 .resultDisplay {
-    position: absolute;
-    top: 9%;
-    left: 0%;
-    width: 100%;
-    height: 90%;
-    border-top: 1px solid #CCC;
+  position: absolute;
+  top: 9%;
+  left: 0%;
+  width: 100%;
+  height: 90%;
+  border-top: 1px solid #ccc;
 }
 
 .imageBlock {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
 }
 
 .stepExecutionDisplay {
-    padding-left: 2%;
-    position: absolute;
-    top: 9%;
-    left: 0%;
-    width: 98%;
-    height: 90%;
-    text-align: center;
-    border-top: 1px solid #CCC;
+  padding-left: 2%;
+  position: absolute;
+  top: 9%;
+  left: 0%;
+  width: 98%;
+  height: 90%;
+  text-align: center;
+  border-top: 1px solid #ccc;
 }
 
 .hide {
-	display: none;
+  display: none;
 }
 
 .show {
-    display: block;
+  display: block;
 }
 
-#functionSquare, #functionRectangle, #functionCircle, #functionTriangle {
-	margin-left: 30%;
-	text-align: left;
+#functionSquare,
+#functionRectangle,
+#functionCircle,
+#functionTriangle {
+  margin-left: 30%;
+  text-align: left;
 }
 
 .instruction {
-    float: left;
-    font-size: 1em;
-    margin-top: 15px;
-    text-align: left;
-    width: 90%;
-    margin-left: 5%;
-    color: #464646;
+  float: left;
+  font-size: 1em;
+  margin-top: 15px;
+  text-align: left;
+  width: 90%;
+  margin-left: 5%;
+  color: #464646;
 }
 
 @media only screen and (min-width: 1000px) {
-
-.inputDivisionTitle, .outputDivisionTitle, .executionDivisionTitle {
+  .inputDivisionTitle,
+  .outputDivisionTitle,
+  .executionDivisionTitle {
     font-size: 1.3em;
-}
+  }
 
-.initializeText, .executionText, .outputText {
-    padding-top: 1.8vmin; 
-}
+  .initializeText,
+  .executionText,
+  .outputText {
+    padding-top: 1.8vmin;
+  }
 
-.functionForSquare, .functionForRectangle, .functionForTriangle, .functionForCircle {
+  .functionForSquare,
+  .functionForRectangle,
+  .functionForTriangle,
+  .functionForCircle {
     height: 24.9%;
     overflow: auto;
-}
+  }
 
-.functionForSquare{
+  .functionForSquare {
     top: 0%;
-}
+  }
 
-.functionForRectangle {
+  .functionForRectangle {
     top: 25%;
-}
+  }
 
-.functionForTriangle {
+  .functionForTriangle {
     top: 50%;
-}
+  }
 
-.functionForCircle {
+  .functionForCircle {
     top: 75%;
-}
+  }
 
-.radioButtonHolder {    
+  .radioButtonHolder {
     height: 24px;
-} 
+  }
 
-.radiobutton {
+  .radiobutton {
     width: 12%;
     height: 60%;
-}
+  }
 
-.radioText {
+  .radioText {
     font-size: 1em;
     width: 68%;
     height: 55%;
-}
+  }
 
-.questionText {
+  .questionText {
     height: 5%;
-    min-height: 30px; 
+    min-height: 30px;
     font-size: 1em;
-}
+  }
 
-.questionTextRich {
+  .questionTextRich {
     height: 9%;
     min-height: 60px;
     font-size: 1em;
+  }
 }
 
-}
-
-@media only screen and (max-width: 999px) and ( min-width: 600px) {
-
-.inputDivisionTitle, .outputDivisionTitle, .executionDivisionTitle {
+@media only screen and (max-width: 999px) and (min-width: 600px) {
+  .inputDivisionTitle,
+  .outputDivisionTitle,
+  .executionDivisionTitle {
     font-size: 1.2em;
-}
+  }
 
-.stepExecutionDisplay {
+  .stepExecutionDisplay {
     line-height: 130%;
     font-size: 1.2em;
-}
+  }
 
-.initializeText, .executionText, .outputText {
-    padding-top: 1.9vmin; 
-}
+  .initializeText,
+  .executionText,
+  .outputText {
+    padding-top: 1.9vmin;
+  }
 
-.functionForSquare, .functionForRectangle, .functionForTriangle, .functionForCircle {
+  .functionForSquare,
+  .functionForRectangle,
+  .functionForTriangle,
+  .functionForCircle {
     height: 160px;
-}
+  }
 
-.functionForSquare{
+  .functionForSquare {
     top: 0px;
-}
+  }
 
-.functionForRectangle {
+  .functionForRectangle {
     top: 164px;
-}
+  }
 
-.functionForTriangle {
+  .functionForTriangle {
     top: 324px;
-}
+  }
 
-.functionForCircle {
+  .functionForCircle {
     top: 486px;
-}
+  }
 
-.radioButtonHolder {    
+  .radioButtonHolder {
     height: 40px;
-} 
+  }
 
-.radiobutton {
+  .radiobutton {
     width: 25%;
     height: 57%;
-}
+  }
 
-.radioText {
+  .radioText {
     font-size: 1.2em;
     width: 60%;
-    height: 60%; 
-}
+    height: 60%;
+  }
 
-.questionText {
-    height: 15%; 
+  .questionText {
+    height: 15%;
     font-size: 1.2em;
-}
+  }
 
-.questionTextRich {
+  .questionTextRich {
     height: 20%;
     font-size: 1.2em;
-}
-
+  }
 }
