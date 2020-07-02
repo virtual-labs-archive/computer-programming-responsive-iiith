@@ -118,11 +118,13 @@ window.view = {
 		document.getElementById('col').value = ''
 	},
 	generateFirstMatrixElements: function() {
-		var size = this.rowsA * this.colsA
-		for ( i = 0 ; i < size ; i++)
-		{
-			 var random = Math.floor(Math.random() * (size - this.colsA)) + this.colsA;
-			this.matrixA.push(random)
+		  var size = this.rowsA * this.colsA;
+    var j = 1;
+    for (i = 0; i < size; i++) {
+      var random = j;
+
+      this.matrixA.push(random);
+      j = j + 1;
 		}
 		this.resetRowsAndCols()
 		this.disableButton('row')
@@ -134,11 +136,13 @@ window.view = {
 		this.matrixCount ++
 	},
 	generateSecondMatrixElements: function() {
-		var size = this.rowsB * this.colsB
-		for ( i = 0 ; i < size ; i++)
-		{
-			 var random = Math.floor(Math.random() * (size - this.colsA)) + this.colsA;
-			this.matrixB.push(random)
+		 var size = this.rowsB * this.colsB;
+    var j = 1;
+    for (i = 0; i < size; i++) {
+      var random = j;
+
+      this.matrixB.push(random);
+      j = j + 1;
 		}
 		this.disableButton('generateB')
 		this.changeClass( 'generateB', 'buttonDisable GenerateValueButton show' )
