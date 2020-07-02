@@ -19,8 +19,8 @@ window.view = {
 		this.addClickEvent('imageSquare', function() { view.showSquareInputs() })
 		this.addTouchEvent('imageSquare', function() { view.showSquareInputs() })
 		this.addClickEvent('okSquare', function() { view.validateSquareInputs() })
-		this.addClickEvent('imageRectangle', function() { view.showRectangleInputs() })
-		this.addClickEvent('okRectangle', function() { view.validateRectangleInputs() })
+		this.addClickEvent('imageRightangledtriangle', function() { view.showRightangledtriangleInputs() })
+		this.addClickEvent('okRightangledtriangle', function() { view.validateRightangledtriangleInputs() })
 		this.addClickEvent('imageTriangle', function() { view.showTriangleInputs() })
 		this.addClickEvent('okTriangle', function() { view.validateTriangleInputs() })
 		this.addClickEvent('imageCircle', function() { view.showCircleInputs() })
@@ -41,23 +41,23 @@ window.view = {
 		document.getElementById(id2).style.opacity = '1'
 	},
 	showSquareInputs: function() {
-		this.hideQuestionBlock('questionRectangle', 'imageRectangle')
+		this.hideQuestionBlock('questionRightangledtriangle', 'imageRightangledtriangle')
 		this.hideQuestionBlock('questionCircle', 'imageCircle')
 		this.hideQuestionBlock('questionTriangle', 'imageTriangle')
 		this.showQuestionBlock('questionSquare', 'imageSquare')
         this.hideInstructions()
 		this.unCheckRadioButtons()
 	},
-	showRectangleInputs: function() {
+	showRightangledtriangleInputs: function() {
 		this.hideQuestionBlock('questionSquare', 'imageSquare')
 		this.hideQuestionBlock('questionCircle', 'imageCircle')
 		this.hideQuestionBlock('questionTriangle', 'imageTriangle')
-		this.showQuestionBlock('questionRectangle', 'imageRectangle')
+		this.showQuestionBlock('questionRightangledtriangle', 'imageRightangledtriangle')
         this.hideInstructions()
 		this.unCheckRadioButtons()
 	},
 	showTriangleInputs: function() {
-		this.hideQuestionBlock('questionRectangle', 'imageRectangle')
+		this.hideQuestionBlock('questionRightangledtriangle', 'imageRightangledtriangle')
 		this.hideQuestionBlock('questionSquare', 'imageSquare')
 		this.hideQuestionBlock('questionCircle', 'imageCircle')
 		this.showQuestionBlock('questionTriangle', 'imageTriangle')
@@ -66,19 +66,19 @@ window.view = {
 	},
 	showCircleInputs: function() {
 		this.hideQuestionBlock('questionSquare', 'imageSquare')
-		this.hideQuestionBlock('questionRectangle', 'imageRectangle')
+		this.hideQuestionBlock('questionRightangledtriangle', 'imageRightangledtriangle')
 		this.hideQuestionBlock('questionTriangle', 'imageTriangle')
 		this.showQuestionBlock('questionCircle', 'imageCircle')
         this.hideInstructions()
 		this.unCheckRadioButtons()
 	},
-	approveRectangleInputs: function() {
-		this.displayFunctionForRectangle()
+	approveRightangledtriangleInputs: function() {
+		this.displayFunctionForRightangledtriangle()
         this.showInstructions()
-		document.getElementById('questionRectangle').className = 'questionBlock hide'
-		document.getElementById('imageRectangle').className += ' disabledImage'
-		document.getElementById('tickRectangle').className = 'tick'
-		document.getElementById('imageRectangle').style.opacity = '0.3'
+		document.getElementById('questionRightangledtriangle').className = 'questionBlock hide'
+		document.getElementById('imageRightangledtriangle').className += ' disabledImage'
+		document.getElementById('tickRightangledtriangle').className = 'tick'
+		document.getElementById('imageRightangledtriangle').style.opacity = '0.3'
 		this.i ++
 		this.replaceDivs()
 	},
@@ -150,7 +150,7 @@ window.view = {
 		else
 			this.approveSquareInputs()
 	}, 
-	validateRectangleInputs: function() {
+	validateRightangledtriangleInputs: function() {
 		var options1, options2, options3, options4
 		var a, b, c, d
 		options1 = document.getElementsByName('radio_group5')
@@ -178,15 +178,15 @@ window.view = {
 			options4[i].checked = false
 		}
 		if ( a !== '2')
-			alert('Incorrect value of input variables(arguments). Calculating the area of a rectangle requires the length of the two different parallel sides of the rectangle. Try again.')
+			alert('Incorrect value of input variables(arguments). Calculating the area of a Rightangledtriangle requires the length base and height of the Rightangledtriangle. Try again.')
 		else if ( b !== 'float' )
-			alert('Incorrect datatype of input variables(arguments). The value of the sides of a rectangle need not be integers. Try again.')
+			alert('Incorrect datatype of input variables(arguments). The value of the sides of a Rightangledtriangle need not be integers. Try again.')
 		else if ( c !== 'float' )
-			alert('Incorrect datatype for return type. The value of the area of a rectangle need not be an integer. Try again.')
-		else if ( d !== 'a*b' )
-			alert('Incorrect formula for calculating the area of a rectangle. Try again.')
+			alert('Incorrect datatype for return type. The value of the area of a Rightangledtriangle need not be an integer. Try again.')
+		else if ( d !== '0.5*a*b' )
+			alert('Incorrect formula for calculating the area of a Rightangledtriangle. Try again.')
 		else
-			this.approveRectangleInputs()
+			this.approveRightangledtriangleInputs()
 	},
 	validateTriangleInputs: function() {
 		var options1, options2, options3, options4
@@ -267,8 +267,8 @@ window.view = {
 	displayFunctionForSquare: function() {
 		document.getElementById('functionSquare').innerHTML += 'float area_sq (float a)<br>{<br> &emsp; float area = a*a;<br>&emsp; return area;<br>}'
 	},
-	displayFunctionForRectangle: function() {
-		document.getElementById('functionRectangle').innerHTML += 'float area_rect (float a,float b)<br>{<br> &emsp; float area = a*b;<br> &emsp; return area;<br>}'
+	displayFunctionForRightangledtriangle: function() {
+		document.getElementById('functionRightangledtriangle').innerHTML += 'float area_rect (float a,float b)<br>{<br> &emsp; float area = 0.5*a*b;<br> &emsp; return area;<br>}'
 	},
 	displayFunctionForTriangle: function() {
 		document.getElementById('functionTriangle').innerHTML += 'float area_triangle (float a)<br>{<br>&emsp;float area = (sqrt(3)/4.0)*a*a;<br>&emsp;return area;<br>}'
@@ -318,8 +318,8 @@ window.view = {
 		alert( 'area from function call ' + String( i + 1 ) + ' ) : ' + functionCall + ' is ' + this.area )
 		this.correctInputs ++
 	},
-	area_rect: function( param, functionCall ) {
-		this.area = Number(param[0]) * Number(param[1])
+	area_Rightangledtriangle: function( param, functionCall ) {
+		this.area =  0.5 * Number(param[0]) * Number(param[1])
 		this.totalArea += this.area
 		alert( 'area from function call ' + String( i + 1 ) + ' ) : ' + functionCall + ' is ' + this.area )
 		this.correctInputs ++
@@ -329,15 +329,15 @@ window.view = {
 		document.getElementById('imageComplex').className = 'imageComplex hide'
 		document.getElementById('calculateArea').className = 'questionBlock hide'
 		document.getElementById('imageSquare').className = 'imageSquare'
-		document.getElementById('imageRectangle').className = 'imageRectangle'
+		document.getElementById('imageRightangledtriangle').className = 'imageRightangledtriangle'
 		document.getElementById('imageTriangle').className = 'imageTriangle'
 		document.getElementById('imageCircle').className = 'imageCircle'
 		document.getElementById('tickSquare').className = 'tick hide'
-		document.getElementById('tickRectangle').className = 'tick hide'
+		document.getElementById('tickRightangledtriangle').className = 'tick hide'
 		document.getElementById('tickCircle').className = 'tick hide'
 		document.getElementById('tickTriangle').className = 'tick hide'
 		document.getElementById('functionSquare').innerHTML = ''
-		document.getElementById('functionRectangle').innerHTML = ''
+		document.getElementById('functionRightangledtriangle').innerHTML = ''
 		document.getElementById('functionCircle').innerHTML = ''
 		document.getElementById('functionTriangle').innerHTML = ''
         document.getElementById('instructions').className = 'questionBlock'
@@ -366,8 +366,8 @@ window.view = {
 				else
 					alert( 'Incorrect function call at line ' + String( i + 1 ) )
 			}
-			else if ( parameter.length === 2 && functionCall === 'area_rect()' && isNaN(parameter[0]) === false && isNaN(parameter[1]) === false )
-				this.area_rect(parameter, parsedValue)
+			else if ( parameter.length === 2 && functionCall === 'area_Rightangledtriangle()' && isNaN(parameter[0]) === false && isNaN(parameter[1]) === false )
+				this.area_Rightangledtriangle(parameter, parsedValue)
 			else
 		 	alert( 'Incorrect function call at line ' + String( i + 1 ) )
 		}	
