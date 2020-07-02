@@ -158,8 +158,8 @@ window.view = {
 	},
 	// resetVariables: reset all variables to it's initial state. 
  	resetVariables: function () {
- 		model.valueOfX = 150;
-		model.valueOfY = 150;
+ 		model.valueOfX = null;
+		model.valueOfY = null;
 		this.currentSiblingElement = '';
 		this.nextSiblingElement = '';
  	},
@@ -178,8 +178,8 @@ window.view = {
  	},
  	// resetTextFieldValue: reset text field to their initial state.
  	resetTextFieldValue: function () {
- 		this.setValue('textFieldXId', 150);
- 		this.setValue('textFieldYId', 150);
+ 		this.setValue('textFieldXId', null);
+ 		this.setValue('textFieldYId', null);
  	},
  	// resetButtonAndTextField: reset button it's initial state and do text field enable.
  	resetButtonAndTextField: function () {
@@ -231,11 +231,13 @@ window.view = {
 	// drawFillRectangle: draws fill rectangle on canvasContext.
  	drawFillRectangle: function () {
  		//this.getCanvas();
+		var x1=this.getValue('textx1id');var x2=this.getValue('textx2id');var x3=this.getValue('textx3id');var x4=this.getValue('textx4id');
+		var y1=this.getValue('texty1id');var y2=this.getValue('texty2id');var y3=this.getValue('texty3id');var y4=this.getValue('texty4id');
  		this.canvasContext.beginPath();
  		this.canvasContext.fillStyle = '#C2D995';
- 		this.canvasContext.fillRect (75, 75, 200, 250);
+ 		this.canvasContext.fillRect (Number(x1), Number(y1), Number(x2)-Number(x1), Number(y4)-Number(y2));
  		this.canvasContext.strokeStyle = '#000000';
- 		this.canvasContext.rect(75, 75, 200, 250);
+ 		this.canvasContext.rect(Number(x1), Number(y1), Number(x2)-Number(x1), Number(y4)-Number(y2));
  		this.canvasContext.stroke();	
  	},
  	// drawCircle: draws circle on canvasContext according given x and y coordinates.
@@ -260,16 +262,18 @@ window.view = {
     	},
     	// displayFigures: display figures on canvasContext according given x and y coordinates.
     	displayFigures: function () {
+		var x1=this.getValue('textx1id');var x2=this.getValue('textx2id');var x3=this.getValue('textx3id');var x4=this.getValue('textx4id');
+		var y1=this.getValue('texty1id');var y2=this.getValue('texty2id');var y3=this.getValue('texty3id');var y4=this.getValue('texty4id');
     		this.drawDots();
     		this.drawFillRectangle();
-    		this.drawCircle(75, 75, '#000000');
-		this.drawCircle(275, 75, '#000000');
-		this.drawCircle(75, 325, '#000000');
-		this.drawCircle(275, 325, '#000000');
-		this.displayText('(x1, y1)', 65, 65); 
-		this.displayText('(x2, y2)', 265, 65);
-		this.displayText('(x3, y3)', 265, 345);
-		this.displayText('(x4, y4)', 75, 345);
+    		this.drawCircle(Number(x1), Number(y1), '#000000');
+		this.drawCircle(Number(x2), Number(y2), '#000000');
+		this.drawCircle(Number(x3), Number(y3), '#000000');
+		this.drawCircle(Number(x4), Number(y4), '#000000');
+		this.displayText('1', Number(x1), Number(y1)); 
+		this.displayText('2', Number(x2), Number(y2));
+		this.displayText('3', Number(x3), Number(y3));
+		this.displayText('4', Number(x4), Number(y4));
 		this.canvasContext.save();
     	},
 	/* validationInput: check validation of input that is given by user and if input value is valid 
@@ -277,6 +281,28 @@ window.view = {
 	validationInput: function () {
     		var valueOfX = this.getValue('textFieldXId');
     		var valueOfY = this.getValue('textFieldYId');
+		var x1=this.getValue('textx1id');var x2=this.getValue('textx2id');var x3=this.getValue('textx3id');var x4=this.getValue('textx4id');
+		var y1=this.getValue('texty1id');var y2=this.getValue('texty2id');var y3=this.getValue('texty3id');var y4=this.getValue('texty4id');
+		var low_x=0;var low_y=0;var up_x=340;var up_y=390;
+		var bool_range=(x1<=up_x&&x1>=low_x)&&(x2<=up_x&&x2>=low_x)&&(y1<=up_y&&y1>=low_y)&&(y3<=up_y&&y3>=low_y);
+		var bool_format=(x1==x3)&&(x2==x4)&&(y1==y2)&&(y3==y4)&&(Number(x1)<Number(x2))&&(Number(y1)<Number(y3));
+		var bool_x=(x1=='')||(x2=='')||(x3=='')||(x4=='')||isNaN(x1)||isNaN(x2)||isNaN(x3)||isNaN(x4);
+		var bool_y=(y1=='')||	(y2=='')||(y3=='')||(y4=='')||isNaN(y1)||isNaN(y2)||isNaN(y3)||isNaN(y4);
+		//empty condition
+		if((bool_x)||(bool_y)){
+			alert('NULL values and non numeric characters are not allowed');
+			return false;
+		}
+		// format condition
+		if(!bool_format){
+			alert('Enter the coordinates in the format mentioned');
+			return false;
+		}
+		//range condition
+		if(!bool_range){
+			alert('Enter the values of coordinates within the range ');
+			return false;
+		}
     		if ((valueOfX === '' || valueOfY === '') || isNaN(valueOfX) || isNaN(valueOfY)) {
 			alert('Enter Numeric Values Only');
 			return false;
@@ -336,6 +362,8 @@ window.view = {
 	},
 	// continueExecutionIfElse: shows code execution and gives final result at end of code.
 	executionOfIfElse: function () {
+		var x1=this.getValue('textx1id');var x2=this.getValue('textx2id');var x3=this.getValue('textx3id');var x4=this.getValue('textx4id');
+		var y1=this.getValue('texty1id');var y2=this.getValue('texty2id');var y3=this.getValue('texty3id');var y4=this.getValue('texty4id');
 		this.currentSiblingElement = this.getElementByClass('redClass');
 		if (this.currentSiblingElement.id === 'codeContentIfElse28Id') {
 			this.endOfExecution();
@@ -355,7 +383,7 @@ window.view = {
 			if (this.nextSiblingElement.id === 'codeContentIfElse4Id' || this.nextOfnextSiblingElement.id === 'codeContentIfElse6Id') {
 				if (this.nextSiblingElement.id === 'codeContentIfElse4Id') 
 					this.codeExecutionWithColour();
-				else if (model.valueOfX >= 75) 
+				else if (model.valueOfX >= Number(x1)/*75*/) 
 					this.changeFlagValue('flagValue1', 'codeContentIfElse6Id', '1');
 				else
 					this.codeExecutionWithColourAndId('codeContentIfElse8Id');
@@ -363,7 +391,7 @@ window.view = {
 			if (this.nextOfnextSiblingElement.id === 'codeContentIfElse8Id' || this.nextOfnextSiblingElement.id === 'codeContentIfElse10Id') {
 				if (this.nextOfnextSiblingElement.id === 'codeContentIfElse8Id') 
 					this.codeExecutionWithColourAndId('codeContentIfElse8Id');
-				else if (model.valueOfX <= 275) 
+				else if (model.valueOfX <= Number(x2)/*275*/) 
 					this.changeFlagValue('flagValue2', 'codeContentIfElse10Id', '1');
 				else
 					this.codeExecutionWithColourAndId('codeContentIfElse12Id');
@@ -371,7 +399,7 @@ window.view = {
 			if (this.nextOfnextSiblingElement.id === 'codeContentIfElse12Id' || this.nextOfnextSiblingElement.id === 'codeContentIfElse14Id') {
 				if (this.nextOfnextSiblingElement.id === 'codeContentIfElse12Id') 
 					this.codeExecutionWithColourAndId('codeContentIfElse12Id');
-				else if (model.valueOfY >= 75) 
+				else if (model.valueOfY >= Number(y1)/*75*/) 
 					this.changeFlagValue('flagValue3', 'codeContentIfElse14Id', '1');
 				else
 					this.codeExecutionWithColourAndId('codeContentIfElse16Id');
@@ -379,7 +407,7 @@ window.view = {
 			if (this.nextOfnextSiblingElement.id === 'codeContentIfElse16Id' || this.nextOfnextSiblingElement.id === 'codeContentIfElse18Id') {
 				if (this.nextOfnextSiblingElement.id === 'codeContentIfElse16Id')
 					this.codeExecutionWithColourAndId('codeContentIfElse16Id');
-				else if (model.valueOfY <= 325) 
+				else if (model.valueOfY <= Number(y3)/*325*/) 
 					this.changeFlagValue('flagValue4', 'codeContentIfElse18Id', '1');
 				else
 					this.codeExecutionWithColourAndId('codeContentIfElse20Id');
@@ -387,7 +415,7 @@ window.view = {
 			if (this.nextOfnextSiblingElement.id === 'codeContentIfElse20Id' || this.nextOfnextSiblingElement.id === 'codeContentIfElse22Id') {
 				if (this.nextOfnextSiblingElement.id === 'codeContentIfElse20Id') 
 					this.codeExecutionWithColourAndId('codeContentIfElse20Id');
-				else if (model.valueOfX > 75 && model.valueOfX < 275 && model.valueOfY > 75 && model.valueOfY < 325) {
+				else if (model.valueOfX > Number(x1)/*75*/ && model.valueOfX < Number(x2)/*275*/ && model.valueOfY > Number(y1)/*75*/ && model.valueOfY < Number(y3)/*325*/) {
 					this.codeExecutionWithColourAndId('codeContentIfElse22Id');
 					this.displayTextWithColour('Output: INSIDE', 100, 40, '#FF2400');
 				}
@@ -406,6 +434,8 @@ window.view = {
 	},
 	// executionOfIfElseIfElse: shows code execution and gives final result at end of code.
 	executionOfIfElseIfElse: function () {
+		var x1=this.getValue('textx1id');var x2=this.getValue('textx2id');var x3=this.getValue('textx3id');var x4=this.getValue('textx4id');
+		var y1=this.getValue('texty1id');var y2=this.getValue('texty2id');var y3=this.getValue('texty3id');var y4=this.getValue('texty4id');
 		this.currentSiblingElement = this.getElementByClass('redClass');
 		if (this.currentSiblingElement.id === 'codeContentIfElseIf23Id') {
 			this.endOfExecution();
@@ -418,35 +448,35 @@ window.view = {
 		}
 		if (this.nextSiblingElement.id === 'codeContentIfElseIf3Id')			
 			this.codeExecutionWithColourAndId('codeContentIfElseIf3aId');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf3bId' && model.valueOfX < 75) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf3bId' && model.valueOfX < Number(x1)/*75*/) 
 			this.changeFlagValue('flagValue1', 'codeContentIfElseIf5Id', '0');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf3bId' && model.valueOfX > 275) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf3bId' && model.valueOfX > Number(x2)/*275*/) 
 			this.codeExecutionWithColourAndId('codeContentIfElseIf3cId');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf3dId' && model.valueOfX > 275) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf3dId' && model.valueOfX >Number(x2) /*275*/) 
 			this.changeFlagValue('flagValue1', 'codeContentIfElseIf5Id', '0');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf3bId' && (75 <= model.valueOfX) && (model.valueOfX <= 275)) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf3bId' && (Number(x1)/*75*/ <= model.valueOfX) && (model.valueOfX <= Number(x2)/*275*/)) 
 			this.codeExecutionWithColourAndId('codeContentIfElseIf3cId');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf3dId' && (75 <= model.valueOfX) && (model.valueOfX <= 275)) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf3dId' && (/*75*/Number(x1) <= model.valueOfX) && (model.valueOfX <= /*275*/Number(x2))) 
 			this.codeExecutionWithColourAndId('codeContentIfElseIf7aId');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf7bId' && model.valueOfY < 75) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf7bId' && model.valueOfY < Number(y1)/*75*/) 
 			this.changeFlagValue('flagValue1', 'codeContentIfElseIf9Id', '0');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf7bId' && model.valueOfY > 325) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf7bId' && model.valueOfY > Number(y3)/*325*/) 
 			this.codeExecutionWithColourAndId('codeContentIfElseIf7cId');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf7dId' && model.valueOfY > 325) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf7dId' && model.valueOfY > Number(y3)/*325*/) 
 			this.changeFlagValue('flagValue1', 'codeContentIfElseIf9Id', '0');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf7bId' && (75 <= model.valueOfY) && (model.valueOfY <= 325)) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf7bId' && (/*75*/Number(y1) <= model.valueOfY) && (model.valueOfY <= /*325*/Number(y3))) 
 			this.codeExecutionWithColourAndId('codeContentIfElseIf7cId');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf7dId' && (75 <= model.valueOfX) && (model.valueOfX <= 275) && (75 <= model.valueOfY) && (model.valueOfY <= 325)) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf7dId' && (/*75*/Number(x1) <= model.valueOfX) && (model.valueOfX <= Number(x2)/*275*/) && (/*75*/ Number(y1)<= model.valueOfY) && (model.valueOfY <=Number(y3)/* 325*/)) 
 			this.codeExecutionWithColourAndId('codeContentIfElseIf11Id');
-		if ((this.nextSiblingElement.id === 'codeContentIfElseIf12Id' || this.nextSiblingElement.id === 'codeContentIfElseIf14Id' || this.nextSiblingElement.id === 'codeContentIfElseIf16Id') && (75 <= model.valueOfX) && (model.valueOfX <= 275) && (75 <= model.valueOfY) && (model.valueOfY <= 325))	{
+		if ((this.nextSiblingElement.id === 'codeContentIfElseIf12Id' || this.nextSiblingElement.id === 'codeContentIfElseIf14Id' || this.nextSiblingElement.id === 'codeContentIfElseIf16Id') && (/*75*/Number(x1) <= model.valueOfX) && (model.valueOfX <= Number(x2)/*275*/) && (/*75*/Number(y1) <= model.valueOfY) && (model.valueOfY <= /*325*/Number(y3)))	{
 			this.changeFlagValue('flagValue1', this.nextOfnextSiblingElement.id, '1');
-			if ((this.nextSiblingElement.id === 'codeContentIfElseIf16Id') && (75 <= model.valueOfX) && (model.valueOfX <= 275) && (75 <= model.valueOfY) && (model.valueOfY <= 325)) {
+			if ((this.nextSiblingElement.id === 'codeContentIfElseIf16Id') && (/*75*/Number(x1) <= model.valueOfX) && (model.valueOfX <= /*275*/Number(x2)) && (/*75*/Number(y1) <= model.valueOfY) && (model.valueOfY <=/* 325*/Number(y3))) {
 				this.displayTextWithColour('Output: INSIDE', 100, 40, '#FF2400');
 			}
 		}
 		if (this.nextSiblingElement.id ==='codeContentIfElseIf6Id' || this.nextSiblingElement.id ==='codeContentIfElseIf10Id') 
 			this.codeExecutionWithColourAndId('codeContentIfElseIf15Id');
-		if (this.nextSiblingElement.id === 'codeContentIfElseIf16Id' && !((75 <= model.valueOfX) && (model.valueOfX <= 275) && (75 <= model.valueOfY) && (model.valueOfY <= 325))) 
+		if (this.nextSiblingElement.id === 'codeContentIfElseIf16Id' && !((/*75*/Number(x1) <= model.valueOfX) && (model.valueOfX <= /*275*/Number(x2)) && (/*75*/Number(y1) <= model.valueOfY) && (model.valueOfY <= /*325*/Number(y3)))) 
 			this.codeExecutionWithColourAndId('codeContentIfElseIf19Id');
 		if (this.nextSiblingElement.id === 'codeContentIfElseIf20Id') {
 			this.codeExecutionWithColourAndId('codeContentIfElseIf21Id');
