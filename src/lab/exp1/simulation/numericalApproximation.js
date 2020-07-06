@@ -1,7 +1,3 @@
-//---------------------------------+
-// Author: Parvesh Kumar Gahanolia |
-// Email: <parvesh@vlabs.ac.in>    |
-//---------------------------------+
 
 window.model = {
 	inputValueA
@@ -290,8 +286,8 @@ window.view = {
 			alert('Enter numeric value of a and b');
 			return false;
 		} 
-		else if (valueA2 >= valueB2 || valueB2 > 30) {
-			alert('Integration Limits are from 0 to 30, b > a and b-a >= 1');
+		else if (valueA2 >11 || valueB2 > 11) {
+			alert('Integration Limits are from 0 to 10, b > a and b-a >= 1');
 			return false;
 		}
 		else {
