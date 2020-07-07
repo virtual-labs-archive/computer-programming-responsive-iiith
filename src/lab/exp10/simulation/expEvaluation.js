@@ -892,7 +892,15 @@ window.view = {
     },
 	activateEvents: function() {
 		this.addClickEvent('buttonSave', function () { view.freezeInputs() })
-		this.addClickEvent('buttonEdit', function () { view.deFreezeInputs() })
+		this.addClickEvent('buttonEdit', function () { 
+			
+			document.getElementById('a').value=0;
+			document.getElementById('b').value=0;
+			document.getElementById('c').value=0;
+			document.getElementById('d').value=0;
+			
+			
+			view.deFreezeInputs() })
 		this.addClickEvent('buttonStart', function () { view.validateExpression() })
 		this.addClickEvent('buttonNext', function () { view.evaluate() })
 		this.addChangeEvent('operatorList', function () { view.setOperatorEnvironment() })
