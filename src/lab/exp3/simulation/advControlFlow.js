@@ -35,11 +35,19 @@ window.view = {
 	getInput: function() {
 		var inputValue = document.getElementById('simpleLoopInput').value
 		model.inp = Number(inputValue)
+		 if (inputValue < 0 || inputValue > 20) {
+      alert("Invalid Input.'a' value shoud be in range 0-20.");
+      return false;
+    }
 		this.clearExecutionSection()
 	},
 	getNestedInput: function() {
 		var inputValue = document.getElementById('nestedLoopInput').value
 		model.nestedInp = Number(inputValue)
+		 if (inputValue < 0 || inputValue > 20) {
+      alert("Invalid Input.'a' value shoud be in range 0-20.");
+      return false;
+    }
 		this.clearExecutionSection()
 	},
 	activateEvents: function() {
