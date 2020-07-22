@@ -241,6 +241,9 @@ window.view = {
 				this.highlightNextStep()		
 			else
 			{	
+				document.getElementById('resultDisplay').innerHTML += "1"
+				// document.getElementById('localVariableI').innerHTML = currentState
+				document.getElementById('localVariableFact').innerHTML = "1"
 				this.endTheSimpleLoopCode()			
 				this.changeClass(this.lastRedDiv.id, 'showDiv')
 			}
