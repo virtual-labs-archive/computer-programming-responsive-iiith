@@ -27,7 +27,7 @@ if ($Q3==3)
 $total=$total+1;
 echo "3 ";
 }
-if ($Q4==3)
+if ($Q4==4)
 {
 echo "4 ";
 $total=$total+1;
