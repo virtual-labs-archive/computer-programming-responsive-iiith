@@ -1,50 +1,27 @@
 <?php
-
-
 $total=0;
 
-$Q1 = $_POST['Q1'];
-$Q2 = $_POST['Q2'];
-$Q3 = $_POST['Q3'];
-$Q4 = $_POST['Q4'];
-$Q5 = $_POST['Q5'];
-$Q6 = $_POST['fib1'];
-$Q7 = $_POST['fib2'];
+$qCount = 7;
+$ans_actual = array_fill(0, $qCount, 0);
+for($n = 1; $n <= $qCount; $n++){
+	if($n <= 4){
+		$ans_actual[$n - 1] = $_POST['Q' . $n];
+	}else{
+		$ans_actual[$n - 1] = $_POST['fib' . ($n - 5)];
+	}
+}
+$ans_exp = array(4, 2, 3, 2, 2);
 
-echo "You answered the following questions correctly : ";
-if ($Q1==4)
-{
-$total=$total+1;
-echo "1 ";
+echo "You answered the following questions correctly: ";
+
+for($n = 0; $n < $qCount; $n++){
+	if($n < 5 && $ans_actual[$n] == $ans_exp[$n])
+	{
+		echo ($n + 1), "\n";
+		$total++;
+	}
 }
-if ($Q2==2)
-{
-$total=$total+1;
-echo "2 ";
-}
-if ($Q3==3)
-{
-$total=$total+1;
-echo "3 ";
-}
-if ($Q4==3)
-{
-echo "4 ";
-$total=$total+1;
-}
-if ($Q5==2)
-{
-$total=$total+1;
-echo "5 ";
-}
-#if ((strcasecmp($Q6,"itself")==0)){
-#$total= $total+1;
-#echo "6 ";
-#}
-#if ((strcasecmp($Q7,"base case")==0) || (strcasecmp($Q7,"end-condition")==0)|| (strcasecmp($Q7,"end condition")==0) || (strcasecmp($Q7,"base-case")==0)){
-#$total= $total+1;
-#echo "7 ";
-#}
+
 echo "\n\n\n\n";
 echo "<html>
 <head></head>";
