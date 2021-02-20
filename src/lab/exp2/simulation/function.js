@@ -178,12 +178,12 @@ window.view = {
 			options4[i].checked = false
 		}
 		if ( a !== '2')
-			alert('Incorrect value of input variables(arguments). Calculating the area of a rectangle requires the length of the two different parallel sides of the rectangle. Try again.')
+			alert('Incorrect value of input variables(arguments). Calculating the area of a triangle requires the length of the base and height. Try again.')
 		else if ( b !== 'float' )
-			alert('Incorrect datatype of input variables(arguments). The value of the sides of a rectangle need not be integers. Try again.')
+			alert('Incorrect datatype of input variables(arguments). The value of the sides of a triangle need not be integers. Try again.')
 		else if ( c !== 'float' )
 			alert('Incorrect datatype for return type. The value of the area of a rectangle need not be an integer. Try again.')
-		else if ( d !== 'a*b' )
+		else if ( d !== '1/2*a*b' )
 			alert('Incorrect formula for calculating the area of a rectangle. Try again.')
 		else
 			this.approveRectangleInputs()
@@ -268,7 +268,7 @@ window.view = {
 		document.getElementById('functionSquare').innerHTML += 'float area_sq (float a)<br>{<br> &emsp; float area = a*a;<br>&emsp; return area;<br>}'
 	},
 	displayFunctionForRectangle: function() {
-		document.getElementById('functionRectangle').innerHTML += 'float area_rect (float a,float b)<br>{<br> &emsp; float area = a*b;<br> &emsp; return area;<br>}'
+		document.getElementById('functionRectangle').innerHTML += 'float area_rightangledtriang (float a,float b)<br>{<br> &emsp; float area = 1/2*a*b;<br> &emsp; return area;<br>}'
 	},
 	displayFunctionForTriangle: function() {
 		document.getElementById('functionTriangle').innerHTML += 'float area_triangle (float a)<br>{<br>&emsp;float area = (sqrt(3)/4.0)*a*a;<br>&emsp;return area;<br>}'
@@ -319,7 +319,7 @@ window.view = {
 		this.correctInputs ++
 	},
 	area_rect: function( param, functionCall ) {
-		this.area = Number(param[0]) * Number(param[1])
+		this.area = 1/2* Number(param[0]) * Number(param[1])
 		this.totalArea += this.area
 		alert( 'area from function call ' + String( i + 1 ) + ' ) : ' + functionCall + ' is ' + this.area )
 		this.correctInputs ++

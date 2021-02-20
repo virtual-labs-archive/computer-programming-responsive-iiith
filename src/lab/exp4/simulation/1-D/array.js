@@ -52,7 +52,7 @@ window.view = {
 		this.addClickEvent('btnStart', function() { view.displayElements() })
 		this.addClickEvent('btnNext', function() { view.sortArray() })
 	},
-	proceedToStartButton: function() {
+proceedToStartButton: function() {
 		var userInput = this.getArraySize()
 		if( isNaN( userInput ) === false ) {
 			if( userInput !== 0 ) {
@@ -75,6 +75,7 @@ window.view = {
 			var random = Math.floor(Math.random()*15)
 			this.numbers.push(String(random))
 		}
+
 	},
 	getUserInput: function() {
 		var inputValue = document.getElementById('userInput').value
@@ -83,10 +84,23 @@ window.view = {
 	},
 	takeInputFromRadioBox: function() {
 		var element = document.getElementsByName('radio_group')
-		if ( element[0].checked )
+		if ( element[0].checked ){
 			this.generateRandomNumbers()
-		else if (element[1].checked)
+			this.textAreaDisable()
+			
+			
+		}
+		else if (element[1].unchecked){
 			this.getUserInput()
+		}
+
+
+	},
+	  
+
+	textAreaDisable: function(){
+		document.getElementById(userInput).disabled = true
+		
 	},
 	createBoxes: function() {
 		for ( i = 0 ; i < this.numbers.length ; i++ ) {
