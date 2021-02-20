@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel = 'stylesheet' type = 'text/css' href = 'expEvaluation.css' >
+		<script src = 'expEvaluation.js' ></script>
+		<title>Computer-Programming</title>
+	</head>
+	<body>
+		<div class = 'header' id = 'headerSimpleLoop' >Expression Evaluation
+		    <div class = 'operatorSelection' >
+		        <div>Select Operator :
+		            <select class = 'operatorList' id = 'operatorList'>
+		                <option id = 'arithmatic'>Arithmatic</option>
+		                <option id = 'logical'>Logical</option>
+		                <option id = 'bitwise'>Bitwise</option>
+		            </select>
+		        </div>
+		    </div>
+		</div>
+		<a href="../index.html"><div class="vlabsIcon"></div></a>
+		<div class = 'inputDivision' >
+			<div class = 'inputDivisionTitle' ><div class = 'initializePic' ></div><div class = 'initializeText' >Initialize</div></div>
+			<div class = 'inputDivisionBody'>
+				<div class = 'instructionText' >Initialize the values</div>
+				<div class = 'inputFieldHolder'>
+			        <div class = 'inputValueText' >a:&nbsp;</div>
+			        <input class = 'inputValueField' type = 'text' value = '2' id = 'a' disabled >
+			        <div class = 'inputValueText' >b:&nbsp;</div>
+			        <input class = 'inputValueField' type = 'text' value = '5' id = 'b' disabled >
+		        </div>
+		        <div class = 'inputFieldHolder'>
+			        <div class = 'inputValueText' >c:&nbsp;</div>
+			        <input class = 'inputValueField' type = 'text'	value = '10' id = 'c' disabled >
+			        <div class = 'inputValueText' >d:&nbsp;</div>
+			        <input class = 'inputValueField' type = 'text'	value = '11' id = 'd' disabled >
+		        </div>
+		        <button class = 'button saveButton hide' id = 'buttonSave' >Save</button>
+		        <button class = 'button editButton' id = 'buttonEdit' >Edit</button>
+		        <select class = 'button loopList' id = 'arithmaticExpressions' >
+		     		<option> a + b - c </option>
+		     		<option> a * ( b + c ) </option>
+		     		<option> a * b + c * d </option>
+		            <option> a + b / c </option>
+		            <option> ( a + b ) / c </option>
+		            <option> ( a + b ) * c - d </option>
+		            <option> ( a + b ) * ( c - d ) </option>
+		            <option> a * d % ( c - b ) * c - a * b </option>
+		        </select>
+		        <select class = 'button loopList hide' id = 'logicalExpressions' >
+		     		<option> a || b && c </option>
+		            <option> ( a || b ) && c </option>
+		            <option> a && b || c && d </option>
+		            <option> a && ( b || c ) && d </option>
+		        </select>
+		        <select class = 'button loopList hide' id = 'bitwiseExpressions' >
+		     		<option> a | b & c ^ d </option>
+		            <option> ( a | b ) & ( c ^ d ) </option>
+		            <option> a << b </option>
+		            <option> a >> b </option>
+		        </select>
+		    	<input class = 'inputField marginBottom' type = 'text'  value = 'a + b - c'  id = 'selectedExpression'>
+				<button class = 'button startButton' id = 'buttonStart'>Start</button>
+				<button class = 'button stopButton hide' id = 'stopButton'>Stop</button>
+				<button class = 'buttonDisable nextButton' id = 'buttonNext' disabled>Next</button>
+			</div><!-- end of inputDivisionBody -->
+		</div><!-- end of inputDivision -->
+		<div class = 'executionDivision'>
+			<div class = 'executionDivisionTitle' ><div class = 'executionPic' ></div><div class = 'executionText' >Evaluation Flow of Expression</div></div>
+			<div class = 'stepExecutionDisplay' id = 'executionDisplay'></div><!-- end of stepExecutionDisplay -->
+		</div><!-- end of executionDivision -->
+			
+		<div class = 'outputDivision'> 
+			<div class = 'outputDivisionTitle' ><div class = 'outputPic' ></div><div class = 'outputText' >Code Output</div></div>
+			<div class = 'resultDisplay'>
+				<div class = 'reasoningTitle'>Step by step reasoning : </div>
+				<div class = 'reasoningBox' id = 'reasoningStep'></div>
+				<div class = 'currentStepTitle'>Current Step : </div>
+				<div class = 'currentStepBox' id = 'currentStep'></div>
+			</div><!-- end of resultDisplay -->
+		</div><!-- end of outputDivision -->
+	</body>
+</html>
