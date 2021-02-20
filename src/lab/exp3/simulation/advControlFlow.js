@@ -29,14 +29,20 @@ window.view = {
 		element.addEventListener('change', method, false)
 	},
 	replaceDiv: function(x, y) {
- 		document.getElementById(x).style.display = 'none'
+ 		document.getElementById(x).style.display =  'none'
  		document.getElementById(y).style.display = 'block' 
  	},
 	getInput: function() {
 		var inputValue = document.getElementById('simpleLoopInput').value
+		if(inputValue>=0 && inputValue<=20 )
+		{
 		model.inp = Number(inputValue)
 		this.clearExecutionSection()
-	},
+		}
+		else{
+			alert("Given value is out of range....Enter the value in between 0-20");
+			}
+						},
 	getNestedInput: function() {
 		var inputValue = document.getElementById('nestedLoopInput').value
 		model.nestedInp = Number(inputValue)
@@ -44,7 +50,8 @@ window.view = {
 	},
 	activateEvents: function() {
 		this.addClickEvent('btnNext', function() { view.nextBtn() })
-		this.addClickEvent('optionFor', function() { view.clearExecutionSection() })
+		t
+		his.addClickEvent('optionFor', function() { view.clearExecutionSection() })
 		this.addClickEvent('optionWhile', function() { view.clearExecutionSection() })
 		this.addClickEvent('optionDoWhile', function() { view.clearExecutionSection() })
 		this.addClickEvent('btnStart', function() { view.startBtn() })
