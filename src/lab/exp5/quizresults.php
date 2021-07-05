@@ -3,59 +3,35 @@
 
 $total=0;
 
-$Q1 = $_POST['Q1'];
-$Q2 = $_POST['Q2'];
-$Q3 = $_POST['Q3'];
-$Q4 = $_POST['Q4'];
-$Q5 = $_POST['Q5'];
-$Q6 = $_POST['fib1'];
-$Q7 = $_POST['fib2'];
+$quesCount=9;
+$actualAns = array_fill(0, $quesCount, 0)
+
+for($n = 1; $n <= $quesCount; $n++)
+{
+    if($n <= 8)
+    {
+        $actualAns[$n-1] = $_POST['Q' . $n];
+    }
+
+    else
+    {
+        $actualAns[$n-1] = $_POST['fib' . ($n - 8)];
+    }
+}
+
+$expAns = array(1, 1, 1, 2, 1, 1, 1, 2, 0)
 
 echo "You answered the following questions correctly : ";
-if ($Q1==1)
+
+for($n = 0; $n < $quesCount; $n++)
 {
-$total=$total+1;
-echo "1 ";
+    if(($n < 8 && $actualAns[$n] == $expAns[$n]) || ($n == 8 && (strcasecmp($actualAns[$n],"single")==0)))
+    {
+        echo ($n + 1), "\n";
+        $total++
+    }
 }
-if ($Q2==1)
-{
-$total=$total+1;
-echo "2 ";
-}
-if ($Q3==1)
-{
-$total=$total+1;
-echo "3 ";
-}
-if ($Q4==2)
-{
-echo "4 ";
-$total=$total+1;
-}
-if ($Q5==1)
-{
-$total=$total+1;
-echo "5 ";
-}
-if ($Q6==1)
-{
-$total=$total+1;
-echo "6 ";
-}
-if ($Q7==1)
-{
-$total=$total+1;
-echo "7 ";
-}
-if ($Q8==2)
-{
-$total=$total+1;
-echo "8 ";
-}
-if ((strcasecmp($Q9,"single")==0)){
-$total= $total+1;
-echo "9 ";
-}
+
 echo "\n\n\n\n";
 echo "<html>
 <head></head>";
