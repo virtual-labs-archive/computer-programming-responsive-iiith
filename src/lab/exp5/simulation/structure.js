@@ -117,10 +117,10 @@ window.view = {
         'account newAc;</br>' +
         'strcpy(newAc.holder,name);</br>' +
         'strcpy(newAc.branch,branch);</br>' +
-        'if (strcmp(type,\"current\")==0 || strcmp(type,\"savings\")==0);</br>' +
+        'if (strcmp(type,\"current\")===0 || strcmp(type,\"savings\")===0);</br>' +
         'strcpy(newAc.type,type);</br>' +
         'else isErr=1;</br>' +
-        'if (strlen(number)==10)</br>' +
+        'if (strlen(number)===10)</br>' +
         'strcpy(newAc.no,number);</br>' +
         'else isErr=1;</br>' +
         'newAc.bal=balance;</br>' +
