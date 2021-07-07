@@ -54,20 +54,16 @@ window.view = {
 	},
 	proceedToStartButton: function() {
 		var userInput = this.getArraySize()
-		if( isNaN( userInput ) === false ) {
-			if( userInput !== 0 ) {
-				var element = document.getElementById('inputButtonRadio')
-				element.className = 'show, radioButtonDivision'
-				this.disableButton('btnOk')
-				this.changeClass( 'btnOk', 'okButton buttonDisable' )
-				this.enableButton( 'btnStart' )
-				this.changeClass( 'btnStart', 'startButton button' )
-			}
-			else
-				alert('Enter array size first !')
+		if( isNaN( userInput ) === false && Number.isInteger(userInput) && userInput > 0 ) {
+			var element = document.getElementById('inputButtonRadio')
+			element.className = 'show, radioButtonDivision'
+			this.disableButton('btnOk')
+			this.changeClass( 'btnOk', 'okButton buttonDisable' )
+			this.enableButton( 'btnStart' )
+			this.changeClass( 'btnStart', 'startButton button' )
 		}
 		else
-			alert( 'Size of the array must be an Integer !' )
+			alert( 'Size of the array must be a Positive Integer !' )
 	},
 	generateRandomNumbers: function() {
 		var inputValue = this.getArraySize()
@@ -89,11 +85,18 @@ window.view = {
 			this.getUserInput()
 	},
 	createBoxes: function() {
+		var maxLength=0
+		for ( i = 0 ; i < this.numbers.length ; i++ ){
+			var numberLength=this.numbers[i].length
+			maxLength=maxLength>=numberLength?maxLength:numberLength;
+		}
+		maxLength*=10
 		for ( i = 0 ; i < this.numbers.length ; i++ ) {
 			var outerDiv = document.createElement('div')
 			outerDiv.className = 'outerDiv'
 			var element = document.createElement('div')
 			element.innerHTML = this.numbers[i]
+			outerDiv.style.width=maxLength+"%"
 			if ( i === 0 )
 				element.className = 'sortedArray'
 			else if ( i === 1 )
@@ -124,7 +127,9 @@ window.view = {
 	validateUserInputs: function() {
 		var result
 		for ( i = 0 ; i < this.numbers.length ; i++ ) {
-			if ( isNaN(Number(this.numbers[i])) )
+			if ( isNaN(Number(this.numbers[i])) || this.numbers[i]=="" )
+				return false
+			else if(Number(this.numbers[i])>1000000000 || Number(this.numbers[i])<-100000000)
 				return false
 		}
 	},
@@ -154,7 +159,7 @@ window.view = {
 		var isValidInput = this.validateUserInputs()
 		if ( arraySize === this.numbers.length ) {	
 			if ( isValidInput === false)
-				alert('Enter Numeric Values Only!')
+				alert('Enter Numeric Values having maximum 10 and minimum 1 character!')
 			else {
 				this.createBoxes()
 				this.showCode()
