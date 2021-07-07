@@ -318,7 +318,7 @@ body {
     border-bottom: 1px solid #CCC;  
 }
 
-.mondayIcon, .tuesdayIcon, .wednesdayIcon, .thursdayIcon, .fridayIcon, .saturdayIcon, .sundayIcon{
+.dayIcon {
     width: 14.2%;
     float: left;
     height: 100%;
@@ -328,33 +328,13 @@ body {
     opacity: .3;
 }
 
-.mondayIcon{
-    background-image: url('monday.png');
-}
-
-.tuesdayIcon{
-    background-image: url('tuesday.png');
-}
-
-.wednesdayIcon{
-    background-image: url('wednesday.png');
-}
-
-.thursdayIcon{
-    background-image: url('thursday.png');
-}
-
-.fridayIcon{
-    background-image: url('friday.png');
-}
-
-.saturdayIcon{
-    background-image: url('saturday.png');
-}
-
-.sundayIcon{
-    background-image: url('sunday.png');
-}
+#mondayImages{ background-image: url('monday.png'); }
+#tuesdayImages{ background-image: url('tuesday.png'); }
+#wednesdayImages{ background-image: url('wednesday.png'); }
+#thursdayImages{ background-image: url('thursday.png'); }
+#fridayImages{ background-image: url('friday.png'); }
+#saturdayImages{ background-image: url('saturday.png'); }
+#sundayImages{ background-image: url('sunday.png'); }
 
 .localVariabals{
     position: absolute;

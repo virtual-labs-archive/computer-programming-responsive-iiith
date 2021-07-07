@@ -1,265 +1,176 @@
-//---------------------------------+
-// Author: Parvesh Kumar Gahanolia |
-// Email: <parvesh@vlabs.ac.in>    |
-//---------------------------------+
+/**
+ * Initializer Segment that takes inputs
+ * * Takes the input and creates the Execution object.
+ */
+class Initializer {
 
-window.model = {
-	inputNumber: 0, //user input text field.
-}
+	constructor() {
+		this.inputValue = 0;
+		this.stateValue = 0;
+		$('.radiobutton').click(function() { getInitializer().input = this.value; })
+		$('#submitBtnId').click(function() { getInitializer().prepareExecution(); });
+		$('#startBtnId').click(function() { getExecutor().line += 1; });
+	}
 
-window.view = {
-	currentSiblingElement: new Object(), // Object value of current sibling.
-	nextSiblingElement: new Object(), // Object value of next sibling.
-	// addClickEvent: add EventListener to other methods.
-	addClickEvent: function (id, method) {
-		var element = document.getElementById(id);
-		element.addEventListener('click', method, false);
-	},
-	// activateEvents: calls addClickEvent method to add EventListener to other methods.
-	activateEvents: function() {
-		this.addClickEvent('radioBtn1Id', function() { view.setValue('textFieldId', this.value) });
-		this.addClickEvent('radioBtn2Id', function() { view.setValue('textFieldId', this.value) });
-		this.addClickEvent('radioBtn3Id', function() { view.setValue('textFieldId', this.value) });
-		this.addClickEvent('radioBtn4Id', function() { view.setValue('textFieldId', this.value) });
-		this.addClickEvent('radioBtn5Id', function() { view.setValue('textFieldId', this.value) });
-		this.addClickEvent('radioBtn6Id', function() { view.setValue('textFieldId', this.value) });
-		this.addClickEvent('radioBtn7Id', function() { view.setValue('textFieldId', this.value) });
-		this.addClickEvent('submitBtnId', function() { view.validationInput() });
-		this.addClickEvent('startBtnId', function() { view.startStepExecution() });
-		this.addClickEvent('nextBtnId', function() { view.showDayOfWeek() });
-		this.addClickEvent('resetBtnId', function() { view.resetButtonSwitch() });	
-	},
-	// setInnerHtml: set innerText to a element.
- 	setInnerHtml: function (id, innerHTML) {
- 		document.getElementById(id).innerHTML = innerHTML;
- 	},
- 	// enableElement: makes element enable.
-    	enableElement: function (id) {
-    		document.getElementById(id).disabled = false;
-    	},
-    	// disableElement: makes element disable.
-    	disableElement: function (id) {
-    		document.getElementById(id).disabled = true;
-    	},
-    	// replaceElement: replace one element by another element.
-    	replaceElement: function (id1, id2) {
-    		document.getElementById(id1).style.display = 'none';
-    		document.getElementById(id2).style.display = 'block';  	 
-    	},
-    	// changeClass: changes class name of a element.
-	changeClass: function(id, className) {
-		document.getElementById(id).className = className
-	},
-    	// setValue: set given value to a element.
-    	setValue: function (id, value) {
-		document.getElementById(id).value = value;
-	},
-	// getValue: get value from element.
-	getValue: function (id) {
-		var value = document.getElementById(id).value;
-		return value;
-	},
-	// applyColorClass: adds new color class to a element.
-	applyColorClass: function (id, colorClass) {
-		document.getElementById(id).classList.add(colorClass);
-	},
-	// removeColorClass: removes color class from element.
-	removeColorClass: function (id, colorClass) {
-		document.getElementById(id).classList.remove(colorClass);
-	},
-	// getNextSiblingElement: return next sibling element.
-	getNextSiblingElement: function (element) {
-		var nextSiblingElement = element.nextSibling;
-		nextSiblingElement = nextSiblingElement.nextSibling;
-		return nextSiblingElement;
-	},
-	// getElementByClass: return element by given class name.
-	getElementByClass: function (className) {
-		var element = document.getElementsByClassName(className);
-		return element[0];
-	},
-	// codeExecutionWithColour: shows execution of code by changing color in code Content.
-	codeExecutionWithColour: function () {
-		this.removeColorClass(this.currentSiblingElement.id, 'redClass');
-		this.applyColorClass(this.nextSiblingElement.id, 'redClass');
-	},
-	// codeExecutionWithColourAndId: shows execution of code by changing color with given id in code Content.
-	codeExecutionWithColourAndId: function (id) {
-		this.removeColorClass(this.currentSiblingElement.id, 'redClass');
-		this.applyColorClass(id, 'redClass');
-	},
-	// changeOpacity: changes opacity of image.
-	changeOpacity: function (id) {
-		document.getElementById(id).style.opacity = '1';
-	},
-	// showDay: shows desire day that by showing output string and change opacity of day picture.
-	showDay: function (id, previousChildId, imagesId, innerHTMLId, innerHTML) {
-		this.codeExecutionWithColourAndId(id);
-		this.setInnerHtml(innerHTMLId, innerHTML);
-		this.changeOpacity(imagesId);	
-	},
-	// jumpToDay: to jump on desire day.
-	jumpToDay: function () {
-		switch (model.inputNumber) {
-			case 1:
-				this.showDay('case1Id', this.currentSiblingElement.id, 'mondayImages', 'strNullId', 'Monday');
-  				break;
-			case 2:
-  				this.showDay('case2Id', this.currentSiblingElement.id, 'tuesdayImages', 'strNullId', 'Tuesday');
-  				break;
-			case 3:
-  				this.showDay('case3Id', this.currentSiblingElement.id, 'wednesdayImages', 'strNullId', 'Wednesday');
-  				break;
-			case 4:
-  				this.showDay('case4Id', this.currentSiblingElement.id, 'thursdayImages', 'strNullId', 'Thursday');
-  				break;
-			case 5:
-  				this.showDay('case5Id', this.currentSiblingElement.id, 'fridayImages', 'strNullId', 'Friday');
-  				break;
-			case 6:
-  				this.showDay('case6Id', this.currentSiblingElement.id, 'saturdayImages', 'strNullId', 'Saturday');
-  				break;
-			case 7:
-  				this.showDay('case7Id', this.currentSiblingElement.id, 'sundayImages', 'strNullId', 'Sunday');
-  				break;
-  			default:
-  				this.showDay('defaultId', this.currentSiblingElement.id, null, 'strNullId', 'null');
-        		break;	
-		}
-	},
-	/* validationInput: check validation of input that is given by user if input value is valid
-	then make submit button disable and make start button enable. */
-	validationInput: function () {
-		var textFieldValue = this.getValue('textFieldId');
-		if (textFieldValue === '' || isNaN(textFieldValue)) {
-			alert('Enter Numeric Values Only');
-			return false;
-		} 
-		else {
-			this.changePropertyOfElements();
-			model.inputNumber = Number(textFieldValue);
-			this.setInnerHtml('idOfDay', model.inputNumber);
-		}		
-	},
-	// changePropertyOfElements: changes property of elemants with enableElement, disableElement and changeClass.
-	changePropertyOfElements: function () {
-		this.disableElement('submitBtnId');
-		this.enableElement('startBtnId');
-		this.changeClass('startBtnId', 'button margin15');
-		this.changeClass('submitBtnId', 'buttonDisable margin15');
-		this.resetStrings();
-		this.resetOpacityOfImages();
-	},
-	// resetRadioButton: reset radio button to it's initial state at the end of code execution.
-	resetRadioButton: function () {
-		var allRadios = document.getElementsByName('day_radio');
-		for(x = 0; x < allRadios.length; x++) {
-			allRadios[x].checked = false;
-		}
-	},
-	// resetOpacityOfImages: set opacity of image it's initial state.
-	resetOpacityOfImages: function () {
-		document.getElementById('workingdayImage').style.opacity = '.2';
-		document.getElementById('holidayImage').style.opacity = '.2';
-		document.getElementById('mondayImages').style.opacity = '.3';
-		document.getElementById('tuesdayImages').style.opacity = '.3';
-		document.getElementById('wednesdayImages').style.opacity = '.3';
-		document.getElementById('thursdayImages').style.opacity = '.3';
-		document.getElementById('fridayImages').style.opacity = '.3';
-		document.getElementById('saturdayImages').style.opacity = '.3';
-		document.getElementById('sundayImages').style.opacity = '.3';
-	},
-	// resetVariables: reset variables to it's initial state at the end of code execution.
-	resetVariables: function () {
-		model.inputNumber = 0;
-	},
-	// resetStrings: clear all output values that displayed during the execution.
-	resetStrings: function () {
-		this.setInnerHtml('strNullId', '');
-		this.setInnerHtml('idOfDay', '');
-		this.setInnerHtml('outputDayId', '');
-		//this.setValue('textFieldId', '');
-	},
-	// resetButton: reset button it's initial state at the end of code execution.
-	resetButton: function () {
-		this.enableElement('submitBtnId');
-		this.changeClass('nextBtnId', 'buttonDisable margin15 hide');
-		this.disableElement('startBtnId');
-		this.changeClass('submitBtnId', 'button margin15');
-		this.changeClass('startBtnId', 'buttonDisable margin15');
-	},
-	// endOfExecution: work at end of code execution and with stop button to reset whole experiment at it's initial state.
-	endOfExecution: function () {
-		this.resetVariables();
-		this.resetRadioButton();
-		//this.resetStrings();
-		this.setValue('textFieldId', '');
-		this.resetButton();
-		var idOfRedText = this.getElementByClass('redClass').id;
-		this.removeColorClass(idOfRedText, 'redClass');
-		//this.resetOpacityOfImages();
-	},
-	// startStepExecution: work to start code execution.
-	startStepExecution: function () {
-		this.applyColorClass('mainId', 'redClass');
-		this.changeClass('startBtnId', 'buttonDisable margin15 hide');
-		this.changeClass('nextBtnId', 'button margin15');
-		this.enableElement('nextBtnId');
-	},
-	// showDayOfWeek: shows code execution and gives final result at end of code.
-	showDayOfWeek: function () {
-		this.currentSiblingElement = this.getElementByClass('redClass');
-		if (this.currentSiblingElement.id === 'closeBrc2Id') {
-	 		this.endOfExecution();
-	 	}
-		this.nextSiblingElement = this.getNextSiblingElement(this.currentSiblingElement);
-		if (this.nextSiblingElement.id === 'charId' || this.nextSiblingElement.id === 'strId' || this.nextSiblingElement.id === 'switchId')
-			this.codeExecutionWithColour();
-		if (this.nextSiblingElement.id === 'case1Id')
-       		this.jumpToDay();
-		if (this.nextSiblingElement.className === 'break')
-			this.codeExecutionWithColour();
-	 	if (this.currentSiblingElement.className === 'break redClass')
-			this.codeExecutionWithColourAndId('closeBrc1Id');
-		if (1 <= model.inputNumber && model.inputNumber <= 6) {
-	 		if (this.nextSiblingElement.id === 'holidayId')
-				this.codeExecutionWithColourAndId('elseIfId');
-	 		else if (this.nextSiblingElement.id === 'workingdayId') {
-	 			this.codeExecutionWithColour();
-				this.changeOpacity('workingdayImage');
-				this.setInnerHtml('outputDayId', 'WORKING DAY');
-	 		}
-	 	}
-		if ( model.inputNumber > 7 ) {
-	 		if (this.nextSiblingElement.id === 'holidayId')
-				this.codeExecutionWithColourAndId('elseIfId');
-	 		else if (this.nextSiblingElement.id === 'workingdayId') 
-				this.codeExecutionWithColourAndId('elseId');
-	 		else if (this.nextSiblingElement.id === 'invalidIPId') {
-				this.codeExecutionWithColour();
-				this.setInnerHtml('outputDayId', 'INVALID INPUT');
-	 		}
-	 	}
-	 	if (model.inputNumber === 7) {
-	 		if (this.nextSiblingElement.id === 'holidayId') {
-				this.codeExecutionWithColour();
-				this.changeOpacity('holidayImage');
-				this.setInnerHtml('outputDayId', 'HOLIDAY');
-	 		}
-	 	}
-		if (this.nextSiblingElement.id === 'ifId')
-			this.codeExecutionWithColour();
-		if (this.nextSiblingElement.id === 'closeBrc2Id' || this.nextSiblingElement.id === 'elseId' || this.nextSiblingElement.id === 'elseIfId') {
-			this.codeExecutionWithColourAndId('closeBrc2Id');
-	 	}
-	},
-	// init: calls methods to draw canvas and activate events.
-	init: function () {
-		this.activateEvents();
-		this.resetOpacityOfImages();
+	set input(value) { $('#textFieldId').val(value); }
+	get input() { this.inputValue = $('#textFieldId').val(); return parseFloat(this.inputValue); }
+
+	validate() {
+		if ($('#textFieldId').value === '' || isNaN($('#textFieldId').val())) {
+			alert('You tried to type in ' + $('#textFieldId').val() + '. Please only feed in Integer Values.');
+			$('.radiobutton').attr('checked', false); return false;
+		} return true;
+	}
+
+	prepareExecution() {
+		if (! this.validate()) return; 
+		$('#submitBtnId').attr("disabled", true);
+		$('#startBtnId').attr("disabled", false);
+		$('#startBtnId').removeClass().addClass('button margin15');
+		$('#submitBtnId').removeClass().addClass('buttonDisable margin15');
+		$('.dayIcon').css('opacity', 0.2);
+		$('.dayImage').css('opacity', 0.2);
+		getExecutor().initialize(getInitializer().input);
+	}
+	terminateExecution() {
+		$('#submitBtnId').attr("disabled", false);
+		$('#startBtnId').attr("disabled", true);
+		$('#startBtnId').removeClass().addClass('buttonDisable margin15');
+		$('#submitBtnId').removeClass().addClass('button margin15');
+		getOutputter().reset();
 	}
 }
-// onload function: call init method on window onload.
-window.onload = function () { 
-	view.init();
+
+
+/**
+ * Controls the Execution of the Sample Program
+ * * Maintains line number and colors it red.
+ * * Executes and Outputs to the output screen.
+ */
+class Executor {
+
+	constructor() {
+		this.statements = [
+			'mainId', 'charId', 'strId', 'switchId',
+			'case1Id', 'case1BreakId', 'case2Id', 'case2BreakId',
+			'case3Id', 'case3BreakId', 'case4Id', 'case4BreakId',
+			'case5Id', 'case5BreakId', 'case6Id', 'case6BreakId',
+			'case7Id', 'case7BreakId', 'defaultId', 'defaultBreakId',
+			'closeBrc1Id', 'ifId', 'holidayId', 'elseIfId', 
+			'workingdayId', 'elseId', 'invalidIPId', 'closeBrc2Id', 'endOfCodeId'
+		];
+		this.day = 0;
+		this.execution = [];
+		this.position = 0;
+		this.line = -1;
+	}
+
+	initialize(input) {
+		this.day = input;
+		const exec1 = [0, 1, 2, 3];
+		const exec2 = input <= 7 && input >= 1 ? [input*2 + 2, input*2 + 3] : [18, 19];
+		const e31 = [20, 21, 22, 27];
+		const e32 = [20, 21, 23, 24, 27];
+		const e33 = [20, 21, 23, 25, 26, 27];
+		let exec3; if (input === 7) exec3 = e31; else if ([1, 2, 3, 4, 5, 6].includes(input)) exec3 = e32; else exec3 = e33;
+		this.execution = exec1.concat(exec2).concat(exec3);
+	}
+
+	set line(line) {
+		$('.redClass').removeClass('redClass');
+		if (line >= this.execution.length) { this.position = -1; getInitializer().terminateExecution(); }
+		else { this.position = line; }
+		if (this.position >= 0) $('#'+this.statements[this.execution[this.position]]).addClass('redClass'); 
+		this.execute(this.execution[this.position]);
+	}
+	get line() {
+		return this.position;
+	}
+
+	execute(lineNumber) {
+		if (lineNumber === 0) {
+			getOutputter().day = this.day;
+		} else if ([4, 6, 8, 10, 12, 14, 16].includes(lineNumber)) {
+			getOutputter().str = getOutputter().week[ [ 1, 2, 3, 4, 5, 6, 7 ].includes(this.day) ? this.day : 0];
+		} else if ([22, 24, 26].includes(lineNumber)) {
+			if (lineNumber === 22) getOutputter().out = 'holiday';
+			if (lineNumber === 24) getOutputter().out = 'working';
+			if (lineNumber === 26) getOutputter().out = 'invalid';
+		}
+	}
 }
+
+
+/**
+ * Output display screen with text and image
+ * * Prints out the str, day and output variables.
+ * * Highlights the final images.
+ */
+class Outputter {
+	constructor() {
+		this.week = [ null, 'Monday', 'Tuesday', 'Wednesday', 
+					'Thursday', 'Friday', 'Saturday', 'Sunday'];
+		this.reset();
+	}
+
+	reset() {
+		this.str = null; this.day = 0; this.out = null;
+		$('.dayIcon').css('opacity', 0.2);
+		$('.dayImage').css('opacity', 0.2);
+	}
+
+	set day(day) {
+		this.mDay = day;
+		if (day !== 0) $('#idOfDay').html(this.mDay); else $('#idOfDay').html('');
+	}
+	get day() {
+		return this.mDay;
+	}
+
+	set str(str) {
+		console.assert(this.week.includes(str), 'Not a valid week day', { "string":str, "executor":this });
+		this.mStr = str;
+		if(str !== null) $('#' + this.mStr.toLowerCase() + 'Images').css('opacity', '1.0');
+		$('#strNullId').html(this.mStr);
+	}
+	get str() {
+		return this.mStr;
+	}
+
+	set out(output) {
+		this.mOutput = output;
+		if (this.mOutput === null) {
+			$('#outputDayId').html(null);
+			$('#workingdayImage').css('opacity', 0.2);
+			$('#holidayImage').css('opacity', 0.2);
+		} else if (this.mOutput === 'working') {
+			$('#outputDayId').html('WORKING DAY');
+			$('#workingdayImage').css('opacity', 1.0);
+			$('#holidayImage').css('opacity', 0.2);
+		} else if (this.mOutput === 'holiday') {
+			$('#outputDayId').html('HOLIDAY');
+			$('#holidayImage').css('opacity', 1.0);
+			$('#workingdayImage').css('opacity', 0.2);
+		} else {
+			$('#outputDayId').html('INVALID INPUT');
+			$('#holidayImage').css('opacity', 0.2);
+			$('#workingdayImage').css('opacity', 0.2);
+		}
+	}
+	get out() {
+		return this.mOutput;
+	}
+}
+
+
+/**
+ * Singleton class initialization model.
+ */
+$(document).ready(function() {
+	var initializer = new Initializer();
+	var executor = new Executor();
+	var outputter = new Outputter();
+	getInitializer = function() { return initializer; }
+	getExecutor = function() { return executor; }
+	getOutputter = function() { return outputter; }
+});
