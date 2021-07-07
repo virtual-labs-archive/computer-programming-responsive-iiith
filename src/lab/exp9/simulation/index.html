@@ -1,71 +1,271 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="CSS/recursion.css" />
-		<!-- <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'> -->
+		<link rel="stylesheet" 
+
+type="text/css" href="CSS/recursion.css" />
+		<!-- <link 
+
+href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' 
+
+type='text/css'> -->
 		<script src = "JS/recursion.js"></script>
-		<title>Recursion</title>
+		
+
+<title>Recursion</title>
 	</head>
 	<body>
-		<div id="header">Recursion ( Towers of Hanoi )</div>
-		<a href="../index.html"><div class="vlabsIcon"></div></a>
+		<div 
+
+id="header">Recursion ( Towers of Hanoi )
+		
+		
+
+</div>
+<div id="icon">
+<button type="button" onclick="toggleFullScreen()">  <img 
+
+src="https://image.freepik.com/free-icon/exit-to-full-screen_318-9919.jpg" height="15" 
+
+width="20"  align="right">
+
+</button>
+</div>
+		<a href="../index.html"><div 
+
+class="vlabsIcon"></div></a>
 		<div class="inputDivision">
-			<div class = "inputDivisionTitle" ><div class="initializePic"></div><div class="initializeText">Initialize</div></div>
-			<div class="inputDivisionBody">
-				<div class="instructionText">Enter number of disks</div>
-				<input  class="textField" type="text"  id = 'input' placeholder = 'N'>
-				<button class="button okButton" id = "btnOk" >Ok</button>	
-				<div class="buttonHolder"><button class="buttonDisable startButton" id = "btnStart" disabled>Start</button><button class="buttonDisable nextButton" id = "btnNext" disabled>Next</button></div>
-			</div><!-- end of inputDivisionBody -->
+			
+
+<div class = "inputDivisionTitle" ><div class="initializePic"></div><div 
+
+class="initializeText">Initialize</div></div>
+			<div 
+
+class="inputDivisionBody">
+				<div 
+
+class="instructionText">Enter number of disks</div>
+				
+
+<input  class="textField" type="text"  id = 'input' placeholder = 'N'>
+			
+
+	<button class="button okButton" id = "btnOk" >Ok</button>	
+		
+
+		<div class="buttonHolder"><button class="buttonDisable 
+
+startButton" id = "btnStart" disabled>Start</button><button class="buttonDisable 
+
+nextButton" id = "btnNext" disabled>Next</button></div>
+			
+
+</div><!-- end of inputDivisionBody -->
 		</div><!-- end of inputDivision -->
 
-		<div class="executionDivision">
-			<div class="executionDivisionTitle"><div class="executionPic"></div><div class="executionText">Step Execution</div></div>
-			<div class="stepExecutionDisplay">
-				<div id = 'code' class = 'hide'>
-					<div id = 'line1'>void main () {</div>
+	
+
+	<div class="executionDivision">
+			<div 
+
+class="executionDivisionTitle"><div class="executionPic"></div><div 
+
+class="executionText">Step Execution</div></div>
+			<div 
+
+class="stepExecutionDisplay">
+				<div id = 'code' class = 
+
+'hide'>
+					<div id = 'line1'>void main () 
+
+{</div>
 					<div id = 'line2'>int N;</div>
-					<div id = 'line3'>scanf ( " %d ", &amp;N );</div>
-					<div id = 'line4'>hanoi( 1, 2, 3, N );</div>
-					<div id = 'line5'>}<br><br></div>
-					<div id = 'line6'>void hanoi ( int S, int D, int T, int n ) {</div>
-					<div id = 'line7' style="padding-left: 5%;">if( n == 1 ) {</div>
-					<div id = 'line8' style="padding-left: 8%;">printf( "Move from tower %d --> %d", S, D );</div>
-					<div id = 'line9' style="padding-left: 8%;">return ; }</div>
-					<div id = 'line10' style="padding-left: 5%;">hanoi ( S, T, D, n-1 );</div>
-					<div id = 'line11' style="padding-left: 5%;">printf( "Move from tower %d --> %d", S, D );</div>
-					<div id = 'line12' style="padding-left: 5%;">hanoi( T, D, S, n-1 );</div>
-					<div id = 'line13' style="padding-left: 5%;">return ;</div>
-					<div id = 'line14' style="padding-left: 5%;">}</div>
-				</div><!-- end of codeLayout -->
-			</div><!-- end of stepExecutionDisplay -->
-		</div><!-- end of executionDivision -->
+		
+
+			<div id = 'line3'>scanf ( " %d ", &amp;N );</div>
+		
+
+			<div id = 'line4'>hanoi( 1, 2, 3, N );</div>
 			
+
+		<div id = 'line5'>}<br><br></div>
+				
+
+	<div id = 'line6'>void hanoi ( int S, int D, int T, int n ) {</div>
+			
+
+		<div id = 'line7' style="padding-left: 5%;">if( n == 1 ) {</div>
+		
+
+			<div id = 'line8' style="padding-left: 8%;">printf( "Move 
+
+from tower %d --> %d", S, D );</div>
+					
+
+<div id = 'line9' style="padding-left: 8%;">return ; }</div>
+				
+
+	<div id = 'line10' style="padding-left: 5%;">hanoi ( S, T, D, n-1 );</div>
+		
+
+			<div id = 'line11' style="padding-left: 5%;">printf( 
+
+"Move from tower %d --> %d", S, D );</div>
+					
+
+<div id = 'line12' style="padding-left: 5%;">hanoi( T, D, S, n-1 );</div>
+			
+
+		<div id = 'line13' style="padding-left: 5%;">return ;</div>
+		
+
+			<div id = 'line14' style="padding-left: 5%;">}</div>
+		
+
+		</div><!-- end of codeLayout -->
+			</div><!-- 
+
+end of stepExecutionDisplay -->
+		</div><!-- end of executionDivision -->
+		
+
+	
 		<div class="outputDivision"> 
-			<div class="outputDivisionTitle"><div class="outputPic"></div><div class="outputText">Code Output</div></div>
-			<div class="resultDisplay" id = "resultDisplay">
-				<div class="pillarFirst">
-					<div class="pillarBase"></div>
-					<div class="pillarLog"></div>
-					<div id = '1'><div class="position1"></div><div class="position2"></div><div class="position3"></div><div class="position4"></div><div class="position5"></div></div>	
-				</div><!-- end of pillarFirst -->
+			
+
+<div class="outputDivisionTitle"><div class="outputPic"></div><div 
+
+class="outputText">Code Output</div></div>
+			<div 
+
+class="resultDisplay" id = "resultDisplay">
+				<div 
+
+class="pillarFirst">
+					<div 
+
+class="pillarBase"></div>
+					<div 
+
+class="pillarLog"></div>
+					<div id = 
+
+'1'><div class="position1"></div><div class="position2"></div><div 
+
+class="position3"></div><div class="position4"></div><div 
+
+class="position5"></div></div>	
+				</div><!-- 
+
+end of pillarFirst -->
 				<div class="pillarSecond">
-					<div class="pillarBase"></div>
-					<div class="pillarLog"></div>
-					<div id = '2'><div class="position1"></div><div class="position2"></div><div class="position3"></div><div class="position4"></div><div class="position5"></div></div>
-				</div><!-- end of pillarSecond -->
+		
+
+			<div class="pillarBase"></div>
+				
+
+	<div class="pillarLog"></div>
+					
+
+<div id = '2'><div class="position1"></div><div class="position2"></div><div 
+
+class="position3"></div><div class="position4"></div><div 
+
+class="position5"></div></div>
+				</div><!-- end of 
+
+pillarSecond -->
 				<div class="pillarThird">
-					<div class="pillarBase"></div>
-					<div class="pillarLog"></div>
-					<div id = '3'><div class="position1"></div><div class="position2"></div><div class="position3"></div><div class="position4"></div><div class="position5"></div></div>	
-				</div><!-- end of pillarThird -->
+		
+
+			<div class="pillarBase"></div>
+				
+
+	<div class="pillarLog"></div>
+					
+
+<div id = '3'><div class="position1"></div><div class="position2"></div><div 
+
+class="position3"></div><div class="position4"></div><div 
+
+class="position5"></div></div>	
+				</div><!-- 
+
+end of pillarThird -->
 				<div class="local">
-					<div>n&emsp;:<div id = 'n' class = 'a'></div></div>
-					<div>S&emsp;:<div id = 's' class = 'a'></div></div>
-					<div>D&emsp;:<div id = 'd' class = 'a'></div></div>
-					<div>T&emsp;:<div id = 't' class = 'a'></div></div>
-				</div>
+			
+
+		<div>n&emsp;:<div id = 'n' class = 'a'></div></div>
+			
+
+		<div>S&emsp;:<div id = 's' class = 'a'></div></div>
+			
+
+		<div>D&emsp;:<div id = 'd' class = 'a'></div></div>
+			
+
+		<div>T&emsp;:<div id = 't' class = 'a'></div></div>
+			
+
+	</div>
 			</div><!-- end of resultDisplay -->
-		</div><!-- end of outputDivision -->
-	</body>
+		
+
+</div><!-- end of outputDivision -->
+		<script>
+function toggleFullScreen
+
+() {
+  if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+   (!
+
+document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if 
+
+(document.documentElement.requestFullScreen) {  
+      
+
+document.documentElement.requestFullScreen();  
+    } else if 
+
+(document.documentElement.mozRequestFullScreen) {  
+      
+
+document.documentElement.mozRequestFullScreen();  
+    } else if 
+
+(document.documentElement.webkitRequestFullScreen) {  
+      
+
+document.documentElement.webkitRequestFullScreen
+
+(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  } else {  
+    if (document.cancelFullScreen) 
+
+{  
+      document.cancelFullScreen();  
+    } else if (document.mozCancelFullScreen) {  
+      
+
+document.mozCancelFullScreen();  
+    } else if (document.webkitCancelFullScreen) {  
+      
+
+document.webkitCancelFullScreen();  
+    }  
+  }  
+}
+</script>
+
+
+
+		
+	
+
+</body>
 </html>
+

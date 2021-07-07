@@ -102,7 +102,7 @@ window.view = {
 	jumpToDay: function () {
 		switch (model.inputNumber) {
 			case 1:
-				this.showDay('case1Id', this.currentSiblingElement.id, 'mondayImages', 'strNullId', 'Monday');
+				this.showDay('case1Id', this.currentSiblingElement.id, 'mondayImages', 'strNullId', 'tuesday');
   				break;
 			case 2:
   				this.showDay('case2Id', this.currentSiblingElement.id, 'tuesdayImages', 'strNullId', 'Tuesday');
