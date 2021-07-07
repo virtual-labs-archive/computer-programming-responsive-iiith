@@ -6,7 +6,7 @@ $total=0;
 $Q1 = $_POST['Q1'];
 $Q2 = $_POST['Q2'];
 $Q3 = $_POST['Q3'];
-$Q6 = $_POST['fib1'];
+$Q4 = $_POST['fib1'];
 
 echo "You answered the following questions correctly : ";
 if ($Q1==1)
@@ -61,7 +61,7 @@ echo '	<h2>Correct Answers</h2>
                 </pre>
                 Make the approximation worse<br>
                 <br>
-                <li><b> An approximate solution may be as good as the accurate solution for <input type="text" name="fib1"> purposes.</b></li><br><br>
+                <li><b> An approximate solution may be as good as the accurate solution for "practical" purposes.</b></li><br><br>
 
 
 

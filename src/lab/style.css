@@ -29,11 +29,16 @@ body {
    font-family: 'Actor', sans-serif;
 
 }
-
-.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+#sidemenu a:hover, #sidemenu a:focus{
 color: #fff;
 background-color: #3652a4;
 }
+
+.active{
+  background-color: #3652a4;
+  color:#fff;
+}
+
 
 .lab-manual{
   float: right;

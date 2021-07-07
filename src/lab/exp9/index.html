@@ -49,11 +49,24 @@
     </nav>
     <p class="experiment-mobile-title">Recursion</p>
     </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
 
-<div class="row">
+    $('#sidemenu a').click(function(){
+
+        $('#sidemenu .active').removeClass('active'); // remove the class from the currently selected
+        $(this).addClass('active'); // add the class to the newly clicked link
+
+    });
+
+});
+</script>
+
+<div class="row" id="sidemenu">
   <div class="col-lg-2 visible-lg lab-index">
     <ul class="nav nav-pills nav-stacked">
-      <li class="active"><a href="#intro">Introduction</a></li>
+      <li><a href="#intro">Introduction</a></li>
       <li><a href="#theory">Theory</a></li>
       <li><a href="#obj">Objective</a></li>
       <li><a href="#man">Manual</a></li>
@@ -132,8 +145,8 @@
       <p class="manual-section-title">Further Reading</p><hr />
       <div class="manual-section-description">
         <ol>
-          <li><a href="http://www.exforsys.com/tutorials/c-language/c-pointers.html"> http://www.tech-faq.com/recursion.html </a></li>
-          <li><a href="http://en.wikipedia.org/wiki/Pointer_%28computer_science%29"> http://en.wikipedia.org/wiki/Recursion_(computer_science) </a></li>
+          <li><a href="http://erwnerve.tripod.com/prog/recursion/recintro.htm">http://erwnerve.tripod.com/prog/recursion/recintro.htm</a></li>
+          <li><a href="http://en.wikipedia.org/wiki/Recursion_(computer_science)"> http://en.wikipedia.org/wiki/Recursion_(computer_science) </a></li>
         </ol>
       </div>
     </div>

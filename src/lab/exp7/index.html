@@ -49,11 +49,24 @@
     </nav>
     <p class="experiment-mobile-title">Strings</p>
     </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function(){
 
-<div class="row">
+    $('#sidemenu a').click(function(){
+
+        $('#sidemenu .active').removeClass('active'); // remove the class from the currently selected
+        $(this).addClass('active'); // add the class to the newly clicked link
+
+    });
+
+});
+</script>
+
+<div class="row" id="sidemenu">
   <div class="col-lg-2 visible-lg lab-index">
     <ul class="nav nav-pills nav-stacked">
-      <li class="active"><a href="#intro">Introduction</a></li>
+      <li><a href="#intro">Introduction</a></li>
       <li><a href="#theory">Theory</a></li>
       <li><a href="#obj">Objective</a></li>
       <li><a href="#man">Manual</a></li>
@@ -76,7 +89,7 @@
       <p class="manual-section-title">Theory</p><hr />
       <div class="manual-section-description">
         <p>
-          In C programming, a string is essentially an array of <a href="en.wikipedia.org/wiki/ASCII" >ASCII code</a> characters. Each character is stored by writing the corresponding 8-bit ASCII code of the character. So, One can initialize a string just like an array:
+          In C programming, a string is essentially an array of <a href="https://en.wikipedia.org/wiki/ASCII" >ASCII code</a> characters. Each character is stored by writing the corresponding 8-bit ASCII code of the character. So, One can initialize a string just like an array:
         </p>
         <p>
           <pre class="prettyprint lang-c">
