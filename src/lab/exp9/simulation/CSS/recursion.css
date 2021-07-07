@@ -380,3 +380,8 @@ body {
 .a {
 	float: right;
 }
+#allowEnter{
+    margin-top: 200px;
+    padding: 20px;
+    display: none;
+}

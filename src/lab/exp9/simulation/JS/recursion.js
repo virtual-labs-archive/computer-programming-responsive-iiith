@@ -283,8 +283,13 @@ window.view = {
 	},
 	activateEvents: function() {
 		this.addClickEvent('btnOk', function() { view.getInput() })
-		this.addClickEvent('btnStart', function() { view.showCode() })
-		this.addClickEvent('btnNext', function() { view.proceed() })
+		this.addClickEvent('btnStart', function() { 
+			view.showCode(); 
+		})
+		this.addClickEvent('btnNext', function() { 
+			view.proceed();
+			document.querySelector('#allowEnter').style.display = "block"; 
+		})
 	},
 	init: function() {
 		this.activateEvents()
