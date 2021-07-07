@@ -89,6 +89,11 @@ window.view = {
 	getRowsAndCols: function() {
 		var row = Number(document.getElementById('row').value)
 		var col = Number(document.getElementById('col').value)
+		if(row<0 || col<0)
+		{
+			alert("Matrix size can't be negative!!!(Make sure that input values to be positive Integers!!)")
+			getRowsAndCols()
+		}
 		if ( row === 0 || col === 0 )
 			alert('Enter Matrix Size First !')
 		else if ( isNaN(row) || isNaN(col) )

@@ -152,7 +152,19 @@ window.view = {
 		this.takeInputFromRadioBox()
 		var arraySize = this.getArraySize()
 		var isValidInput = this.validateUserInputs()
+		var flag=0;
+		if(arraySize%1==0 && arraySize>0)
+		{
+			arraySize=arraySize;
+		}
+		else 
+		{
+			alert("Input should be an integer greater than 0 ");
+			displayElements();
+		}
+		
 		if ( arraySize === this.numbers.length ) {	
+			
 			if ( isValidInput === false)
 				alert('Enter Numeric Values Only!')
 			else {
@@ -166,8 +178,10 @@ window.view = {
 				this.changeClass( 'line1' , 'showDivInRed')
 			} 
 		}
-		else
+		
+		else {
 			alert('number of inputs must be equal to the size of the array')	
+		}
 	},
 	setKey: function() {
 		var element = document.getElementById('sortingDiv').childNodes

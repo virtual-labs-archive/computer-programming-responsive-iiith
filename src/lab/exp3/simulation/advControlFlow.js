@@ -34,12 +34,52 @@ window.view = {
  	},
 	getInput: function() {
 		var inputValue = document.getElementById('simpleLoopInput').value
-		model.inp = Number(inputValue)
-		this.clearExecutionSection()
+		if(inputValue%1==0 && inputValue>0)
+		{
+			model.inp = Number(inputValue)
+			this.clearExecutionSection()
+		}
+		else if (inputValue=="")
+		{
+			alert("Input should be a non negative integer!!!");
+			getInput();
+		}
+		else if (inputValue==0)
+		{
+			alert("Required result (i.e 0!) is 1");
+			getInput();
+		}
+		else if (inputValue<0)
+		{
+			alert("Input should be a non negative integer!!!");
+			getInput();
+		}
+		else
+		{
+			alert("Input should be a non negative integer!!!");
+		
+		getInput();
+	}
+	//	model.inp = Number(inputValue)
+	//	this.clearExecutionSection()
 	},
 	getNestedInput: function() {
 		var inputValue = document.getElementById('nestedLoopInput').value
-		model.nestedInp = Number(inputValue)
+		if(inputValue%1==0 && inputValue>0)
+		{
+			model.nestedInp = Number(inputValue)
+		}
+		else if (inputValue<=0)
+		{
+			alert("Input should be an integer greater than 0 ");
+			getNestedInput();
+		}
+		else
+		{
+			alert("Input should not be a fractional value!!!");
+		
+		getNestedInput();
+	}
 		this.clearExecutionSection()
 	},
 	activateEvents: function() {
@@ -125,7 +165,7 @@ window.view = {
 	printSpace: function() {
 		var span = document.createElement('span')
 		span.style.color = '#FF4208'
-		span.innerHTML = '_'
+		span.innerHTML = ' '
 		document.getElementById('resultDisplay').appendChild(span)
 	},
 	printStar: function() {
@@ -206,7 +246,7 @@ window.view = {
 		this.highlightNextStep()
 	},
 	endTheSimpleLoopCode: function() {
-		alert('code running is over')
+		alert('code running is over and the result will be displayed on clicking "OK"')
 		clearInterval(this.stampSimple)
 		this.disableButton('btnNext')
 		this.changeClass( 'btnNext', 'buttonDisable nextButton')
