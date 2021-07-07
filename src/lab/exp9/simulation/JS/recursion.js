@@ -19,12 +19,8 @@ window.view = {
 	},
 	getInput: function() {
 		 var input = Number(document.getElementById('input').value)
-		 if ( input === 0 )
-		 	alert('Enter number of disks first !')
-		 else if ( isNaN(input) === true )
-			alert('Number of disks must be an integer value !')
-		 else if ( input > 5 || input % 1 !== 0 )
-			alert('Only integral value (Greater than equal to 1 and less than equal to 5) is accepted !')
+		 if ( isNaN(input) === true || !Number.isInteger(input) || Number(input)<=0  || Number(input)>5)
+			alert('Number of disks must be an integer value! (Greater than equal to 1 and less than equal to 5)')
 		 else {
 			this.disableElement('btnOk')
 			this.enableElement('btnStart')
