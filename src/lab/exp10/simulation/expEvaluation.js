@@ -512,6 +512,7 @@ window.view = {
 			document.getElementById('logicalExpressions').className += ' hide'
 		}
 	},
+    
 	setOperatorEnvironment: function () {
 		var list = document.getElementById('operatorList')
 		var selectedOption = list.options[list.selectedIndex].text
@@ -543,6 +544,20 @@ window.view = {
 		document.getElementById('buttonSave').className += ' hide'
 		document.getElementById('buttonEdit').className = 'button editButton'
 	},
+    freezeInputsSave: function () {
+		this.disableElement('a')
+		this.disableElement('b')
+		this.disableElement('c')
+		this.disableElement('d')
+		document.getElementById('buttonSave').className = 'button saveButton hide'
+		document.getElementById('buttonEdit').className = 'button editButton hide'
+        document.getElementById('selectedExpression').className = 'inputField marginBottom hide'
+        document.getElementById('arithmaticExpressions').className='button loopList hide'
+        document.getElementById('bitwiseExpressions').className='button loopList hide'
+        document.getElementById('logicalExpressions').className='button loopList hide'
+        document.getElementById('operatorList').className='button loopList hide'
+	},
+    
 	deFreezeInputs: function () {
 		this.enableElement('a')
 		this.enableElement('b')
@@ -899,8 +914,10 @@ window.view = {
 		this.addChangeEvent('arithmaticExpressions', function () { view.setSelectedEquation('arithmaticExpressions') })
 		this.addChangeEvent('logicalExpressions', function () { view.setSelectedEquation('logicalExpressions') })
 		this.addChangeEvent('bitwiseExpressions', function () { view.setSelectedEquation('bitwiseExpressions') })
+        this.addClickEvent('buttonStart', function () { view.validateExpression() })
+        this.addClickEvent('buttonStart',function(){view.freezeInputsSave()})
 	},
-	init: function () {
+	init: function () { 
 		this.activateEvents()
 	}
 } 
